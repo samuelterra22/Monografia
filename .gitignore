@@ -5,3 +5,7 @@
 *.lot
 *.synctex.gz
 *.toc
+*.bbl
+*.blg
+*.brf
+*.bib
