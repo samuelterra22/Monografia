@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.10.28)  28 OCT 2017 17:26
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.10.28)  28 OCT 2017 17:41
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**abntex2-modelo-trabalho-academico.tex
-(./abntex2-modelo-trabalho-academico.tex
+**Monografia.tex
+(./Monografia.tex
 LaTeX2e <2016/02/01>
 Babel <3.9q> and hyphenation patterns for 81 language(s) loaded.
 (/usr/share/texlive/texmf-dist/tex/latex/abntex2/abntex2.cls
@@ -1014,14 +1014,13 @@ LaTeX Info: Redefining \cite on input line 618.
 )
 Package color Info: Redefining color blue on input line 122.
 Package hyperref Info: Option `colorlinks' set `true' on input line 139.
-\abntex2-modelo-trabalho-academico@idxfile=\write4
-\openout4 = `abntex2-modelo-trabalho-academico.idx'.
+\Monografia@idxfile=\write4
+\openout4 = `Monografia.idx'.
 
 
-Writing index file abntex2-modelo-trabalho-academico.idx 
-(./abntex2-modelo-trabalho-academico.aux (./abntex2-modelo-include-comandos.aux
-))
-\openout1 = `abntex2-modelo-trabalho-academico.aux'.
+Writing index file Monografia.idx 
+(./Monografia.aux (./include-comandos.aux))
+\openout1 = `Monografia.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 162.
 LaTeX Font Info:    ... okay on input line 162.
@@ -1038,7 +1037,8 @@ LaTeX Font Info:    ... okay on input line 162.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 162.
 LaTeX Font Info:    ... okay on input line 162.
 LaTeX Font Info:    Try loading font information for T1+lmr on input line 162.
- (/usr/share/texmf/tex/latex/lm/t1lmr.fd
+
+(/usr/share/texmf/tex/latex/lm/t1lmr.fd
 File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 \AtBeginShipoutBox=\box30
@@ -1228,11 +1228,10 @@ LaTeX Info: Redefining \. on input line 407.
 LaTeX Info: Redefining \% on input line 407.
  [19] [20
 
-]
-(./abntex2-modelo-trabalho-academico.lof) [21] [22
+] (./Monografia.lof) [21] [22
 
 ]
-(./abntex2-modelo-trabalho-academico.lot) [23] [24
+(./Monografia.lot) [23] [24
 
 ] [25
 
@@ -1242,8 +1241,7 @@ LaTeX Info: Redefining \% on input line 407.
 
 ] [28
 
-]
-(./abntex2-modelo-trabalho-academico.toc
+] (./Monografia.toc
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <14.4> on input line 13.
 LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <12> not available
@@ -1292,9 +1290,9 @@ LaTeX Warning: Citation `memoir' on page 33 undefined on input line 501.
 ] [34
 
 ] [35] [36]
-\openout2 = `abntex2-modelo-include-comandos.aux'.
+\openout2 = `include-comandos.aux'.
 
- (./abntex2-modelo-include-comandos.tex
+ (./include-comandos.tex
 LaTeX Font Info:    Try loading font information for T1+lmtt on input line 37.
 
 (/usr/share/texmf/tex/latex/lm/t1lmtt.fd
@@ -1503,7 +1501,7 @@ Overfull \hbox (6.91217pt too wide) in paragraph at lines 705--708
 ] [57] [58
 
 ]
-No file abntex2-modelo-trabalho-academico.bbl.
+No file Monografia.bbl.
 [59] [60
 
 ]
@@ -1533,7 +1531,7 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 ] [71] [72
 
 ]
-No file abntex2-modelo-trabalho-academico.ind.
+No file Monografia.ind.
 
 Class memoir Warning: The material used in the headers is too large
 (28.99998pt) for the given head height (14.5pt), it is recommended to
@@ -1544,18 +1542,17 @@ either increase the head height or redesign the header
 AED: lastpage setting LastPage
 [73]
 \tf@lof=\write5
-\openout5 = `abntex2-modelo-trabalho-academico.lof'.
+\openout5 = `Monografia.lof'.
 
 \tf@lot=\write6
-\openout6 = `abntex2-modelo-trabalho-academico.lot'.
+\openout6 = `Monografia.lot'.
 
 \tf@toc=\write7
-\openout7 = `abntex2-modelo-trabalho-academico.toc'.
+\openout7 = `Monografia.toc'.
 
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 676.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 676.
- (./abntex2-modelo-trabalho-academico.aux
-(./abntex2-modelo-include-comandos.aux))
+ (./Monografia.aux (./include-comandos.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 676.
 Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 676.
 
@@ -1566,12 +1563,12 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 676.
  ) 
 Here is how much of TeX's memory you used:
  14368 strings out of 493029
- 212098 string characters out of 6136233
- 476023 words of memory out of 5000000
+ 211580 string characters out of 6136233
+ 476000 words of memory out of 5000000
  17331 multiletter control sequences out of 15000+600000
  110856 words of font info for 146 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 44i,13n,36p,498b,685s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 44i,13n,36p,475b,685s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dv
 ips/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/share
 /texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm
@@ -1590,8 +1587,7 @@ fonts/type1/public/lm/lmsso10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsso
 12.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fon
 ts/type1/public/lm/lmsy8.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt12.pfb
 >
-Output written on abntex2-modelo-trabalho-academico.pdf (75 pages, 699369 bytes
-).
+Output written on Monografia.pdf (75 pages, 699369 bytes).
 PDF statistics:
  975 PDF objects out of 1000 (max. 8388607)
  846 compressed objects within 9 object streams
