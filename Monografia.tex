@@ -326,22 +326,15 @@
 % Agradecimentos
 % ---
 \begin{agradecimentos}
-Os agradecimentos principais são direcionados à Gerald Weber, Miguel Frasson,
-Leslie H. Watter, Bruno Parente Lima, Flávio de Vasconcellos Corrêa, Otavio Real
-Salvador, Renato Machnievscz\footnote{Os nomes dos integrantes do primeiro
-projeto abn\TeX\ foram extraídos de
-\url{http://codigolivre.org.br/projects/abntex/}} e todos aqueles que
-contribuíram para que a produção de trabalhos acadêmicos conforme
-as normas ABNT com \LaTeX\ fosse possível.
 
-Agradecimentos especiais são direcionados ao Centro de Pesquisa em Arquitetura
-da Informação\footnote{\url{http://www.cpai.unb.br/}} da Universidade de
-Brasília (CPAI), ao grupo de usuários
-\emph{latex-br}\footnote{\url{http://groups.google.com/group/latex-br}} e aos
-novos voluntários do grupo
-\emph{\abnTeX}\footnote{\url{http://groups.google.com/group/abntex2} e
-\url{http://www.abntex.net.br/}}~que contribuíram e que ainda
-contribuirão para a evolução do \abnTeX.
+Agradeço a Deus, pois sem Sua ajuda, direção e o Seu agir em minha vida, não teria capacidade e o empenho para chegar até aqui; por se fazer presente até nos momentos em que os desafios foram tão grandes quanto minha vontade, por me ter dotado de saúde, sabedoria e disposição para alcançar mais uma etapa em minha vida.
+
+Agradeço aos meus pais que, com toda humildade e simplicidade, me ensinaram a ser uma pessoa decente, a respeitar e buscar meus sonhos de forma honesta e dentro do meu tempo, mesmo que seja com muito trabalho árduo. 
+
+Agradeço ao responsável pela parte de TI do \textit{campus}, Roger Ferreira, e ao engenheiro civil do \textit{campus}, Alysson Geraldo, por terem gentilmente cedido as plantas-baixas.
+
+Agradeço ao professor Everthon Valadão, a paciência e compreensão que teve comigo durante o período em que me acompanhou e que estivemos juntos realizando este trabalho. Esteve sempre presente como um grande professor e amigo, sempre se mostrando comprometido em dar o seu melhor para os alunos. 
+
 
 \end{agradecimentos}
 % ---
@@ -368,16 +361,9 @@ contribuirão para a evolução do \abnTeX.
 % resumo em português
 \setlength{\absparsep}{18pt} % ajusta o espaçamento dos parágrafos do resumo
 \begin{resumo}
- Segundo a \citeonline[3.1-3.2]{NBR6028:2003}, o resumo deve ressaltar o
- objetivo, o método, os resultados e as conclusões do documento. A ordem e a extensão
- destes itens dependem do tipo de resumo (informativo ou indicativo) e do
- tratamento que cada item recebe no documento original. O resumo deve ser
- precedido da referência do documento, com exceção do resumo inserido no
- próprio documento. (\ldots) As palavras-chave devem figurar logo abaixo do
- resumo, antecedidas da expressão Palavras-chave:, separadas entre si por
- ponto e finalizadas também por ponto.
+A proposta deste trabalho é desenvolver um \textit{software} para \textit{Wireless AP Placement}  que utilizará modelo(s) da propagação do sinal \textit{Wi-Fi} de acordo com as características físicas do ambiente, aplicando o \textit{Simulated Annealing} como metaheurística para visar ao aprimoramento da cobertura de sinal, tendo como caso de uso as dependências do IFMG campus Formiga. Tal \textit{software} indicará um melhor posicionamento dos \textit{access points} \textit{Wi-Fi} para o ambiente analisado. O trabalho realizado foi disponibilizado de forma gratuita utilizando Licença Pública Geral GNU. Ressaltamos que ele possibilita testar disposições de APs sem o custo operacional de fisicamente movê-los, de maneira a propor uma disposição espacial dos mesmos que forneça uma maior cobertura e intensidade de sinal dentro do ambiente simulado. Para trabalhos futuros, a fim de se obter resultados que possibilitem uma melhor busca pelos pontos de acesso para dois ou mais APs, novas técnicas deverão ser utilizadas para o cálculo da função objetivo. 
 
- \textbf{Palavras-chave}: latex. abntex. editoração de texto.
+ \textbf{Palavras-chave}:  Wireless, Propagação, Posicionamento, Wi-Fi, Simulated Annealing, CUDA.
 \end{resumo}
 
 % resumo em inglês
@@ -431,8 +417,35 @@ contribuirão para a evolução do \abnTeX.
 % inserir lista de abreviaturas e siglas
 % ---
 \begin{siglas}
-  \item[ABNT] Associação Brasileira de Normas Técnicas
-  \item[abnTeX] ABsurdas Normas para TeX
+  \item[IEEE] Institute of Electrical and Electronics Engineers
+  \item[AP] Access Point
+  \item[WLAN] Wireless Local Area Network
+  \item[WiFi] Wireless Fidelity
+  \item[LAN] Local Area Network
+  \item[ISM] Industrial, Scientific and Medical
+  \item[GHz] Gigahertz
+  \item[MHz] Megahertz
+  \item[RF] Radio Frequency
+  \item[GNU] Gnu's Not Unix
+  \item[GPL] General Public License
+  \item[T-R] Transmitter-Receiver
+  \item[dB] decibel
+  \item[FOSS] Free Open Source Software
+  \item[DXF] Drawing Exchange Format
+  \item[CAD] Computer-aided Design
+  \item[2D] 2 dimensões
+  \item[3D] 3 dimensões
+  \item[EMI] Interferência Eletromagnética
+  \item[CUDA] Compute Unified Device Architecture
+  \item[GPU] Graphics Processing Unit
+  \item[CPU] Central Processing Unit
+  \item[HPC] High Performance Computing
+  \item[API] Application Programming Interface
+  \item[PCIe] Peripheral Component Interconnect Express
+  \item[Gb/s] Gigabits por segundo
+  \item[GB] Gigabits
+  \item[dBm] Decibel Miliwatt
+  \item[SA] Simulated Annealing
 \end{siglas}
 % ---
 
@@ -440,10 +453,12 @@ contribuirão para a evolução do \abnTeX.
 % inserir lista de símbolos
 % ---
 \begin{simbolos}
-  \item[$ \Gamma $] Letra grega Gama
-  \item[$ \Lambda $] Lambda
-  \item[$ \zeta $] Letra grega minúscula zeta
-  \item[$ \in $] Pertence
+  \item[$ \Delta $] Delta maiúsculo
+  \item[$ \mu $] Mi
+  \item[$ \delta $] Delta minúsculo
+  \item[$ \xi $] Ksi
+  \item[$ \sigma $] Sigma
+  \item[$ \alpha $] Alpha
 \end{simbolos}
 % ---
 
@@ -455,28 +470,407 @@ contribuirão para a evolução do \abnTeX.
 \cleardoublepage
 % ---
 
-
-
 % ----------------------------------------------------------
 % ELEMENTOS TEXTUAIS
 % ----------------------------------------------------------
 \textual
-
 % ----------------------------------------------------------
 % Introdução 
 % ----------------------------------------------------------
-\chapter[Introdução]{Introdução}
+\chapter[INTRODUÇÃO]{INTRODUÇÃO}
 %\addcontentsline{toc}{chapter}{Introdução}
 % ----------------------------------------------------------
+
+A demanda por disponibilidade e cobertura de redes locais sem fio (WLAN), seja em ambiente corporativo ou doméstico, tem crescido vertiginosamente. À medida que o uso de \textit{Wi-Fi} se torna trivial e cotidiano, suas tecnologias são aperfeiçoadas e os preços dos equipamentos para acesso sem fio se tornam mais acessíveis.
+
+Em um ambiente onde computadores tipicamente realizam a sua comunicação através de rede local cabeada (LAN), caso seja necessária a realização de alguma mudança física no ambiente, será inevitável o uso de arrumações, canaletas ou até obras na estrutura física do prédio. Conforme ocorrem alterações no ambiente de trabalho, variando desde a colocação dos móveis e divisórias a mudanças de sala, a limitação imposta pelos cabos se torna um problema de organização e planejamento das futuras mudanças. Quando há a necessidade de ampliar a rede para a acomodação de novos pontos de acesso para telecomunicação, a necessidade de se passarem novos cabos torna-se inconveniente. O obstáculo às alterações se torna ainda maior quando o ambiente é alguma construção em que não é viável realizar intervenções na parede (e.g., tombamento ou estética) para a redistribuição dos cabos, por vezes em edifícios, onde, sequer, houve planejamento de uma rede cabeada estruturada.
+
+Considerando o acima exposto, é possível observar o quanto é conveniente o uso de redes sem fio (\textit{wireless}) quando há a necessidade de ampliar a rede ou implantar, mesmo que temporariamente, o acesso à internet em alguma determinada área. Apesar da praticidade, não é viável ter uma rede \textit{wireless} se sua cobertura de sinal não atinge boa parte da área necessária ou, então, se por mais perto que o ponto de acesso (AP) \textit{wireless} esteja do computador, não provê uma qualidade de serviço satisfatória devido a um baixo nível de sinal ou interferências na mesma frequência do canal. 
+
+Portanto, se faz necessário um bom planejamento do posicionamento dos APs \textit{wireless}, de maneira a oferecer uma boa cobertura de sinal onde se fizerem necessários. É importante deixar claro que o tratamento de colisão de canais como sua interferência de APs próximos não está dentre os principais objetivos dessa pesquisa e, por conseguinte, não foi implementado. A proposta deste trabalho é desenvolver um \textit{software} para \textit{Wireless AP Placement},  que utilizará modelo(s) da propagação do sinal Wi-Fi de acordo com as características físicas do ambiente, aplicando metaheurísticas que visem ao aprimoramento da cobertura de sinal, tendo como caso de uso as dependências do IFMG \textit{campus} Formiga. Tal \textit{software} indicará um melhor posicionamento dos \textit{access points Wi-Fi} para o ambiente analisado.
+
+
+
 \section{Justificativa}
+
+É importante ressaltar a validade prática deste trabalho a ser desenvolvido, uma vez que uma grande dúvida dos usuários residenciais e profissionais de TI é saber qual a melhor localização para o(s) AP(s) \textit{Wi-Fi}. Alguma vezes, essa questão até passa despercebida para o usuário (doméstico ou empresarial), resultando em locais sem cobertura de sinal. Boa parte dos ambientes corporativos e residenciais utilizam um ou mais pontos de acesso sem fio para prover acesso à rede local e dela para a internet. Entretanto, dispositivos móveis e computadores tipicamente não observam uma qualidade satisfatória de sinal do \textit{access point wireless}. Esse problema pode ocorrer pelo fato do AP não abranger toda a área necessária ou sofrer atenuações devido às características do ambiente.
+
+Ademais, redes Wi-Fi podem sofrer interferências externas, tais como telefones sem fio ou "babás" eletrônicas que operem na mesma faixa de frequência (banda ISM de 2.4 GHz), motores elétricos ou outras redes sem fio que estejam próximos do AP e irradiem EMI na mesma frequência do canal utilizado, seja ele na banda de 2.4 GHz (IEEE 802.11 b/g) ou 5.8 GHz (IEEE 802.11 a/ac). Por meio de uma análise do espectro de radiofrequência (RF) é possível detectar o nível dos sinais e/ou interferências em determinado local, entretanto, um problema facilmente observável que pode agravar a baixa qualidade observada no serviço da rede sem fio é a existência de pontos cegos na cobertura do sinal para determinado ambiente. 
+
+Como consequência de toda a atenuação e interferência sofrida, a rede \textit{wireless} pode ficar inoperante ou dar a impressão de baixo desempenho. Por parte da maioria dos usuários finais, uma reclamação comum é a dificuldade de acessar determinado conteúdo e o acesso à rede parecer "lento". De um modo geral, por serem leigos no assunto, muitos usuários de rede sem fio acabam culpando o provedor de acesso à internet ou equipe de TI da instituição  pela má qualidade do serviço quando, na verdade, a solução para o problema passaria por uma inspeção no espectro de sinal do(s) AP(s) \textit{Wi-Fi} (para identificar interferências) e um melhor posicionamento deste(s) (para maximizar a cobertura do sinal e reduzir interferências entre APs).
+
+Por fim, até onde pudemos verificar, não há disponível um \textit{software} livre, gratuito e de código-fonte aberto para \textit{Wireless AP Placement}, apenas soluções proprietárias, comerciais e custosas. 
+
+
 \section{Objetivos}
 
+Após a contextualização do objeto de estudo deste trabalho e sua importância, sintetiza-se aqui seu objeto primário: projetar e implementar um \textit{software} para planejamento do posicionamento dos APs (\textit{Wireless AP Placement}), que receba como entrada uma representação do ambiente e informações dos APs disponíveis, realize simulações de propagação dos sinais (considerando as características do ambiente) para os posicionamentos de APs propostos por meta-heurística que vise maximizar a cobertura do sinal Wi-Fi tendo, como caso de uso, as dependências do IFMG campus Formiga. 
+São objetivos secundários e mais específicos os seguintes tópicos:
 
-\chapter[Fundamentação Teórica]{Fundamentação Teórica}
-% ---
+\begin{itemize}
+	\item Construir um modelo das dependências do IFMG campus Formiga, a partir da representação do ambiente fornecida ao software, e.g. planta(s)-baixa(s);
+	
+	\item Simular a propagação do sinal wireless de APs Wi-Fi através das dependências do campus Formiga, seguindo modelos de propagação de sinais sem fio; 
 
-\section[asd]{asd}
-\section[asd]{asd}
+	\item Utilizar metaheurística computacional para propor/verificar, via simulação, novas localizações para os APs Wi-Fi, visando maximizar a cobertura do sinal no campus (dentre outros fatores);
+	
+	\item Fornecer, ao final, uma solução proposta para o novo posicionamento dos APs Wi-Fi, se possível, auxiliada por algum método de visualização da cobertura do sinal wireless no ambiente.
+	
+	\item Disponibilizar o software de maneira livre e de código-fonte aberto (FOSS), distribuindo-o por meio de alguma licença que proteja a autoria do mesmo (e.g., Licença Pública Geral GNU — GPL).
+\end{itemize}
+
+
+\chapter[FUNDAMENTAÇÃO TEÓRICA]{FUNDAMENTAÇÃO TEÓRICA}
+
+No levantamento do referencial bibliográfico realizado, observamos um vasto número de trabalhos que tratam sobre a otimização do posicionamento de pontos de acesso \textit{wireless}. Utilizaremos, como principais fundamentações teóricas deste projeto, o trabalho de Batitti, Brunato e Delai: \textit{Optimal Wireless Access Point Placement for Location-Dependent Services} e a obra \textit{Comunicações sem fio - Princípios e Práticas}, de Theodore S. Rappaport.
+
+\section[Wireless AP Placement]{\textit{Wireless AP Placement}}
+
+De acordo com o trabalho publicado por Battiti, Brunato e Delai (2003), “\textit{Optimal Wireless Access Point Placement for Location-Dependent Services}”, vários grupos de pesquisadores independentes têm proposto métodos para fazer estimativa a respeito da posição do usuário, com base na intensidade dos sinais de rádio recebidos de múltiplos APs (DALSSOTO, 2013; NAJNUDEL, 2004). Partindo desta distinta aplicação, os pesquisadores propõem uma nova abordagem para o AP \textit{Placement}, pois consideram que a localização “é um importante parâmetro que pode ser usado para determinar o comportamento do sistema” (BATTITI, BRUNATO, DELAI, 2013, p. 1). Desse modo, a proposta deste TCC, que utilizará um modelo de propagação do sinal Wi-Fi em uma simulação do ambiente do IFMG \textit{campus} Formiga é, mais uma vez, justificada pela necessidade de se ter um software livre e gratuito para \textit{Wireless AP Placement}, que indique um melhor posicionamento dos \textit{access points Wi-Fi}.
+
+\section[Tecnologias Wi-Fi ( WLANs IEEE 802.11 )]{Tecnologias Wi-Fi ( WLANs IEEE 802.11 )}
+
+Quando se trata de redes \textit{wireless}, é imprescindível dizer que, com o estabelecimento da família de padrões IEEE 802.11, se tornou possível a compatibilidade entre diferentes marcas de fabricantes de APs \textit{wireless} e dispositivos móveis. De acordo com Franciscatti,
+
+\begin{citacao}
+	As redes \textit{wireless} utilizam freqüências de rádio para se comunicar havendo necessidade de uma padronização dos equipamentos sem fio por existir vários fabricantes. Não havia uma padronização dessa tecnologia causando, assim, a impossibilidade de comunicação de dispositivos de redes sem fio de outros fabricantes. Assim o \textit{Institute of Electrical and Electronics [Engineers]} (IEEE) formou um grupo de trabalho com o objetivo de definir os padrões de uso em redes sem fio, denominado 802.11. (FRANCISCATTI, 2005 apud BOF, 2010, p. 14)
+\end{citacao}
+
+Desta forma, após a padronização definida pela IEEE, alguns padrões para WLAN foram estabelecidos (RIVERA, 2010; BANERJI, 2013), como:
+
+\begin{itemize}
+	\item \textbf{IEEE 802.11a:} Definido em setembro 1999, operando na frequência de 5 GHz, uma largura de banda de 20 MHz, taxa de transmissão de até 54 Mbit/s e podendo ter um alcance de 35 metros indoor e até 5 quilômetros outdoor.
+	
+	\item \textbf{IEEE 802.11b:} Definido em setembro 1999, operando com uma frequência de 2.4 GHz, uma largura de banda de 22 MHz, taxa de transmissão de até 11 Mbit/s e com alcance de 35 metros indoor e 140 metros outdoor.
+	
+	\item \textbf{IEEE 802.11g:} Definido em junho de 2003, operando com uma frequência de 2.4 GHz, utilizando uma largura de banda de 20 MHz, com uma taxa de transmissão de até 54 Mbit/s e com um alcance de 38 metros indoor e 140 metros outdoor.
+	
+	\item \textbf{IEEE 802.11n:} Definido em outubro de 2009, operando com uma frequência de 2.4 GHz (802.11a) e 5 GHz (802.11g), com uma taxa de transmissão de até 72.2 Mbit/s utilizando uma largura de banda de 20 MHz e uma taxa de transmissão de até 150 Mbit/s com uma banda de 40 MHz, permitindo múltiplos fluxos espectrais (MIMO). O alcance vai de 70 metros indoor e 250 metros outdoor.
+	
+	\item \textbf{IEEE 802.11ac:} Definido em dezembro de 2013, operando com uma frequência de 5 GHz, utilizando uma largura de banda que vai de 20 MHz até 160 MHz, com uma taxa de transmissão de 87.6 Mbit/s até até 866.7 Mbit/s, também com uso de MIMO. 
+\end{itemize}
+
+Considerando os padrões supracitados, iremos focar especificamente na penetração dos sinais \textit{Wi-Fi} na estrutura dos edifícios (paredes, andares).
+
+\section[Propagação de sinais de rádio]{Propagação de sinais de rádio}
+
+O sinal Wi-Fi produzido pelo access point nada mais é, de um modo simplista, que uma onda de rádio que se propaga no espaço. De acordo com Rappaport,
+
+\begin{citacao}
+	Os mecanismos por trás da propagação da onda eletromagnética são diversos, mas geralmente podem ser atribuídos a reflexão, difração e dispersão. (...) Devido a múltiplas reflexões de vários objetos, as ondas eletromagnéticas trafegam por diferentes caminhos de tamanhos variados. A interação entre essas ondas causa uma distorção de caminhos múltiplos em um local específico, e as intensidades das ondas diminui à medida que a distância entre transmissor e receptor aumenta. (RAPPAPORT, 2009, p. 72)
+	
+\end{citacao}
+
+Por ser uma onda eletromagnética, a onda do sinal \textit{Wi-Fi} como descrito por Torlak, apresenta tal comportamento, sofrendo reflexão, difração e dispersão. Outro aspecto que deve ser abordado acerca da onda do sinal \textit{Wi-Fi} é a diferença entre modelos de propagação de larga escala (perdas) e pequena escala (atenuação). Os modelos de propagação em larga escala são caracterizados pela intensidade do sinal para grandes distâncias de separação do transmissor e receptor (podendo variar de várias centenas ou milhares de metros), enquanto modelos de propagação em pequena escala são caracterizados pelas flutuações rápidas do sinal recebidos para distâncias muito curtas (variando de alguns comprimentos de onda ou durações de segundos) (Cf. RAPPAPORT, 2009, p. 72).
+
+Rappaport define três modelos básicos de propagação que são usados para a previsão da intensidade do sinal recebido a determinada distância do transmissor, numa larga escala. O modelo de propagação no espaço livre (Friss) é utilizado quando transmissor e receptor possuem uma linha de visão desobstruída, ou seja, não há obstáculos entre eles que interrompam ou alterem o caminho da transmissão do sinal. O modelo de propagação no espaço livre oferece uma noção da ordem de magnitude do sinal recebido, mas é demasiado otimista pois raramente há um único caminho entre a antena transmissora e a antena receptora: em situações reais, haverá reflexão do sinal no solo. Para grandes distâncias e antenas altas, o modelo de reflexão no solo é razoavelmente preciso para prever a intensidade do sinal recebido. Esse modelo é baseado na ótica geométrica e considera o caminho direto e o caminho refletido (modelo de dois raios), que muitas vezes é no solo. E, por fim, temos o modelo de difração (por gume de faca) que torna possível propagar os sinais de rádio através de obstruções, bem como ao redor da superfície da terra, além do horizonte. Contudo, a força do campo recebido diminui rapidamente quando o receptor se aproxima do obstáculo em direção à região obstruída (sombra), porém, o campo de difração ainda existe e normalmente tem força suficiente para produzir um sinal útil (Cf. RAPPAPORT, 2009, p. 72-83).
+
+A propagação no interior é dominada pelos mesmos mecanismos (reflexão, difração e dispersão), porém as condições são muito variáveis, podendo variar, por exemplo, até mesmo se as portas e janelas estiverem fechadas ou dependendo do local onde as antenas são montadas. Dentro do mesmo contexto, existem várias características físicas e elétricas que podem influenciar na propagação do sinal, como qual o tipo de ambiente (escritório ou casa) e de que é feita a construção (madeira, tijolo, concreto ou até ferragem). Durante a propagação, pode também ocorrer a perda do sinal entre andares de um edifício, obedecendo à lei de potência da distância, a qual leva em consideração o tipo de prédio, arredores e uma variável aleatória normal que representa o desvio padrão (Cf. RAPPAPORT, 2009, p. 104-108). 
+
+
+\section[Modelos de propagação]{Modelos de propagação}
+
+Quando se deseja realizar um bom desempenho e planejamento da cobertura do espectro Wi-Fi, é indispensável o conhecimento do meio de transmissão e qual modelo se deve usar para obter um resultado mais realista. Em sistemas \textit{wireless} o meio de propagação utilizado é o canal de rádio, de forma que as características e efeitos sobre todas as informações trafegadas são de uma natureza complexa, fazendo com que medições empíricas sejam de suma importância. Com as medições é possível ver como é o comportamento de modelos em pequena e larga escala, além de ser possível determinar a variação da potência do sinal devido ao movimento de pessoas no ambiente ou atingir obstáculos fixos, como paredes, pisos, vidros, móveis, dentre outros.
+
+Então, se faz necessário uma boa escolha de quais modelos de propagação utilizar quando se quer obter uma boa representação do espectro e que ao mesmo tempo esteja condizente com a realidade. Quanto maior for a precisão desejada, mais detalhes sobre o ambiente de propagação devem ser modelados. Nesta seção serão comentados sucintamente sete modelos que foram estudados para a realização deste trabalho.
+
+
+\subsection[Propagação no espaço livre (modelo de Friis)]{Propagação no espaço livre (modelo de Friis)}
+
+O modelo \textit{Friss free-space path loss} ou geralmente tratado como modelo de propagação no espaço livre de Friis é usado para prever a intensidade do sinal recebido quando a antena transmissora e a antena receptora possuem um caminho de linha de visão limpo, ou seja, um caminho desobstruído de qualquer objeto ou edificação (Luo, 2003). Tal modelo é em geral usado em sistemas de comunicação por satélite e em enlaces de rádio de microondas com linha de visão. Assim como os modelos outdoor, o modelo de propagação no espaço livre de Friis, pressupõe que a potência recebida diminui com uma função da distância entre a antena transmissora e a antena receptora elevada a alguma potência, ou seja, uma função da lei de potência. A potência recebida através do espaço livre pela antena receptora separada da antena transmissora por uma distância d pode ser calculada pela seguinte equação:
+
+[livro equação 4.1 página 93 do pdf]
+
+sendo:
+
+\begin{itemize}
+	\item Pt a potência transmitida;
+	\item Pr(d) a potência recebida;
+	\item Gt é o ganho da antena transmissora;
+	\item Gr é o ganho da antena receptora;
+	\item d é a distância de separação das antenas;
+	\item L é o fator de perda (L>=1), L = 1 indica nenhuma perda no hardware do sistema
+	\item $ \lambda $ é o comprimento de onda dado em metros.
+\end{itemize}
+
+O modelo de espaço livre de Friis é apenas uma previsão válida para uma potência recebida para uma distância d de separação entre as antenas. O campo distante que é criado entre as antenas pode ser chamado de região de \textit{Fraunhofer}, onde essa região é definida como uma região além da distância de campo distante df, que está diretamente relacionada com a maior dimensão linear D de abertura da antena transmissora e com o comprimento de onda da portadora (antena receptora). Tal distância de \textit{Fraunhofer} pode ser calculada pela seguinte fórmula:
+
+[livro equação 4.7.a página 94 do pdf]
+
+O cálculo da potência recebida tem uma falha quando a distância é zero. Por este motivo, modelos de propagação em larga escala utilizam uma distância próxima, d0, com um ponto de referência de potência conhecido. A potência recebida, Pr(d), em qualquer distância que a distância d seja maior que zero, pode estar relacionada com a potência recebida no ponto de referência d0. A equação que calcula a potência recebida pode ser vista abaixo utilizando uma distância maior que d0:
+
+[livro formula 4.8 página 95 do pdf]
+
+O valor da distância de referência d0 em sistemas práticos em antenas de baixo ganho, entre 1 e 2 GHz, normalmente é utilizado com sendo 1 metro em ambientes internos (\textit{indoor}) e 100 metros ou 1 quilômetro para ambientes externos (\textit{outdoor}), de forma que o resultado obtido pelas equações anteriores são múltiplos de 10, tornando os cálculos de perda de caminho fácies em unidade de dB.
+
+\subsection[Two-rays ground reflection]{\textit{Two-rays ground reflection}}
+
+O modelo \textit{Two-rays ground reflection} é um modelo de propagação de rádio que prevê as perdas de trajetória entre uma antena transmissora e uma antena receptora. Em geral, as duas antenas têm altura diferente e raramente possuem uma linha direta. O sinal é recebido de duas formas: por LOS (linha de visão) e o por \textit{multipath} (multicaminho) formado predominantemente por uma única onda refletida no solo.
+
+Quando a distância entre as antenas é menor do que a altura da antena transmissora, duas ondas são adicionadas de forma positiva para gerar maior potência e, à medida que a distância aumenta, essas ondas se somam de forma construtiva e destrutiva, proporcionando regiões de exaustão e decaimento à medida que a distância aumenta além da distância crítica ou primeira zona de Fresnel, a potência cai proporcionalmente quatro vezes o inverso da potência da distância. Essa é uma perda no caminho muito mais rápida do que é experimentada no \textit{Friss free-space path loss model} (espaço livre de Friis).
+
+Quando se tem valores muito altos para a distância, pode-se notar que a potência recebida e a perda no caminho se tornam independentes da frequência (RAPPAPORT, 2009). O modelo de reflexão de dois raios é uma formulação matemática de um tipo de interferência \textit{multipath} quando a interferência é considerada como consistindo em dois caminhos: \textbf{(I)} do transmissor ao receptor diretamente, \textbf{(II)} do transmissor, refletido fora do chão, para o receptor.
+
+A potência recebida a uma distância d do transmissor para o modelo \textit{Two-rays ground reflection model} pode ser expressa como:
+
+[equação 4.52 pag. 102 pdf livro]
+
+sendo:
+
+\begin{itemize}
+	\item Pr a potência recebida;
+	\item Pt a potência transmitida;
+	\item Gr o ganho da antena receptora;
+	\item Gt o ganho da antena transmissora;
+	\item ht a altura da antena transmissora;
+	\item hr a altura da antena receptora;
+	\item d a distância do transmissor;
+\end{itemize}
+
+A perda do caminho para o modelo \textit{Two-rays ground reflection model} pode ser expressa em dB com a equação abaixo:
+
+[equação 4.53 pag. 102 pdf livro]
+
+\subsection[Log-distance]{\textit{Log-distance}}
+
+O modelo \textit{Log distance path loss} é um modelo genérico e uma extensão do modelo de espaço livre de Friis. Ele é usado para prever a perda de propagação para uma ampla gama de ambientes, enquanto que o modelo Friis é restrito ao caminho desobstruído entre o transmissor e o receptor.
+
+O principal critério ou característica deste modelo é considerar que a perda no caminho é logaritmicamente dependente da distância. Logo a perda no caminho calculada com uma distância d entre um transmissor e receptor (geralmente dado em quilômetros) . Na região mais distante do transmissor (onde $d \geq df$), se PL (d0) é a perda de percurso medida em dB a uma distância d0 do transmissor, então a perda do caminho (a perda na potência do sinal em dB quando se desloca de distância d0 a d) a uma distância arbitrária $ d > d0 $ é dada pela fórmula:
+
+%[http://sbrt.org.br/sbrt2012/publicacoes/98766_1.pdf] (pagina 1, formula 1)
+
+sendo:
+
+\begin{itemize}
+	\item d é a distância dada em quilômetros em todos os caso;
+	\item d0 é a distância inicial de referência;
+	\item PL(d) é a perda no caminho para a distância d;
+	\item PL(d0) é um valor de perda de caminho para uma distância de referência;
+	\item n é o expoente de propagação e indica a taxa na qual a perda de caminho aumenta com a distância (MATHURANATHAN, 2013).
+\end{itemize}
+
+Geralmente, para modelar ambientes reais, os efeitos \textit{shadowing} (de sombreamento) não podem ser negligenciados. Se os efeitos de sombreamento forem deixados de lado, a perda do caminho, quando representada em um gráfico que representa a potência recebida e a distância, é simplesmente uma linha reta. Para adicionar  um efeito de sombreamento e deixar o resultado final mais próximo da realizada, uma variável aleatória Gaussiana de média zero com desvio padrão $ \sigma $ é adicionada à equação. A perda real do caminho ainda pode variar devido a outros fatores, assim como os efeitos de reflexão, difração e dispersão. Assim, o expoente da perda de caminho (a literatura define alguns em ambientes diferentes) e o desvio padrão da variável aleatória escolhida, devem ser bem conhecidos para uma boa modelagem da perda.
+
+\subsection[One-slope]{\textit{One-slope}}
+
+O modelo \textit{One-slope} é classificado como sendo um modelo empírico e assume que a perda no caminho dada em dBm é linearmente na distância logarítmica da distância d entre o transmissor e receptor:
+
+% [https://hal.archives-ouvertes.fr/tel-00937481/document](pag 15 do pdf)
+
+onde:
+
+\begin{itemize}
+	\item d é a distância entre transmissor e receptor;
+	\item PL(d) é a perda no caminho para a distância d;
+	\item L0 é a perda no caminho calculado em uma distância de 1 metro;
+	\item n é o expoente de perda no caminho;
+\end{itemize}
+
+Claramente, este modelo baseia-se na perda do espaço livre e visa incluir todas as perdas devido a vários mecanismos de propagação pelo caminho usando um expoente n de perda. Por ser um modelo simples, se torna muito fácil de realizar sua implementação, mas se usado de forma única pode levar a grandes erros em ambientes internos, pois é possível que um grande números de objetos interfiram nos mecanismos de propagação, ou seja, não será possível obter um resultado com uma precisão próxima da realidade.
+
+
+\subsection[Wall and floor factor]{\textit{Wall and floor factor}}
+
+O modelo \textit{Wall and floor factor} leva em conta a absorção em paredes e pavimentos e geralmente é usado em ambientes internos e considera a perda no espaço livre. Ele se resume basicamente na perda no espaço livre de um ambiente interno somado com uma perda adicional relacionada a cada piso atravessado e o número de paredes interceptadas em uma linha direta entre o transmissor e receptor.
+
+Segundo Xie, este modelo de propagação tem um desempenho melhor que o modelo \textit{One-slope}, uma vez que proporciona mais graus de liberdade na consideração de obstáculos (Xie, 2013). A perda no caminho utilizando o modelo de propagação \textit{wall and floor factor} pode ser calculada pela seguinte equação:
+
+% [https://hal.archives-ouvertes.fr/tel-00937481/document](pag 15 do pdf)
+
+sendo:
+
+\begin{itemize}
+	\item d é a distância entre transmissor e receptor;
+	\item PL(d) é a perda no caminho para a distância d;
+	\item L1 é a perda no caminho calculado em uma distância de 1 metro;
+	n é o expoente de perda no caminho;
+	\item Lf e Lw são respectivamente perdas causadas pela penetração no piso e nas paredes;
+	\item nf e nw são respectivamente os números de pisos e de paredes.
+\end{itemize}
+
+
+\subsection[Log-normal fading]{\textit{Log-normal fading}}
+
+Este modelo de propagação estatístico provê uma estimativa aproximada do que representa a perda no caminho como uma função da distância e outros parâmetros como a frequência e a altura da antena. Desta forma é possível obter uma previsão da qualidade da intensidade do sinal quando aumentamos a distância entre o transmissor e receptor. Vale ressaltar que, para se obter uma representação mais realista da perda do sinal, é necessária uma grande coleta de dados empíricos.
+
+[Equação da distribuição Log-Normal ou sua PDF ou algo.]
+
+Uma possível explicação para o motivo pelo qual este modelo utiliza uma distribuição \textit{log-normal} é que, para cada caminho há muitos fatores que contribuem com a perda do sinal, incluindo a combinação de perda no espaço livre, difrações, reflexões, interferências de equipamentos, dentre outros motivos. Para cada uma dessas perdas, é utilizada uma variável aleatória que a representa (BUDGETS, 2013). A sua perda é dada em dB e é o somatório de todas essas perdas (também expressadas em dB). O teorema do limite central afirma que tal distribuição tenderá a uma distribuição normal.
+
+\subsection[Ray-tracing fading]{\textit{Ray-tracing fading}}
+
+Segundo Valenzuela (1993), para esse modelo de propagação é realizado o traçado de raios em todas as direções possíveis do receptor ao transmissor, utilizando os princípios da óptica geométrica. Este mesmo conceito é utilizado em sistemas de realidade virtual para que possam se tornar visíveis todos os objetos dentro de um ambiente. Nos cálculos da simulação do ambiente são levadas em consideração a reflexão, difração, espalhamento do sinal, dentre outros fenômenos físicos.
+ 
+Valenzuela também afirma que o modelo de propagação \textit{Ray Tracing} assume que todos os objetos no ambiente de propagação são objetos refletores em potencial. Para isso, considera também somente os caminhos que realmente existem entre o transmissor e receptor. A complexidade do ambiente escolhido tem um forte impacto em seu consumo de recurso computacional, uma vez que, quanto mais obstáculos forem adicionados, mais reflexões, difrações e cálculos serão feitos.
+
+
+\section[Trabalhos Relacionados]{Trabalhos Relacionados}
+
+Nesta seção serão apresentados alguns softwares que estão presentes no mercado e oferecem serviços similares aos objetivos propostos nesse trabalho. Serão citadas ferramentas que realizam um trabalho semelhante ao desenvolvido aqui, como o \textit{TamoGraph Site Survey, AirMagnet Survey, Ekahau Site Survey, D-Link Wi-Fi Planner e Xirrus Wi-FI Designer}. Existem várias outras ferramentas que trabalham no mesmo meio, porém, os softwares apresentados a seguir possuem conhecimentos aplicados nesta pesquisa e na área da Ciência da Computação.
+
+\subsection[TamoGraph Site Survey]{TamoGraph Site Survey}
+
+O \textit{TamoGraph}\footnote{\url{http://www.tamos.com/products/wifi-site-survey/}} é uma ferramenta de site survey usada para a coleta, visualização e análise de dados \textit{Wi-Fi} 802.11 com padrões a/bg/n/ac. É muito usada quando se tem a implantação e a manutenção de redes sem fio, uma vez que facilita tarefas que são demoradas e muitas das vezes, até complexas de se obter um bom resultado. O \textit{TamoGraph} realiza como tarefas, análises contínuas e relatórios de intensidade/qualidade do sinal, ruídos e interferências, alocações de canais, taxas de dados transmitidos, dentre outros.
+
+A ferramenta aposta que, as empresas que fizerem o seu uso, poderão reduzir drasticamente o seu tempo e custos envolvidos em implantações e manutenções de redes \textit{wireless}, melhorar o desempenho e cobertura da rede em todos os tipos de ambiente, desde ambientes \textit{indoor}, como prédios com escritórios, aeroportos e shoppings, até ambientes \textit{outdoor}, como pátios, praças, campos e estacionamentos.
+
+A empresa \textit{TamoSoft} considera ser praticamente impossível considerar todas as variáveis que possam afetar a saúde e o desempenho da rede. Para ela, alterar as condições, até mesmo de algo aparentemente menor, como um \textit{notebook} conectado à rede sem fio de um escritório, pode afetar gravemente o seu desempenho, que também pode ser influenciado pela ampla proliferação de redes sem fio com fatores de interferência. Por estes fatores, a ferramenta da \textit{TamoSoft} pode ser considerada como profissional e de essencial uso para empresas, inclusive para usuários comuns.
+
+O \textit{TamoGraph} pode ser executado em \textit{Microsoft Windows 7, Windows 8, Windows 8.1, Windows 10, Windows Server 2008 R2, Windows Server 2012, Windows Server 2012 R2} e versão para \textit{MacBooks}. Possui versões em 32 e 64 bits e requer um adaptador de rede \textit{wireless} compatível. A sua licença mais básica custa 899 dólares, aproximadamente R\$2850,00 e a licença profissional custa US\$1199.00, aproximadamente R\$ 3802,00.
+
+
+\subsection[Netscout AirMagnet Survey]{Netscout AirMagnet Survey}
+
+O \textit{AirMagnet Survey}\footnote{\url{http://enterprise-pt.netscout.com/products/airmagnet-survey }} é um software de pesquisa local para redes sem fio que propõe uma solução para \textit{softwares} que realizam a análise de redes sem fio locais que necessitam projetar e planejar LANs sem fio com o padrão 802.11  a/b/g/n/ac com desempenho, segurança e conformidade. O software calcula a quantidade, a alocação e configurações ideais para a realização de uma rede local \textit{wireless} com um bom desempenho.
+
+A \textit{Netscout}, empresa responsável pelo \textit{AirMagnet}, diz que o seu produto vai além do que uma simples cobertura dos sinais de radiofrequência. Ele traça o desempenho de rede real do usuário final nos termos da velocidade de conexão, taxa de transferência e estatísticas do pacote e dá, como resultado, um mapa completo do ambiente coberto pelo Wi-Fi, permitindo ao usuário implantar sua rede corretamente, já no primeiro momento, evitando custos de retrabalho e reclamações posteriores, além de ter fidelidade nos serviços prestados.
+
+O \textit{AirMagnet} permite que os usuários possam integrar analisadores de espectro profissionais para obter os dados do sinal \textit{wireless} em uma única varredura, modelar cenários antes da implantação para estimar orçamentos, definir estratégias de migração para novas tecnologias, obter relatórios de pesquisa personalizados, executar inspeções internas usando dispositivos providos de tecnologia GPS, realizar inspeções de \textit{VoiceOver} no local de implantação da rede \textit{wireless} (para que esteja pronta para suportar serviços de voz), certificar a rede para os requisitos de aplicativos e rede dos usuários finais, com um planejamento detalhado da capacidade de usuários finais.
+
+O \textit{AirMagnet Survey} possui versões \textit{Express} que oferecem uma versão mais simples de pesquisa local para padrão 802.11ac, permitindo que o usuário execute um exame básico do local de implantação da rede \textit{wireless}, possibilitando mapear o sinal, ruído e até mesmo o desempenho de usuários. O \textit{AirMagnet} possui também a sua versão Pro, que amplia ainda mais as capacidades oferecidas pela versão \textit{Express}. Nela é adicionada a funcionalidade "\textit{Planner}", pela qual é possível realizar desde a implantação de um \textit{access point} até o orçamento dos gastos, além de suporte para a implantação de vários andares, inspeções técnicas de ambientes externos (outdoor), verificação e análise de prontidão para serviços de voz, análise do espectro de radiofrequência e mais outros recursos.
+
+É possível executar o \textit{software} no ambiente \textit{Windows} em todas as versões 64 bits iguais ou superiores ao \textit{Windows 7} e em ambientes \textit{OSX} em que a versão é igual ou superior ao \textit{Mac OS X v 10.5 (Leopard)}. O preço da licença para o uso do software não é informado no site da empresa. O orçamento deve ser feito pelo contato com representantes.
+
+
+\subsection[Ekahau Site Survey \& Planner]{Ekahau Site Survey \& Planner}
+
+A \textit{Ekahau Wireless Design} é mais uma empresa que fornece um software para soluções sobre redes sem fio, batizado de \textit{Ekahau Site Survey (ESS)}\footnote{\url{https://www.ekahau.com/products/ekahau-site-survey/overview/ }}. O \textit{Ekahau Site Survey} propõe um design e análise experiente sobre a tecnologia Wi-Fi. A \textit{Ekahau} define seu software como sendo um conjunto completo de ferramentas para projetar, analisar, otimizar e solucionar problemas de redes \textit{wireless}.
+
+O ESS não deixa de ser um instrumento para verificação e solução de uso fácil em redes Wi-Fi. Foi desenvolvido para engenheiros e arquitetos de redes sem fio (desde sistemas integrados até administradores da área de TI). A empresa ainda garante o alto desempenho e capacidade para qualquer rede Wi-Fi com padrões 802.11ac e n. Se caso uma rede ainda não esteja em seu desempenho ótimo ou ainda não foi implantada, o ESS irá sugerir automaticamente o devido posicionamento e as configurações ideais para o \textit{access point}.
+
+Com a ferramenta, também é possível criar automaticamente um plano da rede Wi-Fi de vários andares com base em requisitos de desempenho e capacidades especificados. Quase que de imediato, o ESS irá identificar o número ideal de \textit{access points}, com os melhores locais para seus posicionamentos e seus respectivos canais, simulando o comportamento de como a rede irá ser executada antes de ir para o local. Com sua funcionalidade "\textit{3D Planner}", é considerado o espalhamento do sinal entre os andares do prédio para ajudar a minimizar a interferência dos canais.
+
+Com o ESS é fácil realizar a análise em profundidade com mapas de calor. Nos mapas de calor é possível visualizar, por exemplo, a força do sinal, a taxa de dados, perda de pacotes, a sobreposição de canais, espalhamento do espectro, dentre outras características. É possível também realizar a análise de capacidade mais abrangentes, por exemplo, todas as descobertas podem ser compiladas em um simples relatório utilizando um sistema de relatório desenvolvido pela \textit{Ekahau}. 
+
+O software foi projetado para ser executado em ambientes \textit{Windows} e \textit{MaxOS}, e é uma ferramenta caracterizada por ser, de fato, essencial para engenheiros de redes sem fio em empresas de todos os tamanhos. A sua licença \textit{Standard} custa US\$2295.00, aproximadamente R\$7278,00 e vai até sua versão \textit{Premium Pack} custando US\$5649.00, aproximadamente R\$17914,00; a versão \textit{Pro Pack} com o valor de US\$5995.00, aproximadamente R\$19011,00s.
+
+
+\subsection[D-Link Wi-Fi Planner PRO]{D-Link Wi-Fi Planner PRO}
+
+O \textit{D-Link Wi-Fi Planner PRO}, como indicado pelo nome, foi desenvolvido pela famosa empresa D-link. Com essa ferramenta, é possível ter uma visão do ambiente como um todo, antes da implantação da rede Wi-Fi. Isso faz com que o planejamento, a comunicação e à boa qualidade do serviço prestado entre WLAN e clientes sejam melhores.
+
+Para a execução do software é necessário criar uma pasta para o projeto. Logo após, o programa pede para ser carregado uma imagem que represente a planta do ambiente. A planta não tem a necessidade de ser exatamente igual, apenas é necessária uma imagem que possa ser o rascunho inicial para planta. Em seguida deve ser informada a escala, para estimar a medida da planta.
+
+Para que a execução do programa seja possível, as zonas de coberturas e as zonas de exclusão tem de ser definidas. O próprio usuário pode marcar os obstáculos (portas e paredes) e indicar as zonas especiais como sendo espaços fechados para salas e escritórios. Isso faz com que o WFP tenha uma simulação mais precisa e próxima da realidade. Depois de feitas as configurações, um módulo chamado \textit{AP Placement Advisor} irá fornecer uma sugestão sobre o número de \textit{access points} e o posicionamento necessários para eles terem uma maior cobertura do local.
+
+A empresa não fornece mais informações sobre quais os requisitos mínimos necessários para a utilização de sua ferramenta. 
+
+
+\chapter[MATERIAIS E MÉTODOS]{MATERIAIS E MÉTODOS}
+
+Serão apresentados neste capítulo os materiais e métodos utilizados para o desenvolvimento desse projeto, tais como as bibliotecas do \textit{Python}, o processo com o arquivo de entrada do \textit{AutoCad}\footnote{\url{https://www.autodesk.com.br/products/autocad/overview}} para a representação da matriz de propagação, a paralelização do código, utilizando a GPU para um melhor desempenho da simulação, a metaheurística utilizada para a otimização do posicionamento de \textit{access points} e o Projeto Fatorial 2K para a calibração dos parâmetros da metaheurística.
+
+Para definir qual modelo de propagação deveria ser utilizado, foram usados dois softwares: o \textit{R-Project}\footnote{\url{https://www.r-project.org/}} e o \textit{Maple}\footnote{\url{https://www.maplesoft.com/products/Maple/}} para a realização de ajuste de curvas dos dados coletados empiricamente nos corredores do instituto. 
+
+\section[A Metaheurística]{A Metaheurística}
+
+Dada a complexidade do problema e o tamanho do ambiente simulado, para que fosse viável sugerir boas posições para a alocação do(s) \textit{access point(s)}, foi implementado o \textit{Simulated Annealing} como metaheurística de otimização que teve como função objetivo a busca por uma melhor cobertura do sinal wireless. 
+
+O \textit{Simulated Annealing} é uma metaheurística para aproximar a otimização global em uma amplo espaço de busca. Este método foi proposto por Scoot Kirkpatrick em 1983 e foi utilizado para simular o processo de recozimento de metais cujo resfriamento  rápido levava a produtos metaestáveis, ou seja, de maior energia interna e o esfriamento lento a produtos mais estáveis, estruturalmente fortes e de menor energia. Durante o recozimento, o material passa por vários estados possíveis com um tempo suficientemente longo para que qualquer elemento passe por todos os seus estados acessíveis.
+
+O \textit{Simulated Annealing} realiza o processo de otimização buscando encontrar a melhor solução viável, considerando o objetivo do problema em questão, e o conjunto de restrições para aceitação da solução proposta.
+
+Problemas no campo das heurísticas podem ser modelados como problemas de maximização e problemas de minimização de uma função objetivo, que neste caso é obter a maior cobertura e qualidade do sinal \textit{wireless}.
+
+Com um problema de otimização em mãos, encontrar soluções ótimas ou aproximadas do seu ótimo para problemas NP-difíceis é um desafio nem sempre fácil de ser alcançado. O uso de heurística para auxiliar na busca por um lugar para o \textit{access point} foi de fácil implementação e, como a maioria das heurísticas, produz boas soluções dentro de um tempo viável de acordo com os parâmetros estabelecidos.
+
+Abaixo apresentamos o pseudocódigo da metaheurística com funções genéricas que foram implementadas neste trabalho:
+
+[inserir pseudo código]
+
+Estes são os identificadores utilizados:
+
+\begin{itemize}
+	\item S0: Configuração Inicial (Entrada);
+	\item Si: Configuração da Iteração i;
+	\item S: Configuração Final;
+	\item T0: Temperatura Inicial;
+	\item Ti: Temperatura na Iteração i;
+	\item M: Número máximo de iterações (Entrada);
+	\item P: Número máximo de Perturbações por iteração (Entrada);
+	\item L: Número máximo de sucessos por iteração (Entrada);
+	\item $ \alpha $: Fator de redução da temperatura (Entrada);
+	\item f(Si): Valor da função objetivo correspondente á configuração Si;
+	\item nSucesso: Contador de sucesso em uma iteração;
+	\item i e j: Variáveis de controle de Loops.
+\end{itemize}
+
+Além dos indicadores acima, consideremos as seguintes funções:
+
+\begin{itemize}
+	\item Perturba(S): Função que realiza uma perturbação na Solução S;
+	\item Randomiza(): Função que gera um número aleatório no intervalo [0,1];
+	\item TempInicial(): Função que calcula a temperatura inicial;
+	
+\end{itemize}
+
+Mais adiante, será descrito como a metaheurística foi adaptada para o problema de otimização para alocação de \textit{access point} nos ambientes do Instituto. Além disso, também serão apresentados técnicas e resultados de sua utilização. 
+
+\section[Linguagem Python ]{Linguagem Python }
+
+A linguagem que foi utilizada para implementar todo o trabalho foi o Python. A linguagem Python é uma poderosa linguagem de programação e de fácil aprendizado. Surgiu no final dos anos 80 e foi criada por Guido Van Rossum. Na época, Guido trabalhava no Centro de Matemática e Ciência da Computação de Amsterdã, Holanda,  no desenvolvimento de outras linguagens, quando percebeu que o desenvolvimento de utilitários para o sistema operacional Amoeba (projeto em que também trabalhava na época) utilizando a linguagem C estava tomando muito tempo e fazê-los em \textit{Shell Scrip}t não era viável. Precisava de algo que completasse o que cada linguagem deixava a desejar. Esses foram o principais motivos que fizeram com que o desenvolvimento do Python realmente tivesse início no ano de 1989 e nos primeiros meses de 1990 fosse a linguagem mais utilizada no departamento de Computação de Amsterdã e hoje por muitos desenvolvedores de software.
+
+O python é uma linguagem interpretada. Isso significa que seu código é executado por um interpretador, e não compilado para linguagem de máquina para depois ser executada para um sistema e arquitetura específica, como acontece em algumas linguagens, como por exemplo a linguagem C. 
+
+Não obstante, o Python não trabalha com tipagem de objetos, o que permite, no geral, um ótimo desempenho. Alguns processamentos que realizam a demanda de mais recursos, como o processamento de imagens, são feitos por bibliotecas que geralmente são escritas em C ou C++, inclusive com possíveis trechos em \textit{assemble}, quando o alto desempenho é necessário. Sendo assim, tais processamentos não fazem uso de tantos recursos num \textit{script} escrito em Python. Em outra linguagem compilada seriam exigidos mais recursos.
+
+Mesmo que o Python faça uso bem definido do tipo de dados que está manipulando, ele trabalha com tipagem dinâmica. Isso implica que uma variável possuirá características de um tipo específico de sua declaração, até ser declarada novamente. Pode-se ver então que, com o uso da tipagem dinâmica, são geradas flexibilidade e simplicidade no código de funções e classes do Python, reduzindo significativamente a quantidade de parâmetros em uma função.
+
+A separação de blocos no Python não é feita com colchetes, chaves ou \textit{begins} e \textit{ends}. Toda a separação dos blocos é feita por tabulações. Isso força sempre o programador a manter o código mais organizado, além de reduzir consideravelmente o tamanho do código. Caso o programador que escreveu o código não mantenha a indentação, um erro de indentação é mostrado e ele não é executado.
+
+Além dos tipos primitivos como \textit{int}, \textit{float} e \textit{boolean}, também estão presentes no Python tipos especiais como listas, sendo listas bem definidas entre colchetes e elementos mutáveis separados por vírgulas; tuplas sendo agora elementos imutáveis definidos entre parênteses, separados por vírgula e dicionários definidos entre chaves com tipos imutáveis variados. O conceito de Orientação a Objetos também está presente no Python, no qual todas as variáveis são definidas como objeto, até mesmo os tipos primitivos. Todos esses tipos especiais enriquecem ainda mais o poder que a linguagem tem. O que em outra linguagem levaria tempo e linhas de código para ser feito, no Python é feito com simplicidade.
+
+
+\section[Bibliotecas utilizadas]{Bibliotecas utilizadas}
+
+Uma das vantagens de se usar o Python, é seu vasto número de bibliotecas embutidas e bibliotecas externas, as quais dão diversas facilidades ao resolver problemas simples do dia a dia até problemas mais complexos. Para o desenvolvimento do projeto foram utilizadas várias bibliotecas que estão embutidas no Python, que vieram complementar outras bibliotecas externas essenciais para o resultado esperado fosse obtido. 
+
+De início, foi utilizada a biblioteca \textit{ezdxf}. Tal biblioteca é um pacote do Python criado para manipular arquivos DXFs exportados do \textit{} independentemente de sua versão. Com ela, é possível criar, abrir, salvar e modificar arquivos com a extensão \textit{.dxf} sem perder qualquer informação, podendo depois, ser utilizada em outros programas que utilizam a mesma extensão de arquivo. Tal biblioteca está presente desde o Python 2.7.
+
+Outra biblioteca utilizada no projeto é a PyGame. Seu desenvolvimento teve início no ano 2000 por  Pete Shinners, sendo um código livre e é principalmente usada em aplicações que utilizam recursos multimídia e/ou programação gráfica, como em desenvolvimento de jogos multiplataforma (independentemente do sistema operacional).    
+
+footnote para: pygame, ezdxf
+
+\section[Programação Paralela]{Programação Paralela}
+
+\subsection[CUDA]{CUDA}
+
+\subsection[CUDA Tool Kit]{CUDA Tool Kit}
+\subsection[Numba]{Numba}
+
+\subsection[JIT (just-in-time)]{JIT (just-in-time)}
+
+\subsection[Anaconda Navigator]{Anaconda Navigator}
+
+\chapter[PROJETO E DESENVOLVIMENTO]{PROJETO E DESENVOLVIMENTO}
+
+\section[Representação do ambiente]{Representação do ambiente}
+\subsection[Arquivo DXF]{Arquivo DXF}
+\subsection[Escala e precisão]{Escala e precisão}
+\section[Propagação dos sinais]{Propagação dos sinais}
+\subsection[Definição do modelo de propagação para sinais Wi-Fi]{Definição do modelo de propagação para sinais Wi-Fi}
+\subsection[Ajuste do modelo de propagação]{Ajuste do modelo de propagação}
+\subsection[Simulação da propagação de sinais no ambiente]{Simulação da propagação de sinais no ambiente}
+\subsection[Atenuação do sinal ao atravessar paredes]{Atenuação do sinal ao atravessar paredes}
+\section[Visualização dos dados]{Visualização dos dados}
+\section[Heurística de otimização]{Heurística de otimização}
+\subsection[Implementação do Simulated Annealing]{Implementação do Simulated Annealing}
+\subsection[Calibração dos parâmetros do Simulated Annealing]{Calibração dos parâmetros do Simulated Annealing}
+\section[Avaliação da solução]{Avaliação da solução}
+\subsection[Avaliação da solução com um AP]{Avaliação da solução com um AP}
+\subsection[Aperfeiçoamento da função objetivo ]{Aperfeiçoamento da função objetivo }
+\subsection[Avaliação da solução para dois ou mais APs]{Avaliação da solução para dois ou mais APs}
+\section[Paralelização em GPU]{Paralelização em GPU}
+\section[Calibração dos modelos ]{Calibração dos modelos }
+
+\chapter[RESULTADOS E ANÁLISE]{RESULTADOS E ANÁLISE}
+
+\section[Simulação da propagação de sinais wireless]{Simulação da propagação de sinais wireless}
+\section[Wi-Fi Placement para 1 AP]{Wi-Fi Placement para 1 AP}
+\section[Wi-Fi Placement para 2 ou mais APs]{Wi-Fi Placement para 2 ou mais APs}
+\section[Análise da utilização de recursos]{Análise da utilização de recursos}
+
+\chapter[CONSIDERAÇÕES FINAIS]{CONSIDERAÇÕES FINAIS}
 
 
 % ----------------------------------------------------------
@@ -485,14 +879,7 @@ contribuirão para a evolução do \abnTeX.
 % e adiciona espaço de parte no Sumário
 % ----------------------------------------------------------
 \phantompart
-
-% ---
-% Conclusão
-% ---
-\chapter{Conclusão}
-% ---
-
-% ----------------------------------------------------------
+ ----------------------------------------------------------
 % ELEMENTOS PÓS-TEXTUAIS
 % ----------------------------------------------------------
 \postextual
@@ -518,24 +905,24 @@ contribuirão para a evolução do \abnTeX.
 % ---
 % Inicia os apêndices
 % ---
-\begin{apendicesenv}
+% \begin{apendicesenv}
 
 % Imprime uma página indicando o início dos apêndices
-\partapendices
+% \partapendices
 
 % ----------------------------------------------------------
-\chapter{Quisque libero justo}
+% \chapter{Quisque libero justo}
 % ----------------------------------------------------------
 
-\lipsum[50]
+% \lipsum[50]
 
 % ----------------------------------------------------------
-\chapter{Nullam elementum urna vel imperdiet sodales elit ipsum pharetra ligula
-ac pretium ante justo a nulla curabitur tristique arcu eu metus}
+% \chapter{Nullam elementum urna vel imperdiet sodales elit ipsum pharetra ligula
+% ac pretium ante justo a nulla curabitur tristique arcu eu metus}
 % ----------------------------------------------------------
-\lipsum[55-57]
+% \lipsum[55-57]
 
-\end{apendicesenv}
+% \end{apendicesenv}
 % ---
 
 
@@ -546,30 +933,30 @@ ac pretium ante justo a nulla curabitur tristique arcu eu metus}
 % ---
 % Inicia os anexos
 % ---
-\begin{anexosenv}
+% \begin{anexosenv}
 
 % Imprime uma página indicando o início dos anexos
-\partanexos
+% \partanexos
 
 % ---
-\chapter{Morbi ultrices rutrum lorem.}
+% \chapter{Morbi ultrices rutrum lorem.}
 % ---
-\lipsum[30]
+% \lipsum[30]
 
 % ---
-\chapter{Cras non urna sed feugiat cum sociis natoque penatibus et magnis dis
-parturient montes nascetur ridiculus mus}
+% \chapter{Cras non urna sed feugiat cum sociis natoque penatibus et magnis dis
+% parturient montes nascetur ridiculus mus}
 % ---
 
-\lipsum[31]
+% \lipsum[31]
 
 % ---
-\chapter{Fusce facilisis lacinia dui}
+% \chapter{Fusce facilisis lacinia dui}
 % ---
 
-\lipsum[32]
+% \lipsum[32]
 
-\end{anexosenv}
+% \end{anexosenv}
 
 %---------------------------------------------------------------------
 % INDICE REMISSIVO
