@@ -103,7 +103,7 @@
 \autor{MEC-SETEC\\ INSTITUTO FEDERAL MINAS GERAIS - Campus Formiga\\ Curso de Ciência da Computação}
 \local{Formiga - MG}
 \data{2017}
-\orientador{Everthon Valadão}
+\orientador{Prof.º Everthon Valadão dos Santos}
 % \coorientador{Equipe \abnTeX}
 \instituicao{%
   Instituto Federal de Educação, Ciência e Tecnologia de Minas Gerais 
@@ -298,9 +298,9 @@
    Trabalho aprovado. \imprimirlocal, 14 de novembro de 2017:
 
    \assinatura{\textbf{\imprimirorientador} \\ Orientador} 
-   \assinatura{\textbf{Diego} \\ Convidado 1}
-   \assinatura{\textbf{Rafael} \\ Convidado 2}
-   \assinatura{\textbf{Walace} \\ Convidado 3}
+   \assinatura{\textbf{Prof.º Diego Mello da Silva} \\ Convidado 1}
+   \assinatura{\textbf{Prof.º Rafael Tayette de Nóbrega} \\ Convidado 2}
+   \assinatura{\textbf{Prof.º Walace de Almeida Rodrigues} \\ Convidado 3}
    %\assinatura{\textbf{Professor} \\ Convidado 4}
       
    \begin{center}
@@ -317,13 +317,13 @@
 % ---
 % Dedicatória
 % ---
-\begin{dedicatoria}
-   \vspace*{\fill}
-   \centering
-   \noindent
-   \textit{ Este trabalho é dedicado às crianças adultas que,\\
-   quando pequenas, sonharam em se tornar cientistas.} \vspace*{\fill}
-\end{dedicatoria}
+%\begin{dedicatoria}
+%   \vspace*{\fill}
+%   \centering
+%   \noindent
+%   \textit{ Este trabalho é dedicado às crianças adultas que,\\
+%   quando pequenas, sonharam em se tornar cientistas.} \vspace*{\fill}
+%\end{dedicatoria}
 % ---
 
 % ---
@@ -349,11 +349,8 @@ Agradeço ao professor Everthon Valadão, a paciência e compreensão que teve c
 \begin{epigrafe}
     \vspace*{\fill}
 	\begin{flushright}
-		\textit{``Não vos amoldeis às estruturas deste mundo, \\
-		mas transformai-vos pela renovação da mente, \\
-		a fim de distinguir qual é a vontade de Deus: \\
-		o que é bom, o que Lhe é agradável, o que é perfeito.\\
-		(Bíblia Sagrada, Romanos 12, 2)}
+		\textit{``Se vi mais longe foi por estar de pé sobre ombros de gigantes.\\
+		Isaac Newton}
 	\end{flushright}
 \end{epigrafe}
 % ---
@@ -1121,15 +1118,33 @@ Neste ponto, vale notar que o escopo deste trabalho não considera interferênci
 
 \subsection[Atenuação do sinal ao atravessar paredes]{Atenuação do sinal ao atravessar paredes}
 
-Para se ter um resultado que fosse condizente com a realidade e fosse possível ver quanto o sinal ficava ruim quando se propagava através de cômodos, foi adicionada uma técnica para absorção do sinal em paredes. Todas as linhas (que representam as paredes) coletadas antes de iniciar a simulação são essenciais no momento de se guardar o valor da intensidade do sinal em um respectivo ponto (ponto que representa uma posição válida na planta baixa).
+Para obtermos um resultado que fosse condizente com a realidade, ou seja, que representasse quanto o sinal Wi-Fi degradava à medida que se propagava através de cômodos em sequência, foi adicionada uma técnica para realizar estimativas da absorção do sinal ao atravessar paredes. Na planta-baixa do edifício, todas as linhas (que representam paredes e divisórias) são armazenadas em uma estrutura de dados no início do programa, antes de iniciar a simulação. Tais linhas se mostraram úteis para simular de maneira mais próxima da realidade o valor da intensidade do sinal em um determinado ponto, atravessando o ambiente simulado desde o AP até tal ponto.
 
-O resultado do modelo de propagação para cada ponto da matriz foi subtraído por um valor que é obtido pelo número de paredes que o sinal ultrapassou multiplicado por um valor em dBm que representa a energia absorvida por parede. A literatura sugere que esse valor pode variar entre 8 e 15 dBm para paredes de concreto. O valor definido para esse trabalho foi 8 dBm, mas pode ser facilmente modificado para que possa se ter resultados de simulações onde o decaimento por absorção em paredes seja maior ou menor.
+Seguimos a modelagem utilizada pela literatura para modelos de propagação em pequena escala, onde o valor esperado para o sinal em determinado ponto é subtraído do valor em dBm que representa a energia absorvida por parede multiplicado pela quantidade de paredes atravessadas pelo sinal. A literatura sugere que o valor de absorção varia entre 8 e 15 dBm para paredes de concreto (RAPPAPORT, 2009), de maneira que o valor definido para para uso do software produzido na simulação do campus Formiga foi de 8 dBm (e de acordo com análise experimental). Vale observar que, por consistir em uma constante que pode ser configurada no software, a ordem de magnitude da absorção de energia pelas paredes do edifício pode ser ajustada, para que a simulação da propagação possa se aproximar da realidade daquele ambiente. 
 
-Para se saber quantas paredes o sinal sofre atenuação, foram utilizadas técnicas de geometria analítica. No momento do cálculo da absorção das paredes para um ponto [x, y] qualquer da matriz, a lista de linhas representando as paredes é percorrida. A técnica utilizada foi a  intersecção de retas num plano 2D. Tal técnica foi fácil de se utilizar, pois é simples de se ver que há um segmento de reta entre o \textit{access point} e o ponto que está sendo calculado a intensidade do sinal. O outro segmento de reta está na lista de linhas obtidas do arquivo \textit{.dxf}. Como já foi dito anteriormente, para cada linha é guardada uma lista com as coordenadas do ponto inicial e ponto final de cada reta. A partir disso se torna também muito fácil obter o outro segmento de reta.
+Para ilustrar o resultado de aplicar tal fator de correção, observe na \autoref{absorcao_parede} a mesma simulação da figura anterior, porém agora contabilizando a absorção do sinal Wi-Fi a cada parede atravessada no trajeto do AP ao ponto destino. 
 
-Com a fácil obtenção dos dois segmentos de retas, pôde se aplicar tranquilamente o conceito de interseções de retas e definir se ambas possuem um ponto em comum. Esta definição é dada por retas concorrentes. Duas retas são concorrentes se possuírem um ponto em comum, ou seja, a intersecção das duas retas é o ponto em comum.
+\begin{figure}[ht]
+	\caption{\label{absorcao_parede}absorção do sinal por cada parede atravessada.}
+	\begin{center}
+		\includegraphics[scale=0.7]{images/absorcao-parede.jpg}
+	\end{center}
+	\legend{Fonte: Elaborado pelo autor}
+\end{figure}
 
-Com mais um tratamento do espectro do sinal a ser feito, surgiu mais um problema. Com a simulação da colisão do sinal nas paredes, o tempo de execução do algoritmo extrapolou o esperado. 
+Para ter uma noção de quantas paredes o sinal sofreria atenuação, foram utilizadas equações de geometria euclidiana. No momento em que se faz necessário o cálculo da absorção das paredes para um ponto [x, y] qualquer da matriz, a lista de linhas representando as paredes da planta-baixa deve ser percorrida. A técnica utilizada foi a intersecção de retas num plano cartesiano (Line-Line Intersection), buscando definir se os dois segmentos de reta ambas possuem um ponto em comum (ponto de interseção). A definição de intersecção de retas é dada por retas concorrentes, ou seja, se possuírem um ponto em comum, ou seja, a intersecção das duas retas é o ponto em comum. Assim, viabiliza-se verificar o cruzamento do sinal com paredes a um baixo custo computacional, se comparado a testar por força bruta cada ponto interno ao retângulo formado pela parede. 
+
+Os segmentos de reta candidatos consistem nas linhas previamente obtidas do arquivo DXF, contendo a planta-baixa. Cada linha no DXF possui duas coordenadas bidimensionais, para o ponto inicial e o ponto final do segmento de reta. O outro segmento de reta é formado entre o AP e o ponto para o qual está sendo calculada a intensidade do sinal. A \autoref{intersecao_retas}, ilustra o segmento de reta formado entre um dado ponto (x1,y1) na matriz e o local do AP  (x2,y2), cruzando com um outro segmento de reta formado pelas extremidades da parede (x3,y3) e (x4,y4). Caso haja ponto de interseção (x,y) significa que o sinal terá atravessado tal parede e soma-se um à quantidade de paredes atravessadas. Caso contrário, se não houver ponto de interseção entre os dois segmentos de reta, significa que o sinal cruzou livremente o espaço entre o AP e o destino sem cruzar com tal parede. 
+
+\begin{figure}[ht]
+	\caption{\label{intersecao_retas}interseção de retas.}
+	\begin{center}
+		\includegraphics[scale=0.7]{images/inter.jpg}
+	\end{center}
+	\legend{Fonte: Elaborado pelo autor}
+\end{figure}
+
+Entretanto, apesar de tal verificação ser barata para um ponto e as paredes candidatas, deve-se lembrar que é um cálculo a mais a ser efetuado para cada um dos $NxM$ pontos da matriz para cada uma das K paredes, ou seja, $NxMxK$ cálculos a serem efetuados e, portanto, com custo de tempo da ordem de $O(n^{3})$. E como o algoritmo de otimização irá avaliar centenas de posicionamentos para o AP, à medida que explora o espaço de soluções, o custo computacional sobre para $NxMxKxP$, ou seja, como todas estas quantidades possuem uma mesma ordem de magnitude (centenas), o algoritmo passa a ter custo temporal de $O(n^{4})$. Assim, com a adição dessa nova modelagem na propagação do sinal Wi-Fi, o tempo de execução do algoritmo extrapolou os costumeiros segundos e beirou as dezenas de minutos. 
 
 
 \section[Visualização dos dados]{Visualização dos dados}
@@ -1558,7 +1573,58 @@ Para trabalhos futuros, é necessária a realização de tratamento da interfer�
 % ----------------------------------------------------------
 % Referências bibliográficas
 % ----------------------------------------------------------
-\bibliography{monografia-references}
+
+%%	TEMPORÁRIO	%%
+%% \bibliography{monografia-references}
+
+\chapter[Referências]{Referências}
+
+ALMERS, P., BONEK, E., BURR, A., CZINK, N., DEBBAH, M., DEGLI-ESPOSTI, V., OZCELIK, H. Survey of channel and radio propagation models for wireless MIMO systems. In: Eurasip Journal on Wireless Communications and Networking, 2007.
+
+BANERJI, S., SINGHA, R. C. IEEE 802.11: Wireless Lan Technology. In: International Journal of Mobile Network Communications \& Telematics ( IJMNCT) Vol. 3, n.4, 2013.
+
+BATTITI, R., BRUNATO, M, DELAI, A. Optimal wireless access point placement for location-dependent services. Relatório Técnico, Universidade de Trento DIT-03-052, 1–12, 2003. 
+
+BOF, E. Segurança Em Redes Wireless. Monografia Pós-graduação MBA, Faculdade do Centro Leste, 1-58, 2010.
+
+BUDGETS, L. (2013). Log-Normal Fading, Link Budgets.
+
+DALSSOTO, F. M., SOUZA, R. H. de, BECKER, L. B. Data Analysis Module for WirelessHART Network Planning. In: Symposium on Computing and Automation for Offshore Shipbuilding, 23–28, 2013.
+
+HOTHORN, Torsten; EVERITT, Brian S. A handbook of statistical analyses using R. CRC press, 2014.
+
+KASE, K., TESHIMA, Y., USAMI, S., KATO, M., YAMAZAKI, S., ITO, M., MAKINOUCHI, A. Volume CAD - CW-complexes based approach. In: CAD Computer Aided Design, 37(14), 1509–1520, 2005.
+
+LENTZ, C. 802.11b Wireless Network Visualization and Radiowave Propagation Modeling. Relatório Técnico, Dartmouth Computer Science, 2003.
+
+LUO, M. (2013). Indoor radio propagation modeling for system performance prediction. Retrieved from https://hal.archives-ouvertes.fr/tel-00937481/document
+
+MARSCHALLINGER, R. A voxel visualization and analysis system based on AutoCAD. In: Computers and Geosciences, 22(4), 379–386, 1996.
+
+MATHURANATHAN. (2013). Log Distance Path Loss or Log Normal Shadowing Model. Retrieved April 27, 2017, from https://www.gaussianwaves.com/2013/09/log-distance-path-loss-or-log-normal-shadowing-model/
+
+NAJNUDEL, M. Estudo de propagação em ambientes fechados para o planejamento de WLANs. Dissertação de Mestrado em Engenharia Elétrica, Pontifícia Universidade Católica do Rio de Janeiro, 2004.
+
+RAPPAPORT, T. S. Comunicações Sem Fio - Princípios e Práticas. Pearson Education: São Paulo, 412 p.; 102p., 2009.
+
+RENSBURG, J. J. van, IRWIN, B. Wireless Network Visualization Using Radio Propagation Modelling. Proceedings of Information Security South Africa Conference, 2005.
+
+RIVERA, A. D. Redes de equipamentos sem fio de uso pessoal: comparação de tecnologias emergentes e análise de tendências. Teses de Doutorado, USP: São Paulo, 2010.
+
+SANDEEP, A. R., et al.. Wireless network visualization and indoor empirical propagation model for a campus wi-fi network. In: World Academy of Science, Engineering and Technology, 42, 730–734, 2008.
+
+SULAIMAN, H. A., OTHMAN, M. A., Ismail, M. M., \& Misran, M. H. Wireless Network Visualization in 3D Virtual Environment Framework, 170–174, 2012.
+
+Torlak, M. (2016). Path Loss. Retrieved from https://www.utdallas.edu/~torlak/courses/ee4367/lectures/lectureradio.pdf
+
+THAKUR, A., BANERJEE, A. G., GUPTA, S. K. A survey of CAD model simplification techniques for physics-based simulation applications. In: CAD Computer Aided Design, 41(2), 65–80, 2009.
+
+VALENZUELA, R. A ray tracing approach to predicting indoor wireless transmission. In: IEEE 43º Vehicular Technology Conference, 214–218, 1993.
+
+XIE, Meiling. Indoor radio propagation modeling for system performance prediction.. Tese de Doutorado. INSA de Lyon, 2013. 
+
+YUN, Z., ISKANDER, M. F. Ray tracing for radio propagation modeling: Principles and applications. In: IEEE Access, 3, 1089–1100, 2015.
+
 
 % ----------------------------------------------------------
 % Glossário
