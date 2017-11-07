@@ -1094,7 +1094,7 @@ Já na \autoref{modelos_propagacao} (b), é apresentada a extrapolação que os 
 
 \subsection[Simulação da propagação de sinais no ambiente]{Simulação da propagação de sinais no ambiente}
 
-Como dito anteriormente, para a realização dos cálculos, o ambiente foi representado como uma matriz bidimensional, representando em escala o ambiente a ser simulado. Cada posição [x,y] da matriz é um ponto candidato a hospedar o \textit{access point} (AP). Uma vez determinada a proposta de nova localização do AP, para cada posição da matriz é necessário realizar o cálculo do modelo de propagação. Na configuração do software produzido, pode-se informar a posição atual do AP no ambiente real, ou deixar que o software inicie a exploração a partir de uma posição aleatória. Para preencher os valores da matriz representando a propagação do sinal de microondas, deve-se realizar o cálculo determinado pelo modelo de propagação, conforme tratado na seção anterior. Tipicamente, como os modelos de propagação fazem uso da distância entre o transmissor e receptor, esta deve ser calculada utilizando as coordenadas do \textit{access point} na simulação e do ponto para o qual deseja-se calcular a estimativa da intensidade do sinal ali recebido (RSSI).
+Como dito anteriormente, para a realização dos cálculos, o ambiente foi representado como uma matriz bidimensional, representando em escala o ambiente a ser simulado. Cada posição [x,y] da matriz é um ponto candidato a hospedar o \textit{access point} (AP). Uma vez determinada a proposta de nova localização do AP, para cada posição da matriz é necessário realizar o cálculo do modelo de propagação. Na configuração do \textit{software} produzido, pode-se informar a posição atual do AP no ambiente real, ou deixar que o \textit{software} inicie a exploração a partir de uma posição aleatória. Para preencher os valores da matriz representando a propagação do sinal de microondas, deve-se realizar o cálculo determinado pelo modelo de propagação, conforme tratado na seção anterior. Tipicamente, como os modelos de propagação fazem uso da distância entre o transmissor e receptor, esta deve ser calculada utilizando as coordenadas do \textit{access point} na simulação e do ponto para o qual deseja-se calcular a estimativa da intensidade do sinal ali recebido (RSSI). 
 
 A \autoref{wifi_central} exibe uma representação gráfica da matriz com os valores de intensidade de sinal conforme o decaimento exponencial da intensidade do sinal recebido (RSSI), com o aumento da distância de cada ponto da matriz com o AP Wi-Fi (ponto central).
 
@@ -1118,7 +1118,7 @@ Neste ponto, vale notar que o escopo deste trabalho não considera interferênci
 
 \subsection[Atenuação do sinal ao atravessar paredes]{Atenuação do sinal ao atravessar paredes}
 
-Para obtermos um resultado que fosse condizente com a realidade, ou seja, que representasse quanto o sinal Wi-Fi degradava à medida que se propagava através de cômodos em sequência, foi adicionada uma técnica para realizar estimativas da absorção do sinal ao atravessar paredes. Na planta-baixa do edifício, todas as linhas (que representam paredes e divisórias) são armazenadas em uma estrutura de dados no início do programa, antes de iniciar a simulação. Tais linhas se mostraram úteis para simular de maneira mais próxima da realidade o valor da intensidade do sinal em um determinado ponto, atravessando o ambiente simulado desde o AP até tal ponto.
+Para obtermos um resultado que fosse condizente com a realidade, ou seja, que representasse quanto o sinal \textit{Wi-Fi} degradava à medida que se propagava através de cômodos em sequência, foi adicionada uma técnica para realizar estimativas da absorção do sinal ao atravessar paredes. Na planta-baixa do edifício, todas as linhas (que representam paredes e divisórias) são armazenadas em uma estrutura de dados no início do programa, antes de iniciar a simulação. Tais linhas se mostraram úteis para simular de maneira mais próxima da realidade o valor da intensidade do sinal em um determinado ponto, atravessando o ambiente simulado desde o AP até tal ponto.
 
 Seguimos a modelagem utilizada pela literatura para modelos de propagação em pequena escala, onde o valor esperado para o sinal em determinado ponto é subtraído do valor em dBm que representa a energia absorvida por parede multiplicado pela quantidade de paredes atravessadas pelo sinal. A literatura sugere que o valor de absorção varia entre 8 e 15 dBm para paredes de concreto (RAPPAPORT, 2009), de maneira que o valor definido para para uso do software produzido na simulação do campus Formiga foi de 8 dBm (e de acordo com análise experimental). Vale observar que, por consistir em uma constante que pode ser configurada no software, a ordem de magnitude da absorção de energia pelas paredes do edifício pode ser ajustada, para que a simulação da propagação possa se aproximar da realidade daquele ambiente. 
 
@@ -1132,10 +1132,9 @@ Para ilustrar o resultado de aplicar tal fator de correção, observe na \autore
 	\legend{Fonte: Elaborado pelo autor}
 \end{figure}
 
-Para ter uma noção de quantas paredes o sinal sofreria atenuação, foram utilizadas equações de geometria euclidiana. No momento em que se faz necessário o cálculo da absorção das paredes para um ponto [x, y] qualquer da matriz, a lista de linhas representando as paredes da planta-baixa deve ser percorrida. A técnica utilizada foi a intersecção de retas num plano cartesiano (Line-Line Intersection), buscando definir se os dois segmentos de reta ambas possuem um ponto em comum (ponto de interseção). A definição de intersecção de retas é dada por retas concorrentes, ou seja, se possuírem um ponto em comum, ou seja, a intersecção das duas retas é o ponto em comum. Assim, viabiliza-se verificar o cruzamento do sinal com paredes a um baixo custo computacional, se comparado a testar por força bruta cada ponto interno ao retângulo formado pela parede. 
+Para ter uma noção de quantas paredes o sinal sofreria atenuação, foram utilizadas equações de geometria euclidiana. No momento em que se faz necessário o cálculo da absorção das paredes para um ponto [x, y] qualquer da matriz, a lista de linhas representando as paredes da planta-baixa deve ser percorrida. A técnica utilizada foi a intersecção de retas num plano cartesiano (\textit{Line-Line Intersection}), buscando definir se os dois segmentos de reta ambas possuem um ponto em comum (ponto de interseção). A definição de intersecção de retas é dada por retas concorrentes, ou seja, se possuírem um ponto em comum, ou seja, a intersecção das duas retas é o ponto em comum. Assim, viabiliza-se verificar o cruzamento do sinal com paredes a um baixo custo computacional, se comparado a testar por força bruta cada ponto interno ao retângulo formado pela parede. 
 
 Os segmentos de reta candidatos consistem nas linhas previamente obtidas do arquivo DXF, contendo a planta-baixa. Cada linha no DXF possui duas coordenadas bidimensionais, para o ponto inicial e o ponto final do segmento de reta. O outro segmento de reta é formado entre o AP e o ponto para o qual está sendo calculada a intensidade do sinal. A \autoref{intersecao_retas}, ilustra o segmento de reta formado entre um dado ponto (x1,y1) na matriz e o local do AP  (x2,y2), cruzando com um outro segmento de reta formado pelas extremidades da parede (x3,y3) e (x4,y4). Caso haja ponto de interseção (x,y) significa que o sinal terá atravessado tal parede e soma-se um à quantidade de paredes atravessadas. Caso contrário, se não houver ponto de interseção entre os dois segmentos de reta, significa que o sinal cruzou livremente o espaço entre o AP e o destino sem cruzar com tal parede. 
-
 \begin{figure}[ht]
 	\caption{\label{intersecao_retas}interseção de retas.}
 	\begin{center}
@@ -1144,36 +1143,12 @@ Os segmentos de reta candidatos consistem nas linhas previamente obtidas do arqu
 	\legend{Fonte: Elaborado pelo autor}
 \end{figure}
 
-Entretanto, apesar de tal verificação ser barata para um ponto e as paredes candidatas, deve-se lembrar que é um cálculo a mais a ser efetuado para cada um dos $NxM$ pontos da matriz para cada uma das K paredes, ou seja, $NxMxK$ cálculos a serem efetuados e, portanto, com custo de tempo da ordem de $O(n^{3})$. E como o algoritmo de otimização irá avaliar centenas de posicionamentos para o AP, à medida que explora o espaço de soluções, o custo computacional sobre para $NxMxKxP$, ou seja, como todas estas quantidades possuem uma mesma ordem de magnitude (centenas), o algoritmo passa a ter custo temporal de $O(n^{4})$. Assim, com a adição dessa nova modelagem na propagação do sinal Wi-Fi, o tempo de execução do algoritmo extrapolou os costumeiros segundos e beirou as dezenas de minutos. 
+Entretanto, apesar de tal verificação ser barata para um ponto e as paredes candidatas, deve-se lembrar que é um cálculo a mais a ser efetuado para cada um dos $N \times M$ pontos da matriz para cada uma das $ K $ paredes, ou seja, $N \times M \times K$ cálculos a serem efetuados e, portanto, com custo de tempo da ordem de $O(n^{3})$. E como o algoritmo de otimização irá avaliar centenas de posicionamentos para o AP, à medida que explora o espaço de soluções, o custo computacional sobre para $N \times M \times K \times P$, ou seja, como todas estas quantidades possuem uma mesma ordem de magnitude (centenas), o algoritmo passa a ter custo temporal de $O(n^{4})$. Assim, com a adição dessa nova modelagem na propagação do sinal \textit{Wi-Fi}, o tempo de execução do algoritmo extrapolou os costumeiros segundos e beirou as dezenas de minutos. 
 
 
 \section[Visualização dos dados]{Visualização dos dados}
 
-A princípio, foi implementada a etapa que trata a representação do ambiente, ao utilizar a matriz de propagação para a geração do modelo 2D correspondente à planta-baixa fornecida (KASE et al., 2005; THAKUR et al., 2009). Tal modelo pode representar algumas características físicas do ambiente, tais como paredes e janelas (MARSCHALLINGER, 1996), no qual o sinal pode atenuar em um maior ou menor grau sua intensidade de propagação.
-
-Com o preenchimento da matriz de propagação de acordo com a posição do \textit{access point} e com o respectivo valor da intensidade do sinal, se tornou difícil a visualização de quanto o sinal ficava ruim quanto maior era a distância e mais paredes eram atravessadas. Tendo então uma matriz com valores em dBm, ela já é suficiente para a realização dos cálculos com a função objetivo, mas para a visualização a olho nú, não é possível distinguir, dentre uma grande quantidade de números numa matriz, o que poderia ser considerado um valor bom ou ruim.
-
-Com a vasta quantidade de ferramentas e bibliotecas disponibilizadas pela linguagem Python, foi necessário utilizar algum método para transformar a matriz de valores em dBms,  algo um tanto quanto visível e de fácil interpretação. Diante disso, o PyGame foi utilizado na interpretação da matriz resultante. Com a obtenção dos valores máximos e mínimos dentro da matriz de propagação, é fácil definir uma faixa de valores para serem uma escala de referência para a exposição dos resultados. 
-
-Foi implementado um método que explorasse os recursos disponibilizados pelo PyGame e pela matriz resultante. Tal método, que pode ser visto abaixo, percorre a matriz obtendo o valor calculado em dBm da posição [x, y]. Em seguida, a função \textit{get\_color\_of\_interval} retorna à respectiva cor, de acordo com o valor informado e os valores máximos e mínimos da matriz. O método \textit{draw\_point} fica responsável por colorir o ponto de acordo com o valor da matriz em sua posição. Ao término da impressão do espectro na janela do PyGame, os pontos onde estão localizados os \textit{access points} são também coloridos com a cor vermelha. Por fim, o método atualizada a janela, fazendo com que a impressão de todo o espectro e posições dos APs seja instantânea.
-
-
-
-\lstinputlisting[language=Python]{code/print_pygame.py}
-
-O método que obtém uma cor numa determinada faixa de valores, \textit{get\_color\_of\_interval}, como foi mostrada sua utilização anteriormente, recebe como parâmetro os valores máximos e mínimos do intervalos, juntamente com o valor no qual se quer obter a respectiva cor. Neste método, foi utilizada uma constante \textit{SENSITIVITY}, que representa a sensibilidade máximo definida nos APs. O valor definido durante a implementação e teste variou entre -75 e -100 dBm, o que significa que, se o valor informado for menor que a sensibilidade do AP, é considerado um ponto que pode ser entendido como “cego”, uma vez que não há sinal suficiente para ter uma boa qualidade de serviço, na janela do PyGame, aparecerá um ponto na cor preta.
-
-Ainda no método que obtém uma cor num intervalo numérico, de acordo com os valores máximo e mínimos e o valor de x, é adquirido um valor em porcentagem que é diretamente correspondente ao valor de x no intervalo. A fórmula utilizada no método que retorna essa porcentagem é a seguinte:
-
-\lstinputlisting[language=Python]{code/get_percentage_of_range.py}
-
-Com a porcentagem do respectivo valor calculado, precisa-se então adquirir a cor desejada. Tal cor pode ser obtida com o método \textit{get\_value\_in\_list}, o qual recebe a porcentagem e uma lista, sendo ela genérica, mas neste caso, utilizada para guardar a faixa de cores, que segue uma escala gradiente. Neste método a porcentagem então é convertida de volta em um valor que representará a posição na lista de cores. A posição é obtida pela seguinte fórmula:
-
-\lstinputlisting[language=Python]{code/get_value_in_list.py}
-
-Com a posição bem definida, pode-se ter a cor, cor que está com o valor em hexadecimal. O PyGame utiliza valores de cor em RGB para colorir os pontos definidos. Desse modo, é necessário converter a cor que foi obtida da lista para o padrão do PyGame.
-
-A imagem abaixo é uma representação gráfica do bloco A\footnote{A modelagem de ambiente utilizada para as simulações apresenta as mesmas divisões de cômodos do arquivo AutoCAD disponibilizado para o este trabalho.} utilizando a biblioteca PyGame. Nela é destacado o que cada cômodo representa atualmente.
+A princípio, foi implementada a etapa que trata a representação do ambiente, ao utilizar a matriz de propagação para a geração do modelo 2D correspondente à planta-baixa fornecida (KASE et al., 2005; THAKUR et al., 2009). Tal modelo pode representar algumas características físicas do ambiente, tais como paredes e portas (MARSCHALLINGER, 1996), no qual o sinal pode atenuar em um maior ou menor grau sua intensidade de propagação. A \autoref{repre_ambiente_dxf_2} ilustra uma representação gráfica das características da planta baixa do bloco A\footnote{A modelagem de ambiente utilizada para as simulações apresenta as mesmas divisões de cômodos do arquivo AutoCAD disponibilizado para o este trabalho.}, onde pode-se observar a presença de portas e paredes. Foi registrado o uso que cada cômodo possui atualmente no campus Formiga.
 
 \begin{figure}[ht]
 	\caption{\label{repre_ambiente_dxf_2}representação do ambiente a partir do arquivo DXF contendo a planta-baixa}
@@ -1183,9 +1158,31 @@ A imagem abaixo é uma representação gráfica do bloco A\footnote{A modelagem 
 	\legend{Fonte: Elaborado pelo autor}
 \end{figure}
 
-Como o método que realiza a simulação e o preenchimento da matriz retorna à mesma, e tal método é chamado no \textit{Simulated Annealing} toda vez que é necessário avaliar uma solução, o trajeto do APs ao procurar o melhor ponto dentro da planta pode ser desenhado utilizando o PyGame. Com a coleta de dados no final, essa funcionalidade foi descontinuada. No entanto, para que o resultado da simulação possa ser visualizado em real time, basta chamar o método \textit{print\_pygame} a cada vez que uma avaliação for realizada (ela é aceita pelo SA).
+Com o preenchimento da matriz de propagação de acordo com a posição do \textit{access point} (AP) e com o respectivo valor da intensidade do sinal, se tornou difícil a visualização de quanto o sinal ficava ruim quanto maior era a distância e mais paredes eram atravessadas, através de uma simples inspeção numérica. Tendo a matriz preenchida com a intensidade de sinal (dBm), suficiente para a realização dos cálculos com a função objetivo da heurística de otimização, fica pendente a visualização a olho nú, não sendo viável distinguir dentre milhares de valores numa matriz, se poderia ser considerada uma simulação boa ou ruim. 
 
-\clearpage
+Considerando a vasta quantidade de ferramentas e bibliotecas disponibilizadas pela linguagem Python, foi necessário utilizar algum método para transformar a matriz de intensidade de sinais em  algo um tanto quanto visível e de fácil interpretação. Diante disso, o PyGame foi utilizado na visualização da matriz resultante. Com a obtenção dos valores máximos e mínimos dentro da matriz de propagação, é fácil definir uma faixa de valores para calibrar uma escala de referência (gradiente de cores) para a exposição dos resultados. Para padronizar e viabilizar a comparação visual de resultados diferentes, o gradiente de cores foi normalizado para um valor mínimo de referência de -100 dBm, referente à maior sensibilidade registrada pelos equipamentos de comunicação \textit{Wi-Fi}.
+
+\begin{figure}[ht]
+	\caption{\label{represetacao_simulacao}simulação da propagação utilizando 256 cores}
+	\begin{center}
+		\includegraphics[scale=0.4]{images/representacao-simulacao.jpg}
+	\end{center}
+	\legend{Fonte: Elaborado pelo autor}
+\end{figure}
+
+Foi implementado um método que explorasse os recursos disponibilizados pelo PyGame para ilustrar a matriz resultante. Tal método, que pode ser visto abaixo, percorre a matriz obtendo o valor calculado em dBm da posição [x, y] e utiliza uma função para obter qual seria a cor respectiva de acordo com o gradiente de cores escolhido. Adicionalmente, foi utilizada condição que avalia o valor do sinal em determinado ponto com uma constante que representa a sensibilidade máxima definida pelos equipamentos de \textit{Wi-Fi}. Os valores de sensibilidade dos diversos equipamentos presentes no campus Formiga do IFMG variam entre -85 e -100 dBm. Assim, se o valor calculado para a simulação da propagação for menor que a sensibilidade do AP, na visualização do mesmo ele é considerado como um "ponto cego" ou uma "região de sombra", uma vez que não há intensidade de sinal suficiente para obter uma boa qualidade de serviço (ou sequer conectar na rede \textit{Wi-Fi}). A \autoref{simulacao_sensibilidade} ilustra as regiões de sombra no ambiente simulado com apenas um AP centralizado. 
+
+\begin{figure}[ht]
+	\caption{\label{simulacao_sensibilidade}regiões com sinal abaixo da sensibilidade máxima dos equipamentos}
+	\begin{center}
+		\includegraphics[scale=0.7]{images/sumulacao-sensibilidade.jpg}
+	\end{center}
+	\legend{Fonte: Elaborado pelo autor}
+\end{figure}
+
+Caso deseje-se, durante a exploração do espaço de soluções pelo \textit{Simulated Annealing}, pode-se exibir a matriz de intensidade de sinal a cada iteração para acompanhar o funcionamento do algoritmo, como se numa animação. Entretanto, como o desenho dos milhares de pontos pelo PyGame consiste em uma operação que consome alguns segundos, tal processo de animação fica desativado por padrão para não atrasar demais a geração da solução final que o usuário aguarda. 
+
+
 
 \section[Heurística de otimização]{Heurística de otimização}
 
