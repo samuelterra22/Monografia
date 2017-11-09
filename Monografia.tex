@@ -63,6 +63,16 @@
 \usepackage{listings}
 \usepackage{multirow}
 \usepackage[table,xcdraw]{xcolor}
+%\usepackage{amsmath}
+%\usepackage{algorithm}
+\usepackage[]{algorithm2e}
+%\usepackage[noend]{algpseudocode}
+
+\makeatletter
+\def\BState{\State\hskip-\ALG@thistlm}
+\makeatother
+
+
 % ---
 % Pacotes adicionais, usados apenas no âmbito do Modelo Canônico do abnteX2
 % ---
@@ -815,7 +825,7 @@ Com um problema de otimização em mãos, encontrar soluções ótimas ou aproxi
 
 Abaixo apresentamos o pseudocódigo da metaheurística com funções genéricas que foram implementadas neste trabalho:
 
-[inserir pseudo código]
+\lstinputlisting[language=TeX]{code/pseudo_codigo.py}
 
 Estes são os identificadores utilizados:
 
