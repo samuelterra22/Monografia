@@ -1372,15 +1372,15 @@ Assim que foi implementada uma primeira versão das etapas de entrada e processa
 
 \subsection[Avaliação da solução para dois ou mais APs]{Avaliação da solução para dois ou mais APs}
 
-Como desde o princípio, a implementação da função objetivo para apenas um AP visava maximizar a cobertura do sinal WiFi para o ambiente. Isso não foi diferente para a simulação de mais um AP. Foram utilizadas técnicas de manipulação de grandezas em dBm para obter o resultado esperado. Como dito no parágrafo anterior, a manipulação com a soma dos dados em dBm estava errada. Como uma proposta de solução para esse problema, antes de realizar a soma dos valores da matriz, a potência do sinal em questão era convertido de dBm para mw, fazendo com que a operação ficasse correta e uma verificação da potência recebida com a sensibilidade do access point também foi feita para penalizar zonas em que o sinal era tão fraco que não se tornava uma opção válida. Com a conversão dos valores matriz e a verificação da qualidade do sinal adicionada, o tempo de execução do algoritmo aumentou consideravelmente, fazendo com que outra alternativa fosse buscada.
+Como desde o princípio, a implementação da função objetivo para apenas um AP visava maximizar a cobertura do sinal \textit{Wi-Fi} para o ambiente. Isso não foi diferente para a simulação de mais um AP. Foram utilizadas técnicas de manipulação de grandezas em dBm para obter o resultado esperado. Como dito no parágrafo anterior, a manipulação com a soma dos dados em dBm estava errada. Como uma proposta de solução para esse problema, antes de realizar a soma dos valores da matriz, a potência do sinal em questão era convertido de dBm para mw, fazendo com que a operação ficasse correta e uma verificação da potência recebida com a sensibilidade do \textit{access point} também foi feita para penalizar zonas em que o sinal era tão fraco que não se tornava uma opção válida. Com a conversão dos valores matriz e a verificação da qualidade do sinal adicionada, o tempo de execução do algoritmo aumentou consideravelmente, fazendo com que outra alternativa fosse buscada.
 
-Diante de uma opção que demandava mais tempo para que fosse processada, outra estratégia para a função objetivo foi implementada. Quando se tem mais um AP para buscar os seus respectivos pontos ótimos, somar suas matrizes de resultados também não é algo que dê um resultado correto. Foi, então, implementado um método que realizava a sobreposição das matrizes de resultado da propagação. Para o SA saber se a escolha era ruim ou boa, precisava transformar essa escolha em um número. Nesse sentido, de acordo com as n matrizes de resultado de n access points, foi necessário realizar suas sobreposições.
+Diante de uma opção que demandava mais tempo para que fosse processada, outra estratégia para a função objetivo foi implementada. Quando se tem mais um AP para buscar os seus respectivos pontos ótimos, somar suas matrizes de resultados também não é algo que dê um resultado correto. Foi, então, implementado um método que realizava a sobreposição das matrizes de resultado da propagação. Para o SA saber se a escolha era ruim ou boa, precisava transformar essa escolha em um número. Nesse sentido, de acordo com as n matrizes de resultado de $ \textit{n} $ \textit{access points}, foi necessário realizar suas sobreposições.
 
-Tal método recebe como parâmetro uma lista (ou array, ou vetor, em Python são o mesmo tipo de dados) contendo a matriz resultado da simulação de todos os APs e uma variável size que corresponde à quantidade de APs no ambiente. Posteriormente é feito um laço de repetição percorrendo a lista de matrizes e guardado as matrizes mínimas e máximas utilizando respectivamente os métodos minimum e maximum da biblioteca Numpy. No final da iteração é feita então a razão dasdas matrizes mínimas e máximas, fazendo com que a operação de subtração (e sobreposição) dos valores resultantes em dBm fosse correta. O método que realiza essa operação pode ser visto abaixo.
+Tal método recebe como parâmetro uma lista (ou \textit{array}, ou vetor, em Python são o mesmo tipo de dados) contendo a matriz resultado da simulação de todos os APs e uma variável \textit{size} que corresponde à quantidade de APs no ambiente. Posteriormente é feito um laço de repetição percorrendo a lista de matrizes e guardado as matrizes mínimas e máximas utilizando respectivamente os métodos \textit{minimum} e \textit{maximum} da biblioteca Numpy. No final da iteração é feita então a razão dadas matrizes mínimas e máximas, fazendo com que a operação de subtração (e sobreposição) dos valores resultantes em dBm fosse correta. O método que realiza essa operação pode ser visto abaixo.
 
 \lstinputlisting[language=Python]{code/sobrepoe_solucoes_DIV_dBm.py}
 
-Com as matrizes sobrepostas, o método acima retorna à matriz resultante. O método que realiza a avaliação da lista de APs fará uso da matriz para obter um valor a se comparar no processo de busca de um ponto melhor no Simulated Annealing. Os cálculos para a penalização de áreas onde o sinal tem uma qualidade de inferir a sensibilidade do equipamento não foram implementados nessa estratégia. 
+Com as matrizes sobrepostas, o método acima retorna à matriz resultante. O método que realiza a avaliação da lista de APs fará uso da matriz para obter um valor a se comparar no processo de busca de um ponto melhor no \textit{Simulated Annealing}. Os cálculos para a penalização de áreas onde o sinal tem uma qualidade de inferir a sensibilidade do equipamento não foram implementados nessa estratégia. 
 
 
 \section[Paralelização em GPU]{Paralelização em GPU}
@@ -1483,7 +1483,66 @@ A seguir temos quatro imagens, as quais a, b e d não possuem as portas ou janel
 	\legend{Fonte: Elaboração do autor}
 \end{figure}
 
+Com a execução do algoritmo, além de se ter a representação gráfica do ambiente através do PyGame, as informações da configuração da execução, tais como os resultados, são impressos no terminal. Abaixo é possível ver como é chamado o algoritmo e sua saída de dados.
+
+\begin{lstlisting}[language=bash]
+samuel@samuel-Vostro-5470: python PlacementAPs.py 
+
+Otimizacao via Simulated Annealing com a seguinte configuracao:
+
+Numero maximo de iteracoes:			600
+Numero maximo de pertubacoes por iteracao:	5
+Numero maximo de sucessos por iteracaoo:	720
+Temperatura inicial:				900
+Decaimento da temperatura com alpha=		0.85
+Raio de perturbacao:				33
+Execucoes do otimizador: 		1
+
+Hardware de simulacao:	GPU
+
+
+Simulacao do ambiente com a seguinte configuracao:
+
+Simulando ambiente com:  		400 x 149 pixels
+Escala de simulacao:     		1 px : 0.1275 metros
+Quantidade de APs:       		2
+Potencia de cada APs:    		-25 dBm
+Posicao inicial dos APs: 		CENTRALIZADA (W/2, H/2)
+Solucao inicial:
+[[ 200.    74.5]
+[ 200.    74.5]]
+Distancia da soluao inicial:		[  2. -23.]
+FO last cand:   -3.285e+01
+FO local best:  -5.867e+01
+FO global best: 5.762e+02
+
+****** Gerando sumarios dos resultados da simulacao ******
+Numero de solucoes:	2
+COBERTURA DE SINAL WI-FI:
+87.62%	 com boa cobertura (sinal forte)
+12.38%	 de zonas de sombra (abaixo da sensibilidade)
+
+Cobertura por FAIXAS de intensidade de sinal
+sinal Otimo  	24.3%
+sinal Bom    	26.3%
+sinal Ruim   	37.0%
+
+\end{lstlisting}
+	
+Ainda com a saída de dados, ao fim da execução da busca da posição dos APs, é gerado um gráfico utilizando a biblioteca \textit{matplotlib.pyplot} do Python. Com o gráfico mostrado na \autoref{comportamento_fo}, é possível ver claramente como a função objetivo da metaheurística se comportou durante a busca. Observe que, com os seus autos e baixos, o Simulated Annealing fugiu de seus ótimos locais e, no final da execução, retornou à sua melhor avaliação.
+	
+\begin{figure}[ht]
+	\caption{\label{comportamento_fo}comportamento da função objetivo do Simulated Annealing na busca do melhor ponto}
+	\begin{center}
+		\includegraphics[scale=0.5]{images/comportamento-fo.jpg}
+	\end{center}
+	\legend{Fonte: Elaboração do autor}
+\end{figure}
+
+
 Neste sentido, é importante ressaltar que a figuras acima são resultados dos primeiros testes executados. A escala de cores utilizada foi a plasma, variando das cores laranja até o azul escuro. Na próxima seção mostraremos os resultados de testes efetuados utilizando ainda um \textit{access point} com uma nova escala de cores. 
+
+\clearpage
 
 \section[Wi-Fi Placement para 1 AP]{Wi-Fi Placement para 1 AP}
 
