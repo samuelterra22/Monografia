@@ -109,7 +109,8 @@
 % Informações de dados para CAPA e FOLHA DE ROSTO
 % ---
 \titulo{OTIMIZAÇÃO DO POSICIONAMENTO DE PONTOS DE ACESSO WIRELESS}
-\autor{MEC-SETEC\\ INSTITUTO FEDERAL MINAS GERAIS - Campus Formiga\\ Curso de Ciência da Computação}
+%\autor{MEC-SETEC\\ INSTITUTO FEDERAL MINAS GERAIS - Campus Formiga\\ Curso de Ciência da Computação}
+\autor{Samuel Terra Vieira}
 \local{Formiga - MG}
 \data{2017}
 \orientador{Prof.º Everthon Valadão dos Santos}
@@ -123,7 +124,7 @@
 \tipotrabalho{Monografia}
 % O preambulo deve conter o tipo do trabalho, o objetivo, 
 % o nome da instituição e a área de concentração 
-\preambulo{ Monografia do trabalho de conclusão de curso apresentado ao Instituto Federal Minas Gerais - Campus Formiga, como requisito parcial para a obtenção do título de Bacharel em Ciência da Computação. }
+\preambulo{ Monografia do trabalho de conclusão de curso apresentado ao Instituto Federal Minas Gerais - Campus Formiga, como requisito obrigatório para a obtenção do título de Bacharel em Ciência da Computação. }
 % ---
 
 
@@ -220,7 +221,7 @@
 	\fbox{\begin{minipage}[c][8cm]{13.5cm}		% Largura
 	\small
 	\imprimirautor
-	%Sobrenome, Nome do autor
+	%Vieira, Samuel
 	
 	\hspace{0.5cm} \imprimirtitulo  / \imprimirautor. --
 	\imprimirlocal, \imprimirdata-
@@ -234,13 +235,13 @@
 	\imprimirdata.}\\
 	
 	\hspace{0.5cm}
-		1. Palavra-chave1.
-		2. Palavra-chave2.
-		2. Palavra-chave3.
-		I. Orientador.
-		II. Universidade xxx.
-		III. Faculdade de xxx.
-		IV. Título 			
+		1. Wireless.
+		2. Posicionamento.
+		2. Otimização.
+		I. Everthon Valadão.
+		II. Instituto Federal de Minas Gerais Campus Formiga.
+		III. Bacharelado em Ciência da Computação.
+		IV. Otimização do Posicionamento de Pontos de Acesso Wireless	
 	\end{minipage}}
 	\end{center}
 \end{fichacatalografica}
@@ -304,12 +305,12 @@
     \vspace*{\fill}
    \end{center}
         
-   Trabalho aprovado. \imprimirlocal, 14 de novembro de 2017:
+   \imprimirlocal, 14 de novembro de 2017:
 
-   \assinatura{\textbf{\imprimirorientador} \\ Orientador} 
-   \assinatura{\textbf{Prof.º Diego Mello da Silva} \\ Convidado 1}
-   \assinatura{\textbf{Prof.º Rafael Tayette de Nóbrega} \\ Convidado 2}
-   \assinatura{\textbf{Prof.º Walace de Almeida Rodrigues} \\ Convidado 3}
+   \assinatura{\textbf{\imprimirorientador} \\ } 
+   \assinatura{\textbf{Prof.º Diego Mello da Silva} \\  }
+   \assinatura{\textbf{Prof.º Rafael Tayette de Nóbrega} \\}
+   \assinatura{\textbf{Prof.º Walace de Almeida Rodrigues} \\ }
    %\assinatura{\textbf{Professor} \\ Convidado 4}
       
    \begin{center}
@@ -1545,38 +1546,17 @@ A seguir temos quatro imagens, as quais a, b e d não possuem as portas ou janel
 	\legend{Fonte: Elaboração do autor}
 \end{figure}
 
-Com a execução do algoritmo, além de se ter a representação gráfica do ambiente através do PyGame, as informações da configuração da execução, tais como os resultados, são impressos no terminal. Abaixo é possível ver como é chamado o algoritmo e sua saída de dados.
+Com a execução do algoritmo, além de se ter a representação gráfica do ambiente através do PyGame, as informações da configuração da execução, tais como os resultados, são impressos no terminal. Abaixo é possível ver como é chamado o algoritmo e uma saída de exemplo dos dados.
 
 \begin{lstlisting}[language=bash]
 $ python PlacementAPs.py 
-
-Otimizacao via Simulated Annealing com a seguinte configuracao:
-
-Numero maximo de iteracoes:			600
-Numero maximo de pertubacoes por iteracao:	5
-Numero maximo de sucessos por iteracaoo:	720
-Temperatura inicial:				900
-Decaimento da temperatura com alpha=		0.85
-Raio de perturbacao:				33
-Execucoes do otimizador: 		1
-
-Hardware de simulacao:	GPU
-
-
-Simulacao do ambiente com a seguinte configuracao:
 
 Simulando ambiente com:  		400 x 149 pixels
 Escala de simulacao:     		1 px : 0.1275 metros
 Quantidade de APs:       		2
 Potencia de cada APs:    		-25 dBm
-Posicao inicial dos APs: 		CENTRALIZADA (W/2, H/2)
-Solucao inicial:
-[[ 200.    74.5]
-[ 200.    74.5]]
 FO global best: 5.762e+02
 
-****** Gerando sumarios dos resultados da simulacao ******
-Numero de APs:	2
 COBERTURA DE SINAL WI-FI:
 87.62%	 com boa cobertura (sinal forte)
 12.38%	 de zonas de sombra (abaixo da sensibilidade)
@@ -1611,25 +1591,73 @@ A \autoref{prop_bloco_a}, se comparada com as figuras do tópico anterior, possu
 \begin{figure}[ht]
 	\caption{\label{prop_bloco_a}Simulação da propagação de sinais de microondas no bloco A utilizando 1 AP, sua absorção e limiar de sensibilidade.}
 	\begin{center}
-		\includegraphics[scale=0.4]{images/prop-bloco-a.jpg}
+		\includegraphics[scale=0.7]{images/prop-bloco-a-2.jpg}
 	\end{center}
 	\legend{Fonte: Elaboração do autor}
 \end{figure}
 
-É possível notar que o SA definiu como um caso ótimo, nesta situação, um ponto próximo ao meio da planta. Com a posição escolhida, a cobertura do sinal se propaga em áreas próximas à biblioteca e sala de estudo, que contém o maior fluxo de pessoas neste bloco que utilizam o acesso à internet. Na figura, o único ponto que deixa a desejar corresponde à sala de estudos.
-
-As plantas dos pisos 1, 2 e 3 do bloco C foram obtidas em formato DWG e convertidas para o formato \textit{.dxf }ao final da implementação. Tais arquivos foram simulados e obtidas suas representações gráficas. A imagem abaixo mostra a simulação da planta baixa no bloco C utilizando 1 AP.
+É possível notar que o SA definiu como um caso ótimo, nesta situação, um ponto próximo ao meio da planta. Com a posição escolhida, a cobertura do sinal se propaga em áreas próximas à biblioteca e sala de estudo, que contém o maior fluxo de pessoas neste bloco que utilizam o acesso à internet. Na figura, os pontos que deixam a desejar corresponde à potência máxima que consegue transmitir, neste caso, -25 dBm.
 
 \newpage
+
+Como resultado disponibilizados via terminal, temos:
+
+\begin{lstlisting}[language=bash]
+	$ python PlacementAPs.py 
+	
+	Simulando ambiente com:                 600 x 325 pixels
+	Escala de simulacao:                    1 px : 0.0800 metros
+	Quantidade de APs:                      1
+	Potencia de cada APs:                   -25 dBm
+	
+	FO global best: 4.432e+02
+	
+	COBERTURA DE SINAL WI-FI:
+	74.32%   com boa cobertura (sinal forte)
+	25.68%   de zonas de sombra (abaixo da sensibilidade)
+	
+	Cobertura por FAIXAS de intensidade de sinal
+	sinal Otimo     15.8%
+	sinal Bom       26.0%
+	sinal Ruim      32.5%
+
+\end{lstlisting}
+
+As plantas dos pisos 1, 2 e 3 do bloco C foram obtidas em formato DWG e convertidas para o formato \textit{.dxf }ao final da implementação. Tais arquivos foram simulados e obtidas suas representações gráficas. A \autoref{captura_zona} mostra a simulação da planta baixa no bloco C utilizando 1 AP com potência de transmissão de -25 dBm.
+
+%\newpage
 
 \begin{figure}[ht]
 	\caption{\label{captura_zona}simulação da propagação de sinais de microondas no bloco C utilizando 1 AP.
 		}
 	\begin{center}
-		\includegraphics[scale=0.3]{images/captura-zona.jpg}
+		\includegraphics[scale=0.7]{images/captura-zona-2.jpg}
 	\end{center}
 	\legend{Fonte: Elaboração do autor}
 \end{figure}
+
+A saída via terminal é a seguinte:
+
+\begin{lstlisting}[language=bash]
+	$ python PlacementAPs.py 
+	
+	Simulando ambiente com:                 600 x 223 pixels
+	Escala de simulacao:                    1 px : 0.0850 metros
+	Quantidade de APs:                      1
+	Potencia de cada APs:                   -25 dBm
+	
+	FO global best: 2.089e+02
+	
+	COBERTURA DE SINAL WI-FI:
+	50.89%   com boa cobertura (sinal forte)
+	49.11%   de zonas de sombra (abaixo da sensibilidade)
+	
+	Cobertura por FAIXAS de intensidade de sinal
+	sinal Otimo     11.4%
+	sinal Bom       14.5%
+	sinal Ruim      25.1%
+
+\end{lstlisting}
 
 Como pode ser visto na \autoref{prop_bloco_a} e na \autoref{captura_zona}, quando utilizada a busca pelo ponto ótimo com um \textit{access point}, ele tendeu a permanecer ao centro da planta. Com o resultado dado para esta simulação com um AP, os cômodos mais ao centro são bem atendidos com o sinal \textit{Wi-Fi}, mas ao contrário dos mais afastados, não irão usufruir de uma boa qualidade de sinal e esse é retirado da apresentação gráfica e dos cálculos da avaliação da função objetivo. O resultado toma essa característica por não realizar uma verificação das áreas subjetivamente mais importantes. Caso tivesse essa funcionalidade implementada, a metaheurística poderia fazer com que o AP cobrisse as áreas mais críticas do ponto de vista da utilização do ambiente pelas pessoas.
 
@@ -1643,29 +1671,72 @@ Feita a propagação do sinal \textit{wireless} para um AP nos bloco A, foi adap
 	\caption{\label{captura_dois_aps}simulação da propagação de sinais de microondas no bloco A utilizando 2 APs.
 	}
 	\begin{center}
-		\includegraphics[scale=0.4]{images/captura-2-aps.jpg}
+		\includegraphics[scale=0.6]{images/captura-2-aps-2.jpg}
 	\end{center}
 	\legend{Fonte: Elaboração do autor}
 \end{figure}
 
-Como pode ser visto, a heurística pode então dar, como o resultado, dois pontos que visualmente aparentam ser muito bons. Na imagem acima pode ser visto que os dois APs foram alocados pela metaheurística com uma distância de folga, fazendo com que possam aproveitar a propagação do espectro no ambiente. Com a escolha sugerida pelo SA, utilizando um \textit{access point} transmitindo a -17 dBm, pode-se também notar que as salas da parte inferior não estão recebendo uma qualidade de sinal como na sala em que os APs estão instalados, mas mesmo assim, toda a área está recebendo sinal, não havendo zonas onde a potência recebida é inferior à sensibilidade do equipamento.
+Como pode ser visto, a heurística pode então dar, como o resultado, dois pontos que visualmente aparentam ser muito bons. Na \autoref{captura_dois_aps} pode ser visto que os dois APs foram alocados pela metaheurística com uma distância de folga, fazendo com que possam aproveitar a propagação do espectro no ambiente. Com a escolha sugerida pelo SA, utilizando um \textit{access point} transmitindo a -25 dBm, pode-se também notar que algumas partes das salas nos extremos não estão recebendo uma qualidade de sinal como na sala em que os APs estão instalados, mas mesmo assim, a maior parte da área está recebendo sinal, havendo poucas zonas onde a potência recebida é inferior à sensibilidade do equipamento.
 
-\clearpage
+Abaixo é possível visualizar o resumo da execução do algoritmo:
 
-O mesmo teste foi realizado com a planta baixa do bloco C. Com a \autoref{captura_dois_aps_c}, pode ser visto quais são os pontos sugeridos pelo SA na busca para a alocação dos mesmos.
+\begin{lstlisting}[language=bash]
+	$ python PlacementAPs.py 
+	
+	Simulando ambiente com:                 600 x 325 pixels
+	Escala de simulacao:                    1 px : 0.0800 metros
+	Quantidade de APs:                      2
+	Potencia de cada APs:                   -25 dBm
+	
+	FO global best: 6.112e+02
+	
+	COBERTURA DE SINAL WI-FI:
+	91.12%   com boa cobertura (sinal forte)
+	8.88%    de zonas de sombra (abaixo da sensibilidade)
+	
+	Cobertura por FAIXAS de intensidade de sinal
+	sinal Otimo     27.1%
+	sinal Bom       31.3%
+	sinal Ruim      32.7%
+
+\end{lstlisting}
+
+%\clearpage
+
+O mesmo teste foi realizado com a planta baixa do bloco C, porém agora, para que seja possível ter uma maior cobertura da área do prédio, a simulação foi realizado com um equipamento com potência de -17 dBm. Na \autoref{captura_dois_aps_c}, pode ser visto quais são os pontos sugeridos pelo SA na busca para a alocação dos mesmos.
 
 \begin{figure}[ht]
 	\caption{\label{captura_dois_aps_c}simulação da propagação de sinais de microondas no bloco C utilizando 2 APs.
 	}
 	\begin{center}
-		\includegraphics[scale=0.3]{images/captura-2-aps-bloco-c.jpg}
+		\includegraphics[scale=0.7]{images/captura-2-aps-bloco-c-2.jpg}
 	\end{center}
 	\legend{Fonte: Elaboração do autor}
 \end{figure}
 
-Com o resultado dado pelo SA no bloco C, pode-se notar que foi possível cobrir praticamente toda a área. Tiveram algumas áreas com pontos cegos porém, podem ser consideradas de certa forma um mal necessário quando o objetivo é obter a maior cobertura do sinal. Um resultado ainda melhor pode ser encontrado se for feito um maior refinamento do SA.
+Com o resultado dado pelo SA no bloco C, pode-se notar que foi possível cobrir praticamente toda a área. Tiveram algumas áreas com pontos cegos porém, podem ser consideradas de certa forma um mal necessário quando o objetivo é obter a maior cobertura do sinal. Um resultado ainda melhor pode ser encontrado se for feito um maior refinamento do SA. A saída dada pelo algoritmo é a seguinte:
 
-\clearpage
+\begin{lstlisting}[language=bash]
+	$ python PlacementAPs.py 
+	
+	Simulando ambiente com:                 600 x 223 pixels
+	Escala de simulacao:                    1 px : 0.0850 metros
+	Quantidade de APs:                      2
+	Potencia de cada APs:                   -17 dBm
+	
+	COBERTURA DE SINAL WI-FI:
+	89.76%   com boa cobertura (sinal forte)
+	10.24%   de zonas de sombra (abaixo da sensibilidade)
+	
+	Cobertura por FAIXAS de intensidade de sinal
+	sinal Otimo     28.4%
+	sinal Bom       24.8%
+	sinal Ruim      36.6%
+
+
+\end{lstlisting}
+
+%\clearpage
 
 A busca utilizando três \textit{access points} também foi realizada. O resultado da propagação do sinal pode ser visto na \autoref{captura_3_aps_bloco_c} utilizando equipamentos com potência de transmissão de -25 dBm..
 
@@ -1681,40 +1752,27 @@ A busca utilizando três \textit{access points} também foi realizada. O resulta
 A os valores dados na saída são os seguintes:
 
 \begin{lstlisting}[language=bash]
-samuel@samuel-Vostro-5470: python PlacementAPs.py 
-Simulacao do ambiente com a seguinte configuracao:
-
-Simulando ambiente com:                 600 x 223 pixels
-Escala de simulacao:                    1 px : 0.0850 metros
-Quantidade de APs:                      3
-Potencia de cada APs:                   -25 dBm
-
-FO global best: 5.169e+02
-
-COBERTURA DE SINAL WI-FI:
-81.69%   com boa cobertura (sinal forte)
-18.31%   de zonas de sombra (abaixo da sensibilidade)
-
-Cobertura por FAIXAS de intensidade de sinal
-sinal Otimo     25.8%
-sinal Bom       28.1%
-sinal Ruim      27.7%
+	$ python PlacementAPs.py 
+	
+	Simulando ambiente com:                 600 x 223 pixels
+	Escala de simulacao:                    1 px : 0.0850 metros
+	Quantidade de APs:                      3
+	Potencia de cada APs:                   -25 dBm
+	
+	FO global best: 5.169e+02
+	
+	COBERTURA DE SINAL WI-FI:
+	81.69%   com boa cobertura (sinal forte)
+	18.31%   de zonas de sombra (abaixo da sensibilidade)
+	
+	Cobertura por FAIXAS de intensidade de sinal
+	sinal Otimo     25.8%
+	sinal Bom       28.1%
+	sinal Ruim      27.7%
 
 \end{lstlisting}
 
-O comportamento da função objetivo da \autoref{captura_3_aps_bloco_c} pode ser visto com a \autoref{fo_captura_3_aps_bloco_c}.
-
-\begin{figure}[ht]
-	\caption{\label{fo_captura_3_aps_bloco_c}comportamento da função objetivo com simulação da propagação de sinais de microondas no bloco C utilizando 3 APs.
-	}
-	\begin{center}
-		\includegraphics[scale=0.6]{images/grafico-sa-3-aps-bloco-c.jpg}
-	\end{center}
-	\legend{Fonte: Elaboração do autor}
-\end{figure}
-
-
-Com a \autoref{captura_3_aps_bloco_a} é possível ver propagação do sinal utilizando 3 access points no bloco A com equipamentos transmitindo a -25 dBm.
+Na \autoref{captura_3_aps_bloco_a} é possível ver propagação do sinal utilizando 3 access points no bloco A com equipamentos transmitindo a -25 dBm.
 
 \begin{figure}[ht]
 	\caption{\label{captura_3_aps_bloco_a}simulação da propagação de sinais de microondas no bloco A utilizando 3 APs com potência de -25 dBm.
@@ -1727,38 +1785,26 @@ Com a \autoref{captura_3_aps_bloco_a} é possível ver propagação do sinal uti
 
 \clearpage
 
-O comportamento da função objetivo da \autoref{captura_3_aps_bloco_a} pode ser visto com a \autoref{fo_captura_3_aps_bloco_a}.
-
-\begin{figure}[ht]
-	\caption{\label{fo_captura_3_aps_bloco_a}comportamento da função objetivo com simulação da propagação de sinais de microondas no bloco A utilizando 3 APs.
-	}
-	\begin{center}
-		\includegraphics[scale=0.6]{images/comportamento-fo-3-ap-bloco-a.jpg}
-	\end{center}
-	\legend{Fonte: Elaboração do autor}
-\end{figure}
-
-A os valores dados na saída para a simulação da \autoref{fo_captura_3_aps_bloco_a}  com três \textit{access points} no bloco A são os seguintes:
+A os valores dados na saída para a simulação da \autoref{captura_3_aps_bloco_a}  com três \textit{access points} no bloco A são os seguintes:
 
 \begin{lstlisting}[language=bash]
-samuel@samuel-Vostro-5470: python PlacementAPs.py 
-Otimizacao via Simulated Annealing com a seguinte configuracao:
-
-Simulando ambiente com:                 600 x 325 pixels
-Escala de simulacao:                    1 px : 0.0800 metros
-Quantidade de APs:                      3
-Potencia de cada APs:                   -25 dBm
-
-FO global best: 6.974e+02
-
-COBERTURA DE SINAL WI-FI:
-99.74%   com boa cobertura (sinal forte)
-0.26%    de zonas de sombra (abaixo da sensibilidade)
-
-Cobertura por FAIXAS de intensidade de sinal
-sinal Otimo     32.7%
-sinal Bom       36.6%
-sinal Ruim      30.4%
+	$ python PlacementAPs.py 
+	
+	Simulando ambiente com:          600 x 325 pixels
+	Escala de simulacao:             1 px : 0.0800 metros
+	Quantidade de APs:               3
+	Potencia de cada APs:            -25 dBm
+	
+	FO global best: 6.974e+02
+	
+	COBERTURA DE SINAL WI-FI:
+	99.74%   com boa cobertura (sinal forte)
+	0.26%    de zonas de sombra (abaixo da sensibilidade)
+	
+	Cobertura por FAIXAS de intensidade de sinal
+	sinal Otimo     32.7%
+	sinal Bom       36.6%
+	sinal Ruim      30.4%
 
 
 \end{lstlisting}
