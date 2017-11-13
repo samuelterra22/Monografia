@@ -1542,14 +1542,15 @@ Ainda com a saída de dados, ao fim da execução da busca da posição dos APs,
 
 Neste sentido, é importante ressaltar que a figuras acima são resultados dos primeiros testes executados. A escala de cores utilizada foi a plasma, variando das cores laranja até o azul escuro. Na próxima seção mostraremos os resultados de testes efetuados utilizando ainda um \textit{access point} com uma nova escala de cores. 
 
-\clearpage
+%\clearpage
+\newpage
 
 \section[Wi-Fi Placement para 1 AP]{Wi-Fi Placement para 1 AP}
 
-A figura abaixo, se comparada com as figuras do tópico anterior, possuem cores mais condizentes com os resultados obtidos, além de uma restrição na parte gráfica, destacada com a cor preta nas áreas onde o sinal é menor que a sensibilidade do AP.
+A \autoref{prop_bloco_a}, se comparada com as figuras do tópico anterior, possuem cores mais condizentes com os resultados obtidos, além de uma restrição na parte gráfica, destacada com a cor preta nas áreas onde o sinal é menor que a sensibilidade do AP.
 
 \begin{figure}[ht]
-	\caption{\label{prop-bloco-a}Simulação da propagação de sinais de microondas no bloco A utilizando 1 AP, sua absorção e limiar de sensibilidade.}
+	\caption{\label{prop_bloco_a}Simulação da propagação de sinais de microondas no bloco A utilizando 1 AP, sua absorção e limiar de sensibilidade.}
 	\begin{center}
 		\includegraphics[scale=0.4]{images/prop-bloco-a.jpg}
 	\end{center}
@@ -1560,8 +1561,10 @@ A figura abaixo, se comparada com as figuras do tópico anterior, possuem cores 
 
 As plantas dos pisos 1, 2 e 3 do bloco C foram fornecidas e convertidas para o formato \textit{.dxf }ao final da implementação. Tais arquivos foram simulados e obtidas suas representações gráficas. A imagem abaixo mostra a simulação da planta baixa no bloco C utilizando 1 AP.
 
+\newpage
+
 \begin{figure}[ht]
-	\caption{\label{captura-zona}simulação da propagação de sinais de microondas no bloco C utilizando 1 AP.
+	\caption{\label{captura_zona}simulação da propagação de sinais de microondas no bloco C utilizando 1 AP.
 		}
 	\begin{center}
 		\includegraphics[scale=0.4]{images/captura-zona.jpg}
@@ -1569,14 +1572,14 @@ As plantas dos pisos 1, 2 e 3 do bloco C foram fornecidas e convertidas para o f
 	\legend{Fonte: Elaboração do autor}
 \end{figure}
 
-Como pode ser visto na imagem, quando utilizada a busca pelo ponto ótimo com um \textit{access point}, ele tendeu a permanecer ao centro da planta. Com o resultado dado para esta simulação com um AP, os cômodos mais ao centro são bem atendidos com o sinal \textit{Wi-Fi}, mas ao contrário dos mais afastados, não irão usufruir de uma boa qualidade de sinal e esse é retirado da apresentação gráfica e dos cálculos da avaliação da função objetivo. O resultado toma essa característica por não realizar uma verificação das áreas mais importantes. Caso tivesse essa funcionalidade implementada, a metaheurística poderia fazer com que o AP cobrisse as áreas mais críticas.
+Como pode ser visto na \autoref{prop_bloco_a} e na \autoref{captura_zona}, quando utilizada a busca pelo ponto ótimo com um \textit{access point}, ele tendeu a permanecer ao centro da planta. Com o resultado dado para esta simulação com um AP, os cômodos mais ao centro são bem atendidos com o sinal \textit{Wi-Fi}, mas ao contrário dos mais afastados, não irão usufruir de uma boa qualidade de sinal e esse é retirado da apresentação gráfica e dos cálculos da avaliação da função objetivo. O resultado toma essa característica por não realizar uma verificação das áreas mais importantes. Caso tivesse essa funcionalidade implementada, a metaheurística poderia fazer com que o AP cobrisse as áreas mais críticas.
 
 \section[Wi-Fi Placement para 2 ou mais APs]{Wi-Fi Placement para 2 ou mais APs}
 
-Feita a propagação do sinal \textit{wireless} para um AP nos bloco A, foi validada a implementação da simulação com dois \textit{access points}. A imagem abaixo mostra como foi o resultado da simulação do \textit{Wi-Fi} no bloco A.
+Feita a propagação do sinal \textit{wireless} para um AP nos bloco A, foi validada a implementação da simulação com dois \textit{access points}. A  \autoref{captura_dois_aps} mostra como foi o resultado da simulação do \textit{Wi-Fi} no bloco A.
 
 \begin{figure}[ht]
-	\caption{\label{captura-dois-aps}simulação da propagação de sinais de microondas no bloco A utilizando 2 APs.
+	\caption{\label{captura_dois_aps}simulação da propagação de sinais de microondas no bloco A utilizando 2 APs.
 	}
 	\begin{center}
 		\includegraphics[scale=0.4]{images/captura-2-aps.jpg}
@@ -1586,10 +1589,10 @@ Feita a propagação do sinal \textit{wireless} para um AP nos bloco A, foi vali
 
 Como pode ser visto, a heurística pode então dar, como o resultado, dois pontos que visualmente aparentam ser muito bons. Na imagem acima pode ser visto que os dois APs foram alocados com uma distância de folga, fazendo com que possam aproveitar a propagação do espectro no ambiente. Com a escolha sugerida pelo SA, pode-se também notar que as salas da parte inferior não estão recebendo uma qualidade de sinal como na sala em que os APs estão instalados, mas mesmo assim, toda a área está recebendo sinal, não havendo zonas onde a potência recebida é inferior à sensibilidade do equipamento.
 
-O mesmo teste foi realizado com a planta baixa do bloco C. Com a imagem abaixo, pode ser visto quais são os pontos sugeridos pelo SA na busca para a alocação dos mesmos.
+O mesmo teste foi realizado com a planta baixa do bloco C. Com a \autoref{captura_dois_aps_c}, pode ser visto quais são os pontos sugeridos pelo SA na busca para a alocação dos mesmos.
 
 \begin{figure}[ht]
-	\caption{\label{captura-dois-aps-C}simulação da propagação de sinais de microondas no bloco C utilizando 2 APs.
+	\caption{\label{captura_dois_aps_c}simulação da propagação de sinais de microondas no bloco C utilizando 2 APs.
 	}
 	\begin{center}
 		\includegraphics[scale=0.3]{images/captura-2-aps-bloco-c.jpg}
@@ -1599,6 +1602,8 @@ O mesmo teste foi realizado com a planta baixa do bloco C. Com a imagem abaixo, 
 
 Com o resultado dado pelo SA no bloco C, pode-se notar que foi possível cobrir praticamente toda a área. Tiveram algumas áreas com pontos cegos porém, podem ser consideradas de certa forma irrelevantes quando o objetivo é obter a maior cobertura do sinal. Um resultado ainda melhor pode ser encontrado se for feito um maior refinamento utilizando o planejamento fatorial 2K.
 
+%\newpage
+\clearpage
 
 \section[Análise da utilização de recursos]{Análise da utilização de recursos}
 
@@ -1612,7 +1617,7 @@ A fim de buscar um melhor visualização do fluxo de execução do algoritmo, fo
 	\legend{Fonte: Elaboração do autor}
 \end{figure}
 
-Assim, cada retângulo do grafo acima representa um método implementado, sendo eles referentes aos métodos implementados utilizando Python e aos métodos de bibliotecas utilizadas no desenvolvimento da aplicação. Também pode ser visto que cada aresta no grafo possui uma barra de porcentagem representando visualmente o seu tempo gasto na aplicação, juntamente com o número de vezes que o método foi chamado.  Para realizar a interpretação do arquivo de saída, basta utilizar o comando \textit{pyprof2calltree -k -i PlacementAPs.cprof} no terminal com o arquivo gerado ao fim da simulação, nesse caso, \textit{PlacementAPs.cprof}.
+Assim, cada retângulo do grafo da \autoref{cprofile} representa um método implementado, sendo eles referentes aos métodos implementados utilizando Python e aos métodos de bibliotecas utilizadas no desenvolvimento da aplicação. Também pode ser visto que cada aresta no grafo possui uma barra de porcentagem representando visualmente o seu tempo gasto na aplicação, juntamente com o número de vezes que o método foi chamado.  Para realizar a interpretação do arquivo de saída, basta utilizar o comando \textit{pyprof2calltree -k -i PlacementAPs.cprof} no terminal com o arquivo gerado ao fim da simulação, nesse caso, \textit{PlacementAPs.cprof}.
 
 
 \chapter[CONSIDERAÇÕES FINAIS]{CONSIDERAÇÕES FINAIS}
