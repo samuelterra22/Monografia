@@ -1,0 +1,38 @@
+Otimizacao via Simulated Annealing com a seguinte configuracao:
+
+Numero maximo de iteracoes:			600
+Numero maximo de pertubacoes por iteracao:	5
+Numero maximo de sucessos por iteracaoo:	720
+Temperatura inicial:				900
+Decaimento da temperatura com alpha=		0.85
+Raio de perturbacao:				33
+Execucoes do otimizador: 		1
+
+Hardware de simulacao:	GPU
+
+
+Simulacao do ambiente com a seguinte configuracao:
+
+Simulando ambiente com:  		400 x 149 pixels
+Escala de simulacao:     		1 px : 0.1275 metros
+Quantidade de APs:       		2
+Potencia de cada APs:    		-25 dBm
+Posicao inicial dos APs: 		CENTRALIZADA (W/2, H/2)
+Solucao inicial:
+[[ 200.    74.5]
+[ 200.    74.5]]
+Distancia da soluao inicial:		[  2. -23.]
+FO last cand:   -3.285e+01
+FO local best:  -5.867e+01
+FO global best: 5.762e+02
+
+****** Gerando sumarios dos resultados da simulacao ******
+Numero de solucoes:	2
+COBERTURA DE SINAL WI-FI:
+87.62%	 com boa cobertura (sinal forte)
+12.38%	 de zonas de sombra (abaixo da sensibilidade)
+
+Cobertura por FAIXAS de intensidade de sinal
+sinal Otimo  	24.3%
+sinal Bom    	26.3%
+sinal Ruim   	37.0%

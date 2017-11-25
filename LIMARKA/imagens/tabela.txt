@@ -1,0 +1,26 @@
+\begin{table}[h!]
+\centering
+\caption{Análise Crítica dos Softwares Relacionados.}
+\label{Fonte: O autor.}
+\begin{tabular}{|l|l|l|ll}
+\cline{1-3}
+ \textbf{Sistema}		& \textbf{Plataforma}  & \textbf{Características Interessantes}  &  &  \\ \cline{1-3}
+ \textbf{Meeting} 		&  WEB & - Envio de notificação aos envolvidos;
+ - Integração com o Google Agenda;
+- Assinatura On-line. &  &  \\ \cline{1-3}
+ \textbf{MeetingKing}	&  WEB & - Modelos de Atas;
+- Integração com Google Agenda e Outlook;
+- Criar reunião a partir de dados do Google e Outlook;
+- Anexo de arquivos importantes.
+ &  &  \\ \cline{1-3}
+ \textbf{MeetingSense}	&  WEB & - Integração com o Microsoft Office 365;
+- Inserção de posicionamentos concorrente à reunião;
+- Painel bem estruturado com todas informações da reunião.
+ &  &  \\ \cline{1-3}
+ \textbf{GMinutes}		&  WEB/Móvel & - Atribuição de papéis aos participantes;
+- Notificações aos participantes;
+- Reagendar reuniões;
+- Modelos de Atas.
+  &  &  \\ \cline{1-3}
+\end{tabular}
+\end{table}
