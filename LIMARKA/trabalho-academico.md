@@ -16,7 +16,7 @@ colocação dos móveis e divisórias a mudanças de sala, a limitação
 imposta pelos cabos se torna um problema de organização e planejamento
 das futuras mudanças. Quando há a necessidade de ampliar a rede para a
 acomodação de novos pontos de acesso para telecomunicação, a necessidade
-de se passarem novos cabos torna-se inconveniente. O obstáculo às
+de se estender o atual cabeamento torna-se inconveniente. O obstáculo às
 alterações se torna ainda maior quando o ambiente é alguma construção em
 que não é viável realizar intervenções na parede (e.g., tombamento ou
 estética) para a redistribuição dos cabos, por vezes em edifícios, onde,
@@ -32,9 +32,9 @@ necessária ou, então, se por mais perto que o ponto de acesso (AP)
 satisfatória devido a um baixo nível de sinal ou interferências na mesma
 frequência do canal.
 
-Portanto, se faz necessário um bom planejamento do posicionamento dos
-APs *wireless*, de maneira a oferecer uma boa cobertura de sinal onde se
-fizerem necessários. É importante deixar claro que o tratamento de
+Isso posto, faz-se necessário um bom planejamento do posicionamento dos
+APs *wireless* de maneira a oferecer uma boa cobertura de sinal onde ouver
+demanda de conectividade. É importante deixar claro que o tratamento de
 colisão de canais como sua interferência de APs próximos não está dentre
 os principais objetivos dessa pesquisa e, por conseguinte, não foi
 implementado. A proposta deste trabalho é desenvolver um *software* para
@@ -87,7 +87,8 @@ reduzir interferências entre APs).
 
 Por fim, até onde pudemos verificar, não há disponível um *software*
 livre, gratuito e de código-fonte aberto para *Wireless AP Placement*,
-apenas soluções proprietárias, comerciais e custosas.
+apenas soluções proprietárias, comerciais e custosas. Isto posto
+justifica-se o desenvolvimento da ferramenta proposta neste trabalho.
 
 Objetivos
 ---------
@@ -176,25 +177,25 @@ WLAN foram estabelecidos \cite{RIVERA,BANERJI}, como:
 
 -   **IEEE 802.11a:** Definido em setembro 1999, operando na frequência
     de 5 GHz, uma largura de banda de 20 MHz, taxa de transmissão de até
-    54 Mbit/s e podendo ter um alcance de 35 metros indoor e até 5
-    quilômetros outdoor.
+    54 Mbit/s e podendo ter um alcance de 35 metros *indoor* e até 5
+    quilômetros *outdoor*.
 
 -   **IEEE 802.11b:** Definido em setembro 1999, operando com uma
     frequência de 2.4 GHz, uma largura de banda de 22 MHz, taxa de
-    transmissão de até 11 Mbit/s e com alcance de 35 metros indoor e 140
-    metros outdoor.
+    transmissão de até 11 Mbit/s e com alcance de 35 metros *indoor* e 140
+    metros *outdoor*.
 
 -   **IEEE 802.11g:** Definido em junho de 2003, operando com uma
     frequência de 2.4 GHz, utilizando uma largura de banda de 20 MHz,
     com uma taxa de transmissão de até 54 Mbit/s e com um alcance de 38
-    metros indoor e 140 metros outdoor.
+    metros *indoor* e 140 metros *outdoor*.
 
 -   **IEEE 802.11n:** Definido em outubro de 2009, operando com uma
     frequência de 2.4 GHz (802.11a) e 5 GHz (802.11g), com uma taxa de
     transmissão de até 72.2 Mbit/s utilizando uma largura de banda de 20
     MHz e uma taxa de transmissão de até 150 Mbit/s com uma banda de 40
     MHz, permitindo múltiplos fluxos espectrais (MIMO). O alcance vai de
-    70 metros indoor e 250 metros outdoor.
+    70 metros *indoor* e 250 metros *outdoor*.
 
 -   **IEEE 802.11ac:** Definido em dezembro de 2013, operando com uma
     frequência de 5 GHz, utilizando uma largura de banda que vai de 20
@@ -208,7 +209,7 @@ andares).
 Propagação de sinais de rádio
 -----------------------------
 
-O sinal Wi-Fi produzido pelo access point nada mais é, de um modo
+O sinal Wi-Fi produzido pelo *access point* nada mais é, de um modo
 simplista, que uma onda de rádio que se propaga no espaço. De acordo com
 Rappaport,
 
@@ -232,7 +233,7 @@ de onda ou durações de segundos) \cite[p. 72]{RAPPAPORT}.
 Rappaport define três modelos básicos de propagação que são usados para
 a previsão da intensidade do sinal recebido a determinada distância do
 transmissor, numa larga escala. O modelo de propagação no espaço livre
-(Friss) é utilizado quando transmissor e receptor possuem uma linha de
+(*Friis*) é utilizado quando transmissor e receptor possuem uma linha de
 visão desobstruída, ou seja, não há obstáculos entre eles que
 interrompam ou alterem o caminho da transmissão do sinal. O modelo de
 propagação no espaço livre oferece uma noção da ordem de magnitude do
@@ -285,49 +286,49 @@ precisão desejada, mais detalhes sobre o ambiente de propagação devem
 ser modelados. Nesta seção serão comentados sucintamente sete modelos
 que foram estudados para a realização deste trabalho.
 
-### Propagação no espaço livre (modelo de Friis)
+### Propagação no espaço livre (modelo de *Friis*)
 
-O modelo *Friss free-space path loss* ou geralmente tratado como modelo
+O modelo *Friis free-space path loss* ou geralmente tratado como modelo
 de propagação no espaço livre de Friis é usado para prever a intensidade
 do sinal recebido quando a antena transmissora e a antena receptora
 possuem um caminho de linha de visão limpo, ou seja, um caminho
 desobstruído de qualquer objeto ou edificação \cite{LUO}. Tal modelo é
 em geral usado em sistemas de comunicação por satélite e em enlaces de
-rádio de microondas com linha de visão. Assim como os modelos outdoor, o
+rádio de microondas com linha de visão. Assim como os modelos *outdoor*, o
 modelo de propagação no espaço livre de Friis, pressupõe que a potência
 recebida diminui com uma função da distância entre a antena transmissora
 e a antena receptora elevada a alguma potência, ou seja, uma função da
 lei de potência. A potência recebida através do espaço livre pela antena
-receptora separada da antena transmissora por uma distância d pode ser
+receptora separada da antena transmissora por uma distância $d$ pode ser
 calculada pela seguinte equação:
 
 \begin{equation}
-P_{r}= \frac{P_{t}G_{t}G_{r}\lambda^{2}}{(4\pi)^{2}d^{2}L}
+P_{r}(d)= \frac{P_{t}G_{t}G_{r}\lambda^{2}}{(4\pi)^{2}d^{2}L}
 \end{equation}
 
 sendo:
 
--   Pt a potência transmitida;
+-   $P_{t}$ a potência transmitida;
 
--   Pr(d) a potência recebida;
+-   $P_{r}(d)$ a potência recebida na distância $d$;
 
--   Gt é o ganho da antena transmissora;
+-   $G_{t}$ é o ganho da antena transmissora;
 
--   Gr é o ganho da antena receptora;
+-   $G_{r}$ é o ganho da antena receptora;
 
--   d é a distância de separação das antenas;
+-   $d$ é a distância de separação das antenas;
 
--   L é o fator de perda (L>=1), L = 1 indica nenhuma perda no
+-   $L$ é o fator de perda ($L\geq1$), $L = 1$ indica nenhuma perda no
     hardware do sistema;
 
 -   $\lambda$ é o comprimento de onda dado em metros.
 
-O modelo de espaço livre de Friis é apenas uma previsão válida para uma
-potência recebida para uma distância d de separação entre as antenas. O
+O modelo de espaço livre de *Friis* é apenas uma previsão válida para uma
+potência recebida para uma distância $d$ de separação entre as antenas. O
 campo distante que é criado entre as antenas pode ser chamado de região
 de *Fraunhofer*, onde essa região é definida como uma região além da
-distância de campo distante df, que está diretamente relacionada com a
-maior dimensão linear D de abertura da antena transmissora e com o
+distância de campo distante $d_{f}$ , que está diretamente relacionada com a
+maior dimensão linear $D$ de abertura da antena transmissora e com o
 comprimento de onda da portadora (antena receptora) \cite{RAPPAPORT}. Tal distância de
 *Fraunhofer* pode ser calculada pela seguinte fórmula:
 
@@ -337,22 +338,22 @@ comprimento de onda da portadora (antena receptora) \cite{RAPPAPORT}. Tal distâ
 
 O cálculo da potência recebida tem uma falha quando a distância é zero.
 Por este motivo, modelos de propagação em larga escala utilizam uma
-distância próxima, d0, com um ponto de referência de potência conhecido.
-A potência recebida, Pr(d), em qualquer distância que a distância d seja
+distância próxima, $d_{0}$, com um ponto de referência de potência conhecido.
+A potência recebida, $P_{r}(d)$, em qualquer distância que a distância $d$ seja
 maior que zero, pode estar relacionada com a potência recebida no ponto
-de referência d0 \cite{RAPPAPORT}. A equação que calcula a potência recebida pode ser
-vista abaixo utilizando uma distância maior que d0:
+de referência $d_{0}$ \cite{RAPPAPORT}. A equação que calcula a potência recebida pode ser
+vista abaixo utilizando uma distância maior que $d_{0}$:
 
 \begin{equation}
-P_{r} = P_{r}(d_{0})(\frac{d_{0}}{d})^{2}
+	P_{r}(d) = P_{r}(d_{0})(\frac{d_{0}}{d})^{2}
 \end{equation}
 
-O valor da distância de referência d0 em sistemas práticos em antenas de
+O valor da distância de referência $d_{0}$ em sistemas práticos em antenas de
 baixo ganho, entre 1 e 2 GHz, normalmente é utilizado com sendo 1 metro
 em ambientes internos (*indoor*) e 100 metros ou 1 quilômetro para
 ambientes externos (*outdoor*), de forma que o resultado obtido pelas
 equações anteriores são múltiplos de 10, tornando os cálculos de perda
-de caminho fácies em unidade de dB.
+de caminho fácies em unidade de $dB$.
 
 ### *Two-rays ground reflection*
 
@@ -370,7 +371,7 @@ de forma construtiva e destrutiva, proporcionando regiões de exaustão e
 decaimento à medida que a distância aumenta além da distância crítica ou
 primeira zona de Fresnel, a potência cai proporcionalmente quatro vezes
 o inverso da potência da distância. Essa é uma perda no caminho muito
-mais rápida do que é experimentada no *Friss free-space path loss model*
+mais rápida do que é experimentada no *Friis free-space path loss model*
 (espaço livre de Friis).
 
 Quando se tem valores muito altos para a distância, pode-se notar que a
@@ -385,26 +386,26 @@ A potência recebida a uma distância d do transmissor para o modelo
 *Two-rays ground reflection model* pode ser expressa como:
 
 \begin{equation}
-P_{r} = P_{t}G_{t}G_{r}\frac{h^{2}_{t}h^{2}_{r}}{d^{4}}
+	P_{r}(d) = P_{t}G_{t}G_{r}\frac{h^{2}_{t}h^{2}_{r}}{d^{4}}
 \end{equation}
 sendo:
 
--   Pr a potência recebida;
+-   $P_{r}(d)$ a potência recebida com distância $d$;
 
--   Pt a potência transmitida;
+-   $P_{t}$ a potência transmitida;
 
--   Gr o ganho da antena receptora;
+-   $G_{r}$ o ganho da antena receptora;
 
--   Gt o ganho da antena transmissora;
+-   $G_{t}$ o ganho da antena transmissora;
 
--   ht a altura da antena transmissora;
+-   $h_{t}$ a altura da antena transmissora;
 
--   hr a altura da antena receptora;
+-   $h_{r}$ a altura da antena receptora;
 
--   d a distância do transmissor;
+-   $d$ a distância do transmissor;
 
 A perda do caminho para o modelo *Two-rays ground reflection model* pode
-ser expressa em dB com a equação abaixo:
+ser expressa em $dB$ com a equação abaixo:
 
 \begin{equation}
 PL(dB) = 40 log d -(10 log G_{t} + 10 log G_{r} + 20 log h_{t} + 20 log h_{r})
@@ -419,12 +420,12 @@ propagação para uma ampla gama de ambientes, enquanto que o modelo Friis
 
 O principal critério ou característica deste modelo é considerar que a
 perda no caminho é logaritmicamente dependente da distância. Logo a
-perda no caminho calculada com uma distância d entre um transmissor e
+perda no caminho calculada com uma distância $d$ entre um transmissor e
 receptor (geralmente dado em quilômetros) . Na região mais distante do
-transmissor (onde $d \geq df$), se PL (d0) é a perda de percurso medida
-em dB a uma distância d0 do transmissor, então a perda do caminho (a
-perda na potência do sinal em dB quando se desloca de distância d0 a d)
-a uma distância arbitrária $d > d0$ é dada pela fórmula:
+transmissor (onde $d \geq df$), se $PL(d_{0})$ é a perda de percurso medida
+em $dB$ a uma distância $d_{0}$ do transmissor, então a perda do caminho (a
+perda na potência do sinal em $dB$ quando se desloca de distância $d_{0}$ a $d$)
+a uma distância arbitrária $d > d_{0}$ é dada pela fórmula:
 
 \begin{equation}
 PL(d) = PL(d_{0}) + 10 \cdot n \cdot log(\frac{d_{0}}{d})
@@ -432,16 +433,16 @@ PL(d) = PL(d_{0}) + 10 \cdot n \cdot log(\frac{d_{0}}{d})
 
 sendo:
 
--   d é a distância dada em quilômetros em todos os caso;
+-   $d$ é a distância dada em quilômetros em todos os caso;
 
--   d0 é a distância inicial de referência;
+-   $d_{0}$ é a distância inicial de referência;
 
--   PL(d) é a perda no caminho para a distância d;
+-   $PL(d)$ é a perda no caminho para a distância $d$;
 
--   PL(d0) é um valor de perda de caminho para uma distância de
+-   $PL(d_{0})$ é um valor de perda de caminho para uma distância de
     referência;
 
--   n é o expoente de propagação e indica a taxa na qual a perda de
+-   $n$ é o expoente de propagação e indica a taxa na qual a perda de
     caminho aumenta com a distância \cite{MATHURANATHAN}.
 
 Geralmente, para modelar ambientes reais, os efeitos *shadowing* (de
@@ -460,8 +461,8 @@ escolhida, devem ser bem conhecidos para uma boa modelagem da perda.
 ### *One-slope*
 
 O modelo *One-slope* é classificado como sendo um modelo empírico e
-assume que a perda no caminho dada em dBm é linearmente na distância
-logarítmica da distância d entre o transmissor e receptor \cite{LUO}:
+assume que a perda no caminho dada em $dBm$ é linearmente na distância
+logarítmica da distância $d$ entre o transmissor e receptor \cite{LUO}:
 
 \begin{equation}
 PL(d) = L_{0} + 10 \cdot n \cdot log(d)
@@ -469,17 +470,17 @@ PL(d) = L_{0} + 10 \cdot n \cdot log(d)
 
 onde:
 
--   d é a distância entre transmissor e receptor;
+-   $d$ é a distância entre transmissor e receptor;
 
--   PL(d) é a perda no caminho para a distância d;
+-   $PL(d)$ é a perda no caminho para a distância $d$;
 
--   L0 é a perda no caminho calculado em uma distância de 1 metro;
+-   $L_{0}$ é a perda no caminho calculado em uma distância de 1 metro;
 
--   n é o expoente de perda no caminho;
+-   $n$ é o expoente de perda no caminho;
 
 Claramente, este modelo baseia-se na perda do espaço livre e visa
 incluir todas as perdas devido a vários mecanismos de propagação pelo
-caminho usando um expoente n de perda. Por ser um modelo simples, se
+caminho usando um expoente $n$ de perda. Por ser um modelo simples, se
 torna muito fácil de realizar sua implementação, mas se usado de forma
 única pode levar a grandes erros em ambientes internos, pois é possível
 que um grande números de objetos interfiram nos mecanismos de
@@ -502,22 +503,23 @@ modelo de propagação *wall and floor factor* pode ser calculada pela
 seguinte equação:
 
 \begin{equation}
-PL(d) = a + 10 \cdot n \cdot log(d)
+	PL(d) = L_{1} + 20 \cdot log(d) + n_{f} \cdot L_{f} + n_{w} \cdot L_{w}
 \end{equation}
 
 sendo:
 
--   d é a distância entre transmissor e receptor;
+-   $d$ é a distância entre transmissor e receptor;
 
--   PL(d) é a perda no caminho para a distância d;
+-   $PL(d)$ é a perda no caminho para a distância $d$;
 
--   L1 é a perda no caminho calculado em uma distância de 1 metro; n é o
-    expoente de perda no caminho;
+-   $L_{1}$ é a perda no caminho calculado em uma distância de 1 metro;
 
--   Lf e Lw são respectivamente perdas causadas pela penetração no piso
+-	$n$ é o expoente de perda no caminho;
+
+-   $L_{f}$ e $L_{w}$ são respectivamente perdas causadas pela penetração no piso
     e nas paredes;
 
--   nf e nw são respectivamente os números de pisos e de paredes.
+-   $n_{f}$ e $n_{w}$ são respectivamente os números de pisos e de paredes.
 
 ### *Log-normal fading*
 
@@ -530,7 +532,7 @@ que, para se obter uma representação mais realista da perda do sinal, é
 necessária uma grande coleta de dados empíricos.
 
 \begin{equation}
-f(x; \mu; \sigma) = \frac{1}{x \sigma \sqrt{2 \pi}} exp[-\frac{(ln(x) - \mu)^{2}}{2 \sigma^{2}}]
+	f(x; \mu; \sigma) = \frac{1}{x \sigma \sqrt{2 \pi}} exp[-\frac{(ln(x) - \mu)^{2}}{2 \sigma^{2}}]
 \end{equation}
 
 Uma possível explicação para o motivo pelo qual este modelo utiliza uma
@@ -539,7 +541,7 @@ contribuem com a perda do sinal, incluindo a combinação de perda no
 espaço livre, difrações, reflexões, interferências de equipamentos,
 dentre outros motivos. Para cada uma dessas perdas, é utilizada uma
 variável aleatória que a representa \cite{BUDGETS}. A sua perda é dada
-em dB e é o somatório de todas essas perdas (também expressadas em dB).
+em $dB$ e é o somatório de todas essas perdas (também expressadas em dB).
 O teorema do limite central afirma que tal distribuição tenderá a uma
 distribuição normal.
 
@@ -564,7 +566,7 @@ difrações e cálculos serão feitos \cite{VALENZUELA}.
 Trabalhos Relacionados
 ----------------------
 
-Nesta seção serão apresentados alguns softwares que estão presentes no
+Nesta seção serão apresentados alguns *softwares* que estão presentes no
 mercado e oferecem serviços similares aos objetivos propostos nesse
 trabalho. Serão citadas ferramentas que realizam um trabalho semelhante
 ao desenvolvido aqui, como o *TamoGraph Site Survey, AirMagnet Survey,
@@ -575,25 +577,25 @@ pesquisa e na área da Ciência da Computação.
 
 ### TamoGraph Site Survey
 
-O *TamoGraph*[^1] é uma ferramenta de site survey usada para a coleta,
+O *TamoGraph*[^1] é uma ferramenta de *site survey* usada para a coleta,
 visualização e análise de dados *Wi-Fi* 802.11 com padrões a/bg/n/ac. É
 muito usada quando se tem a implantação e a manutenção de redes sem fio,
 uma vez que facilita tarefas que são demoradas e muitas das vezes, até
 complexas de se obter um bom resultado. O *TamoGraph* realiza como
-tarefas, análises contínuas e relatórios de intensidade/qualidade do
+tarefas análises contínuas e relatórios de intensidade/qualidade do
 sinal, ruídos e interferências, alocações de canais, taxas de dados
 transmitidos, dentre outros.
 
 A ferramenta aposta que, as empresas que fizerem o seu uso, poderão
 reduzir drasticamente o seu tempo e custos envolvidos em implantações e
 manutenções de redes *wireless*, melhorar o desempenho e cobertura da
-rede em todos os tipos de ambiente, desde ambientes *indoor*, como
+rede em todos os tipos de ambiente, desde ambientes *indoor* como
 prédios com escritórios, aeroportos e shoppings, até ambientes
-*outdoor*, como pátios, praças, campos e estacionamentos.
+*outdoor* como pátios, praças, campos e estacionamentos.
 
 A empresa *TamoSoft* considera ser praticamente impossível considerar
 todas as variáveis que possam afetar a saúde e o desempenho da rede.
-Para ela, alterar as condições, até mesmo de algo aparentemente menor,
+Segundo ela em seu site, alterar as condições do cenário, até mesmo de algo aparentemente menor,
 como um *notebook* conectado à rede sem fio de um escritório, pode
 afetar gravemente o seu desempenho, que também pode ser influenciado
 pela ampla proliferação de redes sem fio com fatores de interferência.
@@ -607,10 +609,11 @@ Windows Server 2012 R2* e versão para *MacBooks*. Possui versões em 32 e
 64 bits e requer um adaptador de rede *wireless* compatível. A sua
 licença mais básica custa 899 dólares, aproximadamente R\$2850,00 e a
 licença profissional custa US\$ 1,199.00, aproximadamente R\$ 3.802,00.
+Ambas as licença são vitalícias e apenas para um usuário. 
 
 ### Netscout AirMagnet Survey
 
-O *AirMagnet Survey*[^2] é um software de pesquisa local para redes sem
+O *AirMagnet Survey*[^2] é um software de *survey* para redes sem
 fio que propõe uma solução para *softwares* que realizam a análise de
 redes sem fio locais que necessitam projetar e planejar LANs sem fio com
 o padrão 802.11 a/b/g/n/ac com desempenho, segurança e conformidade. O
@@ -621,8 +624,8 @@ A *Netscout*, empresa responsável pelo *AirMagnet*, diz que o seu
 produto vai além do que uma simples cobertura dos sinais de
 radiofrequência. Ele traça o desempenho de rede real do usuário final
 nos termos da velocidade de conexão, taxa de transferência e
-estatísticas do pacote e dá, como resultado, um mapa completo do
-ambiente coberto pelo Wi-Fi, permitindo ao usuário implantar sua rede
+estatísticas do pacote e computa como resultado, um mapa completo do
+ambiente coberto pelo *Wi-Fi*, permitindo ao usuário implantar sua rede
 corretamente, já no primeiro momento, evitando custos de retrabalho e
 reclamações posteriores, além de ter fidelidade nos serviços prestados.
 
@@ -631,45 +634,45 @@ espectro profissionais para obter os dados do sinal *wireless* em uma
 única varredura, modelar cenários antes da implantação para estimar
 orçamentos, definir estratégias de migração para novas tecnologias,
 obter relatórios de pesquisa personalizados, executar inspeções internas
-usando dispositivos providos de tecnologia GPS, realizar inspeções de
+usando dispositivos providos de tecnologia *GPS*, realizar inspeções de
 *VoiceOver* no local de implantação da rede *wireless* (para que esteja
 pronta para suportar serviços de voz), certificar a rede para os
 requisitos de aplicativos e rede dos usuários finais, com um
 planejamento detalhado da capacidade de usuários finais.
 
 O *AirMagnet Survey* possui versões *Express* que oferecem uma versão
-mais simples de pesquisa local para padrão 802.11ac, permitindo que o
+mais simples de *survey* para padrão 802.11ac, permitindo que o
 usuário execute um exame básico do local de implantação da rede
 *wireless*, possibilitando mapear o sinal, ruído e até mesmo o
-desempenho de usuários. O *AirMagnet* possui também a sua versão Pro,
+desempenho de usuários. O *AirMagnet* possui também a sua versão *Pro*,
 que amplia ainda mais as capacidades oferecidas pela versão *Express*.
 Nela é adicionada a funcionalidade “*Planner*”, pela qual é possível
 realizar desde a implantação de um *access point* até o orçamento dos
 gastos, além de suporte para a implantação de vários andares, inspeções
-técnicas de ambientes externos (outdoor), verificação e análise de
+técnicas de ambientes externos (*outdoor*), verificação e análise de
 prontidão para serviços de voz, análise do espectro de radiofrequência e
 mais outros recursos.
 
 É possível executar o *software* no ambiente *Windows* em todas as
 versões 64 bits iguais ou superiores ao *Windows 7* e em ambientes *OSX*
 em que a versão é igual ou superior ao *Mac OS X v 10.5 (Leopard)*. O
-preço da licença para o uso do software não é informado no site da
+preço da licença para o uso do *software* não é informado no site da
 empresa. O orçamento deve ser feito pelo contato com representantes.
 
 ### Ekahau Site Survey & Planner
 
 A *Ekahau Wireless Design* é mais uma empresa que fornece um software
 para soluções sobre redes sem fio, batizado de *Ekahau Site Survey
-(ESS)*[^3]. O *Ekahau Site Survey* propõe um design e análise experiente
-sobre a tecnologia Wi-Fi. A *Ekahau* define seu software como sendo um
+(ESS)*[^3]. O *Ekahau Site Survey* propõe um *design* e análise experiente
+sobre a tecnologia Wi-Fi. A *Ekahau* define seu *software* como sendo um
 conjunto completo de ferramentas para projetar, analisar, otimizar e
 solucionar problemas de redes *wireless*.
 
 O ESS não deixa de ser um instrumento para verificação e solução de uso
-fácil em redes Wi-Fi. Foi desenvolvido para engenheiros e arquitetos de
+fácil em redes *Wi-Fi*. Foi desenvolvido para engenheiros e arquitetos de
 redes sem fio (desde sistemas integrados até administradores da área de
 TI). A empresa ainda garante o alto desempenho e capacidade para
-qualquer rede Wi-Fi com padrões 802.11ac e n. Se caso uma rede ainda não
+qualquer rede *Wi-Fi* com padrões 802.11ac e n. Se caso uma rede ainda não
 esteja em seu desempenho ótimo ou ainda não foi implantada, o ESS irá
 sugerir automaticamente o devido posicionamento e as configurações
 ideais para o *access point*.
@@ -692,23 +695,24 @@ também realizar a análise de capacidade mais abrangentes, por exemplo,
 todas as descobertas podem ser compiladas em um simples relatório
 utilizando um sistema de relatório desenvolvido pela *Ekahau*.
 
-O software foi projetado para ser executado em ambientes *Windows* e
+O *software* foi projetado para ser executado em ambientes *Windows* e
 *MaxOS*, e é uma ferramenta caracterizada por ser, de fato, essencial
 para engenheiros de redes sem fio em empresas de todos os tamanhos. A
 sua licença *Standard* custa US\$2295.00, aproximadamente R\$ 7.278,00 e
 vai até sua versão *Premium Pack* custando US\$ 5,649.00,
 aproximadamente R\$ 17.914,00; a versão *Pro Pack* com o valor de US\$
-5,995.00, aproximadamente R\$ 19.011,00s.
+5,995.00, aproximadamente R\$ 19.011,00. Todas as licenças são anuais
+e devem ser renovadas a cada ano.
 
 ### D-Link Wi-Fi Planner PRO
 
-O *D-Link Wi-Fi Planner PRO*, como indicado pelo nome, foi desenvolvido
+O *D-Link Wi-Fi Planner PRO* [^27], como indicado pelo nome, foi desenvolvido
 pela famosa empresa D-link. Com essa ferramenta, é possível ter uma
 visão do ambiente como um todo, antes da implantação da rede Wi-Fi. Isso
-faz com que o planejamento, a comunicação e à boa qualidade do serviço
-prestado entre WLAN e clientes sejam melhores.
+faz com que o planejamento, a comunicação e a boa qualidade do serviço
+prestado entre WLAN e clientes sejam melhorados.
 
-Para a execução do software é necessário criar uma pasta para o projeto.
+Para a execução do *software* é necessário criar uma pasta para o projeto.
 Logo após, o programa pede para ser carregado uma imagem que represente
 a planta do ambiente. A planta não tem a necessidade de ser exatamente
 igual, apenas é necessária uma imagem que possa ser o rascunho inicial
@@ -725,7 +729,9 @@ sugestão sobre o número de *access points* e o posicionamento
 necessários para eles terem uma maior cobertura do local.
 
 A empresa não fornece mais informações sobre quais os requisitos mínimos
-necessários para a utilização de sua ferramenta.
+necessários para a utilização de sua ferramenta ou preços, mas para que seja
+possível obter mais informações é necessário obter cadastro como empresa e entrar
+em contato com a mesma por email.
 
 MATERIAIS E MÉTODOS
 ===================
@@ -736,21 +742,22 @@ processo com o arquivo de entrada do *AutoCad*[^4] para a representação
 da matriz de propagação, a paralelização do código, utilizando a GPU
 para um melhor desempenho da simulação, a metaheurística utilizada para
 a otimização do posicionamento de *access points* e o Projeto Fatorial
-2K para a calibração dos parâmetros da metaheurística.
+$2^{k}$ para a calibração dos parâmetros da metaheurística.
 
 Para definir qual modelo de propagação deveria ser utilizado, foram
 usados dois softwares: o *R-Project*[^5] e o *Maple*[^6] para a
 realização de ajuste de curvas dos dados coletados empiricamente nos
-corredores do instituto.
+corredores do IFMG *campus* Formiga, mais especificamente sobre a planta
+dos andares do bloco C e bloco A.
 
 A Metaheurística
 ----------------
 
 Dada a complexidade do problema e o tamanho do ambiente simulado, para
 que fosse viável sugerir boas posições para a alocação do(s) *access
-point(s)*, foi implementado o *Simulated Annealing* como metaheurística
-de otimização que teve como função objetivo a busca por uma melhor
-cobertura do sinal wireless.
+point(s)* implementou-se o *Simulated Annealing* como metaheurística
+de otimização que teve como função objetivo maximizar a região coberta pela
+rede sem fio.
 
 O *Simulated Annealing* é uma metaheurística para aproximar a otimização
 global em uma amplo espaço de busca. Este método foi proposto por Scoot
@@ -760,7 +767,7 @@ metaestáveis, ou seja, de maior energia interna e o esfriamento lento a
 produtos mais estáveis, estruturalmente fortes e de menor energia \cite{VAN}.
 Durante o recozimento, o material passa por vários estados possíveis com
 um tempo suficientemente longo para que qualquer elemento passe por
-todos os seus estados acessíveis.
+todos os seus estados viáveis.
 
 O *Simulated Annealing* realiza o processo de otimização buscando
 encontrar a melhor solução viável, considerando o objetivo do problema
@@ -769,10 +776,10 @@ proposta.
 
 Problemas no campo das heurísticas podem ser modelados como problemas de
 maximização e problemas de minimização de uma função objetivo, que neste
-caso é obter a maior cobertura e qualidade do sinal *wireless*.
+caso é obter a maior cobertura e qualidade do sinal *wireless* na região informada.
 
 Com um problema de otimização em mãos, encontrar soluções ótimas ou
-aproximadas do seu ótimo para problemas NP-difíceis é um desafio nem
+aproximadas do seu ótimo para problemas NP-difícil é um desafio nem
 sempre fácil de ser alcançado. O uso de heurística para auxiliar na
 busca por um lugar para o *access point* foi de fácil implementação e,
 como a maioria das heurísticas, produz boas soluções dentro de um tempo
@@ -784,45 +791,45 @@ genéricas que foram implementadas neste trabalho:
 \begin{algorithm}
 	\caption{Simulated Annealing}\label{sa}
 	\begin{algorithmic}[1]
-		\Procedure{Simulated Annealing}{S0, M, P, L, $ \alpha $}
+		\Procedure{SimulatedAnnealing}{$S_{0}$, $M$, $P$, $L$, $ \alpha $}
 		
 		\State/* Inicialização das variáveis */
 		
-		\State S = S0
-		\State T0 = TempInicial()
-		\State T = T0
-		\State j = 1
+		\State $S = S_{0}$
+		\State $T_{0} = TempInicial()$
+		\State $T = T_{0}$
+		\State $j = 1$
 		
-		\State /*Loop principal*/
-		\State /*Verifica se foram atendidas as condições de termino do algoritmo*/
+		\State /* Loop principal */
+		\State /* Verifica se foram atendidas as condições de termino do algoritmo */
 		\Repeat
 		
-		\State i = 1
-		\State nSucesso = 0
+		\State $i = 1$
+		\State $nSucesso = 0$
 		
-		\State /* Loop Interno*/
-		\State /* Realização de perturbação em uma iteração*/
+		\State /* Loop Interno */
+		\State /* Realização de perturbação em uma iteração */
 			\Repeat
-				\State Si = Perturba(S)
-			    \State $\Delta$Fi = f(Si) – f(S)
+				\State $S_{i} = Perturba(S)$
+			    \State $\Delta_{Fi} = f(S_{i}) - f(S)$
 			    
 			    \State /*Teste de aceitação de uma nova solução*/
-			    \If{$(\Delta fi \leq 0) ou (exp(-\Delta fi/T) > Randomiza())$}
-			        \State S= Si
-			        \State nSucesso = nSucesso + 1
+			    \If{$(\Delta_{Fi} \leq 0) \textbf{ or } (exp(-\Delta_{Fi}/T) > Randomiza())$}
+			        \State $S = S_{i}$
+			        \State $nSucesso = nSucesso + 1$
 			    \EndIf
 			
-			\State i = i + 1
-			\Until{(nSucesso $ \geq $ L) \textbf{or} (i > P)}
+			\State $i = i + 1$
+			\Until{($nSucesso  \geq  L$) \textbf{or} ($i > P$)}
 		
-		   \State T = $\alpha \times$T
-		   \State /*Atualização do Contador de iterações*/
-		   \State j = j + 1
+		   \State $T = \alpha \times T$
+		   \State /* Atualização do Contador de iterações */
+		   \State $j = j + 1$
 		
-		\Until{(nSucesso = 0) \textbf{or} (j > M)}
+		\Until{($nSucesso = 0$) \textbf{or} ($j > M$)}
 		
-		\State /*Saída do Algoritmo*/
-		\State \Return{S}
+		\State /* Saída do Algoritmo */
+		\State \Return{$S$}
 		
 		\EndProcedure
 	\end{algorithmic}
@@ -830,42 +837,39 @@ genéricas que foram implementadas neste trabalho:
 
 Estes são os identificadores utilizados:
 
--   S0: Configuração Inicial (Entrada);
+-   $S_{0}$: Configuração Inicial (Entrada);
 
--   Si: Configuração da Iteração i;
+-   $S_{i}$: Configuração da Iteração $i$;
 
--   S: Configuração Final;
+-   $S$: Configuração Final;
 
--   T0: Temperatura Inicial;
+-   $T_{0}$: Temperatura Inicial;
 
--   Ti: Temperatura na Iteração i;
+-   $M$: Número máximo de iterações (Entrada);
 
--   M: Número máximo de iterações (Entrada);
+-   $P$: Número máximo de Perturbações por iteração (Entrada);
 
--   P: Número máximo de Perturbações por iteração (Entrada);
-
--   L: Número máximo de sucessos por iteração (Entrada);
+-   $L$: Número máximo de sucessos por iteração (Entrada);
 
 -   $\alpha$: Fator de redução da temperatura (Entrada);
 
--   f(Si): Valor da função objetivo correspondente á configuração Si;
+-   $f(S_{i})$: Valor da função objetivo correspondente á configuração $S_{i}$;
 
--   nSucesso: Contador de sucesso em uma iteração;
+-   $nSucesso$: Contador de sucesso em uma iteração;
 
--   i e j: Variáveis de controle de Loops.
+-   $i$ e $j$: Variáveis de controle de Loops.
 
 Além dos indicadores acima, consideremos as seguintes funções:
 
--   Perturba(S): Função que realiza uma perturbação na Solução S;
+-   $Perturba(S)$: Função que realiza uma perturbação na Solução $S$;
 
--   Randomiza(): Função que gera um número aleatório no intervalo
-    \[0,1\];
+-   $Randomiza()$: Função que gera um número aleatório uniforme no intervalo $[0, 1]$;
 
--   TempInicial(): Função que calcula a temperatura inicial;
+-   $TempInicial()$: Função que calcula a temperatura inicial;
 
 Mais adiante, será descrito como a metaheurística foi adaptada para o
 problema de otimização para alocação de *access point* nos ambientes do
-Instituto. Além disso, também serão apresentados técnicas e resultados
+IFMG *campus* Formiga. Além disso, também serão apresentados técnicas e resultados
 de sua utilização.
 
 Linguagem Python 
@@ -886,7 +890,7 @@ ano de 1989 e nos primeiros meses de 1990 fosse a linguagem mais
 utilizada no departamento de Computação de Amsterdã e hoje por muitos
 desenvolvedores de software \cite{SILVA}.
 
-O python é uma linguagem interpretada. Isso significa que seu código é
+O Python é uma linguagem interpretada. Isso significa que seu código é
 executado por um interpretador, e não compilado para linguagem de
 máquina para depois ser executada para um sistema e arquitetura
 específica, como acontece em algumas linguagens, como por exemplo a
@@ -896,7 +900,7 @@ Não obstante, o Python não trabalha com tipagem de objetos, o que
 permite, no geral, um ótimo desempenho. Alguns processamentos que
 realizam a demanda de mais recursos, como o processamento de imagens,
 são feitos por bibliotecas que geralmente são escritas em C ou C++,
-inclusive com possíveis trechos em *assemble*, quando o alto desempenho
+inclusive com possíveis trechos em *assembly*, quando o alto desempenho
 é necessário. Sendo assim, tais processamentos não fazem uso de tantos
 recursos num *script* escrito em Python. Em outra linguagem compilada
 seriam exigidos mais recursos.
@@ -958,7 +962,7 @@ Programação Paralela
 A computação paralela realizada por placas de vídeo é o uso de uma GPU
 juntamente com uma CPU para acelerar aplicações que necessitam de um
 alto recurso computacional \cite{KIRK}. Desde 2007, quando a NVIDIA criou o conceito
-de ‘computação acelerada’, o uso da GPU vem potencializando data centers
+de ‘computação acelerada’, o uso da GPU vem potencializando *data centers*
 de eficiência energética em laboratórios governamentais, universidades,
 corporações e empresas de médio e grande portes em todo o mundo. Elas
 desempenham um papel fundamental na aceleração de aplicações em
@@ -988,7 +992,7 @@ Há algum tempo era complicado escrever códigos para que fossem
 executados utilizando a GPU. Todo o assunto sobre programação paralela
 em GPU era focado em processamento de imagens; hoje esse conceito já não
 é o mesmo. A placa de vídeo faz mais do que realizar o processamento de
-imagens, ela lida com um teraflop de desempenho de ponto flutuante e
+imagens; ela lida com um *teraflop* de desempenho de ponto flutuante e
 processa tarefas que vão de problemas de finanças à medicina.
 
 Para que seja possível escrever um código que busque aproveitar o
@@ -998,7 +1002,8 @@ desenvolvimento abrangente para desenvolvedores C, C\#, C++, Fortran, R
 e Python. O CUDA Toolkit inclui compilador, bibliotecas de matemática e
 ferramentas para depuração e otimização do desempenho do código \cite{FARBER}.
 
-Hoje a NVIDIA oferece tudo gratuitamente. Tanto a NVIDIA quando a CUDA
+Hoje a NVIDIA oferece todas a ferramentas necessárias para o desesenvolvimento 
+utiliazando seu *hardware*. Tanto a NVIDIA quando a CUDA
 só tendem a crescer, à medida que cada vez mais empresas fornecem
 ferramentas, serviços e soluções. Além disso, áreas como a ciência e a
 medicina podem crescer ainda mais com suas pesquisas \cite{CUDA}.
@@ -1015,7 +1020,7 @@ HPC \cite{TOOLKIT}. No pacote vem incluso bibliotecas otimizadas para GPU, ferra
 para depuração e otimização, um compilador C/C++ e uma biblioteca de
 tempo para ser usada nas aplicações que serão desenvolvidas.
 
-As bibliotecas otimizadas possibilita a otimização de vários tipos de
+As bibliotecas otimizadas possibilitam a otimização de vários tipos de
 aplicação, como por exemplo, aplicações que realizam cálculos
 matemáticos utilizando conceitos de álgebra linear, processamento de
 imagem e de vídeo, inteligência artificial e até análise de grafos. O
@@ -1030,7 +1035,7 @@ independente da linguagem.
 
 A versão utilizada neste trabalho foi a CUDA Tool Kit 9.0 e foi o que
 tornou possível a otimização do algoritmo na sua versão final. O CUDA
-Tool Kit foi instalado juntamente com os *drivers* e é facilmente
+Tool Kit foi instalado juntamente com os *drivers* de vídeo e é facilmente
 encontrado no site de desenvolvedores da NVIDIA.
 
 ### Numba
@@ -1048,12 +1053,12 @@ que alterar a linguagem de programação ou interpretador do Python.
 Os principais pontos positivos da utilização do Numba são:
 
 -   geração de código *on-the-fly* (geração de código em tempo de
-    execução)
+    execução);
 
--   geração de código nativo para a CPU e hardware GPU
+-   geração de código nativo para a CPU e hardware GPU;
 
 -   integração com a pilha de bibliotecas científicas do Python, graças
-    ao Numpy
+    ao Numpy.
 
 ### JIT (*just-in-time*)
 
@@ -1136,10 +1141,10 @@ utilizando o RStudio[^14].
 
 A plataforma pode ser obtida através do site oficial. Após a instalação,
 se o usuário achar preferível usar uma interface gráfica, deve-se usar o
-Navigator; caso prefira usar o próprio terminal, basta usar o conda. É
+Navigator; caso prefira usar o próprio terminal, basta usar o *conda*. É
 possível alternar entre eles (qualquer modificação feita em uma
 biblioteca será refletida no outro). O Anaconda acaba sendo a interface
-gráfica para o conda. É possível instalar, remover ou atualizar qualquer
+gráfica para o *conda*. É possível instalar, remover ou atualizar qualquer
 pacote científico da Anaconda com apenas alguns cliques, utilizando o
 Navigator ou apenas um único comando do conda no terminal.
 
@@ -1168,8 +1173,8 @@ calor (*heat map*).
 Representação do ambiente
 -------------------------
 
-O modelo bidimensional do ambiente utilizado como caso de estudo foi o
-bloco A, onde atualmente os professores e alunos têm reclamado de baixa
+Os modelos bidimensionais dos ambientes utilizados como caso de estudo foram o
+piso 2 do bloco A e os pisos 1, 2 e 3 do bloco C, onde atualmente os professores e alunos têm reclamado de baixa
 cobertura de sinal Wi-Fi. Especificamente, os ambientes da sala dos
 professores e da sala de estudos tem apresentado baixa cobertura de
 sinal Wi-Fi, com frequentes desconexões dos usuários que ali estejam.
@@ -1214,7 +1219,7 @@ definida pelo usuário, para que seja mantido a proporção entre o tamanho
 da matriz de simulação e o ambiente real simulado. Ao final do
 processamento do arquivo DXF, os valores máximos (e mínimos) das
 coordenadas (x,y), bem como cada tupla de coordenadas das paredes é
-armazenada em memória pelo software, para que sejam utilizados pela
+armazenada em memória pelo *software*, para que sejam utilizados pela
 heurística.
 
 ### Escala e precisão
@@ -1229,17 +1234,17 @@ Comprimento $X$ Largura, podendo ser utilizada uma escala 1:1 do
 ambiente simulado para o ambiente real. Neste caso, uma célula da matriz
 representaria 1 $m^{2}$ no mundo real.
 
-Entretanto, vale ressaltar que o software produzido é capaz de trabalhar
+Entretanto, vale ressaltar que o *software* produzido é capaz de trabalhar
 com diferentes níveis de precisão na simulação de propagação de sinais,
 onde caso o usuário queira uma precisão de 0,5 $m^{2}$ por célula da
-matriz, bastaria informar tal configuração que o software passaria a
-utilizar um fator de escala de 2.0x a dimensão real do edifício (pois
+matriz, bastaria informar tal configuração de forma que o *software* passe
+a utilizar um fator de escala de 2.0x a dimensão real do edifício (pois
 precisão = 1/escala). Assim, o software pode trabalhar com a precisão
 desejada pelo usuário, podendo inclusive realizar uma simulação de
-propagação de ondas onde cada célula da matriz poderia ter a dimensão de
-um comprimento de onda $(\lambda = c/f)$. Por exemplo, caso o usuário
-deseje a precisão de 1 comprimento de onda para simular a propagação de
-Wi-Fi na frequência de 2,484 GHz, cada célula representa[^20] uma área
+propagação de ondas onde cada célula da matriz tenha a dimensão de
+um comprimento de onda $(\lambda = c/f)$. Por exemplo, se o usuário desejar ter
+a precisão de 1 comprimento de onda para simular a propagação de
+Wi-Fi na frequência de 2,484 GHz, cada célula representará[^20] uma área
 de 12,3 $cm^{2}$. Entretanto, vale ressaltar que quanto maior a
 precisão da simulação, maior serão as dimensões da matriz que representa
 o ambiente e, portanto, mais demorada será a simulação computacional.
@@ -1279,7 +1284,7 @@ de propagação, se faz necessário uma boa escolha de qual modelo de
 propagação de sinais utilizar, para obter uma boa representação da
 intensidade dos sinais para aquela banda do espectro eletromagnético e,
 assim, simular algo mais próximo da realidade. Quanto maior for a
-precisão desejada para o valor da intensidade de sinal, devido a perdas
+precisão desejada para o valor da intensidade de sinal devido a perdas
 e sua atenuação, mais detalhes sobre o ambiente de propagação devem ser
 modelados (frequências, distâncias, paredes, pisos, materiais, etc).
 
@@ -1292,14 +1297,14 @@ corredor um *access point* Cisco WAP200 (IEEE 802.11b/g) e configurado
 para utilizar um canal *Wi-Fi* que correspondesse a uma frequência que,
 naquele momento, estivesse livre de interferência de outros APs naquela
 região do campus. A potência máxima de transmissão que o AP suporta é
--14 dBm (0,0398 mW), mas ele foi configurado para utilizar apenas $25\%$
+-14 $dBm$ (0,0398 mW), mas ele foi configurado para utilizar apenas $25\%$
 dessa potência. Tal configuração visou apenas reduzir a distância a ser
 percorrida na condução do teste, uma vez que as paredes e pisos absorvem
 mais ou menos o sinal de acordo com a frequência dele e não de sua
-intensidade, portanto é foi mantido o comportamento esperado na
+intensidade, portanto manteve-se o comportamento esperado na
 propagação do sinal. O *access point WAP200* utilizado como transmissor
-possui antenas com 2 dBi de ganho e a interface Wi-Fi do notebook
-utilizado como receptor nos testes possui ganho de 1 dBi. Foi utilizado
+possui antenas com 2 $dBi$ de ganho e a interface Wi-Fi do notebook
+utilizado como receptor nos testes possui ganho de 1 $dBi$. Foi utilizado
 o canal 11 (portanto com frequência de 2,462 GHz e $\lambda$ de 12,18
 cm), tendo sido realizadas medições após o campo distante da antena
 (campo de *Fraunhofer* = 148 cm).
@@ -1307,25 +1312,25 @@ cm), tendo sido realizadas medições após o campo distante da antena
 As medições foram coletadas utilizando o comando *iwlist* da biblioteca
 *iw-utils*, que realiza a varredura (*scanning*) da faixa de espectro
 correspondente ao Wi-Fi e registra os valores de intensidade de sinal
-recebidos bem como o endereço MAC do(s) AP(s). A \autoref{medicao_modelos}ilustra quão
+recebidos bem como o endereço MAC do(s) AP(s). A \autoref{medicao_modelos} ilustra quão
 bem cada modelo de propagação considerado previu o valor da intensidade
 de sinal de acordo com com o aumento da distância. Pela figura, observe
 que o modelo de reflexão de dois raios, por definição e de acordo com a
 altura das antenas (aproximadamente 90 cm, considerando também o suporte
-utilizado), por definição seria apropriado somente se as distâncias
+utilizado), seria apropriado somente se as distâncias
 entre transmissor e receptor fossem superiores a 83,59 m, faixa
 demasiado próxima do limite de alcance de um enlace *Wi-Fi* típico.
 Também, observe que com o modelo de propagação no espaço livre (modelo
-de Friss), as estimativas foram abaixo do valor real observado, por tal
+de *Friis*), as estimativas foram abaixo do valor real observado, por tal
 modelo não considerar os fenômenos de reflexão, difração e dispersão que
 tipicamente ocorrem na propagação de ondas em um ambiente
 geometricamente complexo (paredes, piso, teto, portas, janelas, mobília,
 etc).
 
 \begin{figure}[htb]
-	\caption{\label{medicao_modelos} Medição da intensidade de sinal vs. modelos de sua propagação}
+	\caption{\label{medicao_modelos} Medição da intensidade de sinal $vs.$ modelos de sua propagação}
 	\begin{center}
-		\includegraphics[scale=0.6]{imagens/medicao-modelos.jpg}
+		\includegraphics[scale=0.68]{imagens/medicao-modelos.jpg}
 	\end{center}
 	\legend{Fonte: Elaborado pelo autor}
 \end{figure}
@@ -1333,12 +1338,12 @@ etc).
 Pela é possível observar que, dos modelos de propagação analisados, o
 *LogDistance Path Loss* apresentou um bom casamento entre os valores de
 suas estimativas e os valores reais mensurados, sendo portanto
-considerado como o mais promissor. Entretanto, observe que a figura
-acima ilustra apenas uma das várias medições realizadas, ilustrando
+considerado como o mais promissor. Entretanto, observe que a \autoref{medicao_modelos}
+apresenta apenas uma das várias medições realizadas, ilustrando
 portanto o decaimento exponencial da intensidade do sinal *Wi-Fi* ao
 longo de um corredor do bloco B. Neste caso, o modelo *LogDistance* foi
-calibrado para uma distância de referência (d0) de 10 metros com a
-respectiva perda (PL0) mensurada em -69 dBm, com expoente de perda de
+calibrado para uma distância de referência ($d_{0}$) de 10 metros com a
+respectiva perda ($PL_{0}$) mensurada em -69 $dBm$, com expoente de perda de
 caminho manualmente ajustado como $\gamma$ = 3 (*path loss exponent*).
 
 ### Ajuste do modelo de propagação
@@ -1351,7 +1356,7 @@ o modelo de propagação para que que seja mais abrangente para o
 realizadas em diversas salas, corredores e áreas internas de nosso caso
 de estudo.
 
-Para tal, as informações de distância vs intensidade das várias medições
+Para tal, as informações de distância *vs.* intensidade das várias medições
 conduzidas foram utilizadas como entrada para um ajuste de curvas
 estatístico, técnica de regressão que foi conduzida no *software*
 *R-Project*[^21]. Inicialmente, conduzimos regressões com um ajuste de
@@ -1372,14 +1377,14 @@ modelar bem o decaimento do nível de sinal observado na medições do RSSI
 no campus Formiga. Por outro lado, as distribuições 3P-LogNormal
 (lnorm3) e 3P-LogLogistica (llog3) se aproximaram bem do comportamento
 esperado para o decaimento da intensidade do sinal, estando tal fato em
-consonância com o exposto nas seções 2.4.6 (Log-normal fading) e 2.4.3
-(Log-distance).
+consonância com o exposto nas seções 2.4.6 (*Log-normal fading* e 2.4.3
+(*Log-distance*).
 
 A \autoref{log_logistica} e a \autoref{log_normal} apresentam em detalhes a qualidade do ajuste de curvas
 estatístico, obtido através das regressões realizadas. Ao comparar o GOF
-(Goodeness-of-fit) entre duas ou mais distribuições, pode-se considerar
-os critérios de qualidade do ajuste AIC (Akaike’s Information Criterion)
-e BIC (Bayesian Information Criterion).
+(*Goodness-of-fit*) entre duas ou mais distribuições, pode-se considerar
+os critérios de qualidade do ajuste AIC (*Akaike’s Information Criterion*)
+e BIC (*Bayesian Information Criterion*).
 
 \begin{figure}[htb]
 	\caption{\label{log_logistica} Qualidade do ajuste (GOF) da distribuição 3P-LogLogística}
@@ -1405,13 +1410,13 @@ foi conduzida com a utilização do pacote *nplr*, também no software
 
 Para obtermos um melhor resultado, considerando o bom desempenho das
 distribuições LogNormal e LogLogística, instruímos o modelo de regressão
-Logístico a utilizar uma base logarítmica para os valores do eixo x, ou
+Logístico a utilizar uma base logarítmica para os valores do eixo $x$, ou
 seja, a distância ao AP deve ser interpretada como $log_{10}(x)$. Em
 uma livre interpretação, isso corresponderia a instruir a regressão
 logística a utilizar modelos NP-LogLogísticos. Assim, buscamos partir
 dos bons resultados obtidos na análise prévia, mas tentando melhorá-los
 com a inclusão de um quarto ou quinto parâmetros de ajuste da
-distribuição. Obtivemos um melhor fitness com um modelo Logístico de 4
+distribuição. Obtivemos um melhor *fitness* com um modelo Logístico de 4
 parâmetros (*4-Parameter Logistic* ou simplesmente 4PL), conforme
 resultados apresentados a seguir. Conforme ilustra a e a , o melhor
 ajuste de curva (GOF) foi obtido com uma distribuição 4P-Logística e com
@@ -1443,11 +1448,12 @@ parâmetros é:
 \begin{equation}
 f(x; A,B,C,D,E) = D + (A-D) / ( (1+(x/C)^B)^E )
 \end{equation}
-, na qual os parâmetros A, B, C, D e E são obtidos ao aplicar-se a
-regressão logística para os valores de intensidade de sinal (em dBm ou
-mW). Observe que, fixando “E=1” obtemos a equação da 4PL (*4-Parameter
-Logistic*) e se fixarmos ambos “D=0” e “E=1”, obtemos a equação da 3PL
-(*3-Parameter Logistic*). Os cinco parâmetros da NP-Log tem o seguinte
+
+na qual os parâmetros A, B, C, D e E são obtidos ao aplicar-se a
+regressão logística para os valores de intensidade de sinal (em $dBm$ ou
+mW). Observe que, fixando “$E=1$” obtemos a equação da $4PL$ (*4-Parameter
+Logistic*) e se fixarmos ambos “$D=0$” e “$E=1$”, obtemos a equação da 3PL
+(*3-Parameter Logistic*). Os cinco parâmetros da $NP-Log$ tem o seguinte
 significado:
 
 -   A = Mínima assintótica. Em medições da propagação de sinais de
@@ -1463,7 +1469,7 @@ significado:
     sinal provavelmente B será positivo.
 
 -   C = Ponto de inflexão, definido como o ponto onde a curvatura muda
-    de direção ou sinal. C é a concentração onde y = (D-A) / 2. No caso
+    de direção ou sinal. $C$ é a concentração onde $y = \frac{(D-A)}{2}$. No caso
     do Wi-Fi, provavelmente será o valor do sinal aferido em torno 10 a
     20 metros.
 
@@ -1477,20 +1483,20 @@ significado:
     de quatro parâmetros.
 
 Para utilizar tal distribuição estatística como modelo de propagação,
-deve-se implementar no software sua **função de densidade de
+deve-se implementar no *software* sua **função de densidade de
 probabilidade** (PDF) para que possa retornar qual seria o valor da
 intensidade do sinal recebido (RSSI) em determinada distância do AP
-Wi-Fi. Durante a implementação, vale observar que ambas as distribuições
-4P-Log e LogDistance devem ser utilizadas como um modelo de **perda de
-sinal**, ou seja, o valor da estimativa obtido (PL) deve ser subtraído
-da potência de transmissão (Pt) do AP para obter a previsão da potência
-recebida (Pr):
+*Wi-Fi*. Durante a implementação, vale observar que ambas as distribuições
+*4P-Log* e LogDistance devem ser utilizadas como um modelo de **perda de
+sinal**, ou seja, o valor da estimativa obtido ($PL$) deve ser subtraído
+da potência de transmissão ($P_{t}$) do AP para obter a previsão da potência
+recebida ($P_{r}$):
 
 \begin{equation}
 Pr(x) = Pt - PL(x)
 \end{equation}
-, onde Pr é a potência recebida à distância x do transmissor; Pt é a
-potência do sinal do transmissor (ex.: -20 dBm) e PL é a perda do sinal
+onde $P_{r}$ é a potência recebida à distância $x$ do transmissor; $P_{t}$ é a
+potência do sinal do transmissor (ex.: -20 $dBm$) e $PL$ é a perda do sinal
 ao longo do caminho entre o transmissor e receptor (calculada com a
 equação da 4PL ou da *LogDistance*). Inicialmente, implementamos tais
 fórmulas em uma planilha para visualizarmos graficamente uma comparação
@@ -1509,7 +1515,7 @@ citados em relação aos valores reais de medição coletados.
 
 Já na \autoref{modelos_propagacao} (b), é apresentada a extrapolação que os modelos de propagação de
 fornecem para distâncias de até 100 metros (limite de alcance de um
-sinal Wi-Fi indoor. Comparando as \autoref{modelos_propagacao} (a) e (b), é interessante notar que os
+sinal *Wi-Fi* *indoor*. Comparando as \autoref{modelos_propagacao} (a) e (b), é interessante notar que os
 dois modelos diferiram mais para curtas distâncias, escala onde acontece
 muita variação do nível de sinal devido aos efeitos de múltiplas
 reflexões nas paredes, difração nas portas, dispersão e absorção pelos
@@ -1533,16 +1539,16 @@ cálculo determinado pelo modelo de propagação, conforme tratado na seção
 anterior. Tipicamente, como os modelos de propagação fazem uso da
 distância entre o transmissor e receptor, esta deve ser calculada
 utilizando as coordenadas do *access point* na simulação e do ponto para
-o qual deseja-se calcular a estimativa da intensidade do sinal ali
+o qual deseja-se calcular a estimativa da intensidade do sinal alí
 recebido (RSSI).
 
 A \autoref{wifi_central} exibe uma representação gráfica da matriz com os valores de
 intensidade de sinal conforme o decaimento exponencial da intensidade do
 sinal recebido (RSSI), com o aumento da distância de cada ponto da
-matriz com o AP Wi-Fi (ponto central).
+matriz com o AP *Wi-Fi* (ponto central).
 
 \begin{figure}[htb]
-	\caption{\label{wifi_central} Decaimento RSSI de Wi-Fi de acordo com a distância ao AP}
+	\caption{\label{wifi_central} Decaimento RSSI de $Wi-Fi$ de acordo com a distância ao AP}
 	\begin{center}
 		\includegraphics[scale=0.5]{imagens/wifi-central.jpg}
 	\end{center}
@@ -1550,10 +1556,10 @@ matriz com o AP Wi-Fi (ponto central).
 \end{figure}
 
 Neste ponto, vale notar que o escopo deste trabalho não considera
-interferências entre canais Wi-Fi de vários APs, de maneira que para
+interferências entre canais *Wi-Fi* de vários APs, de maneira que para
 cada AP simulado é gerada uma matriz numérica individual, que receberá
 as estimativas de valores para a intensidade de sinal em decibel
-miliwatt (dBm). O propósito deste trabalho é sugerir um melhor
+*miliWatt* ($dBm$). O propósito deste trabalho é sugerir um melhor
 posicionamento dos APs e a decisão de não terem sido modeladas
 interferências entre APs diferentes é baseada no fato de que a
 tecnologia *Wi-Fi* possibilita coexistência de alguns APs em um mesmo
@@ -1585,21 +1591,21 @@ o AP até tal ponto.
 
 Seguimos a modelagem utilizada pela literatura para modelos de
 propagação em pequena escala, onde o valor esperado para o sinal em
-determinado ponto é subtraído do valor em dBm que representa a energia
+determinado ponto é subtraído do valor em $dB$ que representa a energia
 absorvida por parede multiplicado pela quantidade de paredes
 atravessadas pelo sinal. A literatura sugere que o valor de absorção
-varia entre 8 e 15 dBm para paredes de concreto \cite{RAPPAPORT}, de
-maneira que o valor definido para para uso do software produzido na
-simulação do campus Formiga foi de 8 dBm (e de acordo com análise
+varia entre 8 e 15 $dB$ para paredes de concreto \cite{RAPPAPORT}, de
+maneira que o valor definido para para uso do *software* produzido na
+simulação do campus Formiga foi de 8 $dB$ (e de acordo com análise
 experimental). Vale observar que, por consistir em uma constante que
-pode ser configurada no software, a ordem de magnitude da absorção de
-energia pelas paredes do edifício pode ser ajustada, para que a
+pode ser configurada no *software*, a ordem de magnitude da absorção de
+energia pelas paredes do edifício pode ser ajustada para que a
 simulação da propagação possa se aproximar da realidade daquele
 ambiente.
 
 Para ilustrar o resultado de aplicar tal fator de correção, observe na \autoref{absorcao_parede} a
 mesma simulação da figura anterior, porém agora contabilizando a
-absorção do sinal Wi-Fi a cada parede atravessada no trajeto do AP ao
+absorção do sinal *Wi-Fi* a cada parede atravessada no trajeto do AP ao
 ponto destino.
 
 \begin{figure}[ht]
@@ -1618,8 +1624,8 @@ planta-baixa deve ser percorrida. A técnica utilizada foi a intersecção
 de retas num plano cartesiano (*Line-Line Intersection*), buscando
 definir se os dois segmentos de reta ambas possuem um ponto em comum
 (ponto de interseção). A definição de intersecção de retas é dada por
-retas concorrentes, ou seja, se possuírem um ponto em comum, ou seja, a
-intersecção das duas retas é o ponto em comum. Assim, viabiliza-se
+retas concorrentes, ou seja, se possuírem um ponto em comum, então a
+intersecção das duas retas será este o ponto em comum. Assim, viabiliza-se
 verificar o cruzamento do sinal com paredes a um baixo custo
 computacional, se comparado a testar por força bruta cada ponto interno
 ao retângulo formado pela parede.
@@ -1687,7 +1693,7 @@ Com o preenchimento da matriz de propagação de acordo com a posição do
 tornou difícil a visualização de quanto o sinal ficava ruim quanto maior
 era a distância e mais paredes eram atravessadas, através de uma simples
 inspeção numérica. Tendo a matriz preenchida com a intensidade de sinal
-(dBm), suficiente para a realização dos cálculos com a função objetivo
+($dB$), suficiente para a realização dos cálculos com a função objetivo
 da heurística de otimização, fica pendente a visualização a olho nú, não
 sendo viável distinguir dentre milhares de valores numa matriz, se
 poderia ser considerada uma simulação boa ou ruim.
@@ -1701,7 +1707,7 @@ valores máximos e mínimos dentro da matriz de propagação, é fácil
 definir uma faixa de valores para calibrar uma escala de referência
 (gradiente de cores) para a exposição dos resultados. Para padronizar e
 viabilizar a comparação visual de resultados diferentes, o gradiente de
-cores foi normalizado para um valor mínimo de referência de -100 dBm,
+cores foi normalizado para um valor mínimo de referência de -100 $dB$,
 referente à maior sensibilidade registrada pelos equipamentos de
 comunicação *Wi-Fi*. Esta visualização dos resultados pode ser vista na 
 \autoref{represetacao_simulacao}.
@@ -1714,22 +1720,21 @@ comunicação *Wi-Fi*. Esta visualização dos resultados pode ser vista na
 	\legend{Fonte: Elaborado pelo autor}
 \end{figure}
 
-Foi implementado um método que explorasse os recursos disponibilizados
+Foi implementado um método capaz de explorar os recursos disponibilizados
 pelo PyGame para ilustrar a matriz resultante. Tal método, que pode ser
 visto abaixo, percorre a matriz obtendo o valor calculado em dBm da
-posição \[x, y\] e utiliza uma função para obter qual seria a cor
-respectiva de acordo com o gradiente de cores escolhido. Adicionalmente,
+posição \[x, y\] e mapeia uma cor de acordo com o gradiente de cores escolhido. Adicionalmente,
 foi utilizada condição que avalia o valor do sinal em determinado ponto
 com uma constante que representa a sensibilidade máxima definida pelos
 equipamentos de *Wi-Fi*. Os valores de sensibilidade dos diversos
 equipamentos presentes no campus Formiga do IFMG variam entre -85 e -100
-dBm. Assim, se o valor calculado para a simulação da propagação for
+$dB$. Assim, se o valor calculado para a simulação da propagação for
 menor que a sensibilidade do AP, na visualização do mesmo ele é
 considerado como um “ponto cego” ou uma “região de sombra”, uma vez que
 não há intensidade de sinal suficiente para obter uma boa qualidade de
 serviço (ou sequer conectar na rede *Wi-Fi*). A \autoref{simulacao_sensibilidade} ilustra as regiões de
 sombra no ambiente simulado com apenas um AP centralizado transmitindo
-com uma potência de -17 dBm.
+com uma potência de -17 $dB$.
 
 \begin{figure}[ht]
 	\caption{\label{simulacao_sensibilidade} Regiões com sinal abaixo da sensibilidade máxima dos equipamentos}
@@ -1739,12 +1744,12 @@ com uma potência de -17 dBm.
 	\legend{Fonte: Elaborado pelo autor}
 \end{figure}
 
-Caso deseje-se, durante a exploração do espaço de soluções pelo
-*Simulated Annealing*, pode-se exibir a matriz de intensidade de sinal a
-cada iteração para acompanhar o funcionamento do algoritmo, como se numa
-animação. Entretanto, como o desenho dos milhares de pontos pelo PyGame
+O algoritmo foi desenvolvido de tal forma que seja possível durante a exploração do espaço de soluções pelo
+*Simulated Annealing*, exibir a matriz de intensidade de sinal a
+cada iteração para acompanhar o funcionamento do algoritmo, comportando-se como uma
+animação em tempo real. Entretanto, como o desenho dos milhares de pontos pelo PyGame
 consiste em uma operação que consome alguns segundos, tal processo de
-animação fica desativado por padrão para não atrasar demais a geração da
+animação fica desativado por padrão para não retardar o cômputo da
 solução final que o usuário aguarda.
 
 Heurística de otimização
@@ -1768,7 +1773,7 @@ de mais de um AP. O SA inicia com os valores predefinidos no momento da
 sua chamada. Para o método é informado: o número de APs a serem
 utilizados no ambiente, o número máximo de iterações, o número máximo de
 perturbações por cada iteração, o número máximo de sucessos por iteração
-e o *alpha* como o fator de redução da temperatura.
+e o $\alpha$ como o fator de redução da temperatura.
 
 Com a estratégia de perturbar mais de um AP por vez, o SA inicia
 alocando todos os APs na posição central da planta baixa. A primeira
@@ -1777,19 +1782,19 @@ e novas perturbações sejam feitas. O SA fica em um *loop* principal, no
 qual se verifica se foram atendidas todas as condições de término do
 algoritmo (se extrapolou o máximo de iterações ou se nenhum ponto com
 ótimo local foi encontrado). Outro *loop* interno realiza a perturbação
-dos APs em forma de lista circular. Com os valores de *fSi* (resultado
-da avaliação da função objetivo na *i-ésima* iteração do SA) e *fS*
+dos APs em forma de lista circular. Com os valores de $f(S_{i})$ (resultado
+da avaliação da função objetivo na *i-ésima* iteração do SA) e $f(S)$
 (melhor resultado da avaliação da função objetivo iteração do SA) é
-possível determinar o valor de *deltaFi* (diferença da avaliação da
+possível determinar o valor de $\Delta F_{i}$ (diferença da avaliação da
 função objetiva atual com a avaliação da função objetiva ótima
-encontrada até o momento). Caso o valor de *deltaFi* seja menor ou igual
+encontrada até o momento). Caso o valor de $\Delta F_{i}$ seja menor ou igual
 a zero, há uma redução de energia, a qual implica que a nova solução é
-melhor que a anterior. Então é aceito a solução e *fSi* passa a ser a
+melhor que a anterior. Então é aceito a solução e $f(S_{i})$ passa a ser a
 nova solução corrente. A aceitação desse tipo de solução é mais provável
 em altas temperaturas e bastante improvável em temperaturas reduzidas.
 Para reproduzir essas características, geralmente usa-se, para calcular
 a probabilidade de se aceitar a nova solução, uma função conhecida por
-fator de *Boltzmann* \cite{AARTS}, que em sua fórmula o valor de T é a temperatura
+critério de aceitação de *Boltzmann* \cite{AARTS}, que em sua fórmula o valor de $T$ é a temperatura
 atual e que regula a probabilidade de soluções com pior custo. Tal
 fórmula pode ser vista abaixo:
 
@@ -1798,12 +1803,12 @@ fórmula pode ser vista abaixo:
 \end{equation}
 
 Com a aceitação, é atualizada a lista das melhores posições para a
-alocação dos APs e também a variável *fS* com o valor de melhor função
+alocação dos APs e também a variável $f(S)$ com o valor de melhor função
 objetivo, o número de sucessos representando a vizinhança, que também é
 fator de parada do SA, e o número de perturbações por iteração é
 incrementado. O método é finalizado quando a temperatura chega a um
-valor próximo de zero e nenhuma solução que piore o valor da melhor
-solução seja mais aceita, ou seja, quando o sistema estiver estável.
+valor próximo de zero, situação esta em que a chance de se aceitar uma
+solução vizinha pior é extremamente baixa, ou seja, quando o sistema estiver estável.
 
 Por fim, a melhor solução encontrada pela metaheurística é retornada,
 indicando a proposta do novo posicionamento dos APs e a cobertura do
@@ -1816,20 +1821,20 @@ ser obtido com a solução proposta utilizando o PyGame.
 Definir quais os parâmetros utilizar na metaheurística não é uma tarefa
 fácil, então para isso, qualquer ferramenta que auxiliasse neste
 processo seria útil. Para a escolha de quais parâmetros utilizar para os
-valores foi empregado um Projeto Fatorial 2K com foco no ajuste do
+valores foi empregado um Projeto Fatorial $2^{k}$ com foco no ajuste do
 *Simulated Annealing*.
 
-Com a aplicação do planejamento de experimentos, é possível definir uma
+Com a aplicação do planejamento de experimentos é possível definir uma
 sequência de coletas de dados experimentais a fim de atingir um
 objetivo. Dentre os métodos de planejamento experimental disponíveis na
 literatura, o planejamento fatorial é o mais indicado quando se deseja
 estudar os efeitos de duas ou mais variáveis de influência, sendo que em
 cada tentativa ou réplica, todas as combinações possíveis dos níveis de
-cada variável são investigadas (BARROS NETO et al., 1996). O caso mais
+cada variável são investigadas \cite{NETO}. O caso mais
 simples de planejamento fatorial descrito na literatura é aquele em que
-cada fator k está presente em apenas dois níveis (o experimento aplicado
-neste trabalho), ou seja, em um experimento com k fatores (ou variáveis)
-e dois níveis.
+cada fator $k$ está presente em apenas dois níveis (o experimento aplicado
+neste trabalho), ou seja, em um experimento com $k$ fatores (ou variáveis)
+e dois níveis, obtendo-se $2^{k}$ experimentos a realizar.
 
 Os valores dos parâmetros do SA foram definidos quando ainda estava
 sendo utilizado apenas um AP. Para o teste, foram considerados os
@@ -1846,7 +1851,7 @@ Com a coleta das informações obtidas pela saída do *script* em Python,
 os valores foram adicionados em uma planilha do Excel cedida pelo
 orientador. A tabela realiza todos os cálculos necessários para saber
 qual parâmetro é mais propício a se utilizar. A \autoref{tabela_parametros_1} apresenta a configuração
-da primeira iteração do planejamento 2K com os fatores e níveis bem
+da primeira iteração do planejamento $2^{k}$ com os fatores e níveis bem
 definidos.
 
 \begin{table}[ht]
@@ -1864,7 +1869,7 @@ definidos.
 	}
 \end{table}
 
-O resultado dado pela planilha pode ser visto na \autoref{candidatos_parametros_1}:
+O resultado computado é dado na \autoref{candidatos_parametros_1}:
 
 \begin{table}[ht]
 	\centering
@@ -1875,22 +1880,24 @@ O resultado dado pela planilha pode ser visto na \autoref{candidatos_parametros_
 			\hline
 			& \multicolumn{4}{l|}{\textbf{CANDIDATOS A PARÂMETRO}} \\ \hline
 			Frações & vizinhos & temperatura & resfriamento & pertubações \\ \hline
-			\textbf{Função Objetivo} & 1,4\% & 1,0\% & 1,2\% & 1,0\% \\ \hline
-			\textbf{Tempo} & 0,9\% & 0,8\% & 1,2\% & 1,0\% \\ \hline
-			\textbf{MÉDIA} & 1,2\% & 0,9\% & 1,2\% & 1,0\% \\ \hline
+			Função Objetivo & 1,4\% & 1,0\% & 1,2\% & 1,0\% \\ \hline
+			Tempo & 0,9\% & 0,8\% & 1,2\% & 1,0\% \\ \hline
+			MÉDIA & 1,2\% & 0,9\% & 1,2\% & 1,0\% \\ \hline
 		\end{tabular}%
 	}
 \end{table}
 
 Com o resultado acima, é possível notar que o melhor candidato é o
-número de vizinhos e o resfriamento. Ainda que o valor de ambos tenha
+número de vizinhos e o resfriamento. O valor dado em porcentagem representa o quanto
+promissor é ao ser tomado como um valor de parametro para o *Simulated Annealing*. 
+Ainda que o valor de ambos tenha
 sido o mesmo, o número de vizinhos acaba sendo melhor, pois consumiu uma
 fração menor do tempo total. O número de vizinhos foi aumentado para ter
 um resultado melhor ainda; os valores da temperatura inicial também
 foram aumentados e o fator de resfriamento foi decrementado junto com o
 número de perturbações. Modificando os parâmetros, se torna propício a
 um novo melhor conjunto de valores do SA. Os novos valores da segunda
-iteração do planejamento fatorial 2K podem ser vistos na \autoref{tabela_parametros_2}.
+iteração do planejamento fatorial $2^{k}$ podem ser vistos na \autoref{tabela_parametros_2}.
 
 \begin{table}[ht]
 	\centering
@@ -1931,7 +1938,7 @@ nível e a temperatura inicial também obtiveram um bom resultado no
 segundo nível. O valor do resfriamento no segundo nível manteve sua
 média, enquanto o número de perturbações em ambos os níveis, teve um
 resultado inferior ao anterior, sendo necessário modificá-lo na próxima
-iteração. \autoref{tabela_parametros_3} é possível ver como ficaram definidos os parâmetros para a
+iteração. Na \autoref{tabela_parametros_3} é possível ver como ficaram definidos os parâmetros para a
 terceira iteração e último teste.
 
 \begin{table}[ht]
@@ -1949,7 +1956,7 @@ terceira iteração e último teste.
 	}
 \end{table}
 
-De acordo com a configuração da \autoref{tabela_parametros_3}  são dados os candidatos a parâmetros mostrados na \autoref{candidatos_parametros_3}.
+De acordo com a configuração da \autoref{tabela_parametros_3}  são dados os candidatos a parâmetros expostos na \autoref{candidatos_parametros_3}.
 
 \begin{table}[ht]
 	\centering
@@ -2012,7 +2019,7 @@ como a matriz gerada continha em cada posição o resultado da potência do
 sinal, conforme ele se propagava pelo ambiente, para representar uma
 indicação numérica da cobertura do sinal *Wi-Fi* foi feita a soma de
 todos os valores da matriz. Num primeiro momento, tentamos somar os
-valores da potência do sinal em mW mas em função do decaimento
+valores da potência do sinal em $mW$ mas em função do decaimento
 exponencial do sinal com o distanciamento do transmissor, a precisão de
 um número de ponto flutuante chegava rapidamente ao limite de seus 32
 bits. Tão pouco adiantou aumentar a precisão para 64 bits ou mais.
@@ -2022,14 +2029,14 @@ trouxe pouco benefício quanto à exploração do espaço de soluções pelo
 *Simulated Annealing*.
 
 Considerando o acima exposto, decidimos por manter os valores da matriz
-resultante em dBm, uma escala logarítmica que representa a ordem de
+resultante em $dB$, uma escala logarítmica que representa a ordem de
 magnitude da intensidade do sinal. Assim, apesar de não ser
-conceitualmente correto somar valores de potência em dBm, nosso objetivo
-não era ter o valor exato em mW da soma de toda a energia irradiada no
+conceitualmente correto somar valores de potência em $dB$, nosso objetivo
+não era ter o valor exato em $mW$ da soma de toda a energia irradiada no
 ambiente simulado, mas sim ter uma noção da ordem de magnitude do quanto
 de sinal útil aquela simulação do ambiente apresentava. Observe que as
 interfaces de rede sem fio tipicamente apresentam sensibilidade mínima
-em torno de -85 dBm a -100 dBm (em torno de $3,162\times10^{-12} W$ a
+em torno de -85 $dB$ a -100 $dB$ (em torno de $3,162\times10^{-12} W$ a
 no mínimo $1\times10^{-13} W$), assim sendo, quanto mais “positivo”
 fosse o valor da função objetivo avaliada, maior seria o montante da
 potência dos sinais que cobriam o ambiente simulado. Levando em
@@ -2037,9 +2044,9 @@ considerações tais fatos, experimentamos com diversas maneiras de
 sumarizar a matriz em um só valor para ser avaliado como função objetivo
 e curiosamente, aquele que apresentou o melhor custo-benefício foi
 justamente a soma simples de todos os valores da matriz, mesmo que as
-informações nela armazenada estivessem em dBm. Numa inspeção visual da
-solução proposta pelo *Simulated Annealing*, com a colorização dos
-valores de dBm em um gradiente de cores de acordo com o posicionamento
+informações nela armazenada estivessem em $dB$. Numa inspeção visual da
+solução proposta pelo *Simulated Annealing*, com a coloração dos
+valores de $dB$ em um gradiente de cores de acordo com o posicionamento
 do *Access Point*, podemos observar que a partir de um ponto aleatório,
 a metaheurística conduzia as soluções candidatas para a região central
 do ambiente 2D, como seria desejado.
@@ -2062,11 +2069,11 @@ nas dependências do campus.
 Como desde o princípio, a implementação da função objetivo para apenas
 um AP visava maximizar a cobertura do sinal *Wi-Fi* para o ambiente.
 Isso não foi diferente para a simulação de mais um AP. Foram utilizadas
-técnicas de manipulação de grandezas em dBm para obter o resultado
+técnicas de manipulação de grandezas em $dB$ para obter o resultado
 esperado. Como dito no parágrafo anterior, a manipulação com a soma dos
-dados em dBm não é conceitualmente apropriada. Como uma proposta de
+dados em $dB$ não é conceitualmente apropriada. Como uma proposta de
 solução para esse problema, antes de realizar a soma dos valores da
-matriz, a potência do sinal em questão era convertido de dBm para mw,
+matriz, a potência do sinal em questão era convertido de $dB$ para $mW$,
 fazendo com que a operação ficasse correta e uma verificação da potência
 recebida com a sensibilidade do *access point* também foi feita para
 penalizar zonas em que o sinal era tão fraco que não se tornava uma
@@ -2089,7 +2096,7 @@ Python são a mesma estrutura de dados) contendo a matriz resultado da
 simulação de todos os APs e uma variável *size* que corresponde à
 quantidade de APs no ambiente. Posteriormente é feito um laço de
 repetição percorrendo a lista de matrizes e guardado as matrizes máximas
-utilizando o método *maximum* da biblioteca Numpy retornando tal valor.
+utilizando o método *maximum()* da biblioteca Numpy retornando tal valor.
 O método que realiza essa operação pode ser visto abaixo.
 
 \lstinputlisting[language=Python]{code/sobrepoe_solucoes_MAX.py}
@@ -2194,7 +2201,7 @@ transistores e com vazão do barramento PCIe de até 80 Gb/s.
 
 O método “*simulate\_kernel\_gpu*” foi escolhido para trabalhar com a
 matriz de propagação. Nele, a matriz é percorrida de acordo com os
-valores dos blocks e grids informados no método anterior. Para cada
+valores dos *blocks* e *grids* informados no método anterior. Para cada
 célula da matriz é executado o método “*propagation\_model\_gpu*”, o
 qual, segundo o próprio nome já diz, realiza o cálculo do modelo de
 propagação utilizando a GPU e está diretamente ligado ao
@@ -2211,17 +2218,17 @@ calcular o valor para a propagação em cada ponto de uma matriz $NxM$.
 Considerando que uma das dimensões é maior que a outra, podemos dizer
 que o custo é $NxN$: $O(n^{2})$ e $O(1\times n^{2}) = O(n^{2})$ para
 aplicar a operação em todos os pontos da matriz. Mas, entre cada ponto
-da matriz (PM) e o AP, podem haver k paredes, que deve-se verificar se
+da matriz (PM) e o AP, podem haver $k$ paredes, que deve-se verificar se
 há ou não interseção entre a reta AP-PM e a reta formada pela parede.
 Tal operação, utilizando a fórmula de geometria analítica para
 interseção de retas, custa $O(1)$ para cada parede e $k\times O(1)$
 para verificar cada parede. Como $k$ é suficientemente grande em relação a
-n, podemos considerar o custo de verificar se há interseção com paredes
+$n$, podemos considerar o custo de verificar se há interseção com paredes
 como $O(n)$. Para fazer essa verificação de cada parede para cada ponto da
 Matriz, temos então: $O(n)\times O(n^{2}) = O(n^{3})$.
 
 Quanto ao *Simulated Annealing* (SA), a cada rodada ele aleatoriza uma
-solução vizinha (v) e avalia-a (fo), e como o SA tem uma quantidade
+solução vizinha ($v$) e avalia-a ($fo$), e como o SA tem uma quantidade
 finita e decremental de iterações em função do fator de resfriamento, a
 quantidade de vizinhos explorados é em torno de $v = log(n)$. Assim, a
 complexidade do SA é em torno de $O(fo*v)$, ou seja:
@@ -2351,7 +2358,7 @@ ver como é chamado o algoritmo e uma saída de exemplo dos dados.
 	Simulando ambiente com:  		400 x 149 pixels
 	Escala de simulacao:     		1 px : 0.1275 metros
 	Quantidade de APs:       		2
-	Potencia de cada APs:    		-25 dBm
+	Potencia de cada APs:    		-25 $dB$
 	FO global best: 5.762e+02
 
 	COBERTURA DE SINAL WI-FI:
@@ -2381,14 +2388,14 @@ Annealing fugiu de seus ótimos locais e, no final da execução, retornou
 	\legend{Fonte: Elaboração do autor}
 \end{figure}
 
-Neste sentido, é importante ressaltar que a \autoref{capturas} representa os resultados
+Neste sentido, é importante ressaltar que a \autoref{captura_inicial} e a \autoref{capturas} representam os resultados
 dos primeiros testes executados. O gradiente de cores utilizada foi o
 plasma, variando das cores laranja até o azul escuro. Na próxima seção
 mostraremos os resultados de testes efetuados utilizando ainda um
 *access point* com uma nova escala de cores, mais ainda apropriada a
 interpretação imediata do que seria um sinal ótimo, bom e ruim.
 
-Wi-Fi Placement para 1 AP
+*Wi-Fi Placement* para 1 AP
 -------------------------
 
 A \autoref{prop_bloco_a}, se comparada com as figuras do tópico anterior, possuem cores mais
@@ -2410,7 +2417,7 @@ ponto próximo ao meio da planta. Com a posição escolhida, a cobertura do
 sinal se propaga em áreas próximas à biblioteca e sala de estudo, que
 contém o maior fluxo de pessoas neste bloco que utilizam o acesso à
 internet. Na figura, os pontos que deixam a desejar corresponde à
-potência máxima que consegue transmitir, neste caso, -25 dBm.
+potência máxima que consegue transmitir, neste caso, -25 $dB$.
 
 Como resultado disponibilizados via terminal, temos:
 
@@ -2420,7 +2427,7 @@ Como resultado disponibilizados via terminal, temos:
 	Simulando ambiente com:                 600 x 325 pixels
 	Escala de simulacao:                    1 px : 0.0800 metros
 	Quantidade de APs:                      1
-	Potencia de cada APs:                   -25 dBm
+	Potencia de cada APs:                   -25 $dB$
 	
 	FO global best: 4.432e+02
 	
@@ -2439,7 +2446,7 @@ As plantas dos pisos 1, 2 e 3 do bloco C foram obtidas em formato DWG e
 convertidas para o formato *.dxf* ao final da implementação. Tais
 arquivos foram simulados e obtidas suas representações gráficas. A
 \autoref{captura_zona} mostra a simulação da planta baixa no bloco C utilizando 1 AP com
-potência de transmissão de -25 dBm.
+potência de transmissão de -25 $dB$.
 
 \begin{figure}[ht]
 	\caption{\label{captura_zona} Simulação da propagação de sinais de microondas no bloco C utilizando 1 AP.
@@ -2458,7 +2465,7 @@ A saída via terminal é a seguinte:
 	Simulando ambiente com:                 600 x 223 pixels
 	Escala de simulacao:                    1 px : 0.0850 metros
 	Quantidade de APs:                      1
-	Potencia de cada APs:                   -25 dBm
+	Potencia de cada APs:                   -25 $dB$
 	
 	FO global best: 2.089e+02
 	
@@ -2485,13 +2492,13 @@ funcionalidade implementada, a metaheurística poderia fazer com que o AP
 cobrisse as áreas mais críticas do ponto de vista da utilização do
 ambiente pelas pessoas.
 
-Wi-Fi Placement para 2 ou mais APs
+*Wi-Fi Placement* para 2 ou mais APs
 ----------------------------------
 
 Feita a propagação do sinal *wireless* para um AP nos bloco A, foi
 adaptada, recalibrada e avaliada a implementação da simulação com dois
 *access points*. A \autoref{captura_dois_aps} mostra como foi o resultado da simulação do *Wi-Fi*
-no bloco A.
+no piso 2 do bloco A.
 
 \begin{figure}[ht]
 	\caption{\label{captura_dois_aps} Simulação da propagação de sinais de microondas no bloco A utilizando 2 APs.
@@ -2507,7 +2514,7 @@ pontos que visualmente aparentam ser muito bons. Na \autoref{captura_dois_aps} p
 os dois APs foram alocados pela metaheurística com uma distância de
 folga, fazendo com que possam aproveitar a propagação do espectro no
 ambiente. Com a escolha sugerida pelo SA, utilizando um *access point*
-transmitindo a -25 dBm, pode-se também notar que algumas partes das
+transmitindo a -25 $dB$, pode-se também notar que algumas partes das
 salas nos extremos não estão recebendo uma qualidade de sinal como na
 sala em que os APs estão instalados, mas mesmo assim, a maior parte da
 área está recebendo sinal, havendo poucas zonas onde a potência recebida
@@ -2521,7 +2528,7 @@ Abaixo é possível visualizar o resumo da execução do algoritmo:
 	Simulando ambiente com:                 600 x 325 pixels
 	Escala de simulacao:                    1 px : 0.0800 metros
 	Quantidade de APs:                      2
-	Potencia de cada APs:                   -25 dBm
+	Potencia de cada APs:                   -25 $dB$
 	
 	FO global best: 6.112e+02
 	
@@ -2537,7 +2544,7 @@ Abaixo é possível visualizar o resumo da execução do algoritmo:
 
 O mesmo teste foi realizado com a planta baixa do bloco C, porém agora,
 para que seja possível ter uma maior cobertura da área do prédio, a
-simulação foi realizado com um equipamento com potência de -17 dBm. Na \autoref{captura_dois_aps_c},
+simulação foi realizado com um equipamento com potência de -17 $dB$. Na \autoref{captura_dois_aps_c},
 pode ser visto quais são os pontos sugeridos pelo SA na busca para a
 alocação dos mesmos.
 
@@ -2563,7 +2570,7 @@ dada pelo algoritmo é a seguinte:
 	Simulando ambiente com:                 600 x 223 pixels
 	Escala de simulacao:                    1 px : 0.0850 metros
 	Quantidade de APs:                      2
-	Potencia de cada APs:                   -17 dBm
+	Potencia de cada APs:                   -17 $dB$
 	
 	COBERTURA DE SINAL WI-FI:
 	89.76%   com boa cobertura (sinal forte)
@@ -2577,10 +2584,10 @@ dada pelo algoritmo é a seguinte:
 
 A busca utilizando três *access points* também foi realizada. O
 resultado da propagação do sinal pode ser visto na \autoref{captura_3_aps_bloco_c} utilizando
-equipamentos com potência de transmissão de -25 dBm.
+equipamentos com potência de transmissão de -25 $dB$.
 
 \begin{figure}[ht]
-	\caption{\label{captura_3_aps_bloco_c} Simulação da propagação de sinais de microondas no bloco C utilizando 3 APs com potência de -25 dBm.
+	\caption{\label{captura_3_aps_bloco_c} Simulação da propagação de sinais de microondas no bloco C utilizando 3 APs com potência de -25 $dB$.
 	}
 	\begin{center}
 		\includegraphics[scale=0.7]{imagens/captura-3-aps-bloco-c.jpg}
@@ -2596,7 +2603,7 @@ A os valores dados na saída são os seguintes:
 	Simulando ambiente com:                 600 x 223 pixels
 	Escala de simulacao:                    1 px : 0.0850 metros
 	Quantidade de APs:                      3
-	Potencia de cada APs:                   -25 dBm
+	Potencia de cada APs:                   -25 $dB$
 	
 	FO global best: 5.169e+02
 	
@@ -2611,10 +2618,10 @@ A os valores dados na saída são os seguintes:
 \end{lstlisting}
 
 Na \autoref{captura_3_aps_bloco_a} é possível ver propagação do sinal utilizando 3 access points no
-bloco A com equipamentos transmitindo a -25 dBm.
+bloco A com equipamentos transmitindo a -25 $dB$.
 
 \begin{figure}[ht]
-	\caption{\label{captura_3_aps_bloco_a} Simulação da propagação de sinais de microondas no bloco A utilizando 3 APs com potência de -25 dBm.
+	\caption{\label{captura_3_aps_bloco_a} Simulação da propagação de sinais de microondas no bloco A utilizando 3 APs com potência de -25 $dB$.
 	}
 	\begin{center}
 		\includegraphics[scale=0.7]{imagens/captura-3-aps-bloco-a.jpg}
@@ -2631,7 +2638,7 @@ no bloco A são os seguintes:
 	Simulando ambiente com:          600 x 325 pixels
 	Escala de simulacao:             1 px : 0.0800 metros
 	Quantidade de APs:               3
-	Potencia de cada APs:            -25 dBm
+	Potencia de cada APs:            -25 $dB$
 	
 	FO global best: 6.974e+02
 	
@@ -2731,14 +2738,13 @@ utilizadas para o cálculo da função objetivo.
 [^20]: $2.998\times10^{8} m/s \div 2.437$ GHz
     <https://www.wolframalpha.com/input/?i=c+%2F+2.437+GHz>
 
-[^21]: [https://www.r-project.org/ ](https://www.r-project.org/ )
+[^21]: [https://www.r-project.org/](https://www.r-project.org/ )
 
-[^22]: [https://cran.r-project.org/web/packages/fitdistrplus/index.html ](https://cran.r-project.org/web/packages/fitdistrplus/index.html )
+[^22]: [https://cran.r-project.org/web/packages/fitdistrplus/index.html](https://cran.r-project.org/web/packages/fitdistrplus/index.html )
 
-[^23]: [https://cran.r-project.org/web/packages/FAdist/index.html ](https://cran.r-project.org/web/packages/FAdist/index.html )
+[^23]: [https://cran.r-project.org/web/packages/FAdist/index.html](https://cran.r-project.org/web/packages/FAdist/index.html )
 
-[^24]: A modelagem de ambiente utilizada para as simulações apresenta as
-    mesmas divisões de cômodos do arquivo AutoCAD disponibilizado para o
+[^24]: A modelagem de ambiente utilizada para as simulações apresenta as mesmas divisões de cômodos do arquivo AutoCAD disponibilizado para o
     este trabalho.
 
 [^25]: Disponível em
@@ -2746,3 +2752,6 @@ utilizadas para o cálculo da função objetivo.
     Acesso em: 29 out. 2017.
 
 [^26]: <https://github.com/samuelterra22/tcc/blob/master/PlacementAPs.py>
+
+[^27]: [http://tools.dlink.com/intro/wfp/](http://tools.dlink.com/intro/wfp/)
+
