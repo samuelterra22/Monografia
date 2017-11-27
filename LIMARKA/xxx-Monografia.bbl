@@ -1,0 +1,271 @@
+\providecommand{\abntreprintinfo}[1]{%
+ \citeonline{#1}}
+\setlength{\labelsep}{0pt}\begin{thebibliography}{}
+\providecommand{\abntrefinfo}[3]{}
+\providecommand{\abntbstabout}[1]{}
+\abntbstabout{v-1.9.6 }
+
+\bibitem[Aarts e Korst 1988]{AARTS}
+\abntrefinfo{Aarts e Korst}{AARTS; KORST}{1988}
+{AARTS, E.; KORST, J. Simulated annealing and boltzmann machines.
+New York, NY; John Wiley and Sons Inc., 1988.}
+
+\bibitem[Almers et al. 2007]{ALMERS}
+\abntrefinfo{Almers et al.}{ALMERS et al.}{2007}
+{ALMERS, P. et al. Survey of channel and radio propagation models for wireless
+  mimo systems.
+\emph{EURASIP Journal on Wireless Communications and Networking}, Hindawi
+  Publishing Corp., v.~2007, n.~1, p. 56--56, 2007.}
+
+\bibitem[Banerji e {Singha Chowdhury} 2013]{BANERJI}
+\abntrefinfo{Banerji e {Singha Chowdhury}}{BANERJI; {Singha Chowdhury}}{2013}
+{BANERJI, S.; {Singha Chowdhury}, R. On ieee 802.11: Wireless lan technology.
+\emph{International Journal of Mobile Network Communications {\&} Telematics (
+  IJMNCT) Vol. 3, No.4, August 2013}, v.~3, p.~64, 2013.
+ISSN 18395678.}
+
+\bibitem[Batista 2017]{VINICIUS}
+\abntrefinfo{Batista}{BATISTA}{2017}
+{BATISTA, V. de L.~D. Software livre para wireless site survey.
+2017.}
+
+\bibitem[Bof 2010]{BOF}
+\abntrefinfo{Bof}{BOF}{2010}
+{BOF, E. {Seguran{\c{c}}a em Redes Wireless}.
+2010.}
+
+\bibitem[Budgets 2013]{BUDGETS}
+\abntrefinfo{Budgets}{BUDGETS}{2013}
+{BUDGETS, L. {Log-Normal Fading, Link Budgets}.
+2013.}
+
+\bibitem[Dalssoto, Souza e Becker 2013]{DALSSOTO}
+\abntrefinfo{Dalssoto, Souza e Becker}{DALSSOTO; SOUZA; BECKER}{2013}
+{DALSSOTO, F.~M.; SOUZA, R.~H. D.; BECKER, L.~B. Data analysis module for
+  wirelesshart network planning. In:  IEEE. \emph{Computing and Automation for
+  Offshore Shipbuilding (NAVCOMP), 2013 Symposium on}. 2013. p. 23--28.
+ISBN 978-0-7695-5123-4. Dispon{\'\i}vel em:
+  \url{http://ieeexplore.ieee.org/lpdocs/epic03/wrapper.htm?arnumber=6686109}.}
+
+\bibitem[Farber 2011]{FARBER}
+\abntrefinfo{Farber}{FARBER}{2011}
+{FARBER, R. \emph{CUDA application design and development}. [S.l.]: Elsevier,
+  2011.}
+
+\bibitem[FRANCISCATTI 2005]{FRANCISCATTI}
+\abntrefinfo{FRANCISCATTI}{FRANCISCATTI}{2005}
+{FRANCISCATTI, V. Seguran{\c{c}}a em redes sem fio.
+\emph{Trabalho de Conclus{\~a}o de Curso--Curso de Especializa{\c{c}}{\~a}o em
+  Redes de Computadores e Comunica{\c{c}}{\~a}o de Dados, Universidade Estadual
+  de Londrina, Londrina, Paran{\'a}}, 2005.}
+
+\bibitem[Kase et al. 2005]{KASE}
+\abntrefinfo{Kase et al.}{KASE et al.}{2005}
+{KASE, K. et al. Volume cad—cw-complexes based approach.
+\emph{Computer-Aided Design}, Elsevier, v.~37, n.~14, p. 1509--1520, 2005.}
+
+\bibitem[Kirk et al. 2007]{KIRK}
+\abntrefinfo{Kirk et al.}{KIRK et al.}{2007}
+{KIRK, D. et al. Nvidia cuda software and gpu parallel computing architecture.
+  In:  \emph{ISMM}. [S.l.: s.n.], 2007. v.~7, p. 103--104.}
+
+\bibitem[Kirkpatrick et al. 1983]{PATRICK}
+\abntrefinfo{Kirkpatrick et al.}{KIRKPATRICK et al.}{1983}
+{KIRKPATRICK, S. et al. Optimization by simulated annealing.
+\emph{science}, Washington, v.~220, n.~4598, p. 671--680, 1983.}
+
+\bibitem[Laarhoven e Aarts 1987]{VAN}
+\abntrefinfo{Laarhoven e Aarts}{LAARHOVEN; AARTS}{1987}
+{LAARHOVEN, P.~J. V.; AARTS, E.~H. Simulated annealing. In:  \emph{Simulated
+  annealing: Theory and applications}. [S.l.]: Springer, 1987. p. 7--15.}
+
+\bibitem[Lam, Pitrou e Seibert 2015]{LAM}
+\abntrefinfo{Lam, Pitrou e Seibert}{LAM; PITROU; SEIBERT}{2015}
+{LAM, S.~K.; PITROU, A.; SEIBERT, S. Numba: A llvm-based python jit compiler.
+  In:  ACM. \emph{Proceedings of the Second Workshop on the LLVM Compiler
+  Infrastructure in HPC}. [S.l.], 2015. p.~7.}
+
+\bibitem[Ledesma, Ruiz e Garcia 2012]{LEDESMA}
+\abntrefinfo{Ledesma, Ruiz e Garcia}{LEDESMA; RUIZ; GARCIA}{2012}
+{LEDESMA, S.; RUIZ, J.; GARCIA, G. Simulated annealing evolution. In:
+  \emph{Simulated Annealing-Advances, Applications and Hybridizations}. [S.l.]:
+  InTech, 2012.}
+
+\bibitem[Lentz 2003]{LENTZ}
+\abntrefinfo{Lentz}{LENTZ}{2003}
+{LENTZ, C. 802.11 b wireless network visualization and radiowave propagation
+  modeling.
+\emph{Hanover, NH: Dartmouth College}, 2003.}
+
+\bibitem[Luo 2013]{LUO}
+\abntrefinfo{Luo}{LUO}{2013}
+{LUO, M. {Indoor radio propagation modeling for system performance prediction}.
+2013.
+Dispon{\'\i}vel em:
+  \url{https://hal.archives-ouvertes.fr/tel-00937481/document}.}
+
+\bibitem[Magnun 2014]{MAGNUN}
+\abntrefinfo{Magnun}{MAGNUN}{2014}
+{MAGNUN. \emph{A História do Python}. 2014.
+Dispon{\'\i}vel em: \url{http://mindbending.org/pt/a-historia-do-python}.}
+
+\bibitem[Marques 2006]{MARQUES}
+\abntrefinfo{Marques}{MARQUES}{2006}
+{MARQUES, F. P. J.~A. A regula{\c{c}}{\~a}o do acesso wireless {\`a} internet
+  no brasil.
+Observat{\'o}rio de Economia e Comunica{\c{c}}{\~a}o (Obscom) da Universidade
+  Federal de Sergipe (UFS), 2006.}
+
+\bibitem[MARSCHALLINGER 1996]{MARSCHALLINGER}
+\abntrefinfo{MARSCHALLINGER}{MARSCHALLINGER}{1996}
+{MARSCHALLINGER, R. {A voxel visualization and analysis system based on
+  AutoCAD}.
+\emph{Computers and Geosciences}, v.~22, n.~4, p. 379--386, 1996.
+ISSN 00983004.}
+
+\bibitem[Mathuranathan 2013]{MATHURANATHAN}
+\abntrefinfo{Mathuranathan}{MATHURANATHAN}{2013}
+{MATHURANATHAN. \emph{{Log Distance Path Loss or Log Normal Shadowing Model}}.
+  2013.
+Dispon{\'\i}vel em:
+  \url{https://www.gaussianwaves.com/2013/09/log-distance-path-loss-or-log-normal-shadowing-model/}.}
+
+\bibitem[Najnudel 2004]{NAJNUDEL}
+\abntrefinfo{Najnudel}{NAJNUDEL}{2004}
+{NAJNUDEL, M. Estudo de propaga{\c{c}}{\~a}o em ambientes fechados para o
+  planejamento de wlans.
+\emph{Rio de Janeiro}, v.~136, 2004.}
+
+\bibitem[Navigator 2017]{ANACONDA}
+\abntrefinfo{Navigator}{NAVIGATOR}{2017}
+{NAVIGATOR, A. \emph{{Anaconda} The Most Popular Python Data Science Platform}.
+  2017.
+Dispon{\'\i}vel em: \url{https://docs.anaconda.com/}.}
+
+\bibitem[Neto, Scarminio e Bruns 1996]{NETO}
+\abntrefinfo{Neto, Scarminio e Bruns}{NETO; SCARMINIO; BRUNS}{1996}
+{NETO, B.~B.; SCARMINIO, I.~S.; BRUNS, R.~E. \emph{Planejamento e
+  otimiza{\c{c}}{\~a}o de experimentos}. [S.l.]: Ed. da UNICAMP, 1996.}
+
+\bibitem[Numba 2017]{NUMBA}
+\abntrefinfo{Numba}{NUMBA}{2017}
+{NUMBA. \emph{{Compilation} JIT functions}. 2017.
+Dispon{\'\i}vel em:
+  \url{http://numba.pydata.org/numba-doc/0.17.0/reference/compilation.html\#numba.jit}.}
+
+\bibitem[nVidia 2017]{CUDA}
+\abntrefinfo{nVidia}{NVIDIA}{2017a}
+{NVIDIA. \emph{CUDA para Medicina}. 2017.
+Dispon{\'\i}vel em:
+  \url{http://www.nvidia.com.br/object/cuda\_medical\_br.html}.}
+
+\bibitem[nVidia 2017]{NVIDIA}
+\abntrefinfo{nVidia}{NVIDIA}{2017b}
+{NVIDIA. \emph{{CUDA} programa{\c{c}}{\~{a}}o paralela facilitada}. 2017.
+Dispon{\'\i}vel em:
+  \url{http://www.nvidia.com.br/object/cuda\_home\_new\_br.html}.}
+
+\bibitem[nVidia 2017]{TOOLKIT}
+\abntrefinfo{nVidia}{NVIDIA}{2017c}
+{NVIDIA. \emph{Develop, Optimize and Deploy GPU-accelerated Apps}. 2017.
+Dispon{\'\i}vel em: \url{https://developer.nvidia.com/cuda-toolkit}.}
+
+\bibitem[{R. Battiti M. Brunato} et al. 2004]{BATTITI}
+\abntrefinfo{{R. Battiti M. Brunato} et al.}{{R. Battiti M. Brunato} et
+  al.}{2004}
+{{R. Battiti M. Brunato} et al. {Optimal wireless access point placement for
+  location-dependent services}.
+\emph{October}, n. October, p. 1--12, 2004.}
+
+\bibitem[Rappaport 2009]{RAPPAPORT}
+\abntrefinfo{Rappaport}{RAPPAPORT}{2009}
+{RAPPAPORT, T.~S. {Comunica{\c{c}}{\~{o}}es Sem fio Princ{\'{i}}pios e
+  Pr{\'{a}}ticas}.
+v.~2, p. 412p, 102p, 2009.}
+
+\bibitem[Rensburg e Irwin 2005]{RENSBURG}
+\abntrefinfo{Rensburg e Irwin}{RENSBURG; IRWIN}{2005}
+{RENSBURG, J.~J. van; IRWIN, B. {Wireless Network Visualization Using Radio
+  Propagation Modelling}.
+\emph{Proceedings of Information Security South Africa Conference}, 2005.}
+
+\bibitem[Rigo 2004]{RIGO}
+\abntrefinfo{Rigo}{RIGO}{2004}
+{RIGO, A. Representation-based just-in-time specialization and the psyco
+  prototype for python. In:  ACM. \emph{Proceedings of the 2004 ACM SIGPLAN
+  symposium on Partial evaluation and semantics-based program manipulation}.
+  [S.l.], 2004. p. 15--26.}
+
+\bibitem[Rivera 2010]{RIVERA}
+\abntrefinfo{Rivera}{RIVERA}{2010}
+{RIVERA, A.~D. Redes de equipamentos sem fio de uso pessoal:
+  compara{\c{c}}{\~{a}}o de tecnologias emergentes e an{\'{a}}lise de
+  tend{\^{e}}ncias.
+\emph{Teses.Usp.Br}, 2010.
+Dispon{\'\i}vel em:
+  \url{http://www.teses.usp.br/teses/disponiveis/3/3142/tde-10012011-084232/en.php}.}
+
+\bibitem[Rossum 2009]{GUIDO}
+\abntrefinfo{Rossum}{ROSSUM}{2009}
+{ROSSUM, G. van. \emph{The History of Python}. 2009.
+Dispon{\'\i}vel em:
+  \url{http://python-history.blogspot.com.br/2009/01/introduction-and-overview.html}.}
+
+\bibitem[Rubinstein e Rezende 2002]{RUBINSTEINS}
+\abntrefinfo{Rubinstein e Rezende}{RUBINSTEIN; REZENDE}{2002}
+{RUBINSTEIN, M.~G.; REZENDE, J.~F. Qualidade de servi{\c{c}}o em redes 802.11.
+\emph{XX Simp{\'o}sio Brasileiro de Redes de Computadores (SBRC2002)}, 2002.}
+
+\bibitem[Sandeep et al. 2008]{SANDEEP}
+\abntrefinfo{Sandeep et al.}{SANDEEP et al.}{2008}
+{SANDEEP, A. et al. Wireless network visualization and indoor empirical
+  propagation model for a campus wi-fi network.
+\emph{World Academy of Science, Engineering and Technology}, v.~42, p.
+  730--734, 2008.}
+
+\bibitem[Silva 2016]{SILVA}
+\abntrefinfo{Silva}{SILVA}{2016}
+{SILVA, J. G.~R. Introdu{\c{c}}{\~a}o {\`a} linguagem python.
+\emph{Universidade Federal de Juiz de Fora}, 2016.}
+
+\bibitem[Sulaiman et al. 2012]{SULAIMAN}
+\abntrefinfo{Sulaiman et al.}{SULAIMAN et al.}{2012}
+{SULAIMAN, H.~A. et al. {Wireless Network Visualization in 3D Virtual
+  Environment Framework}.
+p. 170--174, 2012.}
+
+\bibitem[Thakur, Banerjee e Gupta 2009]{THAKUR}
+\abntrefinfo{Thakur, Banerjee e Gupta}{THAKUR; BANERJEE; GUPTA}{2009}
+{THAKUR, A.; BANERJEE, A.~G.; GUPTA, S.~K. {A survey of CAD model
+  simplification techniques for physics-based simulation applications}.
+\emph{CAD Computer Aided Design}, Elsevier Ltd, v.~41, n.~2, p. 65--80, 2009.
+ISSN 00104485.
+Dispon{\'\i}vel em: \url{http://dx.doi.org/10.1016/j.cad.2008.11.009}.}
+
+\bibitem[Torlak 2016]{TORLAK}
+\abntrefinfo{Torlak}{TORLAK}{2016}
+{TORLAK, M. {Path Loss}.
+2016.
+Dispon{\'\i}vel em:
+  \url{https://www.utdallas.edu/{~}torlak/courses/ee4367/lectures/lectureradio.p}.}
+
+\bibitem[Valenzuela 1993]{VALENZUELA}
+\abntrefinfo{Valenzuela}{VALENZUELA}{1993}
+{VALENZUELA, R. A ray tracing approach to predicting indoor wireless
+  transmission.
+\emph{IEEE 43rd Vehicular Technology Conference}, p. 214--218, 1993.}
+
+\bibitem[Xie 2013]{XIE}
+\abntrefinfo{Xie}{XIE}{2013}
+{XIE, M.
+\emph{Indoor radio propagation modeling for system performance prediction}.
+Tese (Doutorado) --- INSA de Lyon, 2013.}
+
+\bibitem[Yun e Iskander 2015]{YUN}
+\abntrefinfo{Yun e Iskander}{YUN; ISKANDER}{2015}
+{YUN, Z.; ISKANDER, M.~F. Ray tracing for radio propagation modeling:
+  Principles and applications.
+\emph{IEEE Access}, v.~3, p. 1089--1100, 2015.
+ISSN 21693536.}
+
+\end{thebibliography}

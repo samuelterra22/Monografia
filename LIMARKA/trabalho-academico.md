@@ -286,7 +286,7 @@ precisão desejada, mais detalhes sobre o ambiente de propagação devem
 ser modelados. Nesta seção serão comentados sucintamente sete modelos
 que foram estudados para a realização deste trabalho.
 
-### Propagação no espaço livre (modelo de *Friis*)
+### Propagação no espaço livre (modelo de *Friis*){#sec:friis}
 
 O modelo *Friis free-space path loss* ou geralmente tratado como modelo
 de propagação no espaço livre de Friis é usado para prever a intensidade
@@ -355,7 +355,7 @@ ambientes externos (*outdoor*), de forma que o resultado obtido pelas
 equações anteriores são múltiplos de 10, tornando os cálculos de perda
 de caminho fácies em unidade de $dB$.
 
-### *Two-rays ground reflection*
+### *Two-rays ground reflection* {#sec:two_rays}
 
 O modelo *Two-rays ground reflection* é um modelo de propagação de rádio
 que prevê as perdas de trajetória entre uma antena transmissora e uma
@@ -411,7 +411,7 @@ ser expressa em $dB$ com a equação abaixo:
 PL(dB) = 40 log d -(10 log G_{t} + 10 log G_{r} + 20 log h_{t} + 20 log h_{r})
 \end{equation}
 
-### *Log-distance*
+### *Log-distance* {#sec:log_distance}
 
 O modelo *Log distance path loss* é um modelo genérico e uma extensão do
 modelo de espaço livre de Friis. Ele é usado para prever a perda de
@@ -458,7 +458,7 @@ dispersão. Assim, o expoente da perda de caminho (a literatura define
 alguns em ambientes diferentes) e o desvio padrão da variável aleatória
 escolhida, devem ser bem conhecidos para uma boa modelagem da perda.
 
-### *One-slope*
+### *One-slope* {#sec:one_slope}
 
 O modelo *One-slope* é classificado como sendo um modelo empírico e
 assume que a perda no caminho dada em $dBm$ é linearmente na distância
@@ -487,7 +487,7 @@ que um grande números de objetos interfiram nos mecanismos de
 propagação, ou seja, não será possível obter um resultado com uma
 precisão próxima da realidade.
 
-### *Wall and floor factor*
+### *Wall and floor factor* {#sec:wall_floor}
 
 O modelo *Wall and floor factor* leva em conta a absorção em paredes e
 pavimentos e geralmente é usado em ambientes internos e considera a
@@ -521,7 +521,7 @@ sendo:
 
 -   $n_{f}$ e $n_{w}$ são respectivamente os números de pisos e de paredes.
 
-### *Log-normal fading*
+### *Log-normal fading* {#sec:log_normal_fading}
 
 Este modelo de propagação estatístico provê uma estimativa aproximada do
 que representa a perda no caminho como uma função da distância e outros
@@ -545,7 +545,7 @@ em $dB$ e é o somatório de todas essas perdas (também expressadas em dB).
 O teorema do limite central afirma que tal distribuição tenderá a uma
 distribuição normal.
 
-### *Ray-tracing fading*
+### *Ray-tracing fading* {#sec:ray_tracing}
 
 Segundo \cite{VALENZUELA}, para esse modelo de propagação é realizado o
 traçado de raios em todas as direções possíveis do receptor ao
@@ -772,7 +772,23 @@ todos os seus estados viáveis.
 O *Simulated Annealing* realiza o processo de otimização buscando
 encontrar a melhor solução viável, considerando o objetivo do problema
 em questão, e o conjunto de restrições para aceitação da solução
-proposta.
+proposta. Na \autoref{simulated_annealing} é possível ver de uma forma simples como é o funcionamento 
+da metaheurística na busca de soluções para um sistema estável. 
+
+No eixo *x* temos o tempo gasto durante a a busca, já no eixo *y* 
+temos a temperatura que tende cair em função do tempo de busca.
+A metaheurística inicia com uma temperatura alta o que faz com que a probabilidade
+de aceitação de novas soluções seja também alta, evitando ótimos locais.
+No momento que a temperatura começa a cair, a chance de aceitar novas soluções diminui e 
+o sistema tende a ficar cada vez mais estável obtendo uma solução definitiva.
+
+\begin{figure}[htb]
+	\caption{\label{simulated_annealing} Comportamento do $Simulated Annealing$ durante a exploração do espaço de busca}
+	\begin{center}
+		\includegraphics[scale=0.185]{imagens/simulated-annealing.png}
+	\end{center}
+	\legend{Fonte: \cite{LEDESMA}}
+\end{figure}
 
 Problemas no campo das heurísticas podem ser modelados como problemas de
 maximização e problemas de minimização de uma função objetivo, que neste
@@ -1371,13 +1387,13 @@ curvas estatístico utilizando os pacotes *fitdistrplus*[^22] e
 	\legend{Fonte: Elaborado pelo autor}
 \end{figure}
 
-Pela comparação do ajuste de curvas ilustrado na , observamos que a
+Pela comparação do ajuste de curvas ilustrado na \autoref{curvas}, observamos que a
 distribuição Logística com apenas 2 parâmetros (logis) não consegue
 modelar bem o decaimento do nível de sinal observado na medições do RSSI
 no campus Formiga. Por outro lado, as distribuições 3P-LogNormal
 (lnorm3) e 3P-LogLogistica (llog3) se aproximaram bem do comportamento
 esperado para o decaimento da intensidade do sinal, estando tal fato em
-consonância com o exposto nas seções 2.4.6 (*Log-normal fading* e 2.4.3
+consonância com o exposto nas seções \ref{sec:log_normal_fading} (*Log-normal fading*) e \ref{sec:log_distance} 
 (*Log-distance*).
 
 A \autoref{log_logistica} e a \autoref{log_normal} apresentam em detalhes a qualidade do ajuste de curvas
@@ -1768,12 +1784,14 @@ conjunto de restrições para aceitação da solução proposta.
 ### Implementação do *Simulated Annealing*
 
 Inicialmente a metaheurística buscava o melhor ponto apenas para um AP.
-Com o cumprimento dos objetivos, se tornou possível a busca e otimização
+Com o cumprimento dos objetivos tornou-se possível a busca e otimização
 de mais de um AP. O SA inicia com os valores predefinidos no momento da
 sua chamada. Para o método é informado: o número de APs a serem
 utilizados no ambiente, o número máximo de iterações, o número máximo de
 perturbações por cada iteração, o número máximo de sucessos por iteração
-e o $\alpha$ como o fator de redução da temperatura.
+e o $\alpha$ como o fator de redução da temperatura. Na seção 
+\ref{sec:avalia_dois_ou_mais} podem ser vistos mais detalhes sobre como a 
+função objetivo foi implementada.
 
 Com a estratégia de perturbar mais de um AP por vez, o SA inicia
 alocando todos os APs na posição central da planta baixa. A primeira
@@ -2009,7 +2027,7 @@ Nesta seção apresentaremos como foram implementadas as técnicas
 utilizadas para avaliações com um ou mais *access points* bem como o
 aperfeiçoamento da função objetivo.
 
-### Avaliação da solução com um AP
+### Avaliação da solução com um AP {#sec:avalia_one_ap}
 
 Para a implementação do SA, se faz importante a decisão de uma boa
 função objetivo. A função objetivo está diretamente ligada à eficácia
@@ -2064,13 +2082,13 @@ características do ambiente e da propagação dos raios (sinais de RF).
 Foram comparados os resultados simulados com resultados reais coletados
 nas dependências do campus.
 
-### Avaliação da solução para dois ou mais APs
+### Avaliação da solução para dois ou mais APs {#sec:avalia_dois_ou_mais}
 
 Como desde o princípio, a implementação da função objetivo para apenas
 um AP visava maximizar a cobertura do sinal *Wi-Fi* para o ambiente.
 Isso não foi diferente para a simulação de mais um AP. Foram utilizadas
 técnicas de manipulação de grandezas em $dB$ para obter o resultado
-esperado. Como dito no parágrafo anterior, a manipulação com a soma dos
+esperado. Como dito na seção \ref{sec:avalia_one_ap} , a manipulação com a soma dos
 dados em $dB$ não é conceitualmente apropriada. Como uma proposta de
 solução para esse problema, antes de realizar a soma dos valores da
 matriz, a potência do sinal em questão era convertido de $dB$ para $mW$,
@@ -2261,7 +2279,7 @@ medições reais da intensidade de sinal em determinados pontos do
 ambiente analisado.
 
 Tais resultados foram então comparados e podem ser visto com a \autoref{captura}
-e a FIGURA com os resultados previstos pela
+e a \autoref{simulacao_vinicius} com os resultados previstos pela
 simulação (através da visualização gráfica da propagação no ambiente),
 para que os modelos de propagação e características do modelo espacial
 pudessem ser calibrados, num processo de melhoria contínua visando ao
@@ -2272,12 +2290,25 @@ de acordo com seus materiais de construção, espessura de suas paredes,
 pisos e teto.
 
 \begin{figure}[ht]
-	\caption{\label{captura} Captura realizada no Bloco C, para um AP "18:8B:9D:69:E8:B2" posicionado em (x=660,y=260) e irradiando no Canal 11 (2.462 GHz)}
+	\caption{\label{captura} Captura realizada no Bloco C, para um AP "18:8B:9D:69:E8:B2" posicionado em (x=660,y=260) e irradiando no Canal 11 (2.462 GHz).}
 	\begin{center}
 		\includegraphics[scale=0.5]{imagens/captura.jpg}
 	\end{center}
-	\legend{Fonte: Vinícius Duarte}
+	\legend{Fonte: \cite{VINICIUS}}
 \end{figure}
+
+\begin{figure}[ht]
+	\caption{\label{simulacao_vinicius} Simulação realizada com dados empíricos nas mesmas configurações do bloco C. }
+	\begin{center}
+		\includegraphics[scale=0.7]{imagens/simulacao_vinicius.png}
+	\end{center}
+	\legend{Fonte: Elaboração do autor}
+\end{figure}
+
+Assim é possível ver como é notável a aplicação de que os modelos físicos 
+teóricos obtiveram o comportamento relativamente parecido com a coleta e simulação
+realizada empiricamente, fazendo com que o modelo utilizado esteja realmente
+validado com a realidade.
 
 RESULTADOS E ANÁLISE
 ====================
@@ -2416,7 +2447,7 @@ ou AP).
 ponto próximo ao meio da planta. Com a posição escolhida, a cobertura do
 sinal se propaga em áreas próximas à biblioteca e sala de estudo, que
 contém o maior fluxo de pessoas neste bloco que utilizam o acesso à
-internet. Na figura, os pontos que deixam a desejar corresponde à
+internet. Na \autoref{prop_bloco_a}, os pontos que deixam a desejar corresponde à
 potência máxima que consegue transmitir, neste caso, -25 $dB$.
 
 Como resultado disponibilizados via terminal, temos:
@@ -2441,6 +2472,22 @@ Como resultado disponibilizados via terminal, temos:
 	sinal Ruim      32.5%
 
 \end{lstlisting}
+
+Com a \autoref{percent_2_aps_bloco_c} podemos analizar, em forma de gráfico de pizza, 
+a solução dada pelo algoritmo ao realizar a simulação
+com dois APs no bloco A, com cada fatia correspondendo à qualidade do sinal propagado.
+Observe que as zonas de sombra (sem cobertura do sinal) tiveram uma fatia correspondente com 
+mais de um quarto de todo o espaço e, se somado com o sinal ruim, mais da metade da 
+área não será atendida com uma boa qualidade de serviço.
+
+\begin{figure}[ht]
+	\caption{\label{percent_2_aps_bloco_c} Interpretação em forma de gráfico de pizza do resultado dado para a otimização
+	 de dois $access points$ no bloco A.}
+	\begin{center}
+		\includegraphics[scale=0.7]{imagens/prop-bloco-percent-a-2.png}
+	\end{center}
+	\legend{Fonte: Elaboração do autor}
+\end{figure}
 
 As plantas dos pisos 1, 2 e 3 do bloco C foram obtidas em formato DWG e
 convertidas para o formato *.dxf* ao final da implementação. Tais
