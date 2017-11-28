@@ -68,8 +68,10 @@
 \contentsline {section}{\numberline {5.2}\emph {Wi-Fi Placement} para 1 AP}{87}{section.5.2}
 \contentsline {section}{\numberline {5.3}\emph {Wi-Fi Placement} para 2 ou mais APs}{91}{section.5.3}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {6}\MakeTextUppercase {CONSIDERAÇÕES FINAIS}}{97}{chapter.6}
+\contentsline {chapter}{\chapternumberline {6}\MakeTextUppercase {TRABALHOS FUTUROS}}{99}{chapter.6}
+\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
+\contentsline {chapter}{\chapternumberline {7}\MakeTextUppercase {CONSIDERAÇÕES FINAIS}}{101}{chapter.7}
 \vspace {\cftbeforechapterskip }
 \vspace {\cftbeforechapterskip }
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
-\contentsline {chapter}{\uppercase {Refer\^encias}}{99}{section*.15}
+\contentsline {chapter}{\uppercase {Refer\^encias}}{103}{section*.15}

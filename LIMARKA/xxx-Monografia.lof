@@ -24,9 +24,14 @@
 \contentsline {figure}{\numberline {22}{\ignorespaces Simulação da propagação inicial de sinais de microondas utilizando versão inicial do algoritmo.}}{87}{figure.5.22}
 \contentsline {figure}{\numberline {23}{\ignorespaces Comportamento da função objetivo do Simulated Annealing na busca do melhor ponto}}{88}{figure.5.23}
 \contentsline {figure}{\numberline {24}{\ignorespaces Simulação da propagação de sinais de microondas no bloco A utilizando 1 AP, sua absorção e limiar de sensibilidade.}}{89}{figure.5.24}
-\contentsline {figure}{\numberline {25}{\ignorespaces Interpretação em forma de gráfico de pizza do resultado dado para a otimização de dois $access points$ no bloco A.}}{90}{figure.5.25}
+\contentsline {figure}{\numberline {25}{\ignorespaces Interpretação em forma de gráfico de pizza do resultado dado para a otimização de um $access points$ no bloco A.}}{90}{figure.5.25}
 \contentsline {figure}{\numberline {26}{\ignorespaces Simulação da propagação de sinais de microondas no bloco C utilizando 1 AP. }}{90}{figure.5.26}
-\contentsline {figure}{\numberline {27}{\ignorespaces Simulação da propagação de sinais de microondas no bloco A utilizando 2 APs. }}{91}{figure.5.27}
-\contentsline {figure}{\numberline {28}{\ignorespaces Simulação da propagação de sinais de microondas no bloco C utilizando 2 APs. }}{92}{figure.5.28}
-\contentsline {figure}{\numberline {29}{\ignorespaces Simulação da propagação de sinais de microondas no bloco C utilizando 3 APs com potência de -25 $dB$. }}{93}{figure.5.29}
-\contentsline {figure}{\numberline {30}{\ignorespaces Simulação da propagação de sinais de microondas no bloco A utilizando 3 APs com potência de -25 $dB$. }}{94}{figure.5.30}
+\contentsline {figure}{\numberline {27}{\ignorespaces Representação em gráfico de pizza do resultado dado para a otimização de um $access points$ no bloco C. }}{91}{figure.5.27}
+\contentsline {figure}{\numberline {28}{\ignorespaces Simulação da propagação de sinais de microondas no bloco A utilizando 2 APs. }}{92}{figure.5.28}
+\contentsline {figure}{\numberline {29}{\ignorespaces Representação em gráfico de pizza do resultado dado para a otimização de um $access points$ no bloco C XXXXXXXXX. }}{93}{figure.5.29}
+\contentsline {figure}{\numberline {30}{\ignorespaces Simulação da propagação de sinais de microondas no bloco C utilizando 2 APs. }}{93}{figure.5.30}
+\contentsline {figure}{\numberline {31}{\ignorespaces Representação em gráfico de pizza do resultado dado para a otimização de um $access points$ no bloco C XXXXXXXXX. }}{94}{figure.5.31}
+\contentsline {figure}{\numberline {32}{\ignorespaces Simulação da propagação de sinais de microondas no bloco C utilizando 3 APs com potência de -25 $dB$. }}{95}{figure.5.32}
+\contentsline {figure}{\numberline {33}{\ignorespaces Representação em gráfico de pizza do resultado dado para a otimização de um $access points$ no bloco C XXXXXXXXX.}}{96}{figure.5.33}
+\contentsline {figure}{\numberline {34}{\ignorespaces Simulação da propagação de sinais de microondas no bloco A utilizando 3 APs com potência de -25 $dB$. }}{97}{figure.5.34}
+\contentsline {figure}{\numberline {35}{\ignorespaces Representação em gráfico de pizza do resultado dado para a otimização de um $access points$ no bloco C XXXXXXXXX.}}{97}{figure.5.35}
