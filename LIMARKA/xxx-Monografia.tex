@@ -99,7 +99,7 @@
 % ---
 % Informações de dados para CAPA e FOLHA DE ROSTO
 % ---
-\titulo{OTIMIZAÇÃO DO POSICIONAMENTO DE PONTOS DE ACESSO WIRELESS}
+\titulo{OTIMIZAÇÃO DO POSICIONAMENTO DE PONTOS DE ACESSO \emph{WIRELESS}}
 \autor{SAMUEL TERRA VIEIRA}
 \data{2017}
 \local{FORMIGA - MG}
@@ -347,24 +347,28 @@ comprometido em dar o seu melhor para os alunos.
 \setlength{\absparsep}{18pt} % ajusta o espaçamento dos parágrafos do resumo
 \begin{resumo}
 
-  A proposta deste trabalho é desenvolver um software para Wireless AP
-  Placement que utilizará modelo(s) da propagação do sinal Wi-Fi de acordo
-  com as características físicas do ambiente, aplicando o Simulated
-  Annealing como metaheurística para visar ao aprimoramento da cobertura
-  de sinal, tendo como caso de uso as dependências do IFMG campus Formiga.
-  Tal software fornece um melhor posicionamento dos access points Wi-Fi
-  para o ambiente analisado, bem como informa o percentual de cobertura de
-  sinal para tal quantidade de APs. O trabalho realizado foi
+  A proposta deste trabalho é desenvolver um \emph{software} para
+  \emph{Wireless AP Placement} que utilizará modelo(s) da propagação do
+  sinal \emph{Wi-Fi} de acordo com as características físicas do ambiente,
+  aplicando o \emph{Simulated Annealing} como metaheurística para visar ao
+  aprimoramento da cobertura de sinal, tendo como caso de uso as
+  dependências do IFMG \emph{campus} Formiga. Tal \emph{software} fornece
+  um melhor posicionamento dos \emph{access points Wi-Fi} para o ambiente
+  analisado, bem como informa o percentual de cobertura de sinal para tal
+  quantidade de \emph{access points}. O trabalho realizado foi
   disponibilizado de forma gratuita utilizando licença pública geral GNU
-  GPL. Ressaltamos que ele possibilita testar disposições de APs sem o
-  custo operacional de fisicamente movê-los, de maneira a propor uma
-  disposição espacial dos mesmos que forneça uma maior cobertura e
-  intensidade de sinal dentro do ambiente simulado. Para trabalhos
-  futuros, a fim de se obter resultados que possibilitem uma melhor busca
-  pelos pontos de acesso para dois ou mais APs, novas técnicas poderiam
-  ser utilizadas para o cálculo da função objetivo da metaheurística.
+  GPL. Ressaltamos que ele possibilita testar disposições de \emph{access
+  points} sem o custo operacional de fisicamente movê-los, de maneira a
+  propor uma disposição espacial dos mesmos que forneça uma maior
+  cobertura e intensidade de sinal dentro do ambiente simulado. Para
+  trabalhos futuros, a fim de se obter resultados que possibilitem uma
+  melhor busca pelos pontos de acesso para dois ou mais \emph{access
+  points}, novas técnicas poderiam ser utilizadas para o cálculo da função
+  objetivo da metaheurística, ou até mesmo implementar outras
+  metaheurísticas.
 
- \textbf{Palavras-chave}: Wireless. Propagação. Posicionamento. Wi-Fi. Simulated Annealing. CUDA.
+ \textbf{Palavras-chave}: \emph{Wireless}. Propagação. Posicionamento. \emph{Wi-Fi}.
+\emph{Simulated Annealing}. CUDA.
 \end{resumo}
 
 
@@ -389,7 +393,8 @@ comprometido em dar o seu melhor para os alunos.
    provides a greater coverage and signal intensity within the simulated
    environment. For future work, in order to obtain results that allow a
    better search for access points for two or more APs, new techniques
-   could be used to calculate the objective function of metaheuristics.
+   could be used to calculate the objective function of metaheuristics, or
+   even implement another metaheuristics.
 
    \vspace{\onelineskip}
  
@@ -520,50 +525,50 @@ ampliar a rede ou implantar, mesmo que temporariamente, o acesso à
 internet em alguma determinada área. Apesar da praticidade, não é viável
 ter uma rede \emph{wireless} se sua cobertura de sinal não atinge boa
 parte da área necessária ou, então, se por mais perto que o ponto de
-acesso (AP) \emph{wireless} esteja do computador, não provê uma
-qualidade de serviço satisfatória devido a um baixo nível de sinal ou
-interferências na mesma frequência do canal.
+acesso (\emph{access point}) \emph{wireless} esteja do computador, não
+provê uma qualidade de serviço satisfatória devido a um baixo nível de
+sinal ou interferências na mesma frequência do canal.
 
 Isso posto, faz-se necessário um bom planejamento do posicionamento dos
-APs \emph{wireless} de maneira a oferecer uma boa cobertura de sinal
-onde ouver demanda de conectividade. É importante deixar claro que o
-tratamento de colisão de canais como sua interferência de APs próximos
-não está dentre os principais objetivos dessa pesquisa e, por
-conseguinte, não foi implementado. A proposta deste trabalho é
-desenvolver um \emph{software} para \emph{Wireless AP Placement}, que
-utilizará modelo(s) da propagação do sinal Wi-Fi de acordo com as
-características físicas do ambiente, aplicando metaheurísticas que visem
-ao aprimoramento da cobertura de sinal, tendo como caso de uso as
-dependências do IFMG \emph{campus} Formiga. Tal \emph{software} indicará
-um melhor posicionamento dos \emph{access points Wi-Fi} para o ambiente
-analisado.
+\emph{access points} \emph{wireless} de maneira a oferecer uma boa
+cobertura de sinal onde ouver demanda de conectividade. É importante
+deixar claro que o tratamento de colisão de canais como sua
+interferência de \emph{access points} próximos não está dentre os
+principais objetivos dessa pesquisa e, por conseguinte, não foi
+implementado. A proposta deste trabalho é desenvolver um \emph{software}
+para \emph{Wireless AP Placement}, que utilizará modelo(s) da propagação
+do sinal \emph{Wi-Fi} de acordo com as características físicas do
+ambiente, aplicando metaheurísticas que visem ao aprimoramento da
+cobertura de sinal, tendo como caso de uso as dependências do IFMG
+\emph{campus} Formiga. Tal \emph{software} indicará um melhor
+posicionamento dos \emph{access points Wi-Fi} para o ambiente analisado.
 
 \section{Justificativa}\label{justificativa}
 
 É importante ressaltar a validade prática deste trabalho a ser
 desenvolvido, uma vez que uma grande dúvida dos usuários residenciais e
-profissionais de TI é saber qual a melhor localização para o(s) AP(s)
-\emph{Wi-Fi}. Alguma vezes, essa questão até passa despercebida para o
-usuário (doméstico ou empresarial), resultando em locais sem cobertura
-de sinal. Boa parte dos ambientes corporativos e residenciais utilizam
-um ou mais pontos de acesso sem fio para prover acesso à rede local e
-dela para a internet. Entretanto, dispositivos móveis e computadores
-tipicamente não observam uma qualidade satisfatória de sinal do
-\emph{access point wireless}. Esse problema pode ocorrer pelo fato do AP
-não abranger toda a área necessária ou sofrer atenuações devido às
-características do ambiente.
+profissionais de TI é saber qual a melhor localização para o(s)
+\emph{access point(s)} \emph{Wi-Fi}. Alguma vezes, essa questão até
+passa despercebida para o usuário (doméstico ou empresarial), resultando
+em locais sem cobertura de sinal. Boa parte dos ambientes corporativos e
+residenciais utilizam um ou mais pontos de acesso sem fio para prover
+acesso à rede local e dela para a internet. Entretanto, dispositivos
+móveis e computadores tipicamente não observam uma qualidade
+satisfatória de sinal do \emph{access point wireless}. Esse problema
+pode ocorrer pelo fato do \emph{access point} não abranger toda a área
+necessária ou sofrer atenuações devido às características do ambiente.
 
-Ademais, redes Wi-Fi podem sofrer interferências externas, tais como
-telefones sem fio ou ``babás'' eletrônicas que operem na mesma faixa de
-frequência (banda ISM de 2.4 GHz), motores elétricos ou outras redes sem
-fio que estejam próximos do AP e irradiem EMI na mesma frequência do
-canal utilizado, seja ele na banda de 2.4 GHz (IEEE 802.11 b/g) ou 5.8
-GHz (IEEE 802.11 a/ac). Por meio de uma análise do espectro de
-radiofrequência (RF) é possível detectar o nível dos sinais e/ou
-interferências em determinado local, entretanto, um problema facilmente
-observável que pode agravar a baixa qualidade observada no serviço da
-rede sem fio é a existência de pontos cegos na cobertura do sinal para
-determinado ambiente \cite{RUBINSTEINS}.
+Ademais, redes \emph{Wi-Fi} podem sofrer interferências externas, tais
+como telefones sem fio ou ``babás'' eletrônicas que operem na mesma
+faixa de frequência (banda ISM de 2.4 GHz), motores elétricos ou outras
+redes sem fio que estejam próximos do \emph{access point} e irradiem EMI
+na mesma frequência do canal utilizado, seja ele na banda de 2.4 GHz
+(IEEE 802.11 b/g) ou 5.8 GHz (IEEE 802.11 a/ac). Por meio de uma análise
+do espectro de radiofrequência (RF) é possível detectar o nível dos
+sinais e/ou interferências em determinado local, entretanto, um problema
+facilmente observável que pode agravar a baixa qualidade observada no
+serviço da rede sem fio é a existência de pontos cegos na cobertura do
+sinal para determinado ambiente \cite{RUBINSTEINS}.
 
 Como consequência de toda a atenuação e interferência sofrida, a rede
 \emph{wireless} pode ficar inoperante ou dar a impressão de baixo
@@ -573,9 +578,9 @@ parecer ``lento''. De um modo geral, por serem leigos no assunto, muitos
 usuários de rede sem fio acabam culpando o provedor de acesso à internet
 ou equipe de TI da instituição pela má qualidade do serviço quando, na
 verdade, a solução para o problema passaria por uma inspeção no espectro
-de sinal do(s) AP(s) \emph{Wi-Fi} (para identificar interferências) e um
-melhor posicionamento deste(s) (para maximizar a cobertura do sinal e
-reduzir interferências entre APs).
+de sinal do(s) \emph{access point}(s) \emph{Wi-Fi} (para identificar
+interferências) e um melhor posicionamento deste(s) (para maximizar a
+cobertura do sinal e reduzir interferências entre \emph{access point}).
 
 Por fim, até onde pudemos verificar, não há disponível um
 \emph{software} livre, gratuito e de código-fonte aberto para
@@ -588,38 +593,62 @@ proposta neste trabalho.
 Após a contextualização do objeto de estudo deste trabalho e sua
 importância, sintetiza-se aqui seu objeto primário: projetar e
 implementar um \emph{software} para planejamento do posicionamento dos
-APs (\emph{Wireless AP Placement}), que receba como entrada uma
-representação do ambiente e informações dos APs disponíveis, realize
-simulações de propagação dos sinais (considerando as características do
-ambiente) para os posicionamentos de APs propostos por meta-heurística
-que vise maximizar a cobertura do sinal Wi-Fi tendo, como caso de uso,
-as dependências do IFMG campus Formiga. São objetivos secundários e mais
+\emph{access point} (\emph{Wireless AP Placement}), que receba como
+entrada uma representação do ambiente e informações dos \emph{access
+points} disponíveis, realize simulações de propagação dos sinais
+(considerando as características do ambiente) para os posicionamentos de
+\emph{access points} propostos por metaheurística que vise maximizar a
+cobertura do sinal \emph{Wi-Fi} tendo, como caso de uso, as dependências
+do IFMG \emph{campus} Formiga. São objetivos secundários e mais
 específicos os seguintes tópicos:
 
 \begin{itemize}
 \item
-  Construir um modelo das dependências do IFMG campus Formiga, a partir
-  da representação do ambiente fornecida ao software,
+  Construir um modelo das dependências do IFMG \emph{campus} Formiga, a
+  partir da representação do ambiente fornecida ao \emph{software},
   e.g.~planta(s)-baixa(s);
 \item
-  Simular a propagação do sinal wireless de APs Wi-Fi através das
-  dependências do campus Formiga, seguindo modelos de propagação de
-  sinais sem fio;
+  Simular a propagação do sinal \emph{wireless} de \emph{access points}
+  \emph{Wi-Fi} através das dependências do \emph{campus} Formiga,
+  seguindo modelos de propagação de sinais sem fio;
 \item
   Utilizar metaheurística computacional para propor/verificar, via
-  simulação, novas localizações para os APs Wi-Fi, visando maximizar a
-  cobertura do sinal no campus (dentre outros fatores);
+  simulação, novas localizações para os \emph{access points}
+  \emph{Wi-Fi}, visando maximizar a cobertura do sinal no \emph{campus}
+  (dentre outros fatores);
 \item
   Fornecer, ao final, uma solução proposta para o novo posicionamento
-  dos APs Wi-Fi, se possível, auxiliada por algum método de visualização
-  da cobertura do sinal wireless no ambiente;
+  dos \emph{access points} \emph{Wi-Fi}, se possível, auxiliada por
+  algum método de visualização da cobertura do sinal \emph{wireless} no
+  ambiente;
 \item
-  Disponibilizar o software de maneira livre e de código-fonte aberto
-  (FOSS), distribuindo-o por meio de alguma licença que proteja a
+  Disponibilizar o \emph{software} de maneira livre e de código-fonte
+  aberto (FOSS), distribuindo-o por meio de alguma licença que proteja a
   autoria do mesmo (e.g., Licença Pública Geral GNU --- GPL).
 \end{itemize}
 
-\chapter{FUNDAMENTAÇÃO TEÓRICA}\label{fundamentauxe7uxe3o-teuxf3rica}
+\section{Estrutura do Trabalho}\label{estrutura-do-trabalho}
+
+Esta monografia de conclusão de curso é organizada em 8 capítulos. no
+capítulo \ref{sec:fundamentacao}, após a contextualização feita na
+introdução, são apresentados os conceitos teóricos necessários para a
+compreensão do trabalho. O capítulo \ref{sec:materiais} expliçita a
+linguagem utilizada no desenvolvimento do trabalho, bem como as
+bibliotecas usadas e a definição da mateheurística. São abordados também
+os conceitos de programação paralela envolvidos no processo de criação
+da ferramenta. No capítulo \ref{sec:projeto} são tratados os tópicos
+sobre o desenvolvimento do projeto, desde a entrada de dados, propagação
+do sinal, validação do modelo utilizado, à paralelização do algorítmo. O
+capítulo \ref{sec:resultados} apresenta os resultados obtidos após as
+simulações da propagação de sinais \emph{wireless} nas dependências do
+IFMG \emph{campus} Formiga e uma análise dos resultados encontrados nas
+simulações com um, dois ou mais \emph{access points}. No capítulo
+\ref{sec:futuros} é feita uma alusão aos possíveis trabalhos futuros e,
+por fim no capítulo \ref{sec:consideracoes} são feitas as considerações
+finais deste trabalho, seguidas pelas referências bibliográficas
+utilizadas neste trabalho.
+
+\chapter{FUNDAMENTAÇÃO TEÓRICA}\label{sec:fundamentacao}
 
 No levantamento do referencial bibliográfico realizado, observamos um
 vasto número de trabalhos que tratam sobre a otimização do
@@ -637,24 +666,25 @@ De acordo com o trabalho publicado por Battiti, Brunato e Delai
 Location-Dependent Services}'', vários grupos de pesquisadores
 independentes têm proposto métodos para fazer estimativa a respeito da
 posição do usuário \cite{DALSSOTO}, com base na intensidade dos sinais
-de rádio recebidos de múltiplos APs \cite{NAJNUDEL}. Partindo desta
-distinta aplicação, os pesquisadores propõem uma nova abordagem para o
-AP \emph{Placement}, pois consideram que a localização ``é um importante
-parâmetro que pode ser usado para determinar o comportamento do
-sistema'' \cite[p. 1]{BATTITI}. Desse modo, a proposta deste TCC, que
-utilizará um modelo de propagação do sinal Wi-Fi em uma simulação do
-ambiente do IFMG \emph{campus} Formiga é, mais uma vez, justificada pela
-necessidade de se ter um software livre e gratuito para \emph{Wireless
-AP Placement}, que indique um melhor posicionamento dos \emph{access
-points Wi-Fi}.
+de rádio recebidos de múltiplos \emph{access points} \cite{NAJNUDEL}.
+Partindo desta distinta aplicação, os pesquisadores propõem uma nova
+abordagem para o \emph{AP Placement}, pois consideram que a localização
+``é um importante parâmetro que pode ser usado para determinar o
+comportamento do sistema'' \cite[p. 1]{BATTITI}. Desse modo, a proposta
+deste TCC, que utilizará um modelo de propagação do sinal \emph{Wi-Fi}
+em uma simulação do ambiente do IFMG \emph{campus} Formiga é, mais uma
+vez, justificada pela necessidade de se ter um \emph{software} livre e
+gratuito para \emph{Wireless AP Placement}, que indique um melhor
+posicionamento dos \emph{access points Wi-Fi}.
 
-\section{Tecnologias Wi-Fi ( WLANs IEEE 802.11
-)}\label{tecnologias-wi-fi-wlans-ieee-802.11}
+\section{\texorpdfstring{Tecnologias \emph{Wi-Fi} ( WLANs IEEE 802.11
+)}{Tecnologias Wi-Fi ( WLANs IEEE 802.11 )}}\label{tecnologias-wi-fi-wlans-ieee-802.11}
 
 Quando se trata de redes \emph{wireless}, é imprescindível dizer que,
 com o estabelecimento da família de padrões IEEE 802.11, se tornou
-possível a compatibilidade entre diferentes marcas de fabricantes de APs
-\emph{wireless} e dispositivos móveis. De acordo com Franciscatti,
+possível a compatibilidade entre diferentes marcas de fabricantes de
+\emph{access points} \emph{wireless} e dispositivos móveis. De acordo
+com Franciscatti,
 
 \begin{citacao}
     As redes *wireless* utilizam freqüências de rádio para se comunicar
@@ -707,9 +737,9 @@ andares).
 \section{Propagação de sinais de
 rádio}\label{propagauxe7uxe3o-de-sinais-de-ruxe1dio}
 
-O sinal Wi-Fi produzido pelo \emph{access point} nada mais é, de um modo
-simplista, que uma onda de rádio que se propaga no espaço. De acordo com
-Rappaport,
+O sinal \emph{Wi-Fi} produzido pelo \emph{access point} nada mais é, de
+um modo simplista, que uma onda de rádio que se propaga no espaço. De
+acordo com Rappaport,
 
 \begin{citacao}
     Os mecanismos por trás da propagação da onda eletromagnética são diversos, mas geralmente podem ser atribuídos a reflexão, difração e dispersão. (...) Devido a múltiplas reflexões de vários objetos, as ondas eletromagnéticas trafegam por diferentes caminhos de tamanhos variados. A interação entre essas ondas causa uma distorção de caminhos múltiplos em um local específico, e as intensidades das ondas diminui à medida que a distância entre transmissor e receptor aumenta. \cite[p. 72]{RAPPAPORT}
@@ -742,7 +772,7 @@ reais, haverá reflexão do sinal no solo. Para grandes distâncias e
 antenas altas, o modelo de reflexão no solo é razoavelmente preciso para
 prever a intensidade do sinal recebido. Esse modelo é baseado na ótica
 geométrica e considera o caminho direto e o caminho refletido (modelo de
-dois raios), que muitas vezes é no solo. E, por fim, temos o modelo de
+dois raios), que muitas vezes é no solo. E, por fim, tem-se o modelo de
 difração (por gume de faca) que torna possível propagar os sinais de
 rádio através de obstruções, bem como ao redor da superfície da terra,
 além do horizonte. Contudo, a força do campo recebido diminui
@@ -762,15 +792,17 @@ concreto ou até ferragem). Durante a propagação, pode também ocorrer a
 perda do sinal entre andares de um edifício, obedecendo à lei de
 potência da distância, a qual leva em consideração o tipo de prédio,
 arredores e uma variável aleatória normal que representa o desvio padrão
-\cite[p. 104-108]{RAPPAPORT}.
+\cite[p. 104-108]{RAPPAPORT}. Com isso, na próxima seção são
+apresentados os modelos de propagação que serviram como base da
+simulação da propagação de sinais \emph{wireless}.
 
 \section{Modelos de propagação}\label{modelos-de-propagauxe7uxe3o}
 
 Quando se deseja realizar um bom desempenho e planejamento da cobertura
-do espectro Wi-Fi, é indispensável o conhecimento do meio de transmissão
-e qual modelo se deve usar para obter um resultado mais realista. Em
-sistemas \emph{wireless} o meio de propagação utilizado é o canal de
-rádio, de forma que as características e efeitos sobre todas as
+do espectro \emph{Wi-Fi}, é indispensável o conhecimento do meio de
+transmissão e qual modelo se deve usar para obter um resultado mais
+realista. Em sistemas \emph{wireless} o meio de propagação utilizado é o
+canal de rádio, de forma que as características e efeitos sobre todas as
 informações trafegadas são de uma natureza complexa, fazendo com que
 medições empíricas sejam de suma importância. Com as medições é possível
 ver como é o comportamento de modelos em pequena e larga escala, além de
@@ -782,8 +814,8 @@ Então, se faz necessário uma boa escolha de quais modelos de propagação
 utilizar quando se quer obter uma boa representação do espectro e que ao
 mesmo tempo esteja condizente com a realidade. Quanto maior for a
 precisão desejada, mais detalhes sobre o ambiente de propagação devem
-ser modelados. Nesta seção serão comentados sucintamente sete modelos
-que foram estudados para a realização deste trabalho.
+ser modelados. Nesta seção são comentados sucintamente sete modelos que
+foram estudados para a realização deste trabalho.
 
 \subsection{\texorpdfstring{Propagação no espaço livre (modelo de
 \emph{Friis})}{Propagação no espaço livre (modelo de Friis)}}\label{sec:friis}
@@ -822,7 +854,7 @@ sendo:
   \(d\) é a distância de separação das antenas;
 \item
   \(L\) é o fator de perda (\(L\geq1\)), \(L = 1\) indica nenhuma perda
-  no hardware do sistema;
+  no \emph{hardware} do sistema;
 \item
   \(\lambda\) é o comprimento de onda dado em metros.
 \end{itemize}
@@ -835,7 +867,7 @@ uma região além da distância de campo distante \(d_{f}\) , que está
 diretamente relacionada com a maior dimensão linear \(D\) de abertura da
 antena transmissora e com o comprimento de onda da portadora (antena
 receptora) \cite{RAPPAPORT}. Tal distância de \emph{Fraunhofer} pode ser
-calculada pela seguinte fórmula:
+calculada pela seguinte equação:
 
 \begin{equation}
     d_{f} =  \frac{2D^{2}}{\lambda}
@@ -859,7 +891,7 @@ antenas de baixo ganho, entre 1 e 2 GHz, normalmente é utilizado com
 sendo 1 metro em ambientes internos (\emph{indoor}) e 100 metros ou 1
 quilômetro para ambientes externos (\emph{outdoor}), de forma que o
 resultado obtido pelas equações anteriores são múltiplos de 10, tornando
-os cálculos de perda de caminho fácies em unidade de \(dB\).
+os cálculos de perda de caminho fáceis em unidade de \(dB\).
 
 \subsection{\texorpdfstring{\emph{Two-rays ground
 reflection}}{Two-rays ground reflection}}\label{sec:two_rays}
@@ -876,10 +908,10 @@ transmissora, duas ondas são adicionadas de forma positiva para gerar
 maior potência e, à medida que a distância aumenta, essas ondas se somam
 de forma construtiva e destrutiva, proporcionando regiões de exaustão e
 decaimento à medida que a distância aumenta além da distância crítica ou
-primeira zona de Fresnel, a potência cai proporcionalmente quatro vezes
-o inverso da potência da distância. Essa é uma perda no caminho muito
-mais rápida do que é experimentada no \emph{Friis free-space path loss
-model} (espaço livre de Friis).
+primeira zona de \emph{Fresnel}, a potência cai proporcionalmente quatro
+vezes ao inverso da potência da distância. Essa é uma perda no caminho
+muito mais rápida do que é experimentada no \emph{Friis free-space path
+loss model} (espaço livre de Friis).
 
 Quando se tem valores muito altos para a distância, pode-se notar que a
 potência recebida e a perda no caminho se tornam independentes da
@@ -889,7 +921,7 @@ quando a interferência é considerada como consistindo em dois caminhos:
 \textbf{(I)} do transmissor ao receptor diretamente, \textbf{(II)} do
 transmissor, refletido fora do chão, para o receptor.
 
-A potência recebida a uma distância d do transmissor para o modelo
+A potência recebida a uma distância \(d\) do transmissor para o modelo
 \emph{Two-rays ground reflection model} pode ser expressa como:
 
 \begin{equation}
@@ -916,13 +948,14 @@ sendo:
 \end{itemize}
 
 A perda do caminho para o modelo \emph{Two-rays ground reflection model}
-pode ser expressa em \(dB\) com a equação abaixo:
+pode ser expressa em \(dB\) com a seguinte equação:
 
 \begin{equation}
-PL(dB) = 40 log d -(10 log G_{t} + 10 log G_{r} + 20 log h_{t} + 20 log h_{r})
+PL(dB) = 40 log (d) -(10 log (G_{t}) + 10 log (G_{r}) + 20 log (h_{t}) + 20 log (h_{r}))
 \end{equation}
 
-\subsection{\texorpdfstring{\emph{Log-distance}}{Log-distance}}\label{sec:log_distance}
+\subsection{\texorpdfstring{\emph{Log-distance path
+loss}}{Log-distance path loss}}\label{sec:log_distance}
 
 O modelo \emph{Log distance path loss} é um modelo genérico e uma
 extensão do modelo de espaço livre de Friis. Ele é usado para prever a
@@ -934,11 +967,11 @@ O principal critério ou característica deste modelo é considerar que a
 perda no caminho é logaritmicamente dependente da distância. Logo a
 perda no caminho calculada com uma distância \(d\) entre um transmissor
 e receptor (geralmente dado em quilômetros) . Na região mais distante do
-transmissor (onde \(d \geq df\)), se \(PL(d_{0})\) é a perda de percurso
-medida em \(dB\) a uma distância \(d_{0}\) do transmissor, então a perda
-do caminho (a perda na potência do sinal em \(dB\) quando se desloca de
-distância \(d_{0}\) a \(d\)) a uma distância arbitrária \(d > d_{0}\) é
-dada pela fórmula:
+transmissor (onde \(d \geq d_{f}\)), se \(PL(d_{0})\) é a perda de
+percurso medida em \(dB\) a uma distância \(d_{0}\) do transmissor,
+então a perda do caminho (a perda na potência do sinal em \(dB\) quando
+se desloca de distância \(d_{0}\) a \(d\)) a uma distância arbitrária
+\(d > d_{0}\) é dada pela expressão:
 
 \begin{equation}
 PL(d) = PL(d_{0}) + 10 \cdot n \cdot log(\frac{d_{0}}{d})
@@ -970,9 +1003,10 @@ sombreamento e deixar o resultado final mais próximo da realizada, uma
 variável aleatória Gaussiana de média zero com desvio padrão \(\sigma\)
 é adicionada à equação. A perda real do caminho ainda pode variar devido
 a outros fatores, assim como os efeitos de reflexão, difração e
-dispersão. Assim, o expoente da perda de caminho (a literatura define
-alguns em ambientes diferentes) e o desvio padrão da variável aleatória
-escolhida, devem ser bem conhecidos para uma boa modelagem da perda.
+dispersão \cite{RAPPAPORT}. Assim, o expoente da perda de caminho (a
+literatura define alguns em ambientes diferentes) e o desvio padrão da
+variável aleatória escolhida, devem ser bem conhecidos para uma boa
+modelagem da perda \cite{LUO}.
 
 \subsection{\texorpdfstring{\emph{One-slope}}{One-slope}}\label{sec:one_slope}
 
@@ -1054,12 +1088,12 @@ Este modelo de propagação estatístico provê uma estimativa aproximada do
 que representa a perda no caminho como uma função da distância e outros
 parâmetros como a frequência e a altura da antena \cite{BUDGETS}. Desta
 forma é possível obter uma previsão da qualidade da intensidade do sinal
-quando aumentamos a distância entre o transmissor e receptor. Vale
+quando aumenta-se a distância entre o transmissor e receptor. Vale
 ressaltar que, para se obter uma representação mais realista da perda do
 sinal, é necessária uma grande coleta de dados empíricos.
 
 \begin{equation}
-    f(x; \mu; \sigma) = \frac{1}{x \sigma \sqrt{2 \pi}} exp[-\frac{(ln(x) - \mu)^{2}}{2 \sigma^{2}}]
+    f(x; \mu; \sigma) = \frac{1}{x \sigma \sqrt{2 \pi}} exp\left[-\frac{(ln(x) - \mu)^{2}}{2 \sigma^{2}}\right]
 \end{equation}
 
 Uma possível explicação para o motivo pelo qual este modelo utiliza uma
@@ -1077,7 +1111,7 @@ fading}}{Ray-tracing fading}}\label{sec:ray_tracing}
 
 Segundo \cite{VALENZUELA}, para esse modelo de propagação é realizado o
 traçado de raios em todas as direções possíveis do receptor ao
-transmissor, utilizando os princípios da óptica geométrica. Este mesmo
+transmissor, utilizando os princípios da ótica geométrica. Este mesmo
 conceito é utilizado em sistemas de realidade virtual para que possam se
 tornar visíveis todos os objetos dentro de um ambiente. Nos cálculos da
 simulação do ambiente são levadas em consideração a reflexão, difração,
@@ -1090,20 +1124,23 @@ que realmente existem entre o transmissor e receptor. A complexidade do
 ambiente escolhido tem um forte impacto em seu consumo de recurso
 computacional, uma vez que, quanto mais obstáculos forem adicionados,
 mais reflexões, difrações e cálculos serão feitos \cite{VALENZUELA}.
+Após a apresentação dos modelos físicos teóricos, na próxima seção são
+apresentados alguns \emph{softwares} presentes no mercado, que realizam
+funções similares ao desenvolvido neste projeto.
 
 \section{Trabalhos Relacionados}\label{trabalhos-relacionados}
 
-Nesta seção serão apresentados alguns \emph{softwares} que estão
-presentes no mercado e oferecem serviços similares aos objetivos
-propostos nesse trabalho. Serão citadas ferramentas que realizam um
-trabalho semelhante ao desenvolvido aqui, como o \emph{TamoGraph Site
-Survey, AirMagnet Survey, Ekahau Site Survey, D-Link Wi-Fi Planner e
-Xirrus Wi-FI Designer}. Existem várias outras ferramentas que trabalham
-no mesmo meio, porém, os softwares apresentados a seguir possuem
-conhecimentos aplicados nesta pesquisa e na área da Ciência da
-Computação.
+Nesta seção são apresentados alguns \emph{softwares} que estão presentes
+no mercado e oferecem serviços similares aos objetivos propostos nesse
+trabalho. São citadas ferramentas que realizam um trabalho semelhante ao
+desenvolvido aqui, como o \emph{TamoGraph Site Survey, AirMagnet Survey,
+Ekahau Site Survey, D-Link Wi-Fi Planner e Xirrus Wi-FI Designer}.
+Existem várias outras ferramentas que trabalham no mesmo meio, porém, os
+\emph{softwares} apresentados a seguir possuem conhecimentos aplicados
+neste trabalho e na área da Ciência da Computação.
 
-\subsection{TamoGraph Site Survey}\label{tamograph-site-survey}
+\subsection{\texorpdfstring{\emph{TamoGraph Site
+Survey}}{TamoGraph Site Survey}}\label{tamograph-site-survey}
 
 O \emph{TamoGraph}\footnote{\url{http://www.tamos.com/products/wifi-site-survey/}}
 é uma ferramenta de \emph{site survey} usada para a coleta, visualização
@@ -1119,8 +1156,8 @@ A ferramenta aposta que, as empresas que fizerem o seu uso, poderão
 reduzir drasticamente o seu tempo e custos envolvidos em implantações e
 manutenções de redes \emph{wireless}, melhorar o desempenho e cobertura
 da rede em todos os tipos de ambiente, desde ambientes \emph{indoor}
-como prédios com escritórios, aeroportos e shoppings, até ambientes
-\emph{outdoor} como pátios, praças, campos e estacionamentos.
+como prédios com escritórios, aeroportos e \emph{shoppings}, até
+ambientes \emph{outdoor} como pátios, praças, campos e estacionamentos.
 
 A empresa \emph{TamoSoft} considera ser praticamente impossível
 considerar todas as variáveis que possam afetar a saúde e o desempenho
@@ -1136,20 +1173,22 @@ O \emph{TamoGraph} pode ser executado em \emph{Microsoft Windows 7,
 Windows 8, Windows 8.1, Windows 10, Windows Server 2008 R2, Windows
 Server 2012, Windows Server 2012 R2} e versão para \emph{MacBooks}.
 Possui versões em 32 e 64 bits e requer um adaptador de rede
-\emph{wireless} compatível. A sua licença mais básica custa 899 dólares,
-aproximadamente R\$2850,00 e a licença profissional custa US\$ 1,199.00,
-aproximadamente R\$ 3.802,00. Ambas as licença são vitalícias e apenas
-para um usuário.
+\emph{wireless} compatível. A sua licença mais básica custa US\$899.00
+dólares, aproximadamente R\$2.850,00 e a licença profissional custa US\$
+1,199.00, aproximadamente R\$ 3.802,00, cotação 26/11/2017. Ambas as
+licença são vitalícias e apenas para um usuário.
 
-\subsection{Netscout AirMagnet Survey}\label{netscout-airmagnet-survey}
+\subsection{\texorpdfstring{\emph{Netscout AirMagnet
+Survey}}{Netscout AirMagnet Survey}}\label{netscout-airmagnet-survey}
 
 O \emph{AirMagnet Survey}\footnote{\url{http://enterprise-pt.netscout.com/products/airmagnet-survey}}
-é um software de \emph{survey} para redes sem fio que propõe uma solução
-para \emph{softwares} que realizam a análise de redes sem fio locais que
-necessitam projetar e planejar LANs sem fio com o padrão 802.11
-a/b/g/n/ac com desempenho, segurança e conformidade. O software calcula
-a quantidade, a alocação e configurações ideais para a realização de uma
-rede local \emph{wireless} com um bom desempenho.
+é um \emph{software} de \emph{survey} para redes sem fio que propõe uma
+solução para \emph{softwares} que realizam a análise de redes sem fio
+locais que necessitam projetar e planejar LANs sem fio com o padrão
+802.11 a/b/g/n/ac com desempenho, segurança e conformidade. O
+\emph{software} calcula a quantidade, a alocação e configurações ideais
+para a realização de uma rede local \emph{wireless} com um bom
+desempenho.
 
 A \emph{Netscout}, empresa responsável pelo \emph{AirMagnet}, diz que o
 seu produto vai além do que uma simples cobertura dos sinais de
@@ -1193,16 +1232,17 @@ X v 10.5 (Leopard)}. O preço da licença para o uso do \emph{software}
 não é informado no site da empresa. O orçamento deve ser feito pelo
 contato com representantes.
 
-\subsection{Ekahau Site Survey \&
-Planner}\label{ekahau-site-survey-planner}
+\subsection{\texorpdfstring{\emph{Ekahau Site Survey \&
+Planner}}{Ekahau Site Survey \& Planner}}\label{ekahau-site-survey-planner}
 
 A \emph{Ekahau Wireless Design} é mais uma empresa que fornece um
-software para soluções sobre redes sem fio, batizado de \emph{Ekahau
-Site Survey (ESS)}\footnote{\url{https://www.ekahau.com/products/ekahau-site-survey/overview/}}.
+\emph{software} para soluções sobre redes sem fio, batizado de
+\emph{Ekahau Site Survey (ESS)}\footnote{\url{https://www.ekahau.com/products/ekahau-site-survey/overview/}}.
 O \emph{Ekahau Site Survey} propõe um \emph{design} e análise experiente
-sobre a tecnologia Wi-Fi. A \emph{Ekahau} define seu \emph{software}
-como sendo um conjunto completo de ferramentas para projetar, analisar,
-otimizar e solucionar problemas de redes \emph{wireless}.
+sobre a tecnologia \emph{Wi-Fi}. A \emph{Ekahau} define seu
+\emph{software} como sendo um conjunto completo de ferramentas para
+projetar, analisar, otimizar e solucionar problemas de redes
+\emph{wireless}.
 
 O ESS não deixa de ser um instrumento para verificação e solução de uso
 fácil em redes \emph{Wi-Fi}. Foi desenvolvido para engenheiros e
@@ -1214,41 +1254,42 @@ ou ainda não foi implantada, o ESS irá sugerir automaticamente o devido
 posicionamento e as configurações ideais para o \emph{access point}.
 
 Com a ferramenta, também é possível criar automaticamente um plano da
-rede Wi-Fi de vários andares com base em requisitos de desempenho e
-capacidades especificados. Quase que de imediato, o ESS irá identificar
-o número ideal de \emph{access points}, com os melhores locais para seus
-posicionamentos e seus respectivos canais, simulando o comportamento de
-como a rede irá ser executada antes de ir para o local. Com sua
-funcionalidade ``\emph{3D Planner}'', é considerado o espalhamento do
-sinal entre os andares do prédio para ajudar a minimizar a interferência
-dos canais.
+rede \emph{Wi-Fi} de vários andares com base em requisitos de desempenho
+e capacidades especificados. Quase que de imediato, o ESS irá
+identificar o número ideal de \emph{access points}, com os melhores
+locais para seus posicionamentos e seus respectivos canais, simulando o
+comportamento de como a rede irá ser executada antes de ir para o local.
+Com sua funcionalidade ``\emph{3D Planner}'', é considerado o
+espalhamento do sinal entre os andares do prédio para ajudar a minimizar
+a interferência dos canais.
 
 Com o ESS é fácil realizar a análise em profundidade com mapas de calor.
-Nos mapas de calor é possível visualizar, por exemplo, a força do sinal,
-a taxa de dados, perda de pacotes, a sobreposição de canais,
+Nos mapas de calor é possível visualizar, por exemplo, a intensidade do
+sinal, a taxa de dados, perda de pacotes, a sobreposição de canais,
 espalhamento do espectro, dentre outras características. É possível
 também realizar a análise de capacidade mais abrangentes, por exemplo,
 todas as descobertas podem ser compiladas em um simples relatório
 utilizando um sistema de relatório desenvolvido pela \emph{Ekahau}.
 
 O \emph{software} foi projetado para ser executado em ambientes
-\emph{Windows} e \emph{MaxOS}, e é uma ferramenta caracterizada por ser,
+\emph{Windows} e \emph{MacOS}, e é uma ferramenta caracterizada por ser,
 de fato, essencial para engenheiros de redes sem fio em empresas de
-todos os tamanhos. A sua licença \emph{Standard} custa US\$2295.00,
+todos os tamanhos. A sua licença \emph{Standard} custa US\$2,295.00,
 aproximadamente R\$ 7.278,00 e vai até sua versão \emph{Premium Pack}
 custando US\$ 5,649.00, aproximadamente R\$ 17.914,00; a versão
 \emph{Pro Pack} com o valor de US\$ 5,995.00, aproximadamente R\$
-19.011,00. Todas as licenças são anuais e devem ser renovadas a cada
-ano.
+19.011,00, cotação 26/11/2017. Todas as licenças são anuais e devem ser
+renovadas a cada ano.
 
-\subsection{D-Link Wi-Fi Planner PRO}\label{d-link-wi-fi-planner-pro}
+\subsection{\texorpdfstring{\emph{D-Link Wi-Fi Planner
+PRO}}{D-Link Wi-Fi Planner PRO}}\label{d-link-wi-fi-planner-pro}
 
 O \emph{D-Link Wi-Fi Planner PRO} \footnote{\url{http://tools.dlink.com/intro/wfp/}},
 como indicado pelo nome, foi desenvolvido pela famosa empresa D-link.
 Com essa ferramenta, é possível ter uma visão do ambiente como um todo,
-antes da implantação da rede Wi-Fi. Isso faz com que o planejamento, a
-comunicação e a boa qualidade do serviço prestado entre WLAN e clientes
-sejam melhorados.
+antes da implantação da rede \emph{Wi-Fi}. Isso faz com que o
+planejamento, a comunicação e a boa qualidade do serviço prestado entre
+WLAN e clientes sejam melhorados.
 
 Para a execução do \emph{software} é necessário criar uma pasta para o
 projeto. Logo após, o programa pede para ser carregado uma imagem que
@@ -1271,10 +1312,14 @@ necessários para a utilização de sua ferramenta ou preços, mas para que
 seja possível obter mais informações é necessário obter cadastro como
 empresa e entrar em contato com a mesma por email.
 
-\chapter{MATERIAIS E MÉTODOS}\label{materiais-e-muxe9todos}
+Assim, no próximo capítulo são apresentadaos os materiais e métodos
+utilizados para a implementação do \emph{software} desenvolvido neste
+trabalho.
 
-Serão apresentados neste capítulo os materiais e métodos utilizados para
-o desenvolvimento desse projeto, tais como as bibliotecas do
+\chapter{MATERIAIS E MÉTODOS}\label{sec:materiais}
+
+Neste capítulo são apresentados os materiais e métodos utilizados para o
+desenvolvimento desse projeto, tais como as bibliotecas do
 \emph{Python}, o processo com o arquivo de entrada do
 \emph{AutoCad}\footnote{\url{https://www.autodesk.com.br/products/autocad/overview}}
 para a representação da matriz de propagação, a paralelização do código,
@@ -1284,7 +1329,7 @@ metaheurística utilizada para a otimização do posicionamento de
 dos parâmetros da metaheurística.
 
 Para definir qual modelo de propagação deveria ser utilizado, foram
-usados dois softwares: o \emph{R-Project}\footnote{\url{https://www.r-project.org/}}
+usados dois \emph{softwares}: o \emph{R-Project}\footnote{\url{https://www.r-project.org/}}
 e o \emph{Maple}\footnote{\url{https://www.maplesoft.com/products/Maple/}}
 para a realização de ajuste de curvas dos dados coletados empiricamente
 nos corredores do IFMG \emph{campus} Formiga, mais especificamente sobre
@@ -1343,8 +1388,8 @@ busca por um lugar para o \emph{access point} foi de fácil implementação
 e, como a maioria das heurísticas, produz boas soluções dentro de um
 tempo viável de acordo com os parâmetros estabelecidos.
 
-Abaixo apresentamos o pseudocódigo da metaheurística com funções
-genéricas que foram implementadas neste trabalho:
+O pseudocódigo da metaheurística com funções genéricas que foram
+implementadas neste trabalho é apresentado a seguir:
 
 \begin{algorithm}
     \caption{Simulated Annealing}\label{sa}
@@ -1421,7 +1466,7 @@ Estes são os identificadores utilizados:
   \(i\) e \(j\): Variáveis de controle de Loops.
 \end{itemize}
 
-Além dos indicadores acima, consideremos as seguintes funções:
+Além dos indicadores acima, considerou-se as seguintes funções:
 
 \begin{itemize}
 \item
@@ -1433,8 +1478,8 @@ Além dos indicadores acima, consideremos as seguintes funções:
   \(TempInicial()\): Função que calcula a temperatura inicial.
 \end{itemize}
 
-Mais adiante, será descrito como a metaheurística foi adaptada para o
-problema de otimização para alocação de \emph{access point} nos
+Mais adiante, é apresentado a descrição da metaheurística adaptada para
+o problema de otimização para alocação de \emph{access point} nos
 ambientes do IFMG \emph{campus} Formiga. Além disso, também serão
 apresentados técnicas e resultados de sua utilização.
 
@@ -1453,7 +1498,7 @@ que cada linguagem deixava a desejar. Esses foram o principais motivos
 que fizeram com que o desenvolvimento do Python realmente tivesse início
 no ano de 1989 e nos primeiros meses de 1990 fosse a linguagem mais
 utilizada no departamento de Computação de Amsterdã e hoje por muitos
-desenvolvedores de software \cite{SILVA}.
+desenvolvedores de \emph{software} \cite{SILVA}.
 
 O Python é uma linguagem interpretada. Isso significa que seu código é
 executado por um interpretador, e não compilado para linguagem de
@@ -1466,9 +1511,9 @@ permite, no geral, um ótimo desempenho. Alguns processamentos que
 realizam a demanda de mais recursos, como o processamento de imagens,
 são feitos por bibliotecas que geralmente são escritas em C ou C++,
 inclusive com possíveis trechos em \emph{assembly}, quando o alto
-desempenho é necessário. Sendo assim, tais processamentos não fazem uso
-de tantos recursos num \emph{script} escrito em Python. Em outra
-linguagem compilada seriam exigidos mais recursos.
+desempenho é necessário \cite{GUIDO}. Sendo assim, tais processamentos
+não fazem uso de tantos recursos num \emph{script} escrito em Python. Em
+outra linguagem compilada seriam exigidos mais recursos.
 
 Mesmo que o Python faça uso bem definido do tipo de dados que está
 manipulando, ele trabalha com tipagem dinâmica. Isso implica que uma
@@ -1508,17 +1553,19 @@ bibliotecas externas essenciais para o resultado esperado fosse obtido.
 
 De início, foi utilizada a biblioteca \emph{ezdxf}\footnote{\url{https://pypi.python.org/pypi/ezdxf}}.
 Tal biblioteca é um pacote do Python criado para manipular arquivos DXFs
-exportados do ** independentemente de sua versão. Com ela, é possível
-criar, abrir, salvar e modificar arquivos com a extensão \emph{.dxf} sem
-perder qualquer informação, podendo depois, ser utilizada em outros
-programas que utilizam a mesma extensão de arquivo. Tal biblioteca está
-presente desde o Python 2.7.
+exportados do \emph{AutoCad} independentemente de sua versão. Com ela, é
+possível criar, abrir, salvar e modificar arquivos com a extensão
+\emph{.dxf} sem perder qualquer informação, podendo depois, ser
+utilizada em outros programas que utilizam a mesma extensão de arquivo.
+Tal biblioteca foi utilizada para a leitura da planta-baixa dos prédios
+e está presente desde o Python 2.7.
 
 Outra biblioteca utilizada no projeto é a PyGame\footnote{\url{https://www.pygame.org/}}.
 Seu desenvolvimento teve início no ano 2000 por Pete Shinners, sendo um
 código livre e é principalmente usada em aplicações que utilizam
 recursos multimídia e/ou programação gráfica, como em desenvolvimento de
-jogos multiplataforma (independentemente do sistema operacional).
+jogos multiplataforma (independentemente do sistema operacional),
+utilizou-se para visualizar a solução gerada pelo \emph{software}.
 
 \section{Programação Paralela}\label{programauxe7uxe3o-paralela}
 
@@ -1532,7 +1579,7 @@ médio e grande portes em todo o mundo. Elas desempenham um papel
 fundamental na aceleração de aplicações em plataformas que variam de
 inteligência artificial até carros, drones e robôs \cite{NVIDIA}.
 
-A seguir serão descritos algum conceitos e ferramentas que foram
+A seguir são descritos alguns conceitos e ferramentas que foram
 utilizadas para o desenvolvimento deste trabalho. Todas tiveram um papel
 essencial para que os objetivos propostos fossem alcançados.
 
@@ -1563,11 +1610,11 @@ medicina.
 
 Para que seja possível escrever um código que busque aproveitar o
 desempenho oferecido pelo \emph{hardware} juntamente com a CUDA, será
-necessário utilizar o CUDA Toolkit, que oferece um ambiente de
+necessário utilizar o CUDA \emph{Toolkit}, que oferece um ambiente de
 desenvolvimento abrangente para desenvolvedores C, C\#, C++, Fortran, R
-e Python. O CUDA Toolkit inclui compilador, bibliotecas de matemática e
-ferramentas para depuração e otimização do desempenho do código
-\cite{FARBER}.
+e Python. O CUDA \emph{Toolkit} inclui compilador, bibliotecas de
+matemática e ferramentas para depuração e otimização do desempenho do
+código \cite{FARBER}.
 
 Hoje a NVIDIA oferece todas a ferramentas necessárias para o
 desesenvolvimento utiliazando seu \emph{hardware}. Tanto a NVIDIA quando
@@ -1575,37 +1622,38 @@ a CUDA só tendem a crescer, à medida que cada vez mais empresas fornecem
 ferramentas, serviços e soluções. Além disso, áreas como a ciência e a
 medicina podem crescer ainda mais com suas pesquisas \cite{CUDA}.
 
-\subsection{CUDA Tool Kit}\label{cuda-tool-kit}
+\subsection{\texorpdfstring{CUDA
+\emph{Toolkit}}{CUDA Toolkit}}\label{cuda-toolkit}
 
 O CUDA Toolkit\footnote{\url{https://developer.nvidia.com/cuda-toolkit}}
-nada mais é que um kit de ferramenta disponibilizado pela NVIDIA. O kit
-fornece um ambiente de desenvolvimento para a criação de aplicações a
-serem otimizadas em uma GPU. Com o kit de ferramentas é possível
-otimizar e implementar códigos escritos utilizando CUDA em sistemas que
-aceitam a paralelização com GPU, \emph{workstations}, centro de dados
-empresariais, plataforma baseadas em nuvem e supercomputadores HPC
-\cite{TOOLKIT}. No pacote vem incluso bibliotecas otimizadas para GPU,
-ferramentas para depuração e otimização, um compilador C/C++ e uma
-biblioteca de tempo para ser usada nas aplicações que serão
-desenvolvidas.
+nada mais é que um \emph{kit} de ferramenta disponibilizado pela NVIDIA.
+O \emph{kit} fornece um ambiente de desenvolvimento para a criação de
+aplicações a serem otimizadas em uma GPU. Com o \emph{kit} de
+ferramentas é possível otimizar e implementar códigos escritos
+utilizando CUDA em sistemas que aceitam a paralelização com GPU,
+\emph{workstations}, centro de dados empresariais, plataforma baseadas
+em nuvem e supercomputadores HPC \cite{TOOLKIT}. No pacote vem incluso
+bibliotecas otimizadas para GPU, ferramentas para depuração e
+otimização, um compilador C/C++ e uma biblioteca de tempo para ser usada
+nas aplicações que serão desenvolvidas.
 
 As bibliotecas otimizadas possibilitam a otimização de vários tipos de
 aplicação, como por exemplo, aplicações que realizam cálculos
 matemáticos utilizando conceitos de álgebra linear, processamento de
 imagem e de vídeo, inteligência artificial e até análise de grafos. O
 que torna possível desenvolver aplicações personalizadas para diferentes
-linguagens é o uso da API. A API fornece um controle mais seguro e
-objetivo, especialmente sobre o contexto ou módulo que a aplicação está
-sendo desenvolvida. Uma chamada feita diretamente ao \emph{kernel} é
-muito mais complexa de ser implementada, pois a configuração de execução
-e os parâmetros do \emph{kernel} devem ser especificados com chamadas de
-funções muito bem explícitas. Outra grande vantagem da API é que seu uso
-é independente da linguagem.
+linguagens é o uso da \emph{API}. A \emph{API} fornece um controle mais
+seguro e objetivo, especialmente sobre o contexto ou módulo que a
+aplicação está sendo desenvolvida. Uma chamada feita diretamente ao
+\emph{kernel} é muito mais complexa de ser implementada, pois a
+configuração de execução e os parâmetros do \emph{kernel} devem ser
+especificados com chamadas de funções muito bem explícitas. Outra grande
+vantagem da API é que seu uso é independente da linguagem.
 
-A versão utilizada neste trabalho foi a CUDA Tool Kit 9.0 e foi o que
-tornou possível a otimização do algoritmo na sua versão final. O CUDA
-Tool Kit foi instalado juntamente com os \emph{drivers} de vídeo e é
-facilmente encontrado no site de desenvolvedores da NVIDIA.
+A versão utilizada neste trabalho foi a CUDA \emph{Toolkit} 9.0 e foi o
+que tornou possível a otimização do algoritmo na sua versão final. O
+CUDA \emph{Toolkit} foi instalado juntamente com os \emph{drivers} de
+vídeo e é facilmente encontrado no site de desenvolvedores da NVIDIA.
 
 \subsection{Numba}\label{numba}
 
@@ -1627,7 +1675,7 @@ Os principais pontos positivos da utilização do Numba são:
   geração de código \emph{on-the-fly} (geração de código em tempo de
   execução);
 \item
-  geração de código nativo para a CPU e hardware GPU;
+  geração de código nativo para a CPU e \emph{hardware} GPU;
 \item
   integração com a pilha de bibliotecas científicas do Python, graças ao
   Numpy.
@@ -1644,7 +1692,7 @@ seguinte assinatura: \emph{@jit(signature, nopython, nogil, cache,
 forceobj, locals)}. Os parâmetros não são obrigatórios, o que faz com
 que o programador deixa a cargo do compilador escolher as melhores
 configurações para a compilação. Uma explicação simples dos parâmetros
-podem ser vistos abaixo \cite{NUMBA}.
+podem ser vistos a seguir \cite{NUMBA}.
 
 \begin{itemize}
 \item
@@ -1710,29 +1758,34 @@ programador decida definir qual a precisão utilizar e otimizar ainda
 mais o desempenho do código, é essencial um conhecimento mais
 aprofundado do compilador \emph{just-in-time}.
 
-\subsection{Anaconda Navigator}\label{anaconda-navigator}
+\subsection{\texorpdfstring{\emph{Anaconda
+Navigator}}{Anaconda Navigator}}\label{anaconda-navigator}
 
 A Anaconda\footnote{\url{https://www.anaconda.com/}} é uma plataforma
-bastante popular de dados científicos para Python e é utilizada por 4.5
+bastante popular de dados científicos para Python e é utilizada por 4,5
 milhões de usuários em todo o mundo. Está sempre liderando projetos de
 código aberto como Numpy e SciPy, que atualmente formam a base de muitas
 aplicações no meio científico \cite{ANACONDA}. A Anaconda também pode
 ser utilizada e integrada com a linguagem utilizando o RStudio\footnote{\url{https://www.rstudio.com/}}.
 
-A plataforma pode ser obtida através do site oficial. Após a instalação,
-se o usuário achar preferível usar uma interface gráfica, deve-se usar o
-Navigator; caso prefira usar o próprio terminal, basta usar o
-\emph{conda}. É possível alternar entre eles (qualquer modificação feita
-em uma biblioteca será refletida no outro). O Anaconda acaba sendo a
-interface gráfica para o \emph{conda}. É possível instalar, remover ou
-atualizar qualquer pacote científico da Anaconda com apenas alguns
-cliques, utilizando o Navigator ou apenas um único comando do conda no
-terminal.
+A plataforma pode ser obtida através do \emph{site} oficial. Após a
+instalação, se o usuário achar preferível usar uma interface gráfica,
+deve-se usar o \emph{Navigator}; caso prefira usar o próprio terminal,
+basta usar o \emph{conda}. É possível alternar entre eles (qualquer
+modificação feita em uma biblioteca será refletida no outro). O
+\emph{Anaconda} acaba sendo a interface gráfica para o \emph{conda}. É
+possível instalar, remover ou atualizar qualquer pacote científico da
+Anaconda com apenas alguns cliques, utilizando o Navigator ou apenas um
+único comando do conda no terminal. A versão do conda utilizada neste
+trabalho foi a versão 4.3.30 e a versão utilizada na interface gráfica,
+\emph{Anaconda Navigator}, foi a 1.6.9.
 
-A versão do conda utilizada neste trabalho foi a versão 4.3.30 e a
-versão utilizada na interface gráfica, Anaconda Navigator, foi a 1.6.9.
+De posse da metodologia desenvolvida neste capítulo, no capítulo
+seguinte é apresentado o projeto e desenvolvimento do \emph{software},
+desde a entrada de dados, propagação do sinal, validação do modelo
+utilizado, à paralelização do algorítmo.
 
-\chapter{PROJETO E DESENVOLVIMENTO}\label{projeto-e-desenvolvimento}
+\chapter{PROJETO E DESENVOLVIMENTO}\label{sec:projeto}
 
 Foram conduzidos estudos bibliográficos para compreensão dos modelos
 físicos de propagação de sinais \emph{wireless} em pequena e grande
@@ -1744,11 +1797,11 @@ propagação de sinais de rádio através de \emph{Ray Tracing}\footnote{\url{ht
 simulação da propagação dos sinais \emph{wireless}\\
 \cite{LENTZ, NAJNUDEL, SANDEEP}. Uma vez definido o mecanismo de
 simulação, foi definida qual técnica de otimização seria aplicada para o
-problema da maximização da cobertura de sinal do(s) AP(s) \emph{Wi-Fi},
-bem como definida a função objetivo para avaliar as soluções propostas.
-Por fim, foi utilizado um método de visualização da intensidade do sinal
-\emph{wireless} \cite{RENSBURG,SULAIMAN} , por meio de um mapa de calor
-(\emph{heat map}).
+problema da maximização da cobertura de sinal do(s) \emph{access
+point}(s) \emph{Wi-Fi}, bem como definida a função objetivo para avaliar
+as soluções propostas. Por fim, foi utilizado um método de visualização
+da intensidade do sinal \emph{wireless} \cite{RENSBURG,SULAIMAN} , por
+meio de um mapa de calor (\emph{heat map}).
 
 \section{Representação do
 ambiente}\label{representauxe7uxe3o-do-ambiente}
@@ -1756,64 +1809,67 @@ ambiente}\label{representauxe7uxe3o-do-ambiente}
 Os modelos bidimensionais dos ambientes utilizados como caso de estudo
 foram o piso 2 do bloco A e os pisos 1, 2 e 3 do bloco C, onde
 atualmente os professores e alunos têm reclamado de baixa cobertura de
-sinal Wi-Fi. Especificamente, os ambientes da sala dos professores e da
-sala de estudos tem apresentado baixa cobertura de sinal Wi-Fi, com
-frequentes desconexões dos usuários que ali estejam. Tipicamente, os
-pavimentos de edifícios e residências são representados através de
-softwares CAD, tais como o AutoCAD\footnote{\url{https://www.autodesk.com.br/products/autocad/overview}}.
-Entretanto, softwares CAD tipicamente utilizam um formato proprietário
-(DWG no caso do AutoCAD) e como este trabalho se propõe a seguir a
-filosofia de software livre e de código-fonte aberto (FOSS\footnote{\url{https://www.gnu.org/philosophy/floss-and-foss.html}}),
-optamos por utilizar um formato de entrada interoperável chamado
-DXF\footnote{\url{https://www.loc.gov/preservation/digital/formats/fdd/fdd000446.shtml}}
+sinal \emph{Wi-Fi}. Especificamente, os ambientes da sala dos
+professores e da sala de estudos tem apresentado baixa cobertura de
+sinal \emph{Wi-Fi}, com frequentes desconexões dos usuários que ali
+estejam. Tipicamente, os pavimentos de edifícios e residências são
+representados através de \emph{softwares} CAD, tais como o
+AutoCAD\footnote{\url{https://www.autodesk.com.br/products/autocad/overview}}.
+Entretanto, \emph{softwares} CAD tipicamente utilizam um formato
+proprietário (DWG no caso do AutoCAD) e como este trabalho se propõe a
+seguir a filosofia de \emph{software} livre e de código-fonte aberto
+(FOSS\footnote{\url{https://www.gnu.org/philosophy/floss-and-foss.html}}),
+optou-se por utilizar um formato de entrada interoperável chamado
+\(DXF\)\footnote{\url{https://www.loc.gov/preservation/digital/formats/fdd/fdd000446.shtml}}
 (\emph{Drawing Interchange Format}), que pode ser facilmente exportado a
 partir dos \emph{softwares} CAD popularmente utilizados.
 
-\subsection{Arquivo DXF}\label{arquivo-dxf}
+\subsection{\texorpdfstring{Arquivo
+\emph{DXF}}{Arquivo DXF}}\label{arquivo-dxf}
 
-O software desenvolvido neste trabalho deve receber como arquivo de
-entrada uma representação bidimensional do ambiente a ser simulado,
-esperando como tal um arquivo com extensão DXF. Arquivos DXF são comuns
-na exportação de desenhos e projetos de peças para serem utilizadas em
-softwares de CAM e máquinas de corte automáticas. São populares por
-promoverem a troca aberta destes arquivos entre programas desenvolvidos
-por diferentes empresas\footnote{Disponível em
+O \emph{software} desenvolvido neste trabalho deve receber como arquivo
+de entrada uma representação bidimensional do ambiente a ser simulado,
+esperando como tal um arquivo com extensão \(DXF\). Arquivos \(DXF\) são
+comuns na exportação de desenhos e projetos de peças para serem
+utilizadas em \emph{softwares} de CAM e máquinas de corte automáticas.
+São populares por promoverem a troca aberta destes arquivos entre
+programas desenvolvidos por diferentes empresas\footnote{Disponível em
   \url{https://www.otimizenesting.com.br/single-post/2016/09/29/Arquivo-DXF}.
-  Acesso em 29 out. 2017.}. Para interpretar o arquivo de entrada DXF,
-foi implementado um procedimento escrito na linguagem Python utilizando
-alguns recursos da biblioteca \emph{ezdxf}, descrita na seção de
-materiais. Inicialmente, o procedimento realiza a leitura do arquivo DXF
-fornecido.
+  Acesso em 29 out. 2017.}. Para interpretar o arquivo de entrada
+\(DXF\), foi implementado um procedimento escrito na linguagem Python
+utilizando alguns recursos da biblioteca \emph{ezdxf}, descrita na seção
+de materiais. Inicialmente, o procedimento realiza a leitura do arquivo
+\(DXF\) fornecido.
 
-A partir do conteúdo do DXF, é obtido o \emph{modelspace} no qual é
-possível buscar os valores (x,y) extremos do modelo 2D. Isto se faz
+A partir do conteúdo do \(DXF\), é obtido o \emph{modelspace} no qual é
+possível buscar os valores (\(x, y\)) extremos do modelo 2D. Isto se faz
 necessário para que tais extremos sejam subtraídos no momento da leitura
 das paredes do edifício, a fim de evitar desperdício de processamento
 com as margens da planta-baixa e para que o desenho do ambiente possa se
 enquadrar perfeitamente na tela de visualização do mesmo. Tanto na busca
-dos valores limítrofes de x e y, quanto na leitura das linhas do modelo
-DXF, é feita uma busca em seu \emph{modelspace} utilizando um laço de
-repetição. Na busca, é verificado se o tipo de dados no
-\emph{modelspace} é do tipo LINE (linha) e se a camada percorrida é do
-tipo ARQ (arquitetura). Durante a verificação de linhas na camada ARQ,
-são adicionados a uma lista de paredes as coordenadas do ponto inicial
-(x1,x1) e ponto final (x2,y2) de cada linha representada no arquivo DXF,
-pois cada linha na camada ARQ do modelo representa uma parede. Observe
-que cada coordenada (x,y) deve ser devidamente multiplicada pela escala
-definida pelo usuário, para que seja mantido a proporção entre o tamanho
-da matriz de simulação e o ambiente real simulado. Ao final do
-processamento do arquivo DXF, os valores máximos (e mínimos) das
-coordenadas (x,y), bem como cada tupla de coordenadas das paredes é
-armazenada em memória pelo \emph{software}, para que sejam utilizados
-pela heurística.
+dos valores limítrofes de \(x\) e \(y\), quanto na leitura das linhas do
+modelo \(DXF\), é feita uma busca em seu \emph{modelspace} utilizando um
+laço de repetição. Na busca, é verificado se o tipo de dados no
+\emph{modelspace} é do tipo \(LINE\) (linha) e se a camada percorrida é
+do tipo \(ARQ\) (arquitetura). Durante a verificação de linhas na camada
+\(ARQ\), são adicionados a uma lista de paredes as coordenadas do ponto
+inicial (\(x_{1},x_{1}\)) e ponto final (\(x_{2},y_{2}\)) de cada linha
+representada no arquivo \(DXF\), pois cada linha na camada ARQ do modelo
+representa uma parede. Observe que cada coordenada (\(x, y\)) deve ser
+devidamente multiplicada pela escala definida pelo usuário, para que
+seja mantido a proporção entre o tamanho da matriz de simulação e o
+ambiente real simulado. Ao final do processamento do arquivo \(DXF\), os
+valores máximos (e mínimos) das coordenadas (\(x, y\)), bem como cada
+tupla de coordenadas das paredes é armazenada em memória pelo
+\emph{software}, para que sejam utilizados pela heurística.
 
 \subsection{Escala e precisão}\label{escala-e-precisuxe3o}
 
-Observe que, a partir dos valores (x,y) limítrofes obtém-se as dimensões
-do modelo bidimensional e, desde que esteja disponível a informação
-sobre o tamanho real do edifício, pode-se calcular a escala da
-planta-baixa para o tamanho real do edifício. De posse das dimensões da
-planta-baixa e do edifício, pode-se representá-lo computacionalmente
+Observe que, a partir dos valores (\(x, y\)) limítrofes obtém-se as
+dimensões do modelo bidimensional e, desde que esteja disponível a
+informação sobre o tamanho real do edifício, pode-se calcular a escala
+da planta-baixa para o tamanho real do edifício. De posse das dimensões
+da planta-baixa e do edifício, pode-se representá-lo computacionalmente
 como um arranjo bidimensional, ou seja, uma matriz de tamanho
 Comprimento \(X\) Largura, podendo ser utilizada uma escala 1:1 do
 ambiente simulado para o ambiente real. Neste caso, uma célula da matriz
@@ -1824,33 +1880,33 @@ trabalhar com diferentes níveis de precisão na simulação de propagação
 de sinais, onde caso o usuário queira uma precisão de 0,5 \(m^{2}\) por
 célula da matriz, bastaria informar tal configuração de forma que o
 \emph{software} passe a utilizar um fator de escala de 2.0x a dimensão
-real do edifício (pois precisão = 1/escala). Assim, o software pode
-trabalhar com a precisão desejada pelo usuário, podendo inclusive
+real do edifício (pois precisão = 1/escala). Assim, o \emph{software}
+pode trabalhar com a precisão desejada pelo usuário, podendo inclusive
 realizar uma simulação de propagação de ondas onde cada célula da matriz
 tenha a dimensão de um comprimento de onda \((\lambda = c/f)\). Por
 exemplo, se o usuário desejar ter a precisão de 1 comprimento de onda
-para simular a propagação de Wi-Fi na frequência de 2,484 GHz, cada
-célula representará\footnote{\(2.998\times10^{8} m/s \div 2.437\) GHz
-  \url{https://www.wolframalpha.com/input/?i=c+\%2F+2.437+GHz}} uma área
-de 12,3 \(cm^{2}\). Entretanto, vale ressaltar que quanto maior a
+para simular a propagação de \emph{Wi-Fi} na frequência de 2,484 GHz,
+cada célula representará\footnote{\(2.998\times10^{8} m/s \div 2.437\)
+  GHz \url{https://www.wolframalpha.com/input/?i=c+\%2F+2.437+GHz}} uma
+área de 12,3 \(cm^{2}\). Entretanto, vale ressaltar que quanto maior a
 precisão da simulação, maior serão as dimensões da matriz que representa
 o ambiente e, portanto, mais demorada será a simulação computacional.
 
 As plantas-baixas representando os ambientes simuladores neste trabalho
-foram gentilmente cedidas pela equipe de TI do campus Formiga (bloco A)
-e com o setor de engenharia civil do campus Formiga (no caso dos blocos
-B e C). A \autoref{repre_ambiente_dxf_1} ilustra o ambiente do bloco A
-do campus Formiga, tendo sido carregado automaticamente a partir do
-arquivo DXF. O texto descrevendo no que consiste cada sala do ambiente
-foi adicionado posteriormente à captura da imagem, para melhor
-compreensão e localização do leitor.
+foram gentilmente cedidas pela equipe de TI do \emph{campus} Formiga
+(bloco A) e com o setor de engenharia civil do \emph{campus} Formiga (no
+caso dos blocos B e C). A \autoref{repre_ambiente_dxf_1} ilustra o
+ambiente do bloco A do \emph{campus} Formiga, tendo sido carregado
+automaticamente a partir do arquivo \(DXF\). O texto descrevendo no que
+consiste cada sala do ambiente foi adicionado posteriormente à captura
+da imagem, para melhor compreensão e localização do leitor.
 
 \begin{figure}[htb]
-    \caption{\label{repre_ambiente_dxf_1} Representação do ambiente a partir do arquivo DXF contendo a planta-baixa}
+    \caption{\label{repre_ambiente_dxf_1} Representação do ambiente a partir do arquivo $DXF$ contendo a planta-baixa}
     \begin{center}
         \includegraphics[scale=0.4]{imagens/planta-labels.jpg}
     \end{center}
-    \legend{Fonte: Elaborado pelo autor}
+    \legend{Fonte: Elaborado pelo autor.}
 \end{figure}
 
 Para a visualização dos resultados dos testes e uma melhor interpretação
@@ -1859,9 +1915,9 @@ gráfica da matriz contendo os resultados dos cálculos de intensidade de
 sinal em cada ponto do modelo simulado, conforme proposto pelo modelo de
 propagação utilizado. Após a representação da matriz de propagação no
 PyGame, podem ser desenhadas também as paredes do ambiente simulado de
-acordo com a lista de linhas obtidas no processamento do arquivo DXF. A
-maneira como a representação visual do ambiente simulado foi realizada
-será tratada em detalhes em seção posterior.
+acordo com a lista de linhas obtidas no processamento do arquivo
+\(DXF\). A maneira como a representação visual do ambiente simulado foi
+realizada será tratada em detalhes em seção posterior.
 
 \section{Propagação dos sinais}\label{propagauxe7uxe3o-dos-sinais}
 
@@ -1874,46 +1930,49 @@ precisão desejada para o valor da intensidade de sinal devido a perdas e
 sua atenuação, mais detalhes sobre o ambiente de propagação devem ser
 modelados (frequências, distâncias, paredes, pisos, materiais, etc).
 
-\subsection{Definição do modelo de propagação para sinais
-Wi-Fi}\label{definiuxe7uxe3o-do-modelo-de-propagauxe7uxe3o-para-sinais-wi-fi}
+\subsection{\texorpdfstring{Definição do modelo de propagação para
+sinais
+\emph{Wi-Fi}}{Definição do modelo de propagação para sinais Wi-Fi}}\label{definiuxe7uxe3o-do-modelo-de-propagauxe7uxe3o-para-sinais-wi-fi}
 
-Foram conduzidos nas dependências do campus Formiga experimentos para
-medição do decaimento da intensidade do sinal \emph{Wi-Fi}. Foram
-realizadas medições \emph{indoor} nos corredores do campus. Para tal,
-foi posicionado no corredor um \emph{access point} Cisco WAP200 (IEEE
-802.11b/g) e configurado para utilizar um canal \emph{Wi-Fi} que
+Foram conduzidos nas dependências do \emph{campus} Formiga experimentos
+para medição do decaimento da intensidade do sinal \emph{Wi-Fi}. Foram
+realizadas medições \emph{indoor} nos corredores do \emph{campus}. Para
+tal, foi posicionado no corredor um \emph{access point} Cisco WAP200
+(IEEE 802.11b/g) e configurado para utilizar um canal \emph{Wi-Fi} que
 correspondesse a uma frequência que, naquele momento, estivesse livre de
-interferência de outros APs naquela região do campus. A potência máxima
-de transmissão que o AP suporta é -14 \(dBm\) (0,0398 mW), mas ele foi
-configurado para utilizar apenas \(25\%\) dessa potência. Tal
-configuração visou apenas reduzir a distância a ser percorrida na
-condução do teste, uma vez que as paredes e pisos absorvem mais ou menos
-o sinal de acordo com a frequência dele e não de sua intensidade,
-portanto manteve-se o comportamento esperado na propagação do sinal. O
-\emph{access point WAP200} utilizado como transmissor possui antenas com
-2 \(dBi\) de ganho e a interface Wi-Fi do notebook utilizado como
-receptor nos testes possui ganho de 1 \(dBi\). Foi utilizado o canal 11
-(portanto com frequência de 2,462 GHz e \(\lambda\) de 12,18 cm), tendo
-sido realizadas medições após o campo distante da antena (campo de
+interferência de outros \emph{access points} naquela região do
+\emph{campus}. A potência máxima de transmissão que o \emph{access
+point} suporta é -14 \(dBm\) (0,0398 mW), mas ele foi configurado para
+utilizar apenas \(25\%\) dessa potência. Tal configuração visou apenas
+reduzir a distância a ser percorrida na condução do teste, uma vez que
+as paredes e pisos absorvem mais ou menos o sinal de acordo com a
+frequência dele e não de sua intensidade, portanto manteve-se o
+comportamento esperado na propagação do sinal. O \emph{access point
+WAP200} utilizado como transmissor possui antenas com 2 \(dBi\) de ganho
+e a interface \emph{Wi-Fi} do \emph{notebook} utilizado como receptor
+nos testes possui ganho de 1 \(dBi\). Foi utilizado o canal 11 (portanto
+com frequência de 2,462 GHz e \(\lambda\) de 12,18 cm), tendo sido
+realizadas medições após o campo distante da antena (campo de
 \emph{Fraunhofer} = 148 cm).
 
 As medições foram coletadas utilizando o comando \emph{iwlist} da
 biblioteca \emph{iw-utils}, que realiza a varredura (\emph{scanning}) da
-faixa de espectro correspondente ao Wi-Fi e registra os valores de
-intensidade de sinal recebidos bem como o endereço MAC do(s) AP(s). A
-\autoref{medicao_modelos} ilustra quão bem cada modelo de propagação
-considerado previu o valor da intensidade de sinal de acordo com com o
-aumento da distância. Pela figura, observe que o modelo de reflexão de
-dois raios, por definição e de acordo com a altura das antenas
-(aproximadamente 90 cm, considerando também o suporte utilizado), seria
-apropriado somente se as distâncias entre transmissor e receptor fossem
-superiores a 83,59 m, faixa demasiado próxima do limite de alcance de um
-enlace \emph{Wi-Fi} típico. Também, observe que com o modelo de
-propagação no espaço livre (modelo de \emph{Friis}), as estimativas
-foram abaixo do valor real observado, por tal modelo não considerar os
-fenômenos de reflexão, difração e dispersão que tipicamente ocorrem na
-propagação de ondas em um ambiente geometricamente complexo (paredes,
-piso, teto, portas, janelas, mobília, etc).
+faixa de espectro correspondente ao \emph{Wi-Fi} e registra os valores
+de intensidade de sinal recebidos bem como o endereço MAC do(s)
+\emph{access point}(s). A \autoref{medicao_modelos} ilustra quão bem
+cada modelo de propagação considerado previu o valor da intensidade de
+sinal de acordo com com o aumento da distância. Pela figura, observe que
+o modelo de reflexão de dois raios, por definição e de acordo com a
+altura das antenas (aproximadamente 90 cm, considerando também o suporte
+utilizado), seria apropriado somente se as distâncias entre transmissor
+e receptor fossem superiores a 83,59 m, faixa demasiado próxima do
+limite de alcance de um enlace \emph{Wi-Fi} típico. Também, observe que
+com o modelo de propagação no espaço livre (modelo de \emph{Friis}), as
+estimativas foram abaixo do valor real observado, por tal modelo não
+considerar os fenômenos de reflexão, difração e dispersão que
+tipicamente ocorrem na propagação de ondas em um ambiente
+geometricamente complexo (paredes, piso, teto, portas, janelas, mobília,
+etc).
 
 \begin{figure}[htb]
     \caption{\label{medicao_modelos} Medição da intensidade de sinal $vs.$ modelos de sua propagação}
@@ -1940,9 +1999,9 @@ propagação}\label{ajuste-do-modelo-de-propagauxe7uxe3o}
 
 Não podemos basear nossa simulação em parâmetros de um modelo de
 configuração calibrado para medições coletadas em \emph{apenas um
-corredor de um pavimento de um prédio do campus Formiga}. Se faz
+corredor de um pavimento de um prédio do}campus* Formiga\emph{. Se faz
 necessário calibrar o modelo de propagação para que que seja mais
-abrangente para o \emph{campus}, devendo ser calibrado de acordo com
+abrangente para o }campus*, devendo ser calibrado de acordo com
 múltiplas medições realizadas em diversas salas, corredores e áreas
 internas de nosso caso de estudo.
 
@@ -1953,7 +2012,7 @@ curvas estatístico, técnica de regressão que foi conduzida no
 Inicialmente, conduzimos regressões com um ajuste de curvas estatístico
 utilizando os pacotes \emph{fitdistrplus}\footnote{\url{https://cran.r-project.org/web/packages/fitdistrplus/index.html}}
 e \emph{FAdist}\footnote{\url{https://cran.r-project.org/web/packages/FAdist/index.html}}
-do software \emph{R-Project}.
+do \emph{software} \emph{R-Project}.
 
 \begin{figure}[htb]
     \caption{\label{curvas} Ajuste de curvas da 2P-Logística, 3P-LogNormal e 3P-LogLogística}
@@ -1966,11 +2025,11 @@ do software \emph{R-Project}.
 Pela comparação do ajuste de curvas ilustrado na \autoref{curvas},
 observamos que a distribuição Logística com apenas 2 parâmetros (logis)
 não consegue modelar bem o decaimento do nível de sinal observado na
-medições do RSSI no campus Formiga. Por outro lado, as distribuições
-3P-LogNormal (lnorm3) e 3P-LogLogistica (llog3) se aproximaram bem do
-comportamento esperado para o decaimento da intensidade do sinal,
-estando tal fato em consonância com o exposto nas seções
-\ref{sec:log_normal_fading} (\emph{Log-normal fading}) e
+medições do RSSI no \emph{campus} Formiga. Por outro lado, as
+distribuições 3P-LogNormal (lnorm3) e 3P-LogLogistica (llog3) se
+aproximaram bem do comportamento esperado para o decaimento da
+intensidade do sinal, estando tal fato em consonância com o exposto nas
+seções \ref{sec:log_normal_fading} (\emph{Log-normal fading}) e
 \ref{sec:log_distance} (\emph{Log-distance}).
 
 A \autoref{log_logistica} e a \autoref{log_normal} apresentam em
@@ -2000,22 +2059,22 @@ ambas com 3 parâmetros, passamos a considerar uma regressão estatística
 com distribuições estatísticas mais complexas, de 4 ou mais parâmetros,
 mas mantendo o comportamento logarítmico. Uma regressão
 \textbf{NP-Logística} foi conduzida com a utilização do pacote
-\emph{nplr}, também no software \emph{R-Project}.
+\emph{nplr}, também no \emph{software} \emph{R-Project}.
 
 Para obtermos um melhor resultado, considerando o bom desempenho das
 distribuições LogNormal e LogLogística, instruímos o modelo de regressão
 Logístico a utilizar uma base logarítmica para os valores do eixo \(x\),
-ou seja, a distância ao AP deve ser interpretada como \(log_{10}(x)\).
-Em uma livre interpretação, isso corresponderia a instruir a regressão
-logística a utilizar modelos NP-LogLogísticos. Assim, buscamos partir
-dos bons resultados obtidos na análise prévia, mas tentando melhorá-los
-com a inclusão de um quarto ou quinto parâmetros de ajuste da
-distribuição. Obtivemos um melhor \emph{fitness} com um modelo Logístico
-de 4 parâmetros (\emph{4-Parameter Logistic} ou simplesmente 4PL),
-conforme resultados apresentados a seguir. Conforme ilustra a e a , o
-melhor ajuste de curva (GOF) foi obtido com uma distribuição
-4P-Logística e com a distância fornecida em em escala logarítmica, como
-\(log_{10}(x)\) metros.
+ou seja, a distância ao \emph{access point} deve ser interpretada como
+\(log_{10}(x)\). Em uma livre interpretação, isso corresponderia a
+instruir a regressão logística a utilizar modelos NP-LogLogísticos.
+Assim, buscamos partir dos bons resultados obtidos na análise prévia,
+mas tentando melhorá-los com a inclusão de um quarto ou quinto
+parâmetros de ajuste da distribuição. Obtivemos um melhor \emph{fitness}
+com um modelo Logístico de 4 parâmetros (\emph{4-Parameter Logistic} ou
+simplesmente 4PL), conforme resultados apresentados a seguir. Conforme
+ilustra a e a , o melhor ajuste de curva (GOF) foi obtido com uma
+distribuição 4P-Logística e com a distância fornecida em em escala
+logarítmica, como \(log_{10}(x)\) metros.
 
 \begin{figure}[htb]
     \caption{\label{logistic_regression_1} Previsão de RSSI da 4P-LogLogística para distâncias em $ log_{10}(x) $ metros}
@@ -2035,9 +2094,9 @@ melhor ajuste de curva (GOF) foi obtido com uma distribuição
 Enfim, a partir dos parâmetros da 4P-Logística (4PL ou logis4) obtidos
 pela regressão, podemos configurar as constantes de sua equação e, a
 partir dela, obtiver a estimativa de decaimento do nível de sinal com o
-aumento da distância do AP, calibradas para a realidade do campus
-Formiga. A equação característica de uma NP-Logística de cinco
-parâmetros é:
+aumento da distância do \emph{access point}, calibradas para a realidade
+do \emph{campus} Formiga. A equação característica de uma NP-Logística
+de cinco parâmetros é:
 
 \begin{equation}
 f(x; A,B,C,D,E) = D + (A-D) / ( (1+(x/C)^B)^E )
@@ -2066,8 +2125,8 @@ cinco parâmetros da \(NP-Log\) tem o seguinte significado:
 \item
   C = Ponto de inflexão, definido como o ponto onde a curvatura muda de
   direção ou sinal. \(C\) é a concentração onde \(y = \frac{(D-A)}{2}\).
-  No caso do Wi-Fi, provavelmente será o valor do sinal aferido em torno
-  10 a 20 metros;
+  No caso do \emph{Wi-Fi}, provavelmente será o valor do sinal aferido
+  em torno 10 a 20 metros;
 \item
   D = Máxima assintótica. Em medições da propagação de sinais de rádio,
   considere-o como o valor do sinal para uma distância muito grande. No
@@ -2082,12 +2141,13 @@ cinco parâmetros da \(NP-Log\) tem o seguinte significado:
 Para utilizar tal distribuição estatística como modelo de propagação,
 deve-se implementar no \emph{software} sua \textbf{função de densidade
 de probabilidade} (PDF) para que possa retornar qual seria o valor da
-intensidade do sinal recebido (RSSI) em determinada distância do AP
-\emph{Wi-Fi}. Durante a implementação, vale observar que ambas as
-distribuições \emph{4P-Log} e LogDistance devem ser utilizadas como um
-modelo de \textbf{perda de sinal}, ou seja, o valor da estimativa obtido
-(\(PL\)) deve ser subtraído da potência de transmissão (\(P_{t}\)) do AP
-para obter a previsão da potência recebida (\(P_{r}\)):
+intensidade do sinal recebido (RSSI) em determinada distância do
+\emph{access point} \emph{Wi-Fi}. Durante a implementação, vale observar
+que ambas as distribuições \emph{4P-Log} e LogDistance devem ser
+utilizadas como um modelo de \textbf{perda de sinal}, ou seja, o valor
+da estimativa obtido (\(PL\)) deve ser subtraído da potência de
+transmissão (\(P_{t}\)) do \emph{access point} para obter a previsão da
+potência recebida (\(P_{r}\)):
 
 \begin{equation}
 Pr(x) = Pt - PL(x)
@@ -2099,10 +2159,11 @@ onde \(P_{r}\) é a potência recebida à distância \(x\) do transmissor;
 receptor (calculada com a equação da 4PL ou da \emph{LogDistance}).
 Inicialmente, implementamos tais fórmulas em uma planilha para
 visualizarmos graficamente uma comparação das medições de RSSI
-realizadas no campus com a expectativa de decaimento proporcionado pelos
-modelos LogDistance e 4P-Logístico. A \autoref{modelos_propagacao}
-ilustra o decaimento se sinal previsto por cada um dos modelos acima
-citados em relação aos valores reais de medição coletados.
+realizadas no \emph{campus} com a expectativa de decaimento
+proporcionado pelos modelos LogDistance e 4P-Logístico. A
+\autoref{modelos_propagacao} ilustra o decaimento se sinal previsto por
+cada um dos modelos acima citados em relação aos valores reais de
+medição coletados.
 
 \begin{figure}[htb]
     \caption{\label{modelos_propagacao} Comparação dos modelos de propagação LogDistance e NP-Logístico}
@@ -2130,26 +2191,26 @@ Como dito anteriormente, para a realização dos cálculos, o ambiente foi
 representado como uma matriz bidimensional, representando em escala o
 ambiente a ser simulado. Cada posição {[}x,y{]} da matriz é um ponto
 candidato a hospedar o \emph{access point} (AP). Uma vez determinada a
-proposta de nova localização do AP, para cada posição da matriz é
-necessário realizar o cálculo do modelo de propagação. Na configuração
-do \emph{software} produzido, pode-se informar a posição atual do AP no
-ambiente real, ou deixar que o \emph{software} inicie a exploração a
-partir de uma posição aleatória. Para preencher os valores da matriz
-representando a propagação do sinal de microondas, deve-se realizar o
-cálculo determinado pelo modelo de propagação, conforme tratado na seção
-anterior. Tipicamente, como os modelos de propagação fazem uso da
-distância entre o transmissor e receptor, esta deve ser calculada
-utilizando as coordenadas do \emph{access point} na simulação e do ponto
-para o qual deseja-se calcular a estimativa da intensidade do sinal alí
-recebido (RSSI).
+proposta de nova localização do \emph{access point}, para cada posição
+da matriz é necessário realizar o cálculo do modelo de propagação. Na
+configuração do \emph{software} produzido, pode-se informar a posição
+atual do \emph{access point} no ambiente real, ou deixar que o
+\emph{software} inicie a exploração a partir de uma posição aleatória.
+Para preencher os valores da matriz representando a propagação do sinal
+de microondas, deve-se realizar o cálculo determinado pelo modelo de
+propagação, conforme tratado na seção anterior. Tipicamente, como os
+modelos de propagação fazem uso da distância entre o transmissor e
+receptor, esta deve ser calculada utilizando as coordenadas do
+\emph{access point} na simulação e do ponto para o qual deseja-se
+calcular a estimativa da intensidade do sinal alí recebido (RSSI).
 
 A \autoref{wifi_central} exibe uma representação gráfica da matriz com
 os valores de intensidade de sinal conforme o decaimento exponencial da
 intensidade do sinal recebido (RSSI), com o aumento da distância de cada
-ponto da matriz com o AP \emph{Wi-Fi} (ponto central).
+ponto da matriz com o \emph{access point} \emph{Wi-Fi} (ponto central).
 
 \begin{figure}[htb]
-    \caption{\label{wifi_central} Decaimento RSSI de $Wi-Fi$ de acordo com a distância ao AP}
+    \caption{\label{wifi_central} Decaimento RSSI de $Wi-Fi$ de acordo com a distância ao $access point$}
     \begin{center}
         \includegraphics[scale=0.5]{imagens/wifi-central.jpg}
     \end{center}
@@ -2157,18 +2218,19 @@ ponto da matriz com o AP \emph{Wi-Fi} (ponto central).
 \end{figure}
 
 Neste ponto, vale notar que o escopo deste trabalho não considera
-interferências entre canais \emph{Wi-Fi} de vários APs, de maneira que
-para cada AP simulado é gerada uma matriz numérica individual, que
-receberá as estimativas de valores para a intensidade de sinal em
-decibel \emph{miliWatt} (\(dBm\)). O propósito deste trabalho é sugerir
-um melhor posicionamento dos APs e a decisão de não terem sido modeladas
-interferências entre APs diferentes é baseada no fato de que a
-tecnologia \emph{Wi-Fi} possibilita coexistência de alguns APs em um
-mesmo ambiente, desde que o canal central de cada AP esteja
-suficientemente espaçado dos demais. Por exemplo, nos padrões IEEE
-802.11b/g/n a largura de banda é de 20 MHz e portanto podem coexistir
-até quatro APs em um mesmo ambiente, conforme ilustra a
-\autoref{canais}.
+interferências entre canais \emph{Wi-Fi} de vários \emph{access points},
+de maneira que para cada \emph{access point} simulado é gerada uma
+matriz numérica individual, que receberá as estimativas de valores para
+a intensidade de sinal em decibel \emph{miliWatt} (\(dBm\)). O propósito
+deste trabalho é sugerir um melhor posicionamento dos \emph{access
+points} e a decisão de não terem sido modeladas interferências entre
+\emph{access points} diferentes é baseada no fato de que a tecnologia
+\emph{Wi-Fi} possibilita coexistência de alguns \emph{access points} em
+um mesmo ambiente, desde que o canal central de cada \emph{access point}
+esteja suficientemente espaçado dos demais. Por exemplo, nos padrões
+IEEE 802.11b/g/n a largura de banda é de 20 MHz e portanto podem
+coexistir até quatro \emph{access points} em um mesmo ambiente, conforme
+ilustra a \autoref{canais}.
 
 \begin{figure}[htb]
     \caption{\label{canais} Canais não sobrepostos para WLANs de 2,4 GHz}
@@ -2190,7 +2252,7 @@ paredes e divisórias) são armazenadas em uma estrutura de dados no
 início do programa, antes de iniciar a simulação. Tais linhas se
 mostraram úteis para simular de maneira mais próxima da realidade o
 valor da intensidade do sinal em um determinado ponto, atravessando o
-ambiente simulado desde o AP até tal ponto.
+ambiente simulado desde o \emph{access point} até tal ponto.
 
 Seguimos a modelagem utilizada pela literatura para modelos de
 propagação em pequena escala, onde o valor esperado para o sinal em
@@ -2199,9 +2261,9 @@ energia absorvida por parede multiplicado pela quantidade de paredes
 atravessadas pelo sinal. A literatura sugere que o valor de absorção
 varia entre 8 e 15 \(dB\) para paredes de concreto \cite{RAPPAPORT}, de
 maneira que o valor definido para para uso do \emph{software} produzido
-na simulação do campus Formiga foi de 8 \(dB\) (e de acordo com análise
-experimental). Vale observar que, por consistir em uma constante que
-pode ser configurada no \emph{software}, a ordem de magnitude da
+na simulação do \emph{campus} Formiga foi de 8 \(dB\) (e de acordo com
+análise experimental). Vale observar que, por consistir em uma constante
+que pode ser configurada no \emph{software}, a ordem de magnitude da
 absorção de energia pelas paredes do edifício pode ser ajustada para que
 a simulação da propagação possa se aproximar da realidade daquele
 ambiente.
@@ -2209,7 +2271,7 @@ ambiente.
 Para ilustrar o resultado de aplicar tal fator de correção, observe na
 \autoref{absorcao_parede} a mesma simulação da figura anterior, porém
 agora contabilizando a absorção do sinal \emph{Wi-Fi} a cada parede
-atravessada no trajeto do AP ao ponto destino.
+atravessada no trajeto do \emph{access point} ao ponto destino.
 
 \begin{figure}[ht]
     \caption{\label{absorcao_parede} Absorção do sinal por cada parede atravessada.}
@@ -2234,18 +2296,19 @@ custo computacional, se comparado a testar por força bruta cada ponto
 interno ao retângulo formado pela parede.
 
 Os segmentos de reta candidatos consistem nas linhas previamente obtidas
-do arquivo DXF, contendo a planta-baixa. Cada linha no DXF possui duas
-coordenadas bidimensionais, para o ponto inicial e o ponto final do
-segmento de reta. O outro segmento de reta é formado entre o AP e o
-ponto para o qual está sendo calculada a intensidade do sinal. A
-\autoref{intersecao_retas}, ilustra o segmento de reta formado entre um
-dado ponto (x1,y1) na matriz e o local do AP (x2,y2), cruzando com um
-outro segmento de reta formado pelas extremidades da parede (x3,y3) e
-(x4,y4). Caso haja ponto de interseção (x,y) significa que o sinal terá
-atravessado tal parede e soma-se um à quantidade de paredes
-atravessadas. Caso contrário, se não houver ponto de interseção entre os
-dois segmentos de reta, significa que o sinal cruzou livremente o espaço
-entre o AP e o destino sem cruzar com tal parede.
+do arquivo \(DXF\), contendo a planta-baixa. Cada linha no \(DXF\)
+possui duas coordenadas bidimensionais, para o ponto inicial e o ponto
+final do segmento de reta. O outro segmento de reta é formado entre o
+\emph{access point} e o ponto para o qual está sendo calculada a
+intensidade do sinal. A \autoref{intersecao_retas}, ilustra o segmento
+de reta formado entre um dado ponto (x1,y1) na matriz e o local do
+\emph{access point} (x2,y2), cruzando com um outro segmento de reta
+formado pelas extremidades da parede (x3,y3) e (x4,y4). Caso haja ponto
+de interseção (x,y) significa que o sinal terá atravessado tal parede e
+soma-se um à quantidade de paredes atravessadas. Caso contrário, se não
+houver ponto de interseção entre os dois segmentos de reta, significa
+que o sinal cruzou livremente o espaço entre o \emph{access point} e o
+destino sem cruzar com tal parede.
 
 \begin{figure}[ht]
     \caption{\label{intersecao_retas} Interseção de retas.}
@@ -2261,13 +2324,13 @@ efetuado para cada um dos \(N \times M\) pontos da matriz para cada uma
 das \(K\) paredes, ou seja, \(N \times M \times K\) cálculos a serem
 efetuados e, portanto, com custo de tempo da ordem de \(O(n^{3})\). E
 como o algoritmo de otimização irá avaliar centenas de posicionamentos
-para o AP, à medida que explora o espaço de soluções, o custo
-computacional sobre para \(N \times M \times K \times P\), ou seja, como
-todas estas quantidades possuem uma mesma ordem de magnitude (centenas),
-o algoritmo passa a ter custo temporal de \(O(n^{4})\). Assim, com a
-adição dessa nova modelagem na propagação do sinal \emph{Wi-Fi}, o tempo
-de execução do algoritmo extrapolou os costumeiros segundos e beirou as
-dezenas de minutos.
+para o \emph{access point}, à medida que explora o espaço de soluções, o
+custo computacional sobre para \(N \times M \times K \times P\), ou
+seja, como todas estas quantidades possuem uma mesma ordem de magnitude
+(centenas), o algoritmo passa a ter custo temporal de \(O(n^{4})\).
+Assim, com a adição dessa nova modelagem na propagação do sinal
+\emph{Wi-Fi}, o tempo de execução do algoritmo extrapolou os costumeiros
+segundos e beirou as dezenas de minutos.
 
 \section{Visualização dos dados}\label{visualizauxe7uxe3o-dos-dados}
 
@@ -2282,10 +2345,10 @@ características da planta baixa do bloco A\footnote{A modelagem de
   ambiente utilizada para as simulações apresenta as mesmas divisões de
   cômodos do arquivo AutoCAD disponibilizado para o este trabalho.},
 onde pode-se observar a presença de portas e paredes. Foi registrado o
-uso que cada cômodo possui atualmente no campus Formiga.
+uso que cada cômodo possui atualmente no \emph{campus} Formiga.
 
 \begin{figure}[ht]
-    \caption{\label{repre_ambiente_dxf_2} Representação do ambiente a partir do arquivo DXF contendo a planta-baixa}
+    \caption{\label{repre_ambiente_dxf_2} Representação do ambiente a partir do arquivo $DXF$ contendo a planta-baixa}
     \begin{center}
         \includegraphics[scale=0.4]{imagens/planta-labels.jpg}
     \end{center}
@@ -2293,15 +2356,14 @@ uso que cada cômodo possui atualmente no campus Formiga.
 \end{figure}
 
 Com o preenchimento da matriz de propagação de acordo com a posição do
-\emph{access point} (AP) e com o respectivo valor da intensidade do
-sinal, se tornou difícil a visualização de quanto o sinal ficava ruim
-quanto maior era a distância e mais paredes eram atravessadas, através
-de uma simples inspeção numérica. Tendo a matriz preenchida com a
-intensidade de sinal (\(dB\)), suficiente para a realização dos cálculos
-com a função objetivo da heurística de otimização, fica pendente a
-visualização a olho nú, não sendo viável distinguir dentre milhares de
-valores numa matriz, se poderia ser considerada uma simulação boa ou
-ruim.
+\emph{access point} e com o respectivo valor da intensidade do sinal, se
+tornou difícil a visualização de quanto o sinal ficava ruim quanto maior
+era a distância e mais paredes eram atravessadas, através de uma simples
+inspeção numérica. Tendo a matriz preenchida com a intensidade de sinal
+(\(dB\)), suficiente para a realização dos cálculos com a função
+objetivo da heurística de otimização, fica pendente a visualização a
+olho nú, não sendo viável distinguir dentre milhares de valores numa
+matriz, se poderia ser considerada uma simulação boa ou ruim.
 
 Considerando a vasta quantidade de ferramentas e bibliotecas
 disponibilizadas pela linguagem Python, foi necessário utilizar algum
@@ -2333,15 +2395,15 @@ gradiente de cores escolhido. Adicionalmente, foi utilizada condição que
 avalia o valor do sinal em determinado ponto com uma constante que
 representa a sensibilidade máxima definida pelos equipamentos de
 \emph{Wi-Fi}. Os valores de sensibilidade dos diversos equipamentos
-presentes no campus Formiga do IFMG variam entre -85 e -100 \(dB\).
-Assim, se o valor calculado para a simulação da propagação for menor que
-a sensibilidade do AP, na visualização do mesmo ele é considerado como
-um ``ponto cego'' ou uma ``região de sombra'', uma vez que não há
-intensidade de sinal suficiente para obter uma boa qualidade de serviço
-(ou sequer conectar na rede \emph{Wi-Fi}). A
-\autoref{simulacao_sensibilidade} ilustra as regiões de sombra no
-ambiente simulado com apenas um AP centralizado transmitindo com uma
-potência de -17 \(dB\).
+presentes no \emph{campus} Formiga do IFMG variam entre -85 e -100
+\(dB\). Assim, se o valor calculado para a simulação da propagação for
+menor que a sensibilidade do \emph{access point}, na visualização do
+mesmo ele é considerado como um ``ponto cego'' ou uma ``região de
+sombra'', uma vez que não há intensidade de sinal suficiente para obter
+uma boa qualidade de serviço (ou sequer conectar na rede \emph{Wi-Fi}).
+A \autoref{simulacao_sensibilidade} ilustra as regiões de sombra no
+ambiente simulado com apenas um \emph{access point} centralizado
+transmitindo com uma potência de -17 \(dB\).
 
 \begin{figure}[ht]
     \caption{\label{simulacao_sensibilidade} Regiões com sinal abaixo da sensibilidade máxima dos equipamentos}
@@ -2365,39 +2427,42 @@ otimização}\label{heuruxedstica-de-otimizauxe7uxe3o}
 
 Para o cumprimento dos objetivos e um bom resultado, foi implementada a
 metaheurística, que irá explorar o espaço de soluções de posicionamento
-dos APs no modelo espacial do ambiente, visando à maximização da
-cobertura do sinal (dentre outras possíveis métricas). Conforme exposto
-na seção de materiais e métodos, foi utilizada a metaheurística proposta
-por Scoot Kirkpatrick \cite{PATRICK}. O \emph{Simulated Annealing} foi
-utilizado para a realização do processo de otimização, buscando
-encontrar a melhor solução viável, considerando o objetivo do problema
-em questão e o conjunto de restrições para aceitação da solução
-proposta.
+dos \emph{access points} no modelo espacial do ambiente, visando à
+maximização da cobertura do sinal (dentre outras possíveis métricas).
+Conforme exposto na seção de materiais e métodos, foi utilizada a
+metaheurística proposta por Scoot Kirkpatrick \cite{PATRICK}. O
+\emph{Simulated Annealing} foi utilizado para a realização do processo
+de otimização, buscando encontrar a melhor solução viável, considerando
+o objetivo do problema em questão e o conjunto de restrições para
+aceitação da solução proposta.
 
 \subsection{\texorpdfstring{Implementação do \emph{Simulated
 Annealing}}{Implementação do Simulated Annealing}}\label{implementauxe7uxe3o-do-simulated-annealing}
 
-Inicialmente a metaheurística buscava o melhor ponto apenas para um AP.
-Com o cumprimento dos objetivos tornou-se possível a busca e otimização
-de mais de um AP. O SA inicia com os valores predefinidos no momento da
-sua chamada. Para o método é informado: o número de APs a serem
-utilizados no ambiente, o número máximo de iterações, o número máximo de
-perturbações por cada iteração, o número máximo de sucessos por iteração
-e o \(\alpha\) como o fator de redução da temperatura. Na seção
-\ref{sec:avalia_dois_ou_mais} podem ser vistos mais detalhes sobre como
-a função objetivo foi implementada.
+Inicialmente a metaheurística buscava o melhor ponto apenas para um
+\emph{access point}. Com o cumprimento dos objetivos tornou-se possível
+a busca e otimização de mais de um \emph{access point}. O
+\emph{Simulated Annealing} inicia com os valores predefinidos no momento
+da sua chamada. Para o método é informado: o número de \emph{access
+points} a serem utilizados no ambiente, o número máximo de iterações, o
+número máximo de perturbações por cada iteração, o número máximo de
+sucessos por iteração e o \(\alpha\) como o fator de redução da
+temperatura. Na seção \ref{sec:avalia_dois_ou_mais} podem ser vistos
+mais detalhes sobre como a função objetivo foi implementada.
 
-Com a estratégia de perturbar mais de um AP por vez, o SA inicia
-alocando todos os APs na posição central da planta baixa. A primeira
-solução é avaliada (APs no centro) para que então seja realizada a busca
-e novas perturbações sejam feitas. O SA fica em um \emph{loop}
-principal, no qual se verifica se foram atendidas todas as condições de
-término do algoritmo (se extrapolou o máximo de iterações ou se nenhum
-ponto com ótimo local foi encontrado). Outro \emph{loop} interno realiza
-a perturbação dos APs em forma de lista circular. Com os valores de
-\(f(S_{i})\) (resultado da avaliação da função objetivo na
-\emph{i-ésima} iteração do SA) e \(f(S)\) (melhor resultado da avaliação
-da função objetivo iteração do SA) é possível determinar o valor de
+Com a estratégia de perturbar mais de um \emph{access point} por vez, o
+\emph{Simulated Annealing} inicia alocando todos os \emph{access points}
+na posição central da planta baixa. A primeira solução é avaliada
+(\emph{access points} no centro) para que então seja realizada a busca e
+novas perturbações sejam feitas. O \emph{Simulated Annealing} fica em um
+\emph{loop} principal, no qual se verifica se foram atendidas todas as
+condições de término do algoritmo (se extrapolou o máximo de iterações
+ou se nenhum ponto com ótimo local foi encontrado). Outro \emph{loop}
+interno realiza a perturbação dos \emph{access points} em forma de lista
+circular. Com os valores de \(f(S_{i})\) (resultado da avaliação da
+função objetivo na \emph{i-ésima} iteração do \emph{Simulated
+Annealing}) e \(f(S)\) (melhor resultado da avaliação da função objetivo
+iteração do \emph{Simulated Annealing}) é possível determinar o valor de
 \(\Delta F_{i}\) (diferença da avaliação da função objetiva atual com a
 avaliação da função objetiva ótima encontrada até o momento). Caso o
 valor de \(\Delta F_{i}\) seja menor ou igual a zero, há uma redução de
@@ -2417,19 +2482,20 @@ abaixo:
 \end{equation}
 
 Com a aceitação, é atualizada a lista das melhores posições para a
-alocação dos APs e também a variável \(f(S)\) com o valor de melhor
-função objetivo, o número de sucessos representando a vizinhança, que
-também é fator de parada do SA, e o número de perturbações por iteração
-é incrementado. O método é finalizado quando a temperatura chega a um
-valor próximo de zero, situação esta em que a chance de se aceitar uma
-solução vizinha pior é extremamente baixa, ou seja, quando o sistema
-estiver estável.
+alocação dos \emph{access points} e também a variável \(f(S)\) com o
+valor de melhor função objetivo, o número de sucessos representando a
+vizinhança, que também é fator de parada do \emph{Simulated Annealing},
+e o número de perturbações por iteração é incrementado. O método é
+finalizado quando a temperatura chega a um valor próximo de zero,
+situação esta em que a chance de se aceitar uma solução vizinha pior é
+extremamente baixa, ou seja, quando o sistema estiver estável.
 
 Por fim, a melhor solução encontrada pela metaheurística é retornada,
-indicando a proposta do novo posicionamento dos APs e a cobertura do
-sinal \emph{Wi-Fi} alcançada, caso tal solução fosse implantada no
-ambiente real. Além disso, é fornecida uma visualização gráfica do
-resultado a ser obtido com a solução proposta utilizando o PyGame.
+indicando a proposta do novo posicionamento dos \emph{access points} e a
+cobertura do sinal \emph{Wi-Fi} alcançada, caso tal solução fosse
+implantada no ambiente real. Além disso, é fornecida uma visualização
+gráfica do resultado a ser obtido com a solução proposta utilizando o
+PyGame.
 
 \subsection{Calibração dos parâmetros do Simulated
 Annealing}\label{calibrauxe7uxe3o-dos-paruxe2metros-do-simulated-annealing}
@@ -2452,16 +2518,17 @@ planejamento fatorial descrito na literatura é aquele em que cada fator
 trabalho), ou seja, em um experimento com \(k\) fatores (ou variáveis) e
 dois níveis, obtendo-se \(2^{k}\) experimentos a realizar.
 
-Os valores dos parâmetros do SA foram definidos quando ainda estava
-sendo utilizado apenas um AP. Para o teste, foram considerados os
-valores da quantidade de vizinhos, temperatura inicial, o fator de
-resfriamento e a quantidade máxima de perturbações. O valor do máximo de
-iterações foi definidos em 50 e a posição do AP foi definida como sendo
-{[}0, 0{]}. Foi desenvolvido um \emph{script} em Python que
-automatizasse o processo. Como são quatro parâmetros que se deseja saber
-os valores e são utilizados dois níveis de profundidade, foi utilizado o
-conceito de tabela verdade, contendo \(2^{4}\) linhas fazendo com que
-todas as possibilidades de parâmetros sejam testadas.
+Os valores dos parâmetros do \emph{Simulated Annealing} foram definidos
+quando ainda estava sendo utilizado apenas um \emph{access point}. Para
+o teste, foram considerados os valores da quantidade de vizinhos,
+temperatura inicial, o fator de resfriamento e a quantidade máxima de
+perturbações. O valor do máximo de iterações foi definidos em 50 e a
+posição do \emph{access point} foi definida como sendo {[}0, 0{]}. Foi
+desenvolvido um \emph{script} em Python que automatizasse o processo.
+Como são quatro parâmetros que se deseja saber os valores e são
+utilizados dois níveis de profundidade, foi utilizado o conceito de
+tabela verdade, contendo \(2^{4}\) linhas fazendo com que todas as
+possibilidades de parâmetros sejam testadas.
 
 Com a coleta das informações obtidas pela saída do \emph{script} em
 Python, os valores foram adicionados em uma planilha do Excel cedida
@@ -2513,9 +2580,9 @@ fração menor do tempo total. O número de vizinhos foi aumentado para ter
 um resultado melhor ainda; os valores da temperatura inicial também
 foram aumentados e o fator de resfriamento foi decrementado junto com o
 número de perturbações. Modificando os parâmetros, se torna propício a
-um novo melhor conjunto de valores do SA. Os novos valores da segunda
-iteração do planejamento fatorial \(2^{k}\) podem ser vistos na
-\autoref{tabela_parametros_2}.
+um novo melhor conjunto de valores do \emph{Simulated Annealing}. Os
+novos valores da segunda iteração do planejamento fatorial \(2^{k}\)
+podem ser vistos na \autoref{tabela_parametros_2}.
 
 \begin{table}[ht]
     \centering
@@ -2597,13 +2664,13 @@ os candidatos a parâmetros expostos na
 
 Os resultados apresentados acima passaram por três refinamentos. Assim,
 como dito no início desta seção, o teste foi realizado com o intuito de
-aprimorar os parâmetros do \emph{Simulated Annealing} com apenas um AP.
-A estratégia para a versão final e com múltiplos \emph{access points} é
-definir também como um fator (variável), o valor do raio de perturbação
-e fazer com que ele seja uma porcentagem da largura da matriz de
-propagação, tornando-o dinâmico de acordo com o tamanho da planta. A
-\autoref{parametros_metaheuristica} mostra de uma forma melhor como
-ficaram os parâmetros utilizados na metaheurística:
+aprimorar os parâmetros do \emph{Simulated Annealing} com apenas um
+\emph{access point}. A estratégia para a versão final e com múltiplos
+\emph{access points} é definir também como um fator (variável), o valor
+do raio de perturbação e fazer com que ele seja uma porcentagem da
+largura da matriz de propagação, tornando-o dinâmico de acordo com o
+tamanho da planta. A \autoref{parametros_metaheuristica} mostra de uma
+forma melhor como ficaram os parâmetros utilizados na metaheurística:
 
 \begin{table}[]
     \centering
@@ -2620,9 +2687,9 @@ ficaram os parâmetros utilizados na metaheurística:
 
 A resolução foi dada em metros e transformada de uma forma compatível
 com o processamento e a duração esperada para analisar cada solução. Os
-parâmetros definidos para a alocação de vários APs foi um compilado dos
-parâmetros utilizados no \emph{Simulated Annealing} com um AP juntamente
-com testes feitos repetidas vezes.
+parâmetros definidos para a alocação de vários \emph{access points} foi
+um compilado dos parâmetros utilizados no \emph{Simulated Annealing} com
+um \emph{access point} juntamente com testes feitos repetidas vezes.
 
 \section{Avaliação da solução}\label{avaliauxe7uxe3o-da-soluuxe7uxe3o}
 
@@ -2632,19 +2699,19 @@ o aperfeiçoamento da função objetivo.
 
 \subsection{Avaliação da solução com um AP}\label{sec:avalia_one_ap}
 
-Para a implementação do SA, se faz importante a decisão de uma boa
-função objetivo. A função objetivo está diretamente ligada à eficácia
-com que o \emph{Simulated Annealing} irá buscar seu ótimo global.
-Inicialmente a função objetivo foi implementada de forma bem prática:
-como a matriz gerada continha em cada posição o resultado da potência do
-sinal, conforme ele se propagava pelo ambiente, para representar uma
-indicação numérica da cobertura do sinal \emph{Wi-Fi} foi feita a soma
-de todos os valores da matriz. Num primeiro momento, tentamos somar os
-valores da potência do sinal em \(mW\) mas em função do decaimento
-exponencial do sinal com o distanciamento do transmissor, a precisão de
-um número de ponto flutuante chegava rapidamente ao limite de seus 32
-bits. Tão pouco adiantou aumentar a precisão para 64 bits ou mais.
-Curiosamente, uma função objetivo baseada na soma dos valores em
+Para a implementação do \emph{Simulated Annealing}, se faz importante a
+decisão de uma boa função objetivo. A função objetivo está diretamente
+ligada à eficácia com que o \emph{Simulated Annealing} irá buscar seu
+ótimo global. Inicialmente a função objetivo foi implementada de forma
+bem prática: como a matriz gerada continha em cada posição o resultado
+da potência do sinal, conforme ele se propagava pelo ambiente, para
+representar uma indicação numérica da cobertura do sinal \emph{Wi-Fi}
+foi feita a soma de todos os valores da matriz. Num primeiro momento,
+tentamos somar os valores da potência do sinal em \(mW\) mas em função
+do decaimento exponencial do sinal com o distanciamento do transmissor,
+a precisão de um número de ponto flutuante chegava rapidamente ao limite
+de seus 32 bits. Tão pouco adiantou aumentar a precisão para 64 bits ou
+mais. Curiosamente, uma função objetivo baseada na soma dos valores em
 miliwatts dos sinais simulados era demasiado custosa de se calcular e
 trouxe pouco benefício quanto à exploração do espaço de soluções pelo
 \emph{Simulated Annealing}.
@@ -2685,53 +2752,55 @@ continuidade na condução dos testes permitiram alterações e
 aperfeiçoamentos na função objetivo da metaheurística de otimização e na
 simulação das características do ambiente e da propagação dos raios
 (sinais de RF). Foram comparados os resultados simulados com resultados
-reais coletados nas dependências do campus.
+reais coletados nas dependências do \emph{campus}.
 
 \subsection{Avaliação da solução para dois ou mais
 APs}\label{sec:avalia_dois_ou_mais}
 
 Como desde o princípio, a implementação da função objetivo para apenas
-um AP visava maximizar a cobertura do sinal \emph{Wi-Fi} para o
-ambiente. Isso não foi diferente para a simulação de mais um AP. Foram
-utilizadas técnicas de manipulação de grandezas em \(dB\) para obter o
-resultado esperado. Como dito na seção \ref{sec:avalia_one_ap} , a
-manipulação com a soma dos dados em \(dB\) não é conceitualmente
-apropriada. Como uma proposta de solução para esse problema, antes de
-realizar a soma dos valores da matriz, a potência do sinal em questão
-era convertido de \(dB\) para \(mW\), fazendo com que a operação ficasse
-correta e uma verificação da potência recebida com a sensibilidade do
-\emph{access point} também foi feita para penalizar zonas em que o sinal
-era tão fraco que não se tornava uma opção válida. Com a conversão dos
-valores matriz e a verificação da qualidade do sinal adicionada, o tempo
-de execução do algoritmo aumentou consideravelmente, fazendo com que
-outra alternativa fosse buscada.
+um \emph{access point} visava maximizar a cobertura do sinal
+\emph{Wi-Fi} para o ambiente. Isso não foi diferente para a simulação de
+mais um \emph{access point}. Foram utilizadas técnicas de manipulação de
+grandezas em \(dB\) para obter o resultado esperado. Como dito na seção
+\ref{sec:avalia_one_ap} , a manipulação com a soma dos dados em \(dB\)
+não é conceitualmente apropriada. Como uma proposta de solução para esse
+problema, antes de realizar a soma dos valores da matriz, a potência do
+sinal em questão era convertido de \(dB\) para \(mW\), fazendo com que a
+operação ficasse correta e uma verificação da potência recebida com a
+sensibilidade do \emph{access point} também foi feita para penalizar
+zonas em que o sinal era tão fraco que não se tornava uma opção válida.
+Com a conversão dos valores matriz e a verificação da qualidade do sinal
+adicionada, o tempo de execução do algoritmo aumentou consideravelmente,
+fazendo com que outra alternativa fosse buscada.
 
 Diante de uma opção que demandava mais tempo para que fosse processada,
 outra estratégia para a função objetivo foi implementada. Quando se tem
-mais um AP para buscar os seus respectivos pontos ótimos, somar suas
-matrizes de resultados também não é algo que dê um resultado correto.
-Foi, então, implementado um método que realizava a sobreposição das
-matrizes de resultado da propagação. Para o SA saber se a escolha era
-ruim ou boa, precisava transformar essa escolha em um número. Nesse
-sentido, de acordo com as n matrizes de resultado de \$ \textit{n} \$
-\emph{access points}, foi necessário realizar suas sobreposições.
+mais um \emph{access point} para buscar os seus respectivos pontos
+ótimos, somar suas matrizes de resultados também não é algo que dê um
+resultado correto. Foi, então, implementado um método que realizava a
+sobreposição das matrizes de resultado da propagação. Para o
+\emph{Simulated Annealing} saber se a escolha era ruim ou boa, precisava
+transformar essa escolha em um número. Nesse sentido, de acordo com as n
+matrizes de resultado de \$ \textit{n} \$ \emph{access points}, foi
+necessário realizar suas sobreposições.
 
 Tal método recebe como parâmetro uma lista (ou \emph{array}, ou vetor,
 em Python são a mesma estrutura de dados) contendo a matriz resultado da
-simulação de todos os APs e uma variável \emph{size} que corresponde à
-quantidade de APs no ambiente. Posteriormente é feito um laço de
-repetição percorrendo a lista de matrizes e guardado as matrizes máximas
-utilizando o método \emph{maximum()} da biblioteca Numpy retornando tal
-valor. O método que realiza essa operação pode ser visto abaixo.
+simulação de todos os \emph{access points} e uma variável \emph{size}
+que corresponde à quantidade de \emph{access points} no ambiente.
+Posteriormente é feito um laço de repetição percorrendo a lista de
+matrizes e guardado as matrizes máximas utilizando o método
+\emph{maximum()} da biblioteca Numpy retornando tal valor. O método que
+realiza essa operação pode ser visto abaixo.
 
 \lstinputlisting[language=Python]{code/sobrepoe_solucoes_MAX.py}
 
 O método acima retorna à matriz resultante. O método que realiza a
-avaliação da lista de APs fará uso da matriz para obter um valor a se
-comparar no processo de busca de um ponto melhor no \emph{Simulated
-Annealing}. Os cálculos para a penalização de áreas onde o sinal tem uma
-qualidade de inferir a sensibilidade do equipamento não foram
-implementados nessa estratégia.
+avaliação da lista de \emph{access points} fará uso da matriz para obter
+um valor a se comparar no processo de busca de um ponto melhor no
+\emph{Simulated Annealing}. Os cálculos para a penalização de áreas onde
+o sinal tem uma qualidade de inferir a sensibilidade do equipamento não
+foram implementados nessa estratégia.
 
 \section{Análise da utilização de
 recursos}\label{anuxe1lise-da-utilizauxe7uxe3o-de-recursos}
@@ -2739,14 +2808,14 @@ recursos}\label{anuxe1lise-da-utilizauxe7uxe3o-de-recursos}
 A fim de buscar um melhor visualização do fluxo de execução do
 algoritmo, foi utilizada uma ferramenta de profile, chamada
 \emph{cProfile}, para geração do arquivo com extensão \emph{.cprof} e o
-software \emph{pyprof2calltree} para realização desta análise. Com tais
-ferramentas é possível obter análises da porcentagem de tempo gasto em
-cada método do algoritmo, de acordo com o tempo total. Como é possível
-ver abaixo, foi gerada uma imagem de saída utilizando o software
-\emph{pyprof2calltree} com o fluxo de execução do método \emph{Run}, que
-é responsável desde os cálculos de proporção da matriz/planta, leitura
-de arquivos de entrada, até a etapa final, com a exibição do resultado
-em forma gráfica, utilizando o PyGame.
+\emph{software} \emph{pyprof2calltree} para realização desta análise.
+Com tais ferramentas é possível obter análises da porcentagem de tempo
+gasto em cada método do algoritmo, de acordo com o tempo total. Como é
+possível ver abaixo, foi gerada uma imagem de saída utilizando o
+\emph{software} \emph{pyprof2calltree} com o fluxo de execução do método
+\emph{Run}, que é responsável desde os cálculos de proporção da
+matriz/planta, leitura de arquivos de entrada, até a etapa final, com a
+exibição do resultado em forma gráfica, utilizando o PyGame.
 
 \begin{figure}[ht]
     \caption{\label{cprofile} Grafo do ciclo de execução do algoritmo   }
@@ -2798,8 +2867,8 @@ trabalho entre os núcleos de CUDA disponíveis. No código abaixo é
 possível ver, no método que realiza a propagação do sinal, que uma
 matriz utilizando a biblioteca numpy é criada, as dimensões dos
 \emph{blocks} e \emph{grids} (os valores foram escolhidos empiricamente,
-dependem do hardware utilizado e do problema a ser trabalhado). Logo
-após, a matriz é enviada para a GPU para ser compartilhada entre
+dependem do \emph{hardware} utilizado e do problema a ser trabalhado).
+Logo após, a matriz é enviada para a GPU para ser compartilhada entre
 \emph{blocks} e \emph{threads}. O método que realiza o cálculo da
 intensidade do sinal é chamado de acordo com os \emph{blocks} e
 \emph{grids} definidos. Então, a matriz que foi enviada para a GPU é
@@ -2845,11 +2914,11 @@ calcular o valor para a propagação em cada ponto de uma matriz \(NxM\).
 Considerando que uma das dimensões é maior que a outra, podemos dizer
 que o custo é \(NxN\): \(O(n^{2})\) e \(O(1\times n^{2}) = O(n^{2})\)
 para aplicar a operação em todos os pontos da matriz. Mas, entre cada
-ponto da matriz (PM) e o AP, podem haver \(k\) paredes, que deve-se
-verificar se há ou não interseção entre a reta AP-PM e a reta formada
-pela parede. Tal operação, utilizando a fórmula de geometria analítica
-para interseção de retas, custa \(O(1)\) para cada parede e
-\(k\times O(1)\) para verificar cada parede. Como \(k\) é
+ponto da matriz (PM) e o \emph{access point}, podem haver \(k\) paredes,
+que deve-se verificar se há ou não interseção entre a reta AP-PM e a
+reta formada pela parede. Tal operação, utilizando a fórmula de
+geometria analítica para interseção de retas, custa \(O(1)\) para cada
+parede e \(k\times O(1)\) para verificar cada parede. Como \(k\) é
 suficientemente grande em relação a \(n\), podemos considerar o custo de
 verificar se há interseção com paredes como \(O(n)\). Para fazer essa
 verificação de cada parede para cada ponto da Matriz, temos então:
@@ -2859,9 +2928,9 @@ Quanto ao \emph{Simulated Annealing} (SA), a cada rodada ele aleatoriza
 uma solução vizinha (\(v\)) e avalia-a (\(fo\)), e como o SA tem uma
 quantidade finita e decremental de iterações em função do fator de
 resfriamento, a quantidade de vizinhos explorados é em torno de
-\(v = log(n)\). Assim, a complexidade do SA é em torno de \(O(fo*v)\),
-ou seja: \(O(fo \times log n)\). Como a função objetivo \((fo)\) consome
-\(O(n^{3})\), teríamos: \(O(n^{3} * log n)\).
+\(v = log(n)\). Assim, a complexidade do \emph{Simulated Annealing} é em
+torno de \(O(fo*v)\), ou seja: \(O(fo \times log n)\). Como a função
+objetivo \((fo)\) consome \(O(n^{3})\), teríamos: \(O(n^{3} * log n)\).
 
 É importante notar que a anotação deste método é diferente das demais
 que utilizam o \emph{@jit} para gerar código de máquina. A anotação
@@ -2882,10 +2951,10 @@ deve-se usar somente \emph{@jit} com uma anotação alvo do CUDA.
 Durante e após a implementação dos modelos de perda e atenuação do sinal
 \emph{wireless} e modelagem de propagação dos sinais pelo ambiente,
 foram comparados os resultados da simulação com o resultado real
-esperado. Para tal, pode-se utilizar o atual posicionamento dos APs
-Wi-Fi no campus e realizar experimentos de \emph{Wireless Site Survey},
-ou seja, medições reais da intensidade de sinal em determinados pontos
-do ambiente analisado.
+esperado. Para tal, pode-se utilizar o atual posicionamento dos
+\emph{access points} \emph{Wi-Fi} no \emph{campus} e realizar
+experimentos de \emph{Wireless Site Survey}, ou seja, medições reais da
+intensidade de sinal em determinados pontos do ambiente analisado.
 
 Tais resultados foram então comparados e podem ser visto com a
 \autoref{captura} e a \autoref{simulacao_vinicius} com os resultados
@@ -2899,7 +2968,7 @@ do IFMG \emph{campus} Formiga, de acordo com seus materiais de
 construção, espessura de suas paredes, pisos e teto.
 
 \begin{figure}[ht]
-    \caption{\label{captura} Captura realizada no Bloco C, para um AP "18:8B:9D:69:E8:B2" posicionado em (x=660,y=260) e irradiando no Canal 11 (2.462 GHz).}
+    \caption{\label{captura} Captura realizada no Bloco C, para um *access point* "18:8B:9D:69:E8:B2" posicionado em (x=660,y=260) e irradiando no Canal 11 (2.462 GHz).}
     \begin{center}
         \includegraphics[scale=0.5]{imagens/captura.jpg}
     \end{center}
@@ -2916,14 +2985,18 @@ construção, espessura de suas paredes, pisos e teto.
 Assim é possível ver como é notável a aplicação de que os modelos
 físicos teóricos obtiveram o comportamento relativamente parecido com a
 coleta e simulação realizada empiricamente, fazendo com que o modelo
-utilizado esteja realmente validado com a realidade.
+utilizado esteja realmente validado com a realidade. A seguir são
+apresentados os resultados obtidos após as simulações da propagação de
+sinais \emph{wireless} nas dependências do IFMG \emph{campus} Formiga e
+uma análise dos resultados encontrados nas simulações com um, dois ou
+mais \emph{access points}.
 
-\chapter{RESULTADOS E ANÁLISE}\label{resultados-e-anuxe1lise}
+\chapter{RESULTADOS E ANÁLISE}\label{sec:resultados}
 
 Neste capítulo serão mostrados os resultados obtidos a partir da
 implementação de toda a fundamentação teórica e a explicação dos
 procedimentos desenvolvidos. Será apresentada também uma análise de
-custo computacional e um ajuste de curvas utilizando os softwares
+custo computacional e um ajuste de curvas utilizando os \emph{softwares}
 \emph{cProfile} e o \emph{R-Project}, respectivamente.
 
 \section{\texorpdfstring{Simulação da propagação de sinais
@@ -3013,7 +3086,7 @@ ver como é chamado o algoritmo e uma saída de exemplo dos dados.
 \end{lstlisting}
 
 Ainda com a saída de dados, ao fim da execução da otimização da posição
-dos APs, é gerado um gráfico utilizando a biblioteca
+dos \emph{access points}, é gerado um gráfico utilizando a biblioteca
 \emph{matplotlib.pyplot} do Python. Com o gráfico mostrado na
 \autoref{comportamento_fo}, é possível ver claramente como a função
 objetivo da metaheurística se comportou durante a busca pelo espaço de
@@ -3044,7 +3117,7 @@ A \autoref{prop_bloco_a}, se comparada com as figuras do tópico
 anterior, possuem cores mais intuitivas para os resultados obtidos, além
 de uma restrição na parte gráfica, destacada com a cor preta nas áreas
 onde o sinal é menor que a sensibilidade típica de um equipamento
-\emph{Wi-Fi} (seja ele um computador ou AP).
+\emph{Wi-Fi} (seja ele um computador ou \emph{access point}).
 
 \begin{figure}[ht]
     \caption{\label{prop_bloco_a} Simulação da propagação de sinais de microondas no bloco A utilizando 1 AP, sua absorção e limiar de sensibilidade.}
@@ -3054,13 +3127,13 @@ onde o sinal é menor que a sensibilidade típica de um equipamento
     \legend{Fonte: Elaboração do autor}
 \end{figure}
 
-É possível notar que o SA definiu como um caso ótimo, nesta situação, um
-ponto próximo ao meio da planta. Com a posição escolhida, a cobertura do
-sinal se propaga em áreas próximas à biblioteca e sala de estudo, que
-contém o maior fluxo de pessoas neste bloco que utilizam o acesso à
-internet. Na \autoref{prop_bloco_a}, os pontos que deixam a desejar
-corresponde à potência máxima que consegue transmitir, neste caso, -25
-\(dB\).
+É possível notar que o \emph{Simulated Annealing} definiu como um caso
+ótimo, nesta situação, um ponto próximo ao meio da planta. Com a posição
+escolhida, a cobertura do sinal se propaga em áreas próximas à
+biblioteca e sala de estudo, que contém o maior fluxo de pessoas neste
+bloco que utilizam o acesso à internet. Na \autoref{prop_bloco_a}, os
+pontos que deixam a desejar corresponde à potência máxima que consegue
+transmitir, neste caso, -25 \(dB\).
 
 Como resultado disponibilizados via terminal, temos:
 
@@ -3106,7 +3179,8 @@ As plantas dos pisos 1, 2 e 3 do bloco C foram obtidas em formato DWG e
 convertidas para o formato \emph{.dxf} ao final da implementação. Tais
 arquivos foram simulados e obtidas suas representações gráficas. A
 \autoref{captura_zona} mostra a simulação da planta baixa no bloco C
-utilizando 1 AP com potência de transmissão de -25 \(dB\).
+utilizando 1 \emph{access point} com potência de transmissão de -25
+\(dB\).
 
 \begin{figure}[ht]
     \caption{\label{captura_zona} Simulação da propagação de sinais de microondas no bloco C utilizando 1 AP.
@@ -3157,23 +3231,24 @@ uma boa qualidade do sinal todas as salas de ambos os piso do bloco C.
 Como pode ser visto na \autoref{prop_bloco_a} e na
 \autoref{captura_zona}, quando utilizada a busca pelo ponto ótimo com um
 \emph{access point}, ele tendeu a permanecer ao centro da planta. Com o
-resultado dado para esta simulação com um AP, os cômodos mais ao centro
-são bem atendidos com o sinal \emph{Wi-Fi}, mas ao contrário dos mais
-afastados, não irão usufruir de uma boa qualidade de sinal e esse é
-retirado da apresentação gráfica e dos cálculos da avaliação da função
-objetivo. O resultado toma essa característica por não realizar uma
-verificação das áreas subjetivamente mais importantes. Caso tivesse essa
-funcionalidade implementada, a metaheurística poderia fazer com que o AP
-cobrisse as áreas mais críticas do ponto de vista da utilização do
-ambiente pelas pessoas.
+resultado dado para esta simulação com um \emph{access point}, os
+cômodos mais ao centro são bem atendidos com o sinal \emph{Wi-Fi}, mas
+ao contrário dos mais afastados, não irão usufruir de uma boa qualidade
+de sinal e esse é retirado da apresentação gráfica e dos cálculos da
+avaliação da função objetivo. O resultado toma essa característica por
+não realizar uma verificação das áreas subjetivamente mais importantes.
+Caso tivesse essa funcionalidade implementada, a metaheurística poderia
+fazer com que o \emph{access point} cobrisse as áreas mais críticas do
+ponto de vista da utilização do ambiente pelas pessoas.
 
 \section{\texorpdfstring{\emph{Wi-Fi Placement} para 2 ou mais
 APs}{Wi-Fi Placement para 2 ou mais APs}}\label{wi-fi-placement-para-2-ou-mais-aps}
 
-Feita a propagação do sinal \emph{wireless} para um AP nos bloco A, foi
-adaptada, recalibrada e avaliada a implementação da simulação com dois
-\emph{access points}. A \autoref{captura_dois_aps} mostra como foi o
-resultado da simulação do \emph{Wi-Fi} no piso 2 do bloco A.
+Feita a propagação do sinal \emph{wireless} para um \emph{access point}
+nos bloco A, foi adaptada, recalibrada e avaliada a implementação da
+simulação com dois \emph{access points}. A \autoref{captura_dois_aps}
+mostra como foi o resultado da simulação do \emph{Wi-Fi} no piso 2 do
+bloco A.
 
 \begin{figure}[ht]
     \caption{\label{captura_dois_aps} Simulação da propagação de sinais de microondas no bloco A utilizando 2 APs.
@@ -3186,15 +3261,16 @@ resultado da simulação do \emph{Wi-Fi} no piso 2 do bloco A.
 
 Como pode ser visto, a heurística pode então dar, como o resultado, dois
 pontos que visualmente aparentam ser muito bons. Na
-\autoref{captura_dois_aps} pode ser visto que os dois APs foram alocados
-pela metaheurística com uma distância de folga, fazendo com que possam
-aproveitar a propagação do espectro no ambiente. Com a escolha sugerida
-pelo SA, utilizando um \emph{access point} transmitindo a -25 \(dB\),
-pode-se também notar que algumas partes das salas nos extremos não estão
-recebendo uma qualidade de sinal como na sala em que os APs estão
-instalados, mas mesmo assim, a maior parte da área está recebendo sinal,
-havendo poucas zonas onde a potência recebida é inferior à sensibilidade
-do equipamento.
+\autoref{captura_dois_aps} pode ser visto que os dois \emph{access
+points} foram alocados pela metaheurística com uma distância de folga,
+fazendo com que possam aproveitar a propagação do espectro no ambiente.
+Com a escolha sugerida pelo \emph{Simulated Annealing}, utilizando um
+\emph{access point} transmitindo a -25 \(dB\), pode-se também notar que
+algumas partes das salas nos extremos não estão recebendo uma qualidade
+de sinal como na sala em que os \emph{access points} estão instalados,
+mas mesmo assim, a maior parte da área está recebendo sinal, havendo
+poucas zonas onde a potência recebida é inferior à sensibilidade do
+equipamento.
 
 Abaixo é possível visualizar o resumo da execução do algoritmo:
 
@@ -3218,11 +3294,16 @@ Abaixo é possível visualizar o resumo da execução do algoritmo:
     sinal Ruim      32.7%
 \end{lstlisting}
 
-bla bla bla
+Na \autoref{percent_bloco_a_2} tem-se a representação da cobertura por
+faixa de intensidade do sinal na simulação de dois \emph{access points}
+no segundo piso do bloco A. É válido ressaltar que utilizando dois
+\emph{access points} na simulação, a cobertura é ainda maior, logo a
+fatia que indica a zona de sombra corresponde a apenas 8,9\%, um valor
+inferior à metade do sombreamento quando havia somente um \emph{access
+point}.
 
 \begin{figure}[ht]
-    \caption{\label{percent_bloco_a_2} Representação em gráfico de pizza do resultado dado para a otimização
-     de um $access points$ no bloco C XXXXXXXXX. }
+    \caption{\label{percent_bloco_a_2} Representação do resultado dado para a otimização de dois $access points$ no segundo piso do bloco A. }
     \begin{center}
         \includegraphics[scale=0.7]{imagens/percent-bloco-a-2.png}
     \end{center}
@@ -3233,7 +3314,8 @@ O mesmo teste foi realizado com a planta baixa do bloco C, porém agora,
 para que seja possível ter uma maior cobertura da área do prédio, a
 simulação foi realizado com um equipamento com potência de -17 \(dB\).
 Na \autoref{captura_dois_aps_c}, pode ser visto quais são os pontos
-sugeridos pelo SA na busca para a alocação dos mesmos.
+sugeridos pelo \emph{Simulated Annealing} na busca para a alocação dos
+mesmos.
 
 \begin{figure}[ht]
     \caption{\label{captura_dois_aps_c} Simulação da propagação de sinais de microondas no bloco C utilizando 2 APs.
@@ -3244,12 +3326,13 @@ sugeridos pelo SA na busca para a alocação dos mesmos.
     \legend{Fonte: Elaboração do autor}
 \end{figure}
 
-Com o resultado dado pelo SA no bloco C, pode-se notar que foi possível
-cobrir praticamente toda a área. Tiveram algumas áreas com pontos cegos
-porém, podem ser consideradas de certa forma um mal necessário quando o
-objetivo é obter a maior cobertura do sinal. Um resultado ainda melhor
-pode ser encontrado se for feito um maior refinamento do SA. A saída
-dada pelo algoritmo é a seguinte:
+Com o resultado dado pelo \emph{Simulated Annealing} no bloco C, pode-se
+notar que foi possível cobrir praticamente toda a área. Tiveram algumas
+áreas com pontos cegos porém, podem ser consideradas de certa forma um
+mal necessário quando o objetivo é obter a maior cobertura do sinal. Um
+resultado ainda melhor pode ser encontrado se for feito um maior
+refinamento do \emph{Simulated Annealing}. A saída dada pelo algoritmo é
+a seguinte:
 
 \begin{lstlisting}[language=bash]
     $ python PlacementAPs.py 
@@ -3269,11 +3352,15 @@ dada pelo algoritmo é a seguinte:
     sinal Ruim      36.6%
 \end{lstlisting}
 
-bla bla bla bla
+Com \autoref{percent_bloco_c_2} tem-se a representação da cobertura por
+faixa de intensidade do sinal na simulação de dois \emph{access points}
+em ambos os pisos do bloco C. É notável que utilizando dois \emph{access
+points} na simulação, a zona de sombreamante caiu de 49,0\% na simulação
+com um \emph{access point} para 10,2\%, ou seja, um aproveitamente de
+38,8\% a mais da cobertura, adicionando apenas mais um equipamento.
 
 \begin{figure}[ht]
-    \caption{\label{percent_bloco_c_2} Representação em gráfico de pizza do resultado dado para a otimização 
-     de um $access points$ no bloco C XXXXXXXXX. }
+    \caption{\label{percent_bloco_c_2} Representação do resultado obtido para a otimização de dois $access points$ no bloco C.}
     \begin{center}
         \includegraphics[scale=0.7]{imagens/percent-bloco-c-2.png}
     \end{center}
@@ -3316,11 +3403,19 @@ A os valores dados na saída são os seguintes:
     sinal Ruim      27.7%
 \end{lstlisting}
 
-bla bla bla bla
+Com \autoref{percent_bloco_c_3} tem-se a representação da cobertura por
+faixa de intensidade do sinal na simulação de três \emph{access points}
+em ambos os pisos do bloco C. Ao utilizar-se três \emph{access points}
+na simulação, a zona de sombreamento aumentou, se comparada com a
+simulação de dois \emph{access points}; a cobertura de sinal ótimo
+também foi menor, resultado que pôde ser dado pelo fato da solução da
+metaheurística, no momento da simulação, ter ficado presa em um ótimo
+local e não ter conseguido obter um resultado melhor. O resultado da
+simulação não foi o esperado, uma vez que esperava-se um aumento
+significativo da solução cujo número de \emph{access points} era maior.
 
 \begin{figure}[ht]
-    \caption{\label{percent_bloco_c_3} Representação em gráfico de pizza do resultado dado para a otimização 
-     de um $access points$ no bloco C XXXXXXXXX.}
+    \caption{\label{percent_bloco_c_3} Representação do resultado para a otimização de três $access points$ no bloco C.}
     \begin{center}
         \includegraphics[scale=0.7]{imagens/percent-bloco-c-3.png}
     \end{center}
@@ -3364,50 +3459,51 @@ são os seguintes:
     sinal Ruim      30.4%
 \end{lstlisting}
 
-bla bla bla bla
+Com \autoref{percent_bloco_a_3} tem-se a representação da cobertura por
+faixa de intensidade do sinal na simulação de três \emph{access points}
+para o segundo piso do bloco A.
+
+Fica claro que ao utilizar-se três \emph{access points} na simulação, a
+zona de sombreamento tendeu-se a zero. Nenhum outro resultado das
+simulações para o bloco A mostrado anteriomente obteve um resultado em
+que a zona de sombra fosse tão menor. A fatia que representa o sinal
+ótimo não teve um grande aumento, mas se comparado aos resultados
+anteriores, foi significativo. No entanto, com o valor mínimo da zona de
+sombra, é possível garantir que toda a área do prédio seja coberta com o
+sinal. Ao ser aplicado em um projeto para a instituição, fica evidente
+que o acréscimo de equipamentos gerará um custo desnecessário.
 
 \begin{figure}[ht]
-    \caption{\label{percent_bloco_a_3} Representação em gráfico de pizza do resultado dado para a otimização 
-     de um $access points$ no bloco C XXXXXXXXX.}
+    \caption{\label{percent_bloco_a_3} Representação do resultado para a otimização 
+     de três $access points$ no bloco A.}
     \begin{center}
         \includegraphics[scale=0.7]{imagens/percent-bloco-a-3.png}
     \end{center}
     \legend{Fonte: Elaboração do autor}
 \end{figure}
 
-bla bla bla bla
+Após as demonstrações feitas neste capítulo, fica claro que a ferramenta
+desenvolvida neste trabalho auxilia na escolha e na decisão da
+quantidade e da alocação de \emph{access points} que podem ser
+utilizados para a cobertura das áreas desejadas. Todavia, a ferramenta
+desenvolvida neste trabalho pode passar por aprimoramentos que
+auxiliarão na modelagem do ambiente, fazendo o uso, cada vez mais, da
+verossimilhança, aproximando mais a simulação mais da realizadade. No
+entanto, se comparado aos \emph{softwares} comerciais, o \emph{software}
+desenvolvido neste trabalho executa uma das principais funções, sendo a
+mais relevante, o \emph{Wireless AP Placement}, sem custo financeiro e
+de código fonte livre. No capítulo seguinte é feita uma alusão aos
+possíveis trabalhos futuros, que se executados poderão aproximar o
+\emph{software} desenvolvido das versões pagas disponíveis no mercado.
 
-\chapter{TRABALHOS FUTUROS}\label{trabalhos-futuros}
-
-bla bla bla bla
-
-\chapter{CONSIDERAÇÕES FINAIS}\label{considerauxe7uxf5es-finais}
-
-O \emph{software} desenvolvido neste trabalho é capaz de (i) receber
-como entrada uma representação espacial 2D do ambiente (planta-baixa de
-um piso do edifício), podendo também ser informada a posição inicial dos
-APs como parâmetros adicionais para o algoritmo; (ii) realizar a
-simulação da propagação dos sinais de microondas dos APs Wi-Fi pelas
-dependências do edifício; (iii) aplicar a metaheurística computacional
-para explorar o espaço de soluções do posicionamento de APs; (iv)
-fornecer como saída a proposta de novo(s) posicionamento(s) dos APs
-visando ampliar a cobertura do sinal \emph{Wi-Fi} para aquele ambiente.
-
-O trabalho realizado foi disponibilizado de forma gratuita utilizando
-Licença Pública Geral GNU --- GPL no site \emph{github.com}. Até onde
-pudemos verificar, não há disponível um software livre, gratuito e de
-código-fonte aberto para \emph{Wireless AP Placement}, apenas soluções
-proprietárias, comerciais e custosas. Para reforçar a relevância deste
-trabalho, ressaltamos que ele possibilita testar disposições de APs sem
-o custo operacional de fisicamente movê-los, de maneira a propor uma
-disposição espacial dos mesmos que forneça uma maior cobertura e
-intensidade de sinal dentro do ambiente simulado.
+\chapter{TRABALHOS FUTUROS}\label{sec:futuros}
 
 Para trabalhos futuros, é necessária a realização de tratamento da
 interferência entre canais \emph{Wi-Fi} no caso de utilização de mais de
-quatro APs em um mesmo ambiente, além de uma coleta de dados mais
-abrangente para obtenção de parâmetros mais precisos o modelo de
-regressão logístico \emph{(NP-Log)}. Também, sugere-se que seja
+quatro \emph{access points} em um mesmo ambiente, além de uma coleta de
+dados mais abrangente para obtenção de parâmetros mais precisos o modelo
+de regressão logístico \emph{(NP-Log)} e tratamento de equipamentos de
+diferentes configurações e fabricantes. Também, sugere-se que seja
 utilizado mais de um modelo de propagação, complementando-se, visto que
 aparentemente um único modelo não realiza estimativas tão boas tanto
 para distâncias perto e longe. Portanto, sugere-se utilizar dois modelos
@@ -3419,8 +3515,56 @@ sugere-se a realização de simulação de propagação de sinais em ambiente
 3D, com um maior aproveitamento dos recursos disponibilizados pela
 biblioteca CUDA, objetivando uma maior precisão da obtenção dos pontos
 cegos dentro de cômodos. Para se obter resultados que possibilitem uma
-melhor busca pelos pontos de acesso para dois ou mais APs, novas
-técnicas deverão ser utilizadas para o cálculo da função objetivo.
+melhor busca pelos pontos de acesso para dois ou mais \emph{access
+points}, novas técnicas deverão ser utilizadas para o cálculo da função
+objetivo. Também é sugerido que outras metaheurísticas sejam
+implementadas e seus resultados comparados.
+
+\chapter{CONSIDERAÇÕES FINAIS}\label{sec:consideracoes}
+
+A ferramenta desenvolvida neste trabalho de conclusão de curso se torna
+útil e prática, uma vez que não havia disponível, no mercado, um
+\emph{software} livre, gratuito e de código-fonte aberto para a
+realização de \emph{Wireless AP Placement}. Nesse sentido, o
+\emph{software} desenvolvido neste trabalho (disponibilizado
+gratuitamente) é capaz de (i) receber como entrada uma representação
+espacial 2D do ambiente (planta-baixa de um piso do edifício), podendo
+também ser informada a posição inicial dos \emph{access points} como
+parâmetros adicionais para o algoritmo; (ii) realizar a simulação da
+propagação dos sinais de microondas dos \emph{access points}
+\emph{Wi-Fi} pelas dependências do edifício; (iii) aplicar a
+metaheurística computacional para explorar o espaço de soluções do
+posicionamento de \emph{access points}; (iv) fornecer como saída a
+proposta de novo(s) posicionamento(s) dos \emph{access points} visando
+ampliar a cobertura do sinal \emph{Wi-Fi} para aquele ambiente.
+
+Na versão final, o \emph{software} é capaz de receber como entrada uma
+representação do ambiente, realizando a simulação de propagação dos
+sinais considerando a atenuação nas paredes e no espaço livre. A
+metaheurística buscou maximizar cada vez mais a cobertura do sinal
+\emph{Wi-Fi} nas dependências do IFMG \emph{campus} Formiga. Assim,
+também foi possível construir um modelo de propagação que se adequasse
+às dependências do IFMG \emph{campus} Formiga, a partir da representação
+do ambiente fornecida pelo engenheiro da instituição. Além disso, é
+possível realizar a simulação da propagação do sinal \emph{wireless} de
+\emph{access points} \emph{Wi-Fi} através das dependências do
+\emph{campus}, informando ao \emph{software} quantos \emph{access
+points} se deseja alocar. Quando houver necessidade de ampliar, mesmo
+que temporariamente, a rede para a acomodação de novos pontos de acesso
+para telecomunicação, será fácil decidir os melhores locais para a
+alocação dos equipamentos. Com a solução desenvolvida, se torna viável
+ter uma rede \emph{wireless}, fazendo com que a cobertura de sinal possa
+abranger boa parte da área necessária, provendo uma qualidade de serviço
+satisfatória aos que fazem uso da rede.
+
+Como mencionado anteriormente, a ferramenta desenvolvida foi
+disponibilizada de forma gratuita, utilizando Licença Pública Geral GNU
+--- GPL no site \emph{github.com}\footnote{\url{https://github.com/SamuelTerra22}}.
+Para reforçar sua relevância, ressaltamos que ele possibilita testar
+disposições de \emph{access points} sem o custo operacional de
+fisicamente movê-los, de maneira a propor uma disposição espacial dos
+\emph{access points}, que forneça uma maior cobertura e intensidade de
+sinal dentro do ambiente simulado.
 
 ---------------------------------------------------------
 

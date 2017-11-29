@@ -1,19 +1,19 @@
 # Fdb version 3
-["bibtex xxx-Monografia"] 1511836248 "xxx-Monografia.aux" "xxx-Monografia.bbl" "xxx-Monografia" 1511836291
+["bibtex xxx-Monografia"] 1511922720 "xxx-Monografia.aux" "xxx-Monografia.bbl" "xxx-Monografia" 1511922954
   "/usr/share/texlive/texmf-dist/bibtex/bib/abntex2/abntex2-options.bib" 1356995954 5396 4eb260dac60f150ae608d45252853090 ""
   "/usr/share/texlive/texmf-dist/bibtex/bst/abntex2/abntex2-alf.bst" 1456875486 60064 6469892b646cc99dbd8ecd5e965537d8 ""
-  "xxx-Monografia.aux" 1511836268 46805 4b12c274fc675437f0f60f45cddfd517 ""
+  "xxx-Monografia.aux" 1511922898 47747 56c5022e89f654bcd9a6321ca1d06c16 ""
   "xxx-Monografia.bcf" 0 -1 0 ""
-  "xxx-referencias.bib" 1511836290 21534 547a0007072b762ea9aec1a285a07fe4 ""
+  "xxx-referencias.bib" 1511922952 21534 547a0007072b762ea9aec1a285a07fe4 ""
   (generated)
   "xxx-Monografia.blg"
   "xxx-Monografia.bbl"
-["makeindex xxx-Monografia.idx"] 1492301312 "xxx-Monografia.idx" "xxx-Monografia.ind" "xxx-Monografia" 1511836291
-  "xxx-Monografia.idx" 1511836267 0 d41d8cd98f00b204e9800998ecf8427e ""
+["makeindex xxx-Monografia.idx"] 1492301312 "xxx-Monografia.idx" "xxx-Monografia.ind" "xxx-Monografia" 1511922954
+  "xxx-Monografia.idx" 1511922897 0 d41d8cd98f00b204e9800998ecf8427e ""
   (generated)
-  "xxx-Monografia.ind"
   "xxx-Monografia.ilg"
-["pdflatex"] 1511836267 "xxx-Monografia.tex" "xxx-Monografia.pdf" "xxx-Monografia" 1511836291
+  "xxx-Monografia.ind"
+["pdflatex"] 1511922897 "xxx-Monografia.tex" "xxx-Monografia.pdf" "xxx-Monografia" 1511922954
   "/etc/texmf/web2c/texmf.cnf" 1509201609 1101 af7716885e081ab43982cab7b4672c1a ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1272929888 3287 e6b82fe08f5336d4d5ebc73fb1152e87 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/adobe/zapfding/pzdr.tfm" 1136768653 1528 f853c4d1b4e0550255e02831fdc8496f ""
@@ -196,22 +196,22 @@
   "imagens/wifi-central.jpg" 1510027375 12379 2981da32fb0b2a4de44498f1d3dc13fa ""
   "images/canais-1.jpg" 0 -1 0 ""
   "latexcustomizacao.sty" 1511476026 517 ff3186c0cd2d933a61b430ba89274483 ""
-  "xxx-Monografia.aux" 1511836268 46805 4b12c274fc675437f0f60f45cddfd517 ""
-  "xxx-Monografia.bbl" 1511836248 10817 592e1b8994280b8ab22319699a37e7b3 "bibtex xxx-Monografia"
-  "xxx-Monografia.brf" 1511836268 3098 f68c963e215b3d0f19a5eb979665f7c8 ""
+  "xxx-Monografia.aux" 1511922898 47747 56c5022e89f654bcd9a6321ca1d06c16 ""
+  "xxx-Monografia.bbl" 1511922720 10817 592e1b8994280b8ab22319699a37e7b3 "bibtex xxx-Monografia"
+  "xxx-Monografia.brf" 1511922898 3236 ba97220445bbd62242b55340c73fb2fa ""
   "xxx-Monografia.ind" 1492304914 0 d41d8cd98f00b204e9800998ecf8427e "makeindex xxx-Monografia.idx"
-  "xxx-Monografia.lof" 1511836268 5469 b312c83dd626a5f5b67c6d4370c322d5 ""
-  "xxx-Monografia.loq" 1511836268 0 d41d8cd98f00b204e9800998ecf8427e ""
-  "xxx-Monografia.lot" 1511836268 983 cac081d024c13624d654a973fdae3edc ""
-  "xxx-Monografia.tex" 1511836291 168958 21ae6ac569bdf8ed36343dbf316d899e ""
-  "xxx-Monografia.toc" 1511836268 6869 9c3ae53dafdeab9ab6b54ff7f2683490 ""
+  "xxx-Monografia.lof" 1511922898 5390 856cae7d658d8c0e80d8aff4e107320e ""
+  "xxx-Monografia.loq" 1511922898 0 d41d8cd98f00b204e9800998ecf8427e ""
+  "xxx-Monografia.lot" 1511922898 983 13ad09d25b94d75d927b5103a7fac5cf ""
+  "xxx-Monografia.tex" 1511922954 179437 81655e502644b79a81d345d45e438fd8 ""
+  "xxx-Monografia.toc" 1511922898 7031 2045bdbc1f80764d7eabc8841a3cdbcd ""
   (generated)
-  "xxx-Monografia.lof"
+  "xxx-Monografia.brf"
+  "xxx-Monografia.aux"
+  "xxx-Monografia.pdf"
+  "xxx-Monografia.loq"
+  "xxx-Monografia.lot"
   "xxx-Monografia.idx"
   "xxx-Monografia.log"
-  "xxx-Monografia.pdf"
-  "xxx-Monografia.lot"
-  "xxx-Monografia.aux"
-  "xxx-Monografia.loq"
-  "xxx-Monografia.brf"
   "xxx-Monografia.toc"
+  "xxx-Monografia.lof"

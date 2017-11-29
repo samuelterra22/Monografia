@@ -18,10 +18,12 @@
 \backcite {LUO}{{32}{2.4.1}{subsection.2.4.1}}
 \backcite {RAPPAPORT}{{33}{2.4.1}{equation.2.4.1}}
 \backcite {RAPPAPORT}{{33}{2.4.1}{equation.2.4.2}}
-\backcite {LUO}{{33}{2.4.2}{subsection.2.4.2}}
+\backcite {LUO}{{34}{2.4.2}{subsection.2.4.2}}
 \backcite {RAPPAPORT}{{34}{2.4.2}{subsection.2.4.2}}
 \backcite {LUO}{{35}{2.4.3}{subsection.2.4.3}}
 \backcite {MATHURANATHAN}{{35}{2.4.3}{equation.2.4.6}}
+\backcite {RAPPAPORT}{{35}{2.4.3}{equation.2.4.6}}
+\backcite {LUO}{{35}{2.4.3}{equation.2.4.6}}
 \backcite {LUO}{{36}{2.4.4}{subsection.2.4.4}}
 \backcite {LUO, RAPPAPORT}{{36}{2.4.5}{subsection.2.4.5}}
 \backcite {LUO, RAPPAPORT}{{36}{2.4.5}{subsection.2.4.5}}
@@ -34,13 +36,14 @@
 \backcite {LEDESMA}{{44}{1}{figure.3.1}}
 \backcite {SILVA}{{46}{3.2}{section.3.2}}
 \backcite {MAGNUN}{{46}{3.2}{section.3.2}}
+\backcite {GUIDO}{{46}{3.2}{section.3.2}}
 \backcite {MAGNUN}{{47}{3.2}{section.3.2}}
 \backcite {GUIDO}{{47}{3.2}{section.3.2}}
 \backcite {KIRK}{{48}{3.4}{section.3.4}}
 \backcite {NVIDIA}{{48}{3.4}{section.3.4}}
 \backcite {NVIDIA}{{48}{3.4.1}{subsection.3.4.1}}
 \backcite {KIRK}{{48}{3.4.1}{subsection.3.4.1}}
-\backcite {FARBER}{{48}{3.4.1}{subsection.3.4.1}}
+\backcite {FARBER}{{49}{3.4.1}{subsection.3.4.1}}
 \backcite {CUDA}{{49}{3.4.1}{subsection.3.4.1}}
 \backcite {TOOLKIT}{{49}{3.4.2}{subsection.3.4.2}}
 \backcite {LAM}{{50}{3.4.3}{subsection.3.4.3}}
@@ -54,12 +57,12 @@
 \backcite {LENTZ, NAJNUDEL, SANDEEP}{{53}{4}{chapter.4}}
 \backcite {RENSBURG,SULAIMAN}{{53}{4}{chapter.4}}
 \backcite {RENSBURG,SULAIMAN}{{53}{4}{chapter.4}}
-\backcite {RAPPAPORT}{{63}{4.2.2}{figure.4.9}}
+\backcite {RAPPAPORT}{{62}{4.2.2}{figure.4.9}}
 \backcite {RAPPAPORT}{{64}{4.2.4}{subsection.4.2.4}}
-\backcite {KASE,THAKUR}{{65}{4.3}{section.4.3}}
-\backcite {KASE,THAKUR}{{65}{4.3}{section.4.3}}
-\backcite {MARSCHALLINGER}{{65}{4.3}{section.4.3}}
+\backcite {KASE,THAKUR}{{66}{4.3}{section.4.3}}
+\backcite {KASE,THAKUR}{{66}{4.3}{section.4.3}}
+\backcite {MARSCHALLINGER}{{66}{4.3}{section.4.3}}
 \backcite {PATRICK}{{67}{4.4}{section.4.4}}
 \backcite {AARTS}{{68}{4.4.1}{subsection.4.4.1}}
 \backcite {NETO}{{68}{4.4.2}{subsection.4.4.2}}
-\backcite {VINICIUS}{{83}{19}{figure.4.19}}
+\backcite {VINICIUS}{{84}{19}{figure.4.19}}

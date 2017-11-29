@@ -1,25 +1,25 @@
 \select@language {brazil}
 \select@language {brazil}
 \contentsline {figure}{\numberline {1}{\ignorespaces Comportamento do $Simulated Annealing$ durante a exploração do espaço de busca}}{44}{figure.3.1}
-\contentsline {figure}{\numberline {2}{\ignorespaces Representação do ambiente a partir do arquivo DXF contendo a planta-baixa}}{55}{figure.4.2}
+\contentsline {figure}{\numberline {2}{\ignorespaces Representação do ambiente a partir do arquivo $DXF$ contendo a planta-baixa}}{55}{figure.4.2}
 \contentsline {figure}{\numberline {3}{\ignorespaces Medição da intensidade de sinal $vs.$ modelos de sua propagação}}{57}{figure.4.3}
-\contentsline {figure}{\numberline {4}{\ignorespaces Ajuste de curvas da 2P-Logística, 3P-LogNormal e 3P-LogLogística}}{58}{figure.4.4}
-\contentsline {figure}{\numberline {5}{\ignorespaces Qualidade do ajuste (GOF) da distribuição 3P-LogLogística}}{59}{figure.4.5}
-\contentsline {figure}{\numberline {6}{\ignorespaces Qualidade do ajuste (GOF) da distribuição 3P-LogNormal}}{60}{figure.4.6}
-\contentsline {figure}{\numberline {7}{\ignorespaces Previsão de RSSI da 4P-LogLogística para distâncias em $ log_{10}(x) $ metros}}{61}{figure.4.7}
-\contentsline {figure}{\numberline {8}{\ignorespaces Previsão de RSSI da 4P-Logística para distâncias em metros}}{62}{figure.4.8}
-\contentsline {figure}{\numberline {9}{\ignorespaces Comparação dos modelos de propagação LogDistance e NP-Logístico}}{77}{figure.4.9}
-\contentsline {figure}{\numberline {10}{\ignorespaces Decaimento RSSI de $Wi-Fi$ de acordo com a distância ao AP}}{78}{figure.4.10}
-\contentsline {figure}{\numberline {11}{\ignorespaces Canais não sobrepostos para WLANs de 2,4 GHz}}{78}{figure.4.11}
-\contentsline {figure}{\numberline {12}{\ignorespaces Absorção do sinal por cada parede atravessada.}}{78}{figure.4.12}
-\contentsline {figure}{\numberline {13}{\ignorespaces Interseção de retas.}}{79}{figure.4.13}
-\contentsline {figure}{\numberline {14}{\ignorespaces Representação do ambiente a partir do arquivo DXF contendo a planta-baixa}}{79}{figure.4.14}
-\contentsline {figure}{\numberline {15}{\ignorespaces Simulação da propagação utilizando 256 cores}}{80}{figure.4.15}
-\contentsline {figure}{\numberline {16}{\ignorespaces Regiões com sinal abaixo da sensibilidade máxima dos equipamentos}}{80}{figure.4.16}
-\contentsline {figure}{\numberline {17}{\ignorespaces Grafo do ciclo de execução do algoritmo }}{81}{figure.4.17}
-\contentsline {figure}{\numberline {18}{\ignorespaces Divisão interna da GPU dos blocks, grids e threads}}{82}{figure.4.18}
-\contentsline {figure}{\numberline {19}{\ignorespaces Captura realizada no Bloco C, para um AP "18:8B:9D:69:E8:B2" posicionado em (x=660,y=260) e irradiando no Canal 11 (2.462 GHz).}}{83}{figure.4.19}
-\contentsline {figure}{\numberline {20}{\ignorespaces Simulação realizada com dados empíricos nas mesmas configurações do bloco C. }}{83}{figure.4.20}
+\contentsline {figure}{\numberline {4}{\ignorespaces Ajuste de curvas da 2P-Logística, 3P-LogNormal e 3P-LogLogística}}{59}{figure.4.4}
+\contentsline {figure}{\numberline {5}{\ignorespaces Qualidade do ajuste (GOF) da distribuição 3P-LogLogística}}{60}{figure.4.5}
+\contentsline {figure}{\numberline {6}{\ignorespaces Qualidade do ajuste (GOF) da distribuição 3P-LogNormal}}{61}{figure.4.6}
+\contentsline {figure}{\numberline {7}{\ignorespaces Previsão de RSSI da 4P-LogLogística para distâncias em $ log_{10}(x) $ metros}}{62}{figure.4.7}
+\contentsline {figure}{\numberline {8}{\ignorespaces Previsão de RSSI da 4P-Logística para distâncias em metros}}{63}{figure.4.8}
+\contentsline {figure}{\numberline {9}{\ignorespaces Comparação dos modelos de propagação LogDistance e NP-Logístico}}{78}{figure.4.9}
+\contentsline {figure}{\numberline {10}{\ignorespaces Decaimento RSSI de $Wi-Fi$ de acordo com a distância ao $access point$}}{79}{figure.4.10}
+\contentsline {figure}{\numberline {11}{\ignorespaces Canais não sobrepostos para WLANs de 2,4 GHz}}{79}{figure.4.11}
+\contentsline {figure}{\numberline {12}{\ignorespaces Absorção do sinal por cada parede atravessada.}}{79}{figure.4.12}
+\contentsline {figure}{\numberline {13}{\ignorespaces Interseção de retas.}}{80}{figure.4.13}
+\contentsline {figure}{\numberline {14}{\ignorespaces Representação do ambiente a partir do arquivo $DXF$ contendo a planta-baixa}}{80}{figure.4.14}
+\contentsline {figure}{\numberline {15}{\ignorespaces Simulação da propagação utilizando 256 cores}}{81}{figure.4.15}
+\contentsline {figure}{\numberline {16}{\ignorespaces Regiões com sinal abaixo da sensibilidade máxima dos equipamentos}}{81}{figure.4.16}
+\contentsline {figure}{\numberline {17}{\ignorespaces Grafo do ciclo de execução do algoritmo }}{82}{figure.4.17}
+\contentsline {figure}{\numberline {18}{\ignorespaces Divisão interna da GPU dos blocks, grids e threads}}{83}{figure.4.18}
+\contentsline {figure}{\numberline {19}{\ignorespaces Captura realizada no Bloco C, para um *access point* "18:8B:9D:69:E8:B2" posicionado em (x=660,y=260) e irradiando no Canal 11 (2.462 GHz).}}{84}{figure.4.19}
+\contentsline {figure}{\numberline {20}{\ignorespaces Simulação realizada com dados empíricos nas mesmas configurações do bloco C. }}{84}{figure.4.20}
 \contentsline {figure}{\numberline {21}{\ignorespaces Simulação da propagação de sinais de microondas no edifício utilizando versão inicial do algoritmo. }}{86}{figure.5.21}
 \contentsline {figure}{\numberline {22}{\ignorespaces Simulação da propagação inicial de sinais de microondas utilizando versão inicial do algoritmo.}}{87}{figure.5.22}
 \contentsline {figure}{\numberline {23}{\ignorespaces Comportamento da função objetivo do Simulated Annealing na busca do melhor ponto}}{88}{figure.5.23}
@@ -28,10 +28,10 @@
 \contentsline {figure}{\numberline {26}{\ignorespaces Simulação da propagação de sinais de microondas no bloco C utilizando 1 AP. }}{90}{figure.5.26}
 \contentsline {figure}{\numberline {27}{\ignorespaces Representação em gráfico de pizza do resultado dado para a otimização de um $access points$ no bloco C. }}{91}{figure.5.27}
 \contentsline {figure}{\numberline {28}{\ignorespaces Simulação da propagação de sinais de microondas no bloco A utilizando 2 APs. }}{92}{figure.5.28}
-\contentsline {figure}{\numberline {29}{\ignorespaces Representação em gráfico de pizza do resultado dado para a otimização de um $access points$ no bloco C XXXXXXXXX. }}{93}{figure.5.29}
-\contentsline {figure}{\numberline {30}{\ignorespaces Simulação da propagação de sinais de microondas no bloco C utilizando 2 APs. }}{93}{figure.5.30}
-\contentsline {figure}{\numberline {31}{\ignorespaces Representação em gráfico de pizza do resultado dado para a otimização de um $access points$ no bloco C XXXXXXXXX. }}{94}{figure.5.31}
+\contentsline {figure}{\numberline {29}{\ignorespaces Representação do resultado dado para a otimização de dois $access points$ no segundo piso do bloco A. }}{93}{figure.5.29}
+\contentsline {figure}{\numberline {30}{\ignorespaces Simulação da propagação de sinais de microondas no bloco C utilizando 2 APs. }}{94}{figure.5.30}
+\contentsline {figure}{\numberline {31}{\ignorespaces Representação do resultado obtido para a otimização de dois $access points$ no bloco C.}}{95}{figure.5.31}
 \contentsline {figure}{\numberline {32}{\ignorespaces Simulação da propagação de sinais de microondas no bloco C utilizando 3 APs com potência de -25 $dB$. }}{95}{figure.5.32}
-\contentsline {figure}{\numberline {33}{\ignorespaces Representação em gráfico de pizza do resultado dado para a otimização de um $access points$ no bloco C XXXXXXXXX.}}{96}{figure.5.33}
+\contentsline {figure}{\numberline {33}{\ignorespaces Representação do resultado para a otimização de três $access points$ no bloco C.}}{96}{figure.5.33}
 \contentsline {figure}{\numberline {34}{\ignorespaces Simulação da propagação de sinais de microondas no bloco A utilizando 3 APs com potência de -25 $dB$. }}{97}{figure.5.34}
-\contentsline {figure}{\numberline {35}{\ignorespaces Representação em gráfico de pizza do resultado dado para a otimização de um $access points$ no bloco C XXXXXXXXX.}}{97}{figure.5.35}
+\contentsline {figure}{\numberline {35}{\ignorespaces Representação do resultado para a otimização de três $access points$ no bloco A.}}{98}{figure.5.35}
