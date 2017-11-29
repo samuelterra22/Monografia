@@ -290,11 +290,14 @@ INPUT imagens/logistic-regression-1.jpg
 INPUT imagens/logistic-regression-2.jpg
 INPUT imagens/modelos-propagacao.jpg
 INPUT imagens/wifi-central.jpg
+INPUT imagens/canais-1.jpg
 INPUT imagens/absorcao-parede.jpg
 INPUT imagens/inter.jpg
 INPUT imagens/planta-labels.jpg
 INPUT imagens/representacao-simulacao.jpg
 INPUT imagens/sumulacao-sensibilidade.jpg
+INPUT /usr/share/texmf/fonts/tfm/public/lm/ec-lmri8.tfm
+INPUT /usr/share/texmf/fonts/tfm/public/lm/ec-lmri7.tfm
 INPUT code/sobrepoe_solucoes_MAX.py
 INPUT /usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty

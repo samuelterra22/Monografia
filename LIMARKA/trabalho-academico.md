@@ -62,7 +62,7 @@ toda a área necessária ou sofrer atenuações devido às características do
 ambiente.
 
 Ademais, redes *Wi-Fi* podem sofrer interferências externas, tais como
-telefones sem fio ou “babás” eletrônicas que operem na mesma faixa de
+telefones sem fio ou "babás" eletrônicas que operem na mesma faixa de
 frequência (banda ISM de 2.4 GHz), motores elétricos ou outras redes sem
 fio que estejam próximos do *access point* e irradiem EMI na mesma frequência do
 canal utilizado, seja ele na banda de 2.4 GHz (IEEE 802.11 b/g) ou 5.8
@@ -77,7 +77,7 @@ Como consequência de toda a atenuação e interferência sofrida, a rede
 *wireless* pode ficar inoperante ou dar a impressão de baixo desempenho.
 Por parte da maioria dos usuários finais, uma reclamação comum é a
 dificuldade de acessar determinado conteúdo e o acesso à rede parecer
-“lento”. De um modo geral, por serem leigos no assunto, muitos usuários
+"lento". De um modo geral, por serem leigos no assunto, muitos usuários
 de rede sem fio acabam culpando o provedor de acesso à internet ou
 equipe de TI da instituição pela má qualidade do serviço quando, na
 verdade, a solução para o problema passaria por uma inspeção no espectro
@@ -144,14 +144,14 @@ e Práticas*, de Theodore S. Rappaport.
 -----------------------
 
 De acordo com o trabalho publicado por Battiti, Brunato e Delai \cite{BATTITI},
-“*Optimal Wireless Access Point Placement for Location-Dependent
-Services*”, vários grupos de pesquisadores independentes têm proposto
+"*Optimal Wireless Access Point Placement for Location-Dependent
+Services*", vários grupos de pesquisadores independentes têm proposto
 métodos para fazer estimativa a respeito da posição do usuário \cite{DALSSOTO}, 
 com base na intensidade dos sinais de rádio recebidos de múltiplos *access points* \cite{NAJNUDEL}. 
 Partindo desta distinta aplicação, os
 pesquisadores propõem uma nova abordagem para o *AP Placement*, pois
-consideram que a localização “é um importante parâmetro que pode ser
-usado para determinar o comportamento do sistema” \cite[p. 1]{BATTITI}. 
+consideram que a localização "é um importante parâmetro que pode ser
+usado para determinar o comportamento do sistema" \cite[p. 1]{BATTITI}. 
 Desse modo, a proposta deste TCC, que utilizará um
 modelo de propagação do sinal *Wi-Fi* em uma simulação do ambiente do IFMG
 *campus* Formiga é, mais uma vez, justificada pela necessidade de se ter
@@ -271,7 +271,7 @@ arredores e uma variável aleatória normal que representa o desvio padrão
 os modelos de propagação que serviram como base da simulação da propagação
 de sinais *wireless*.
 
-Modelos de propagação
+Modelos de propagação {#sec:modelos}
 ---------------------
 
 Quando se deseja realizar um bom desempenho e planejamento da cobertura
@@ -655,7 +655,7 @@ usuário execute um exame básico do local de implantação da rede
 *wireless*, possibilitando mapear o sinal, ruído e até mesmo o
 desempenho de usuários. O *AirMagnet* possui também a sua versão *Pro*,
 que amplia ainda mais as capacidades oferecidas pela versão *Express*.
-Nela é adicionada a funcionalidade “*Planner*”, pela qual é possível
+Nela é adicionada a funcionalidade "*Planner*", pela qual é possível
 realizar desde a implantação de um *access point* até o orçamento dos
 gastos, além de suporte para a implantação de vários andares, inspeções
 técnicas de ambientes externos (*outdoor*), verificação e análise de
@@ -692,7 +692,7 @@ capacidades especificados. Quase que de imediato, o ESS irá identificar
 o número ideal de *access points*, com os melhores locais para seus
 posicionamentos e seus respectivos canais, simulando o comportamento de
 como a rede irá ser executada antes de ir para o local. Com sua
-funcionalidade “*3D Planner*”, é considerado o espalhamento do sinal
+funcionalidade "*3D Planner*", é considerado o espalhamento do sinal
 entre os andares do prédio para ajudar a minimizar a interferência dos
 canais.
 
@@ -794,11 +794,11 @@ de aceitação de novas soluções seja também alta, evitando ótimos locais.
 No momento que a temperatura começa a cair, a chance de aceitar novas soluções diminui e o sistema tende a ficar cada vez mais estável obtendo uma solução definitiva.
 
 \begin{figure}[htb]
-	\caption{\label{simulated_annealing} Comportamento do $Simulated Annealing$ durante a exploração do espaço de busca}
+	\caption{\label{simulated_annealing} Comportamento do $Simulated Annealing$ durante a exploração do espaço de busca.}
 	\begin{center}
 		\includegraphics[scale=0.185]{imagens/simulated-annealing.png}
 	\end{center}
-	\legend{Fonte: \cite{LEDESMA}}
+	\legend{Fonte: \cite{LEDESMA}.}
 \end{figure}
 
 Problemas no campo das heurísticas podem ser modelados como problemas de
@@ -1112,7 +1112,7 @@ explicação simples dos parâmetros podem ser vistos a seguir \cite{NUMBA}.
     double)*;
 
 -   ***nopython*** é um valor booleano quando seu valor for *true*;
-    força o método a ser compilado no modo *“nopython”*. Neste modo de
+    força o método a ser compilado no modo *"nopython"*. Neste modo de
     compilação, o Numba gera código que não acessa a API Python C. Este
     modo de compilação produz o código de desempenho mais alto, mas
     requer que os tipos nativos de todos os valores no método possam ser
@@ -1287,7 +1287,7 @@ posteriormente à captura da imagem, para melhor compreensão e
 localização do leitor.
 
 \begin{figure}[htb]
-	\caption{\label{repre_ambiente_dxf_1} Representação do ambiente a partir do arquivo $DXF$ contendo a planta-baixa}
+	\caption{\label{repre_ambiente_dxf_1} Representação do ambiente a partir do arquivo $DXF$ contendo a planta-baixa.}
 	\begin{center}
 		\includegraphics[scale=0.4]{imagens/planta-labels.jpg}
 	\end{center}
@@ -1307,8 +1307,7 @@ será tratada em detalhes em seção posterior.
 Propagação dos sinais
 ---------------------
 
-Conforme assunto abordado na seção onde foram falados sobre os modelos
-de propagação, se faz necessário uma boa escolha de qual modelo de
+Conforme assunto abordado na seção \ref{sec:modelos}, se faz necessário uma boa escolha de qual modelo de
 propagação de sinais utilizar, para obter uma boa representação da
 intensidade dos sinais para aquela banda do espectro eletromagnético e,
 assim, simular algo mais próximo da realidade. Quanto maior for a
@@ -1319,7 +1318,7 @@ modelados (frequências, distâncias, paredes, pisos, materiais, etc).
 ### Definição do modelo de propagação para sinais *Wi-Fi*
 
 Foram conduzidos nas dependências do *campus* Formiga experimentos para
-medição do decaimento da intensidade do sinal *Wi-Fi*. Foram realizadas
+medição do decaimento da intensidade do sinal *Wi-Fi*. Utilizou-se
 medições *indoor* nos corredores do *campus*. Para tal, foi posicionado no
 corredor um *access point* Cisco WAP200 (IEEE 802.11b/g) e configurado
 para utilizar um canal *Wi-Fi* que correspondesse a uma frequência que,
@@ -1356,18 +1355,18 @@ geometricamente complexo (paredes, piso, teto, portas, janelas, mobília,
 etc).
 
 \begin{figure}[htb]
-	\caption{\label{medicao_modelos} Medição da intensidade de sinal $vs.$ modelos de sua propagação}
+	\caption{\label{medicao_modelos} Medição da intensidade de sinal $vs.$ modelos de sua propagação.}
 	\begin{center}
 		\includegraphics[scale=0.68]{imagens/medicao-modelos.jpg}
 	\end{center}
-	\legend{Fonte: Elaborado pelo autor}
+	\legend{Fonte: Elaborado pelo autor.}
 \end{figure}
 
-Pela é possível observar que, dos modelos de propagação analisados, o
-*LogDistance Path Loss* apresentou um bom casamento entre os valores de
+Pela \autoref{medicao_modelos} é possível observar que, dos modelos de propagação analisados, o
+*LogDistance Path Loss* apresentou um boa concordância entre os valores de
 suas estimativas e os valores reais mensurados, sendo portanto
 considerado como o mais promissor. Entretanto, observe que a \autoref{medicao_modelos}
-apresenta apenas uma das várias medições realizadas, ilustrando
+apresenta ainda apenas uma das várias medições realizadas, ilustrando
 portanto o decaimento exponencial da intensidade do sinal *Wi-Fi* ao
 longo de um corredor do bloco B. Neste caso, o modelo *LogDistance* foi
 calibrado para uma distância de referência ($d_{0}$) de 10 metros com a
@@ -1376,7 +1375,7 @@ caminho manualmente ajustado como $\gamma$ = 3 (*path loss exponent*).
 
 ### Ajuste do modelo de propagação
 
-Não podemos basear nossa simulação em parâmetros de um modelo de
+Não pode-se basear nossa simulação em parâmetros de um modelo de
 configuração calibrado para medições coletadas em *apenas um corredor de
 um pavimento de um prédio do *campus* Formiga*. Se faz necessário calibrar
 o modelo de propagação para que que seja mais abrangente para o
@@ -1384,22 +1383,22 @@ o modelo de propagação para que que seja mais abrangente para o
 realizadas em diversas salas, corredores e áreas internas de nosso caso
 de estudo.
 
-Para tal, as informações de distância *vs.* intensidade das várias medições
+Para tal, as informações de distância em função da intensidade das várias medições
 conduzidas foram utilizadas como entrada para um ajuste de curvas
 estatístico, técnica de regressão que foi conduzida no *software*
-*R-Project*[^21]. Inicialmente, conduzimos regressões com um ajuste de
+*R-Project*[^21]. Inicialmente, realizou-se regressões com um ajuste de
 curvas estatístico utilizando os pacotes *fitdistrplus*[^22] e
 *FAdist*[^23] do *software* *R-Project*.
 
 \begin{figure}[htb]
-	\caption{\label{curvas} Ajuste de curvas da 2P-Logística, 3P-LogNormal e 3P-LogLogística}
+	\caption{\label{curvas} Ajuste de curvas da 2P-Logística, 3P-LogNormal e 3P-LogLogística.}
 	\begin{center}
 		\includegraphics[scale=0.8]{imagens/curvas.jpg}
 	\end{center}
-	\legend{Fonte: Elaborado pelo autor}
+	\legend{Fonte: Elaborado pelo autor.}
 \end{figure}
 
-Pela comparação do ajuste de curvas ilustrado na \autoref{curvas}, observamos que a
+Pela comparação do ajuste de curvas ilustrado na \autoref{curvas}, observou-se que a
 distribuição Logística com apenas 2 parâmetros (logis) não consegue
 modelar bem o decaimento do nível de sinal observado na medições do RSSI
 no *campus* Formiga. Por outro lado, as distribuições 3P-LogNormal
@@ -1415,55 +1414,56 @@ os critérios de qualidade do ajuste AIC (*Akaike’s Information Criterion*)
 e BIC (*Bayesian Information Criterion*).
 
 \begin{figure}[htb]
-	\caption{\label{log_logistica} Qualidade do ajuste (GOF) da distribuição 3P-LogLogística}
+	\caption{\label{log_logistica} Qualidade do ajuste (GOF) da distribuição 3P-LogLogística.}
 	\begin{center}
 		\includegraphics[scale=0.47]{imagens/log-logistica.jpg}
 	\end{center}
-	\legend{Fonte: Elaborado pelo autor}
+	\legend{Fonte: Elaborado pelo autor.}
 \end{figure}
 
 \begin{figure}[htb]
-	\caption{\label{log_normal} Qualidade do ajuste (GOF) da distribuição 3P-LogNormal}
+	\caption{\label{log_normal} Qualidade do ajuste (GOF) da distribuição 3P-LogNormal.}
 	\begin{center}
 		\includegraphics[scale=0.47]{imagens/log-normal.jpg}
 	\end{center}
-	\legend{Fonte: Elaborado pelo autor}
+	\legend{Fonte: Elaborado pelo autor.}
 \end{figure}
-Considerando o melhor ajuste das distribuições LogNormal e LogLogistica,
-ambas com 3 parâmetros, passamos a considerar uma regressão estatística
+
+Considerando o melhor ajuste das distribuições *LogNormal* e *LogLogistica*,
+ambas com 3 parâmetros, passou-se a considerar uma regressão estatística
 com distribuições estatísticas mais complexas, de 4 ou mais parâmetros,
 mas mantendo o comportamento logarítmico. Uma regressão **NP-Logística**
 foi conduzida com a utilização do pacote *nplr*, também no *software*
 *R-Project*.
 
 Para obtermos um melhor resultado, considerando o bom desempenho das
-distribuições LogNormal e LogLogística, instruímos o modelo de regressão
+distribuições *LogNormal* e *LogLogística*, instruímos o modelo de regressão
 Logístico a utilizar uma base logarítmica para os valores do eixo $x$, ou
 seja, a distância ao *access point* deve ser interpretada como $log_{10}(x)$. Em
 uma livre interpretação, isso corresponderia a instruir a regressão
-logística a utilizar modelos NP-LogLogísticos. Assim, buscamos partir
+logística a utilizar modelos NP-LogLogísticos. Assim, buscou-se partir
 dos bons resultados obtidos na análise prévia, mas tentando melhorá-los
 com a inclusão de um quarto ou quinto parâmetros de ajuste da
-distribuição. Obtivemos um melhor *fitness* com um modelo Logístico de 4
+distribuição. Obteu-se um melhor *fitness* com um modelo Logístico de 4
 parâmetros (*4-Parameter Logistic* ou simplesmente 4PL), conforme
 resultados apresentados a seguir. Conforme ilustra a e a , o melhor
 ajuste de curva (GOF) foi obtido com uma distribuição 4P-Logística e com
 a distância fornecida em em escala logarítmica, como $log_{10}(x)$ metros.
 
 \begin{figure}[htb]
-	\caption{\label{logistic_regression_1} Previsão de RSSI da 4P-LogLogística para distâncias em $ log_{10}(x) $ metros}
+	\caption{\label{logistic_regression_1} Previsão de RSSI da 4P-LogLogística para distâncias em $ log_{10}(x) $ metros.}
 	\begin{center}
 		\includegraphics[scale=0.47]{imagens/logistic-regression-1.jpg}
 	\end{center}
-	\legend{Fonte: Elaborado pelo autor}
+	\legend{Fonte: Elaborado pelo autor.}
 \end{figure}
 
 \begin{figure}[htb]
-	\caption{\label{logistic_regression_2} Previsão de RSSI da 4P-Logística para distâncias em metros}
+	\caption{\label{logistic_regression_2} Previsão de RSSI da 4P-Logística para distâncias em metros.}
 	\begin{center}
 		\includegraphics[scale=0.47]{imagens/logistic-regression-2.jpg}
 	\end{center}
-	\legend{Fonte: Elaborado pelo autor}
+	\legend{Fonte: Elaborado pelo autor.}
 \end{figure}
 
 Enfim, a partir dos parâmetros da 4P-Logística (4PL ou logis4) obtidos
@@ -1471,16 +1471,16 @@ pela regressão, podemos configurar as constantes de sua equação e, a
 partir dela, obtiver a estimativa de decaimento do nível de sinal com o
 aumento da distância do *access point*, calibradas para a realidade do *campus*
 Formiga. A equação característica de uma NP-Logística de cinco
-parâmetros é:
+parâmetros é,
 
 \begin{equation}
-f(x; A,B,C,D,E) = D + (A-D) / ( (1+(x/C)^B)^E )
+	f(x; A,B,C,D,E) = D + (A-D) / ( (1+(x/C)^B)^E ),
 \end{equation}
 
-na qual os parâmetros A, B, C, D e E são obtidos ao aplicar-se a
+\noindent na qual os parâmetros A, B, C, D e E são obtidos ao aplicar-se a
 regressão logística para os valores de intensidade de sinal (em $dBm$ ou
-mW). Observe que, fixando “$E=1$” obtemos a equação da $4PL$ (*4-Parameter
-Logistic*) e se fixarmos ambos “$D=0$” e “$E=1$”, obtemos a equação da 3PL
+mW). Observe que, fixando "$E=1$" obtem-se a equação da $4PL$ (*4-Parameter
+Logistic*) e se fixar ambos "$D=0$" e "$E=1$", obtem-se a equação da 3PL
 (*3-Parameter Logistic*). Os cinco parâmetros da $NP-Log$ tem o seguinte
 significado:
 
@@ -1493,7 +1493,7 @@ significado:
     a 2 metros (2,4 GHz) ou 4 metros (5,6 GHz).
 
 -   B = Inclinação da curva, que pode ser positiva ou negativa. No caso
-    de propagação de sinais de rádio, para obtermos um decaimento do
+    de propagação de sinais de rádio, para obter um decaimento do
     sinal provavelmente B será positivo.
 
 -   C = Ponto de inflexão, definido como o ponto onde a curvatura muda
@@ -1506,8 +1506,8 @@ significado:
     grande. No caso do *Wi-Fi*, pode-se utilizar um valor de referência
     aferido a 100 metros (limita da WLAN).
 
--   E = Fator de assimetria. Para E=1, temos uma curva simétrica em
-    torno do ponto de inflexão e, portanto, temos uma equação logística
+-   E = Fator de assimetria. Para E=1, tem-se uma curva simétrica em
+    torno do ponto de inflexão e, portanto, uma equação logística
     de quatro parâmetros.
 
 Para utilizar tal distribuição estatística como modelo de propagação,
@@ -1521,24 +1521,25 @@ da potência de transmissão ($P_{t}$) do *access point* para obter a previsão 
 recebida ($P_{r}$):
 
 \begin{equation}
-Pr(x) = Pt - PL(x)
+	Pr(x) = Pt - PL(x),
 \end{equation}
-onde $P_{r}$ é a potência recebida à distância $x$ do transmissor; $P_{t}$ é a
+
+\noindent onde $P_{r}$ é a potência recebida à distância $x$ do transmissor; $P_{t}$ é a
 potência do sinal do transmissor (ex.: -20 $dBm$) e $PL$ é a perda do sinal
 ao longo do caminho entre o transmissor e receptor (calculada com a
-equação da 4PL ou da *LogDistance*). Inicialmente, implementamos tais
-fórmulas em uma planilha para visualizarmos graficamente uma comparação
+equação da 4PL ou da *LogDistance*). Inicialmente, implementou-se tais
+equações em uma planilha para visualizarmos graficamente uma comparação
 das medições de RSSI realizadas no *campus* com a expectativa de
-decaimento proporcionado pelos modelos LogDistance e 4P-Logístico. A \autoref{modelos_propagacao}
+decaimento proporcionado pelos modelos *LogDistance* e *4P-Logístico*. A \autoref{modelos_propagacao}
 ilustra o decaimento se sinal previsto por cada um dos modelos acima
 citados em relação aos valores reais de medição coletados.
 
 \begin{figure}[htb]
-	\caption{\label{modelos_propagacao} Comparação dos modelos de propagação LogDistance e NP-Logístico}
+	\caption{\label{modelos_propagacao} Comparação dos modelos de propagação LogDistance e NP-Logístico.}
 	\begin{center}
 		\includegraphics[scale=0.6]{imagens/modelos-propagacao.jpg}
 	\end{center}
-	\legend{Fonte: Elaborado pelo autor}
+	\legend{Fonte: Elaborado pelo autor.}
 \end{figure}
 
 Já na \autoref{modelos_propagacao} (b), é apresentada a extrapolação que os modelos de propagação de
@@ -1576,17 +1577,17 @@ sinal recebido (RSSI), com o aumento da distância de cada ponto da
 matriz com o *access point* *Wi-Fi* (ponto central).
 
 \begin{figure}[htb]
-	\caption{\label{wifi_central} Decaimento RSSI de $Wi-Fi$ de acordo com a distância ao $access point$}
+	\caption{\label{wifi_central} Decaimento RSSI de $Wi-Fi$ de acordo com a distância ao $access point$.}
 	\begin{center}
 		\includegraphics[scale=0.5]{imagens/wifi-central.jpg}
 	\end{center}
-	\legend{Fonte: Elaborado pelo autor}
+	\legend{Fonte: Elaborado pelo autor.}
 \end{figure}
 
 Neste ponto, vale notar que o escopo deste trabalho não considera
 interferências entre canais *Wi-Fi* de vários *access points*, de maneira que para
 cada *access point* simulado é gerada uma matriz numérica individual, que receberá
-as estimativas de valores para a intensidade de sinal em decibel
+as estimativas de valores para a intensidade de sinal em Decibel
 *miliWatt* ($dBm$). O propósito deste trabalho é sugerir um melhor
 posicionamento dos *access points* e a decisão de não terem sido modeladas
 interferências entre *access points* diferentes é baseada no fato de que a
@@ -1597,16 +1598,16 @@ de banda é de 20 MHz e portanto podem coexistir até quatro *access points* em 
 mesmo ambiente, conforme ilustra a \autoref{canais}.
 
 \begin{figure}[htb]
-	\caption{\label{canais} Canais não sobrepostos para WLANs de 2,4 GHz}
+	\caption{\label{canais} Canais não sobrepostos para WLANs de 2,4 GHz.}
 	\begin{center}
-		\includegraphics[scale=0.6]{images/canais-1.jpg}
+		\includegraphics[scale=0.6]{imagens/canais-1.jpg}
 	\end{center}
-	\legend{Fonte: \url{https://en.wikipedia.org/wiki/File:NonOverlappingChannels2.4GHzWLAN-en.svg}}
+	\legend{Disponível em: \url{https://en.wikipedia.org/wiki/File:NonOverlappingChannels2.4GHzWLAN-en.svg}. Acesso em 29 out. 2017.}
 \end{figure}
 
 ### Atenuação do sinal ao atravessar paredes
 
-Para obtermos um resultado que fosse condizente com a realidade, ou
+Para obter um resultado que fosse condizente com a realidade, ou
 seja, que representasse quanto o sinal *Wi-Fi* degradava à medida que se
 propagava através de cômodos em sequência, foi adicionada uma técnica
 para realizar estimativas da absorção do sinal ao atravessar paredes. Na
@@ -1617,7 +1618,7 @@ para simular de maneira mais próxima da realidade o valor da intensidade
 do sinal em um determinado ponto, atravessando o ambiente simulado desde
 o *access point* até tal ponto.
 
-Seguimos a modelagem utilizada pela literatura para modelos de
+Segui-se a modelagem utilizada pela literatura para modelos de
 propagação em pequena escala, onde o valor esperado para o sinal em
 determinado ponto é subtraído do valor em $dB$ que representa a energia
 absorvida por parede multiplicado pela quantidade de paredes
@@ -1641,12 +1642,12 @@ ponto destino.
 	\begin{center}
 		\includegraphics[scale=0.7]{imagens/absorcao-parede.jpg}
 	\end{center}
-	\legend{Fonte: Elaborado pelo autor}
+	\legend{Fonte: Elaborado pelo autor.}
 \end{figure}
 
 Para ter uma noção de quantas paredes o sinal sofreria atenuação, foram
 utilizadas equações de geometria euclidiana. No momento em que se faz
-necessário o cálculo da absorção das paredes para um ponto \[x, y\]
+necessário o cálculo da absorção das paredes para um ponto $[x, y]$
 qualquer da matriz, a lista de linhas representando as paredes da
 planta-baixa deve ser percorrida. A técnica utilizada foi a intersecção
 de retas num plano cartesiano (*Line-Line Intersection*), buscando
@@ -1663,10 +1664,10 @@ do arquivo $DXF$, contendo a planta-baixa. Cada linha no $DXF$ possui duas
 coordenadas bidimensionais, para o ponto inicial e o ponto final do
 segmento de reta. O outro segmento de reta é formado entre o *access point* e o
 ponto para o qual está sendo calculada a intensidade do sinal. A \autoref{intersecao_retas},
-ilustra o segmento de reta formado entre um dado ponto (x1,y1) na matriz
-e o local do *access point* (x2,y2), cruzando com um outro segmento de reta formado
-pelas extremidades da parede (x3,y3) e (x4,y4). Caso haja ponto de
-interseção (x,y) significa que o sinal terá atravessado tal parede e
+ilustra o segmento de reta formado entre um dado ponto ($x_{1}, y_{1}$) na matriz
+e o local do *access point* ($x_{2}, y_{2}$), cruzando com um outro segmento de reta formado
+pelas extremidades da parede ($x_{3}, y_{3}$) e ($x_{4}, y_{4}$). Caso haja ponto de
+interseção ($x, y$) significa que o sinal terá atravessado tal parede e
 soma-se um à quantidade de paredes atravessadas. Caso contrário, se não
 houver ponto de interseção entre os dois segmentos de reta, significa
 que o sinal cruzou livremente o espaço entre o *access point* e o destino sem cruzar
@@ -1677,10 +1678,10 @@ com tal parede.
 	\begin{center}
 		\includegraphics[scale=0.5]{imagens/inter.jpg}
 	\end{center}
-	\legend{Fonte: Elaborado pelo autor}
+	\legend{Fonte: Elaborado pelo autor.}
 \end{figure}
 
-Entretanto, apesar de tal verificação ser barata para um ponto e as
+Entretanto, apesar de tal verificação ser melhor aceita para um ponto e as
 paredes candidatas, deve-se lembrar que é um cálculo a mais a ser
 efetuado para cada um dos $N \times M$ pontos da matriz para cada uma
 das $K$ paredes, ou seja, $N \times M \times K$ cálculos a serem
@@ -1692,7 +1693,8 @@ quantidades possuem uma mesma ordem de magnitude (centenas), o algoritmo
 passa a ter custo temporal de $O(n^{4})$. Assim, com a adição dessa nova
 modelagem na propagação do sinal *Wi-Fi*, o tempo de execução do
 algoritmo extrapolou os costumeiros segundos e beirou as dezenas de
-minutos.
+minutos, com isso, tem-se um cenário propício para buscar uma forma de otimizar
+esta solução. A seguir, será aprentado o processo utilizado para a visualização dos dados.
 
 Visualização dos dados
 ----------------------
@@ -1709,17 +1711,17 @@ e paredes. Foi registrado o uso que cada cômodo possui atualmente no
 *campus* Formiga.
 
 \begin{figure}[ht]
-	\caption{\label{repre_ambiente_dxf_2} Representação do ambiente a partir do arquivo $DXF$ contendo a planta-baixa}
+	\caption{\label{repre_ambiente_dxf_2} Representação do ambiente a partir do arquivo $DXF$ contendo a planta-baixa do bloco A do IFMG $campus$ Formiga.}
 	\begin{center}
 		\includegraphics[scale=0.4]{imagens/planta-labels.jpg}
 	\end{center}
-	\legend{Fonte: Elaborado pelo autor}
+	\legend{Fonte: Elaborado pelo autor.}
 \end{figure}
 
 Com o preenchimento da matriz de propagação de acordo com a posição do
 *access point* e com o respectivo valor da intensidade do sinal, se
-tornou difícil a visualização de quanto o sinal ficava ruim quanto maior
-era a distância e mais paredes eram atravessadas, através de uma simples
+tornou difícil a visualização de quanto o sinal ficava a medida que a 
+distância aumenta e mais paredes eram atravessadas, através de uma simples
 inspeção numérica. Tendo a matriz preenchida com a intensidade de sinal
 ($dB$), suficiente para a realização dos cálculos com a função objetivo
 da heurística de otimização, fica pendente a visualização a olho nú, não
@@ -1727,7 +1729,7 @@ sendo viável distinguir dentre milhares de valores numa matriz, se
 poderia ser considerada uma simulação boa ou ruim.
 
 Considerando a vasta quantidade de ferramentas e bibliotecas
-disponibilizadas pela linguagem Python, foi necessário utilizar algum
+disponibilizadas pela linguagem Python, foi necessário utilizar um
 método para transformar a matriz de intensidade de sinais em algo um
 tanto quanto visível e de fácil interpretação. Diante disso, o PyGame
 foi utilizado na visualização da matriz resultante. Com a obtenção dos
@@ -1741,35 +1743,34 @@ comunicação *Wi-Fi*. Esta visualização dos resultados pode ser vista na
 \autoref{represetacao_simulacao}.
 
 \begin{figure}[ht]
-	\caption{\label{represetacao_simulacao} Simulação da propagação utilizando 256 cores}
+	\caption{\label{represetacao_simulacao} Simulação da propagação utilizando 256 cores no mapa de calor.}
 	\begin{center}
 		\includegraphics[scale=0.4]{imagens/representacao-simulacao.jpg}
 	\end{center}
-	\legend{Fonte: Elaborado pelo autor}
+	\legend{Fonte: Elaborado pelo autor.}
 \end{figure}
 
 Foi implementado um método capaz de explorar os recursos disponibilizados
-pelo PyGame para ilustrar a matriz resultante. Tal método, que pode ser
-visto abaixo, percorre a matriz obtendo o valor calculado em dBm da
-posição \[x, y\] e mapeia uma cor de acordo com o gradiente de cores escolhido. Adicionalmente,
+pelo PyGame para ilustrar a matriz resultante. Tal método, percorre a matriz obtendo o valor calculado em dBm da
+posição $[x, y]$ e mapeia uma cor de acordo com o gradiente de cores escolhido. Adicionalmente,
 foi utilizada condição que avalia o valor do sinal em determinado ponto
 com uma constante que representa a sensibilidade máxima definida pelos
 equipamentos de *Wi-Fi*. Os valores de sensibilidade dos diversos
 equipamentos presentes no *campus* Formiga do IFMG variam entre -85 e -100
 $dB$. Assim, se o valor calculado para a simulação da propagação for
 menor que a sensibilidade do *access point*, na visualização do mesmo ele é
-considerado como um “ponto cego” ou uma “região de sombra”, uma vez que
+considerado como um "ponto cego" ou uma "região de sombra", uma vez que
 não há intensidade de sinal suficiente para obter uma boa qualidade de
 serviço (ou sequer conectar na rede *Wi-Fi*). A \autoref{simulacao_sensibilidade} ilustra as regiões de
 sombra no ambiente simulado com apenas um *access point* centralizado transmitindo
 com uma potência de -17 $dB$.
 
 \begin{figure}[ht]
-	\caption{\label{simulacao_sensibilidade} Regiões com sinal abaixo da sensibilidade máxima dos equipamentos}
+	\caption{\label{simulacao_sensibilidade} Regiões com sinal abaixo da sensibilidade máxima dos equipamentos no bloco C.}
 	\begin{center}
 		\includegraphics[scale=0.7]{imagens/sumulacao-sensibilidade.jpg}
 	\end{center}
-	\legend{Fonte: Elaborado pelo autor}
+	\legend{Fonte: Elaborado pelo autor.}
 \end{figure}
 
 O algoritmo foi desenvolvido de tal forma que seja possível durante a exploração do espaço de soluções pelo
@@ -1783,11 +1784,11 @@ solução final que o usuário aguarda.
 Heurística de otimização
 ------------------------
 
-Para o cumprimento dos objetivos e um bom resultado, foi implementada a
+Para o cumprimento dos objetivos e a obtenção de um bom resultado, foi implementada a
 metaheurística, que irá explorar o espaço de soluções de posicionamento
 dos *access points* no modelo espacial do ambiente, visando à maximização da
 cobertura do sinal (dentre outras possíveis métricas). Conforme exposto
-na seção de materiais e métodos, foi utilizada a metaheurística proposta
+no capítulo de materiais e métodos, foi utilizada a metaheurística proposta
 por Scoot Kirkpatrick \cite{PATRICK}. O *Simulated Annealing* foi utilizado para a
 realização do processo de otimização, buscando encontrar a melhor
 solução viável, considerando o objetivo do problema em questão e o
@@ -1824,9 +1825,10 @@ nova solução corrente. A aceitação desse tipo de solução é mais provável
 em altas temperaturas e bastante improvável em temperaturas reduzidas.
 Para reproduzir essas características, geralmente usa-se, para calcular
 a probabilidade de se aceitar a nova solução, uma função conhecida por
-critério de aceitação de *Boltzmann* \cite{AARTS}, que em sua fórmula o valor de $T$ é a temperatura
-atual e que regula a probabilidade de soluções com pior custo. Tal
-fórmula pode ser vista abaixo:
+critério de aceitação de *Boltzmann* \cite{AARTS}, que em sua expressão o valor de $T$ é a temperatura
+atual e que regula a probabilidade de soluções com pior custo e $\Delta$ representa a variação da
+função objetivo, isto é, $\Delta = f(s') - f(s)$. Tal
+expressão pode ser escrita como:
 
 \begin{equation}
 	e^{(-\Delta/T)}
@@ -1838,7 +1840,7 @@ objetivo, o número de sucessos representando a vizinhança, que também é
 fator de parada do *Simulated Annealing*, e o número de perturbações por iteração é
 incrementado. O método é finalizado quando a temperatura chega a um
 valor próximo de zero, situação esta em que a chance de se aceitar uma
-solução vizinha pior é extremamente baixa, ou seja, quando o sistema estiver estável.
+solução vizinha pior é extremamente baixa, ou seja, quando o sistema estiver estável \cite{VAN}.
 
 Por fim, a melhor solução encontrada pela metaheurística é retornada,
 indicando a proposta do novo posicionamento dos *access points* e a cobertura do
@@ -1846,7 +1848,7 @@ sinal *Wi-Fi* alcançada, caso tal solução fosse implantada no ambiente
 real. Além disso, é fornecida uma visualização gráfica do resultado a
 ser obtido com a solução proposta utilizando o PyGame.
 
-### Calibração dos parâmetros do Simulated Annealing
+### Calibração dos parâmetros do *Simulated Annealing*
 
 Definir quais os parâmetros utilizar na metaheurística não é uma tarefa
 fácil, então para isso, qualquer ferramenta que auxiliasse neste
@@ -1886,13 +1888,13 @@ definidos.
 
 \begin{table}[ht]
 	\centering
-	\caption{Fatores para parâmetro para o \textit{Simulated Annealing} na primeira iteração}
+	\caption{Fatores para parâmetro para o \textit{Simulated Annealing} na primeira iteração.}
 	\label{tabela_parametros_1}
 	\resizebox{\textwidth}{!}{%
 		\begin{tabular}{|l|l|c|c|c|c|c|c|c|c|c|}
 			\hline
 			\multicolumn{1}{|c|}{} &  & \multicolumn{4}{c|}{\textbf{FATORES}} & \multicolumn{4}{c|}{\textbf{FATORES}} & \multicolumn{1}{l|}{\textbf{FIXO}} \\ \hline
-			\textbf{k=} & 4 & \multicolumn{2}{c|}{\begin{tabular}[c]{@{}c@{}}A\\ (n de vizinhos)\end{tabular}} & \multicolumn{2}{c|}{\begin{tabular}[c]{@{}c@{}}B\\ (temperatura inicial)\end{tabular}} & \multicolumn{2}{c|}{\begin{tabular}[c]{@{}c@{}}C\\ (fator resfriamento)\end{tabular}} & \multicolumn{2}{c|}{\begin{tabular}[c]{@{}c@{}}D\\ (perturbações)\end{tabular}} & Iteracoes \\ \hline
+			\textbf{k=} & 4 & \multicolumn{2}{c|}{\begin{tabular}[c]{@{}c@{}}A\\ (n de vizinhos)\end{tabular}} & \multicolumn{2}{c|}{\begin{tabular}[c]{@{}c@{}}B\\ (temperatura inicial)\end{tabular}} & \multicolumn{2}{c|}{\begin{tabular}[c]{@{}c@{}}C\\ (fator resfriamento)\end{tabular}} & \multicolumn{2}{c|}{\begin{tabular}[c]{@{}c@{}}D\\ (perturbações)\end{tabular}} & Iterações \\ \hline
 			\multirow{2}{*}{\textbf{n=}} & \multirow{2}{*}{Niveis} & 1 & 20 & 1 & 100 & 1 & 75\% & 1 & 10 & 1000 \\ \cline{3-11} 
 			&  & 2 & 40 & 2 & 200 & 2 & 95\% & 2 & 20 & 1000 \\ \hline
 		\end{tabular}%
@@ -1903,7 +1905,7 @@ O resultado computado é dado na \autoref{candidatos_parametros_1}:
 
 \begin{table}[ht]
 	\centering
-	\caption{Candidatos a parâmetros na primeira iteração}
+	\caption{Candidatos a parâmetros na primeira iteração.}
 	\label{candidatos_parametros_1}
 	\resizebox{\textwidth}{!}{%
 		\begin{tabular}{|l|c|c|c|c|}
@@ -1931,7 +1933,7 @@ iteração do planejamento fatorial $2^{k}$ podem ser vistos na \autoref{tabela_
 
 \begin{table}[ht]
 	\centering
-	\caption{Fatores para parâmetro para o \textit{Simulated Annealing} na segunda iteração}
+	\caption{Fatores para parâmetro para o \textit{Simulated Annealing} na segunda iteração.}
 	\label{tabela_parametros_2}
 	\resizebox{\textwidth}{!}{%
 		\begin{tabular}{|l|l|c|c|c|c|c|c|c|c|c|}
@@ -1948,7 +1950,7 @@ O resultado dado pela configuração da \autoref{tabela_parametros_2} pode ser v
 
 \begin{table}[ht]
 	\centering
-	\caption{Candidatos a parâmetros na segunda iteração}
+	\caption{Candidatos a parâmetros na segunda iteração.}
 	\label{candidatos_parametros_2}
 	\resizebox{\textwidth}{!}{%
 		\begin{tabular}{|l|c|c|c|c|}
@@ -1973,13 +1975,13 @@ terceira iteração e último teste.
 
 \begin{table}[ht]
 	\centering
-	\caption{Fatores para parâmetro para o \textit{Simulated Annealing} na terceira iteração}
+	\caption{Fatores para parâmetro para o \textit{Simulated Annealing} na terceira iteração.}
 	\label{tabela_parametros_3}
 	\resizebox{\textwidth}{!}{%
 		\begin{tabular}{|l|l|c|c|c|c|c|c|c|c|c|}
 			\hline
 			\multicolumn{1}{|c|}{} &  & \multicolumn{4}{c|}{\textbf{FATORES}} & \multicolumn{4}{c|}{\textbf{FATORES}} & \multicolumn{1}{l|}{\textbf{FIXO}} \\ \hline
-			\textbf{k=} & 4 & \multicolumn{2}{c|}{\begin{tabular}[c]{@{}c@{}}A\\ (n de vizinhos)\end{tabular}} & \multicolumn{2}{c|}{\begin{tabular}[c]{@{}c@{}}B\\ (temperatura inicial)\end{tabular}} & \multicolumn{2}{c|}{\begin{tabular}[c]{@{}c@{}}C\\ (fator resfriamento)\end{tabular}} & \multicolumn{2}{c|}{\begin{tabular}[c]{@{}c@{}}D\\ (perturbações)\end{tabular}} & Iteracoes \\ \hline
+			\textbf{k=} & 4 & \multicolumn{2}{c|}{\begin{tabular}[c]{@{}c@{}}A\\ (n de vizinhos)\end{tabular}} & \multicolumn{2}{c|}{\begin{tabular}[c]{@{}c@{}}B\\ (temperatura inicial)\end{tabular}} & \multicolumn{2}{c|}{\begin{tabular}[c]{@{}c@{}}C\\ (fator resfriamento)\end{tabular}} & \multicolumn{2}{c|}{\begin{tabular}[c]{@{}c@{}}D\\ (perturbações)\end{tabular}} & Iterações \\ \hline
 			\multirow{2}{*}{\textbf{n=}} & \multirow{2}{*}{Niveis} & 1 & 80 & 1 & 300 & 1 & 80\% & 1 & 5 & 1000 \\ \cline{3-11} 
 			&  & 2 & 60 & 2 & 600 & 2 & 85\% & 2 & 10 & 1000 \\ \hline
 		\end{tabular}%
@@ -1990,7 +1992,7 @@ De acordo com a configuração da \autoref{tabela_parametros_3}  são dados os c
 
 \begin{table}[ht]
 	\centering
-	\caption{Candidatos a parâmetros na terceira iteração}
+	\caption{Candidatos a parâmetros na terceira iteração.}
 	\label{candidatos_parametros_3}
 	\resizebox{\textwidth}{!}{%
 		\begin{tabular}{|l|c|c|c|c|}
@@ -2004,24 +2006,24 @@ De acordo com a configuração da \autoref{tabela_parametros_3}  são dados os c
 	}
 \end{table}
 
-Os resultados apresentados acima passaram por três refinamentos. Assim,
+Os resultados apresentados na \autoref{candidatos_parametros_3} passaram por três refinamentos. Assim,
 como dito no início desta seção, o teste foi realizado com o intuito de
 aprimorar os parâmetros do *Simulated Annealing* com apenas um *access point*. A
 estratégia para a versão final e com múltiplos *access points* é definir
 também como um fator (variável), o valor do raio de perturbação e fazer
 com que ele seja uma porcentagem da largura da matriz de propagação,
 tornando-o dinâmico de acordo com o tamanho da planta. A \autoref{parametros_metaheuristica} mostra de uma
-forma melhor como ficaram os parâmetros utilizados na metaheurística:
+forma melhor como ficaram os parâmetros utilizados na metaheurística.
 
 \begin{table}[]
 	\centering
-	\caption{Parâmetros definitivos utilizados na metaheurística}
+	\caption{Parâmetros definitivos utilizados na metaheurística.}
 	\label{parametros_metaheuristica}
 	\resizebox{\textwidth}{!}{%
 		\begin{tabular}{|c|c|c|c|c|c|}
 			\hline
 			\textbf{\begin{tabular}[c]{@{}c@{}}Raio de \\ perturbação\end{tabular}}              & \textbf{\begin{tabular}[c]{@{}c@{}}Número máximo\\  de iterações\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}Número máximo \\ de perturbações\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}Número máximo \\ de vizinhos\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}Decaimento da \\ temperatura (Alpha)\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}Temperatura \\ inicial\end{tabular}} \\ \hline
-			\begin{tabular}[c]{@{}c@{}}WIDTH * 0.025\\ (2.5\% da largura da matriz)\end{tabular} & 600 *  APs                                                                & 5                                                                                 & 80                                                                            & 85\%                                                                                  & 300 *  APs                                                            \\ \hline
+			\begin{tabular}[c]{@{}c@{}}WIDTH * (0.025)\\ (2.5\% da largura da matriz)\end{tabular} & 600 * ( n de APs )                                                             & 5                                                                                 & 80                                                                            & 85\%                                                                                  & 300 * ( n de APs )                                                           \\ \hline
 		\end{tabular}%
 	}
 \end{table}
@@ -2035,8 +2037,8 @@ testes feitos repetidas vezes.
 Avaliação da solução
 --------------------
 
-Nesta seção apresentaremos como foram implementadas as técnicas
-utilizadas para avaliações com um ou mais *access points* bem como o
+Nesta seção apresenta-se como foram implementadas as técnicas
+utilizadas para avaliações com um ou mais *access points*, bem como o
 aperfeiçoamento da função objetivo.
 
 ### Avaliação da solução com um AP {#sec:avalia_one_ap}
@@ -2058,7 +2060,7 @@ miliwatts dos sinais simulados era demasiado custosa de se calcular e
 trouxe pouco benefício quanto à exploração do espaço de soluções pelo
 *Simulated Annealing*.
 
-Considerando o acima exposto, decidimos por manter os valores da matriz
+Considerando o acima exposto, decidiu-se por manter os valores da matriz
 resultante em $dB$, uma escala logarítmica que representa a ordem de
 magnitude da intensidade do sinal. Assim, apesar de não ser
 conceitualmente correto somar valores de potência em $dB$, nosso objetivo
@@ -2067,17 +2069,17 @@ ambiente simulado, mas sim ter uma noção da ordem de magnitude do quanto
 de sinal útil aquela simulação do ambiente apresentava. Observe que as
 interfaces de rede sem fio tipicamente apresentam sensibilidade mínima
 em torno de -85 $dB$ a -100 $dB$ (em torno de $3,162\times10^{-12} W$ a
-no mínimo $1\times10^{-13} W$), assim sendo, quanto mais “positivo”
+no mínimo $1\times10^{-13} W$), assim sendo, quanto mais "positivo"
 fosse o valor da função objetivo avaliada, maior seria o montante da
 potência dos sinais que cobriam o ambiente simulado. Levando em
-considerações tais fatos, experimentamos com diversas maneiras de
+considerações tais fatos, experimentou-se com diversas maneiras de
 sumarizar a matriz em um só valor para ser avaliado como função objetivo
 e curiosamente, aquele que apresentou o melhor custo-benefício foi
 justamente a soma simples de todos os valores da matriz, mesmo que as
 informações nela armazenada estivessem em $dB$. Numa inspeção visual da
 solução proposta pelo *Simulated Annealing*, com a coloração dos
 valores de $dB$ em um gradiente de cores de acordo com o posicionamento
-do *Access Point*, podemos observar que a partir de um ponto aleatório,
+do *access point*, pode-se observar que a partir de um ponto aleatório,
 a metaheurística conduzia as soluções candidatas para a região central
 do ambiente 2D, como seria desejado.
 
@@ -2118,7 +2120,7 @@ matrizes de resultados também não é algo que dê um resultado correto.
 Foi, então, implementado um método que realizava a sobreposição das
 matrizes de resultado da propagação. Para o *Simulated Annealing* saber se a escolha era
 ruim ou boa, precisava transformar essa escolha em um número. Nesse
-sentido, de acordo com as n matrizes de resultado de $ \textit{n} $
+sentido, de acordo com as $n$ matrizes de resultado de $\textit{n}$
 *access points*, foi necessário realizar suas sobreposições.
 
 Tal método recebe como parâmetro uma lista (ou *array*, ou vetor, em
@@ -2127,11 +2129,11 @@ simulação de todos os *access points* e uma variável *size* que corresponde �
 quantidade de *access points* no ambiente. Posteriormente é feito um laço de
 repetição percorrendo a lista de matrizes e guardado as matrizes máximas
 utilizando o método *maximum()* da biblioteca Numpy retornando tal valor.
-O método que realiza essa operação pode ser visto abaixo.
+O método que realiza essa operação pode ser visualizado a seguir.
 
 \lstinputlisting[language=Python]{code/sobrepoe_solucoes_MAX.py}
 
-O método acima retorna à matriz resultante. O método que realiza a
+Tal método retorna à matriz resultante e realiza a
 avaliação da lista de *access points* fará uso da matriz para obter um valor a se
 comparar no processo de busca de um ponto melhor no *Simulated
 Annealing*. Os cálculos para a penalização de áreas onde o sinal tem uma
@@ -2142,11 +2144,11 @@ Análise da utilização de recursos
 ---------------------------------
 
 A fim de buscar um melhor visualização do fluxo de execução do
-algoritmo, foi utilizada uma ferramenta de profile, chamada *cProfile*,
+algoritmo, foi utilizada uma ferramenta de *profile*, chamada *cProfile*,
 para geração do arquivo com extensão *.cprof* e o *software*
 *pyprof2calltree* para realização desta análise. Com tais ferramentas é
 possível obter análises da porcentagem de tempo gasto em cada método do
-algoritmo, de acordo com o tempo total. Como é possível ver abaixo, foi
+algoritmo, de acordo com o tempo total. Como é possível ver a seguir, foi
 gerada uma imagem de saída utilizando o *software* *pyprof2calltree* com o
 fluxo de execução do método *Run*, que é responsável desde os cálculos
 de proporção da matriz/planta, leitura de arquivos de entrada, até a
@@ -2154,11 +2156,11 @@ etapa final, com a exibição do resultado em forma gráfica, utilizando o
 PyGame.
 
 \begin{figure}[ht]
-	\caption{\label{cprofile} Grafo do ciclo de execução do algoritmo	}
+	\caption{\label{cprofile} Grafo do ciclo de execução do algoritmo.}
 	\begin{center}
 		\includegraphics[scale=0.48]{imagens/graph.jpg}
 	\end{center}
-	\legend{Fonte: Elaboração do autor}
+	\legend{Fonte: Elaboração do autor.}
 \end{figure}
 
 Assim, cada retângulo do grafo da \autoref{cprofile} representa um método implementado,
@@ -2182,15 +2184,15 @@ transição de um código sequencial para um código paralelizado foi feita
 aos poucos. No início, foi importado da biblioteca numba o módulo *jit*
 e adicionado sob todos os cabeçalhos dos métodos a anotação *@jit*.
 Apenas com isso, o código será compilado em código de máquina no momento
-que for executado (*just-in-time*). Abaixo é possível ver um exemplo de
-um método que será compilado para código de máquina utilizando a
-anotação *@jit*:
+que for executado (*just-in-time*). A seguir é possível ver um exemplo de
+um método que foi compilado para código de máquina utilizando a
+anotação *@jit*,
 
 \lstinputlisting[language=Python]{code/calc_distance.py}
 
 Após utilizar as anotações nos métodos, foi escolhido o método que
 demandava mais recursos e demandava todo o tempo. Utilizando o resultado
-obtido pelo Profile, foi possível ver que o método era o que realizava a
+obtido pelo *Profile*, foi possível ver que o método era o que realizava a
 avaliação da solução em ponto dentro do *Simulated Annealing*. Neste
 momento, o método calcula a intensidade do sinal para cada ponto da
 matriz e, para cada ponto, calcula a absorção das paredes, percorrendo
@@ -2200,7 +2202,7 @@ a se verificar absorções.
 
 Posteriormente à decisão do método a deixar a cargo da GPU realizar os
 cálculos, todo o código foi transcrito de forma a dividir todo o
-trabalho entre os núcleos de CUDA disponíveis. No código abaixo é
+trabalho entre os núcleos de CUDA disponíveis. No código a seguir é
 possível ver, no método que realiza a propagação do sinal, que uma
 matriz utilizando a biblioteca numpy é criada, as dimensões dos *blocks*
 e *grids* (os valores foram escolhidos empiricamente, dependem do
@@ -2217,27 +2219,27 @@ Na \autoref{grid_blocks} é possível compreender facilmente como é a divisão 
 *grids* e *threads*.
 
 \begin{figure}[ht]
-	\caption{\label{grid_blocks} Divisão interna da GPU dos blocks, grids e threads}
+	\caption{\label{grid_blocks} Divisão interna da GPU dos blocks, grids e threads.}
 	\begin{center}
 		\includegraphics[scale=0.4]{imagens/block-grid.jpg}
 	\end{center}
-	\legend{Fonte: \url{https://en.wikipedia.org/wiki/Thread_block}}
+	\legend{Disponível em: \url{https://en.wikipedia.org/wiki/Thread_block}. Acesso em 28/10/2017}
 \end{figure}
 
 O equipamento utilizado para o desenvolvimento utiliza uma placa de
 vídeo NVIDIA modelo GeForce GT 740M[^25] com 2GB de memória dedicada;
-possui 384 núcleos CUDA, com um clock básico de 993 MHz, 1300 milhões de
+possui 384 núcleos CUDA, com um *clock* básico de 993 MHz, 1.300 milhões de
 transistores e com vazão do barramento PCIe de até 80 Gb/s.
 
-O método “*simulate\_kernel\_gpu*” foi escolhido para trabalhar com a
+O método "*simulate\_kernel\_gpu*" foi escolhido para trabalhar com a
 matriz de propagação. Nele, a matriz é percorrida de acordo com os
 valores dos *blocks* e *grids* informados no método anterior. Para cada
-célula da matriz é executado o método “*propagation\_model\_gpu*”, o
+célula da matriz é executado o método "*propagation\_model\_gpu*", o
 qual, segundo o próprio nome já diz, realiza o cálculo do modelo de
 propagação utilizando a GPU e está diretamente ligado ao
-“*propagation\_model*” que obtém valores do modelo de propagação e os
+"*propagation\_model*" que obtém valores do modelo de propagação e os
 miliwatts a serem subtraídos do cálculo da perda por paredes. O código
-referente ao “*simulate\_kernel\_gpu*” pode ser visto abaixo.
+referente ao "*simulate\_kernel\_gpu*" pode ser visto abaixo.
 
 \lstinputlisting[language=Python]{code/simulate_kernel.py}
 
@@ -2245,12 +2247,12 @@ O cálculo do valor do sinal naquele ponto é $O(k)$ pois consiste em um
 operação envolvendo multiplicação, divisão, exponenciação/logaritmo,
 portanto, assintoticamente é: $O(1)$. Em cada simulação deve-se
 calcular o valor para a propagação em cada ponto de uma matriz $NxM$.
-Considerando que uma das dimensões é maior que a outra, podemos dizer
+Considerando que uma das dimensões é maior que a outra, pode-se dizer
 que o custo é $NxN$: $O(n^{2})$ e $O(1\times n^{2}) = O(n^{2})$ para
 aplicar a operação em todos os pontos da matriz. Mas, entre cada ponto
 da matriz (PM) e o *access point*, podem haver $k$ paredes, que deve-se verificar se
 há ou não interseção entre a reta AP-PM e a reta formada pela parede.
-Tal operação, utilizando a fórmula de geometria analítica para
+Tal operação, utilizando a equação de geometria analítica para
 interseção de retas, custa $O(1)$ para cada parede e $k\times O(1)$
 para verificar cada parede. Como $k$ é suficientemente grande em relação a
 $n$, podemos considerar o custo de verificar se há interseção com paredes
@@ -2262,8 +2264,8 @@ solução vizinha ($v$) e avalia-a ($fo$), e como o SA tem uma quantidade
 finita e decremental de iterações em função do fator de resfriamento, a
 quantidade de vizinhos explorados é em torno de $v = log(n)$. Assim, a
 complexidade do *Simulated Annealing* é em torno de $O(fo*v)$, ou seja:
-$O(fo \times log n)$. Como a função objetivo $(fo)$ consome
-$O(n^{3})$, teríamos: $O(n^{3} * log n)$.
+$O(fo \times log (n))$. Como a função objetivo $(fo)$ consome
+$O(n^{3})$, teríamos: $O(n^{3} * log (n))$.
 
 É importante notar que a anotação deste método é diferente das demais
 que utilizam o *@jit* para gerar código de máquina. A anotação *@jit* é
@@ -2299,22 +2301,22 @@ aumento da precisão da solução a ser apresentada. É válido reiterar que
 os parâmetros do *Simulated Annealing* e da função *NP-Log* foram
 calibrados para melhor representar o ambiente do IFMG *campus* Formiga,
 de acordo com seus materiais de construção, espessura de suas paredes,
-pisos e teto.
+pisos e teto, desta forma, é notável que os valores estão de acordo com as medições realizadas por \cite{VINICIUS}.
 
 \begin{figure}[ht]
 	\caption{\label{captura} Captura realizada no Bloco C, para um *access point* "18:8B:9D:69:E8:B2" posicionado em (x=660,y=260) e irradiando no Canal 11 (2.462 GHz).}
 	\begin{center}
 		\includegraphics[scale=0.5]{imagens/captura.jpg}
 	\end{center}
-	\legend{Fonte: \cite{VINICIUS}}
+	\legend{Fonte: \cite{VINICIUS}.}
 \end{figure}
 
 \begin{figure}[ht]
-	\caption{\label{simulacao_vinicius} Simulação realizada com dados empíricos nas mesmas configurações do bloco C. }
+	\caption{\label{simulacao_vinicius} Simulação realizada com dados empíricos nas mesmas configurações do bloco C.}
 	\begin{center}
 		\includegraphics[scale=0.7]{imagens/simulacao_vinicius.png}
 	\end{center}
-	\legend{Fonte: Elaboração do autor}
+	\legend{Fonte: Elaboração do autor.}
 \end{figure}
 
 Assim é possível ver como é notável a aplicação de que os modelos físicos 
@@ -2325,9 +2327,9 @@ validado com a realidade. A seguir são apresentados os resultados obtidos após
 RESULTADOS E ANÁLISE {#sec:resultados}
 ====================
 
-Neste capítulo serão mostrados os resultados obtidos a partir da
+Neste capítulo são mostrados os resultados obtidos a partir da
 implementação de toda a fundamentação teórica e a explicação dos
-procedimentos desenvolvidos. Será apresentada também uma análise de
+procedimentos desenvolvidos. Apresenta-se também uma análise de
 custo computacional e um ajuste de curvas utilizando os *softwares*
 *cProfile* e o *R-Project*, respectivamente.
 
@@ -2340,16 +2342,16 @@ o seu decaimento com a distância quanto sua absorção pelas paredes,
 assim, demonstrar graficamente o seu valor dentro da matriz de
 propagação. A \autoref{captura_inicial} mostra a simulação da propagação de sinais de *microondas*
 na planta baixa do bloco A do IFMG *campus* Formiga. Para a obtenção de
-tal resultado da simulação e dos próximos resultados que serão mostrados
-neste capítulo, foi utilizado o código em Python[^26] que faz uso da
+tal resultado da simulação e dos próximos resultados que são mostrados
+neste capítulo, utilizou-se o código em Python[^26] que faz uso da
 GPU.
 
 \begin{figure}[ht]
-	\caption{\label{captura_inicial} Simulação da propagação de sinais de microondas no edifício utilizando versão inicial do algoritmo. }
+	\caption{\label{captura_inicial} Simulação da propagação de sinais de microondas no bloco A utilizando versão inicial do algoritmo.}
 	\begin{center}
 		\includegraphics[scale=0.6]{imagens/captura-inicial.jpg}
 	\end{center}
-	\legend{Fonte: Elaboração do autor}
+	\legend{Fonte: Elaboração do autor.}
 \end{figure}
 
 Na \autoref{capturas} tem-se quatro capturas, nas quais as imagens *(a)*, *(b)* e *(d)* não possuem as portas
@@ -2361,7 +2363,7 @@ sinal, sombreamentos são criados.
 
 \begin{figure}[htb]
 	
-	\caption{\label{capturas} Simulação da propagação inicial de sinais de microondas utilizando versão inicial do algoritmo.}
+	\caption{\label{capturas} Simulação da propagação inicial de sinais de microondas no bloco A utilizando versão inicial do algoritmo.}
 	\centering
 	\begin{minipage}{0.4\textwidth}
 		\centering \label{captura_1}
@@ -2387,7 +2389,7 @@ sinal, sombreamentos são criados.
 		\legend{(d)}
 	\end{minipage}
 
-	\legend{Fonte: Elaboração do autor}
+	\legend{Fonte: Elaboração do autor.}
 \end{figure}
 
 Com a execução do algoritmo, além de se ter a representação gráfica do
@@ -2419,40 +2421,42 @@ Ainda com a saída de dados, ao fim da execução da otimização da posição
 dos *access points*, é gerado um gráfico utilizando a biblioteca *matplotlib.pyplot*
 do Python. Com o gráfico mostrado na \autoref{comportamento_fo}, é possível ver claramente como a
 função objetivo da metaheurística se comportou durante a busca pelo
-espaço de soluções. Observe que, com os seus altos e baixos, o Simulated
-Annealing fugiu de seus ótimos locais e, no final da execução, retornou
+espaço de soluções. Observe que, com os seus altos e baixos, o *Simulated
+Annealing* fugiu de seus ótimos locais e, no final da execução, retornou
 à sua melhor avaliação.
 
 \begin{figure}[ht]
-	\caption{\label{comportamento_fo} Comportamento da função objetivo do Simulated Annealing na busca do melhor ponto}
+	\caption{\label{comportamento_fo} Comportamento da função objetivo do $Simulated Annealing$ na busca do melhor ponto.}
 	\begin{center}
 		\includegraphics[scale=0.5]{imagens/comportamento-fo.jpg}
 	\end{center}
-	\legend{Fonte: Elaboração do autor}
+	\legend{Fonte: Elaboração do autor.}
 \end{figure}
 
 Neste sentido, é importante ressaltar que a \autoref{captura_inicial} e a \autoref{capturas} representam os resultados
 dos primeiros testes executados. O gradiente de cores utilizada foi o
-plasma, variando das cores laranja até o azul escuro. Na próxima seção
-mostraremos os resultados de testes efetuados utilizando ainda um
+plasma, variando das cores laranja até o azul escuro, onde a cor azul representa
+as zonas com menor intensidade e a cor laranja as zonas de maior intensidade. Na próxima seção
+são mostrados os resultados de testes efetuados utilizando ainda um
 *access point* com uma nova escala de cores, mais ainda apropriada a
 interpretação imediata do que seria um sinal ótimo, bom e ruim.
 
 *Wi-Fi Placement* para 1 AP
 -------------------------
 
-A \autoref{prop_bloco_a}, se comparada com as figuras do tópico anterior, possuem cores mais
+A \autoref{prop_bloco_a}, se comparada com a \autoref{capturas}, possue cores mais
 intuitivas para os resultados obtidos, além de uma restrição na parte
 gráfica, destacada com a cor preta nas áreas onde o sinal é menor que a
 sensibilidade típica de um equipamento *Wi-Fi* (seja ele um computador
-ou *access point*).
+ou *access point*). Desta vez, a cor verde representa as zonas de maior intensidade do sinal e 
+a cor vermelha, as zonas com sinal relativamente ruim.
 
 \begin{figure}[ht]
-	\caption{\label{prop_bloco_a} Simulação da propagação de sinais de microondas no bloco A utilizando 1 AP, sua absorção e limiar de sensibilidade.}
+	\caption{\label{prop_bloco_a} Simulação da propagação de sinais de microondas no bloco A utilizando 1 AP, sua absorção e limiar de sensibilidade ao longo das salas e corredores do segundo piso do bloco A.}
 	\begin{center}
 		\includegraphics[scale=0.7]{imagens/prop-bloco-a-2.jpg}
 	\end{center}
-	\legend{Fonte: Elaboração do autor}
+	\legend{Fonte: Elaboração do autor.}
 \end{figure}
 
 É possível notar que o *Simulated Annealing* definiu como um caso ótimo, nesta situação, um
@@ -2462,7 +2466,7 @@ contém o maior fluxo de pessoas neste bloco que utilizam o acesso à
 internet. Na \autoref{prop_bloco_a}, os pontos que deixam a desejar corresponde à
 potência máxima que consegue transmitir, neste caso, -25 $dB$.
 
-Como resultado disponibilizados via terminal, temos:
+Como resultado disponibilizados via terminal, tem-se:
 
 \begin{lstlisting}[language=bash]
 	$ python PlacementAPs.py 
@@ -2498,7 +2502,7 @@ mais de um quarto de todo o espaço e, se somado com o sinal ruim, mais da metad
 	\begin{center}
 		\includegraphics[scale=0.7]{imagens/prop-bloco-percent-a-2.png}
 	\end{center}
-	\legend{Fonte: Elaboração do autor}
+	\legend{Fonte: Elaboração do autor.}
 \end{figure}
 
 As plantas dos pisos 1, 2 e 3 do bloco C foram obtidas em formato DWG e
@@ -2513,7 +2517,7 @@ potência de transmissão de -25 $dB$.
 	\begin{center}
 		\includegraphics[scale=0.7]{imagens/captura-zona-2.jpg}
 	\end{center}
-	\legend{Fonte: Elaboração do autor}
+	\legend{Fonte: Elaboração do autor.}
 \end{figure}
 
 A saída via terminal é a seguinte:
@@ -2544,11 +2548,11 @@ fica  notável que utilizando apenas um *access point* se torna impossível obte
 
 \begin{figure}[ht]
 	\caption{\label{prop_bloco_percent_c_1} Representação em gráfico de pizza do resultado dado para a otimização
-	 de um $access points$ no bloco C. }
+	 de um $access points$ no bloco C.}
 	\begin{center}
 		\includegraphics[scale=0.7]{imagens/prop-bloco-percent-c-1.png}
 	\end{center}
-	\legend{Fonte: Elaboração do autor}
+	\legend{Fonte: Elaboração do autor.}
 \end{figure}
 
 Como pode ser visto na \autoref{prop_bloco_a} e na \autoref{captura_zona}, quando utilizada a busca pelo ponto ótimo
@@ -2577,7 +2581,7 @@ no piso 2 do bloco A.
 	\begin{center}
 		\includegraphics[scale=0.6]{imagens/captura-2-aps-2.jpg}
 	\end{center}
-	\legend{Fonte: Elaboração do autor}
+	\legend{Fonte: Elaboração do autor.}
 \end{figure}
 
 Como pode ser visto, a heurística pode então dar, como o resultado, dois
@@ -2591,7 +2595,7 @@ sala em que os *access points* estão instalados, mas mesmo assim, a maior parte
 área está recebendo sinal, havendo poucas zonas onde a potência recebida
 é inferior à sensibilidade do equipamento.
 
-Abaixo é possível visualizar o resumo da execução do algoritmo:
+A seguir é possível visualizar o resumo da execução do algoritmo:
 
 \begin{lstlisting}[language=bash]
 	$ python PlacementAPs.py 
@@ -2620,7 +2624,7 @@ Na \autoref{percent_bloco_a_2} tem-se a representação da cobertura por faixa d
 	\begin{center}
 		\includegraphics[scale=0.7]{imagens/percent-bloco-a-2.png}
 	\end{center}
-	\legend{Fonte: Elaboração do autor}
+	\legend{Fonte: Elaboração do autor.}
 \end{figure}
 
 O mesmo teste foi realizado com a planta baixa do bloco C, porém agora,
@@ -2635,7 +2639,7 @@ alocação dos mesmos.
 	\begin{center}
 		\includegraphics[scale=0.7]{imagens/captura-2-aps-bloco-c-2.jpg}
 	\end{center}
-	\legend{Fonte: Elaboração do autor}
+	\legend{Fonte: Elaboração do autor.}
 \end{figure}
 
 Com o resultado dado pelo *Simulated Annealing* no bloco C, pode-se notar que foi possível
@@ -2670,7 +2674,7 @@ Com \autoref{percent_bloco_c_2} tem-se a representação da cobertura por faixa 
 	\begin{center}
 		\includegraphics[scale=0.7]{imagens/percent-bloco-c-2.png}
 	\end{center}
-	\legend{Fonte: Elaboração do autor}
+	\legend{Fonte: Elaboração do autor.}
 \end{figure}
 
 A busca utilizando três *access points* também foi realizada. O
@@ -2682,10 +2686,10 @@ resultado da propagação do sinal pode ser visto na \autoref{captura_3_aps_bloc
 	\begin{center}
 		\includegraphics[scale=0.7]{imagens/captura-3-aps-bloco-c.jpg}
 	\end{center}
-	\legend{Fonte: Elaboração do autor}
+	\legend{Fonte: Elaboração do autor.}
 \end{figure}
 
-A os valores dados na saída são os seguintes:
+Os valores dados na saída são os seguintes:
 
 \begin{lstlisting}[language=bash]
 	$ python PlacementAPs.py 
@@ -2714,21 +2718,20 @@ Com \autoref{percent_bloco_c_3} tem-se a representação da cobertura por faixa 
 	\begin{center}
 		\includegraphics[scale=0.7]{imagens/percent-bloco-c-3.png}
 	\end{center}
-	\legend{Fonte: Elaboração do autor}
+	\legend{Fonte: Elaboração do autor.}
 \end{figure}
 
 Na \autoref{captura_3_aps_bloco_a} é possível ver propagação do sinal utilizando 3 access points no bloco A com equipamentos transmitindo a -25 $dB$.
 
 \begin{figure}[ht]
-	\caption{\label{captura_3_aps_bloco_a} Simulação da propagação de sinais de microondas no bloco A utilizando 3 APs com potência de -25 $dB$.
-	}
+	\caption{\label{captura_3_aps_bloco_a} Simulação da propagação de sinais de microondas no bloco A utilizando 3 APs com potência de -25 $dB$.}
 	\begin{center}
 		\includegraphics[scale=0.7]{imagens/captura-3-aps-bloco-a.jpg}
 	\end{center}
-	\legend{Fonte: Elaboração do autor}
+	\legend{Fonte: Elaboração do autor.}
 \end{figure}
 
-A os valores dados na saída para a simulação da \autoref{captura_3_aps_bloco_a} com três *access points*
+Os valores dados na saída para a simulação da \autoref{captura_3_aps_bloco_a} com três *access points*
 no bloco A são os seguintes:
 
 \begin{lstlisting}[language=bash]
@@ -2761,7 +2764,7 @@ Fica claro que ao utilizar-se três *access points* na simulação, a zona de so
 	\begin{center}
 		\includegraphics[scale=0.7]{imagens/percent-bloco-a-3.png}
 	\end{center}
-	\legend{Fonte: Elaboração do autor}
+	\legend{Fonte: Elaboração do autor.}
 \end{figure}
 
 Após as demonstrações feitas neste capítulo, fica claro que a ferramenta desenvolvida neste trabalho auxilia na escolha e na decisão da quantidade e da alocação de *access points* que podem ser utilizados para a cobertura das áreas desejadas. Todavia, a ferramenta desenvolvida neste trabalho pode passar por aprimoramentos que auxiliarão na modelagem do ambiente, fazendo o uso, cada vez mais, da verossimilhança, aproximando mais a simulação mais da realizadade. No entanto, se comparado aos *softwares* comerciais, o *software* desenvolvido neste trabalho executa uma das principais funções, sendo a mais relevante, o *Wireless AP Placement*, sem custo financeiro e de código fonte livre. No capítulo seguinte é feita uma alusão aos possíveis trabalhos futuros, que se executados poderão aproximar o *software* desenvolvido das versões pagas disponíveis no mercado.
@@ -2780,7 +2783,7 @@ para distâncias perto e longe. Portanto, sugere-se utilizar dois modelos
 de propagação, um para perto $(1-10 m)$ e outro para mais longe $(10-100
 m)$, numa abordagem híbrida. Uma outra abordagem poderia ser a aplicação
 de técnicas que envolvem simulação via *Ray-Tracing*, podendo ser
-incluída em pesquisas posteriores. Ainda, caso haja demanda, sugere-se a
+incluída em trabalhos posteriores. Ainda, caso haja demanda, sugere-se a
 realização de simulação de propagação de sinais em ambiente 3D, com um
 maior aproveitamento dos recursos disponibilizados pela biblioteca CUDA,
 objetivando uma maior precisão da obtenção dos pontos cegos dentro de
@@ -2796,14 +2799,14 @@ A ferramenta desenvolvida neste trabalho de conclusão de curso se torna útil e
 piso do edifício), podendo também ser informada a posição inicial dos
 *access points* como parâmetros adicionais para o algoritmo; (ii) realizar a
 simulação da propagação dos sinais de microondas dos *access points* *Wi-Fi* pelas
-dependências do edifício; (iii) aplicar a metaheurística computacional
+dependências dos blocos A e C do  IFMG *campus* Formiga; (iii) aplicar a metaheurística computacional
 para explorar o espaço de soluções do posicionamento de *access points*; (iv)
 fornecer como saída a proposta de novo(s) posicionamento(s) dos *access points*
 visando ampliar a cobertura do sinal *Wi-Fi* para aquele ambiente.
 
 Na versão final, o *software* é capaz de receber como entrada uma representação do ambiente, realizando a simulação de propagação dos sinais considerando a atenuação nas paredes e no espaço livre. A metaheurística buscou maximizar cada vez mais a cobertura do sinal *Wi-Fi* nas dependências do IFMG *campus* Formiga. Assim, também foi possível construir um modelo de propagação que se adequasse às dependências do IFMG *campus* Formiga, a partir da representação do ambiente fornecida pelo engenheiro da instituição. Além disso, é possível realizar a simulação da propagação do sinal *wireless* de *access points* *Wi-Fi* através das dependências do *campus*, informando ao *software* quantos *access points* se deseja alocar. Quando houver necessidade de ampliar, mesmo que temporariamente, a rede para a acomodação de novos pontos de acesso para telecomunicação, será fácil decidir os melhores locais para a alocação dos equipamentos. Com a solução desenvolvida, se torna viável ter uma rede *wireless*, fazendo com que a cobertura de sinal possa abranger boa parte da área necessária, provendo uma qualidade de serviço satisfatória aos que fazem uso da rede.
 
-Como mencionado anteriormente, a ferramenta desenvolvida foi disponibilizada de forma gratuita, utilizando Licença Pública Geral GNU — GPL no site *github.com*[^28]. Para reforçar sua relevância, ressaltamos que ele possibilita testar disposições de *access points* sem
+Como mencionado anteriormente, a ferramenta desenvolvida foi disponibilizada de forma gratuita, utilizando Licença Pública Geral GNU — GPL no site *github.com*[^28]. Para reforçar sua relevância, ressalta-se que ele possibilita testar disposições de *access points* sem
 o custo operacional de fisicamente movê-los, de maneira a propor uma
 disposição espacial dos *access points*, que forneça uma maior cobertura e
 intensidade de sinal dentro do ambiente simulado.
