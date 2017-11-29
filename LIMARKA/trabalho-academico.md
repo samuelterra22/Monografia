@@ -2790,7 +2790,7 @@ objetivando uma maior precisão da obtenção dos pontos cegos dentro de
 cômodos. Para se obter resultados que possibilitem uma melhor busca
 pelos pontos de acesso para dois ou mais *access points*, novas técnicas deverão ser
 utilizadas para o cálculo da função objetivo. Também é sugerido que outras 
-metaheurísticas sejam implementadas e seus resultados comparados. 
+metaheurísticas sejam implementadas e seus resultados comparados.
 
 CONSIDERAÇÕES FINAIS {#sec:consideracoes}
 ====================
