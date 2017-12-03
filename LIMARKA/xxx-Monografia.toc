@@ -39,9 +39,9 @@
 \contentsline {section}{\numberline {3.4}Programação Paralela}{48}{section.3.4}
 \contentsline {subsection}{\numberline {3.4.1}CUDA}{48}{subsection.3.4.1}
 \contentsline {subsection}{\numberline {3.4.2}CUDA \emph {Toolkit}}{49}{subsection.3.4.2}
-\contentsline {subsection}{\numberline {3.4.3}Numba}{49}{subsection.3.4.3}
+\contentsline {subsection}{\numberline {3.4.3}Numba}{50}{subsection.3.4.3}
 \contentsline {subsection}{\numberline {3.4.4}JIT (\emph {just-in-time})}{50}{subsection.3.4.4}
-\contentsline {subsection}{\numberline {3.4.5}\emph {Anaconda Navigator}}{51}{subsection.3.4.5}
+\contentsline {subsection}{\numberline {3.4.5}\emph {Anaconda Navigator}}{52}{subsection.3.4.5}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
 \contentsline {chapter}{\chapternumberline {4}\MakeTextUppercase {PROJETO E DESENVOLVIMENTO}}{53}{chapter.4}
 \contentsline {section}{\numberline {4.1}Representação do ambiente}{53}{section.4.1}
@@ -50,29 +50,29 @@
 \contentsline {section}{\numberline {4.2}Propagação dos sinais}{56}{section.4.2}
 \contentsline {subsection}{\numberline {4.2.1}Definição do modelo de propagação para sinais \emph {Wi-Fi}}{56}{subsection.4.2.1}
 \contentsline {subsection}{\numberline {4.2.2}Ajuste do modelo de propagação}{58}{subsection.4.2.2}
-\contentsline {subsection}{\numberline {4.2.3}Simulação da propagação de sinais no ambiente}{63}{subsection.4.2.3}
-\contentsline {subsection}{\numberline {4.2.4}Atenuação do sinal ao atravessar paredes}{64}{subsection.4.2.4}
-\contentsline {section}{\numberline {4.3}Visualização dos dados}{66}{section.4.3}
-\contentsline {section}{\numberline {4.4}Heurística de otimização}{67}{section.4.4}
-\contentsline {subsection}{\numberline {4.4.1}Implementação do \emph {Simulated Annealing}}{67}{subsection.4.4.1}
-\contentsline {subsection}{\numberline {4.4.2}Calibração dos parâmetros do \emph {Simulated Annealing}}{68}{subsection.4.4.2}
-\contentsline {section}{\numberline {4.5}Avaliação da solução}{71}{section.4.5}
-\contentsline {subsection}{\numberline {4.5.1}Avaliação da solução com um AP}{71}{subsection.4.5.1}
-\contentsline {subsection}{\numberline {4.5.2}Aperfeiçoamento da função objetivo}{72}{subsection.4.5.2}
-\contentsline {subsection}{\numberline {4.5.3}Avaliação da solução para dois ou mais APs}{72}{subsection.4.5.3}
-\contentsline {section}{\numberline {4.6}Análise da utilização de recursos}{73}{section.4.6}
-\contentsline {section}{\numberline {4.7}Paralelização em GPU}{74}{section.4.7}
-\contentsline {section}{\numberline {4.8}Validação dos modelos}{76}{section.4.8}
+\contentsline {subsection}{\numberline {4.2.3}Simulação da propagação de sinais no ambiente}{64}{subsection.4.2.3}
+\contentsline {subsection}{\numberline {4.2.4}Atenuação do sinal ao atravessar paredes}{65}{subsection.4.2.4}
+\contentsline {section}{\numberline {4.3}Visualização dos dados}{68}{section.4.3}
+\contentsline {section}{\numberline {4.4}Heurística de otimização}{71}{section.4.4}
+\contentsline {subsection}{\numberline {4.4.1}Implementação do \emph {Simulated Annealing}}{71}{subsection.4.4.1}
+\contentsline {subsection}{\numberline {4.4.2}Calibração dos parâmetros do \emph {Simulated Annealing}}{72}{subsection.4.4.2}
+\contentsline {section}{\numberline {4.5}Avaliação da solução}{75}{section.4.5}
+\contentsline {subsection}{\numberline {4.5.1}Avaliação da solução com um AP}{76}{subsection.4.5.1}
+\contentsline {subsection}{\numberline {4.5.2}Aperfeiçoamento da função objetivo}{76}{subsection.4.5.2}
+\contentsline {subsection}{\numberline {4.5.3}Avaliação da solução para dois ou mais APs}{77}{subsection.4.5.3}
+\contentsline {section}{\numberline {4.6}Análise da utilização de recursos}{78}{section.4.6}
+\contentsline {section}{\numberline {4.7}Paralelização em GPU}{80}{section.4.7}
+\contentsline {section}{\numberline {4.8}Validação dos modelos}{83}{section.4.8}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {5}\MakeTextUppercase {RESULTADOS E ANÁLISE}}{87}{chapter.5}
-\contentsline {section}{\numberline {5.1}Simulação da propagação de sinais \emph {wireless}}{87}{section.5.1}
-\contentsline {section}{\numberline {5.2}\emph {Wi-Fi Placement} para 1 AP}{89}{section.5.2}
-\contentsline {section}{\numberline {5.3}\emph {Wi-Fi Placement} para 2 ou mais APs}{93}{section.5.3}
+\contentsline {chapter}{\chapternumberline {5}\MakeTextUppercase {RESULTADOS E ANÁLISE}}{85}{chapter.5}
+\contentsline {section}{\numberline {5.1}Simulação da propagação de sinais \emph {wireless}}{85}{section.5.1}
+\contentsline {section}{\numberline {5.2}\emph {Wi-Fi Placement} para 1 AP}{88}{section.5.2}
+\contentsline {section}{\numberline {5.3}\emph {Wi-Fi Placement} para 2 ou mais APs}{91}{section.5.3}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {6}\MakeTextUppercase {TRABALHOS FUTUROS}}{101}{chapter.6}
+\contentsline {chapter}{\chapternumberline {6}\MakeTextUppercase {TRABALHOS FUTUROS}}{99}{chapter.6}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {7}\MakeTextUppercase {CONSIDERAÇÕES FINAIS}}{103}{chapter.7}
+\contentsline {chapter}{\chapternumberline {7}\MakeTextUppercase {CONSIDERAÇÕES FINAIS}}{101}{chapter.7}
 \vspace {\cftbeforechapterskip }
 \vspace {\cftbeforechapterskip }
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
-\contentsline {chapter}{\uppercase {Refer\^encias}}{105}{section*.15}
+\contentsline {chapter}{\uppercase {Refer\^encias}}{103}{section*.15}

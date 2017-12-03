@@ -283,12 +283,13 @@ INPUT /usr/share/texmf/fonts/tfm/public/lm/ec-lmbx6.tfm
 INPUT /usr/share/texmf/fonts/tfm/public/lm/ec-lmbxi10.tfm
 INPUT imagens/planta-labels.jpg
 INPUT imagens/medicao-modelos.jpg
-INPUT imagens/curvas.jpg
-INPUT imagens/log-logistica.jpg
+INPUT imagens/curvas.png
+INPUT imagens/log-logistica.png
 INPUT imagens/log-normal.jpg
-INPUT imagens/logistic-regression-1.jpg
-INPUT imagens/logistic-regression-2.jpg
-INPUT imagens/modelos-propagacao.jpg
+INPUT imagens/logistic-regression-1.png
+INPUT imagens/logistic-regression-2.png
+INPUT imagens/modelos-propagacao_a.png
+INPUT imagens/modelos-propagacao_b.png
 INPUT imagens/wifi-central.jpg
 INPUT imagens/canais-1.jpg
 INPUT imagens/absorcao-parede.jpg
@@ -314,7 +315,7 @@ INPUT imagens/block-grid.jpg
 INPUT code/simulate_kernel.py
 INPUT code/simulate_kernel.py
 INPUT code/simulate_kernel.py
-INPUT imagens/captura.jpg
+INPUT imagens/captura-vinicius.jpg
 INPUT imagens/simulacao_vinicius.png
 INPUT imagens/captura-inicial.jpg
 INPUT imagens/captura-1.jpg
