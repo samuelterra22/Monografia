@@ -1224,7 +1224,8 @@ O *software* desenvolvido neste trabalho deve receber como arquivo de
 entrada uma representação bidimensional do ambiente a ser simulado,
 esperando como tal um arquivo com extensão $DXF$. Arquivos $DXF$ são comuns
 na exportação de desenhos e projetos de peças para serem utilizadas em
-*softwares* de CAM (*Computer Aided Manufacturing*), e máquinas de corte automáticas. São populares por
+*softwares* de CAM (*Computer Aided Manufacturing*), 
+e máquinas de corte automáticas \cite{SOUZA}. São populares por
 promoverem a troca aberta destes arquivos entre programas desenvolvidos
 por diferentes empresas[^19]. Para interpretar o arquivo de entrada $DXF$,
 foi implementado um procedimento escrito na linguagem Python utilizando
@@ -1614,7 +1615,7 @@ mesmo ambiente, conforme ilustra a \autoref{canais}.
 \begin{figure}[!htb]
 	\caption{\label{canais} Canais não sobrepostos para WLANs de 2,4 GHz.}
 	\begin{center}
-		\includegraphics[scale=0.6]{imagens/canais-1.jpg}
+		\includegraphics[scale=0.8]{imagens/canais.png}
 	\end{center}
 	\legend{Disponível em: \url{https://en.wikipedia.org/wiki/File:NonOverlappingChannels2.4GHzWLAN-en.svg}. Acesso em 29 out. 2017.}
 \end{figure}
@@ -1908,44 +1909,40 @@ definidos.
 	\resizebox{\textwidth}{!}{%
 		\begin{tabular}{|l|l|c|c|c|c|c|c|c|c|c|}
 			\hline
-			\multicolumn{1}{|c|}{} &  & \multicolumn{4}{c|}{\textbf{FATORES}} & \multicolumn{4}{c|}{\textbf{FATORES}} & \multicolumn{1}{l|}{\textbf{FIXO}} \\ \hline
+			\multicolumn{1}{|c|}{} &  & \multicolumn{4}{c|}{\textbf{PARÂMETROS}} & \multicolumn{4}{c|}{\textbf{PARÂMETROS}} & \multicolumn{1}{l|}{\textbf{FIXO}} \\ \hline
 			\textbf{k=} & 4 & \multicolumn{2}{c|}{\begin{tabular}[c]{@{}c@{}}A\\ (n de vizinhos)\end{tabular}} & \multicolumn{2}{c|}{\begin{tabular}[c]{@{}c@{}}B\\ (temperatura inicial)\end{tabular}} & \multicolumn{2}{c|}{\begin{tabular}[c]{@{}c@{}}C\\ (fator resfriamento)\end{tabular}} & \multicolumn{2}{c|}{\begin{tabular}[c]{@{}c@{}}D\\ (perturbações)\end{tabular}} & Iterações \\ \hline
-			\multirow{2}{*}{\textbf{n=}} & \multirow{2}{*}{Niveis} & 1 & 20 & 1 & 100 & 1 & 75\% & 1 & 10 & 1000 \\ \cline{3-11} 
-			&  & 2 & 40 & 2 & 200 & 2 & 95\% & 2 & 20 & 1000 \\ \hline
+			\multirow{2}{*}{\textbf{n=}} & \multirow{2}{*}{Niveis} & 1 & 20 & 1 & \textbf{100} & 1 & \textbf{75\%} & 1 & \textbf{10} & 1000 \\ \cline{3-11} 
+			&  & 2 & \textbf{40} & 2 & 200 & 2 & \textbf{95\%} & 2 & 20 & 1000 \\ \hline
 		\end{tabular}%
 	}
 \end{table}
-
-O resultado computado é dado na \autoref{candidatos_parametros_1}:
 
 \begin{table}[ht]
 \centering
 \caption{Métricas coletadas para a combinação de níveis dos parâmetros da primeira iteração.}
 \label{candidatos_parametros_1}
+\resizebox{\textwidth}{!}{%
 	\begin{tabular}{|c|c|c|c|c|c|}
 		\hline
 		\multicolumn{4}{|c|}{\textbf{CONFIGURAÇÕES}} & \multicolumn{2}{c|}{\textbf{MÉTRICAS}} \\ \hline
-		1          & 1          & 2          & 2          & 723846,211609                   & 618                  \\ \hline
-		2          & 1          & 2          & 2          & 723846,211609                   & 131                  \\ \hline
-		2          & 1          & 1          & 1          & 723846,211609                   & 22                   \\ \hline
-		1          & 1          & 1          & 1          & 723846,211609                   & 13                   \\ \hline
+\begin{tabular}[c]{@{}c@{}}A\\ (n de vizinhos)\end{tabular} & \begin{tabular}[c]{@{}c@{}}B\\ (temperatura inicial)\end{tabular} & \begin{tabular}[c]{@{}c@{}}C\\ (fator resfriamento)\end{tabular} & \begin{tabular}[c]{@{}c@{}}D\\ (perturbações)\end{tabular} & Qualidade do Resultado  & Tempo Gasto  \\ \hline
+		1          & 1          & 2          & 2          & 723846                   & 618                  \\ \hline
+		2          & 1          & 2          & 2          & 723846                   & 131                  \\ \hline
+		2          & 1          & 1          & 1          & 723846                   & 22                   \\ \hline
+		1          & 1          & 1          & 1          & \textbf{723846}                   & \textbf{13}                   \\ \hline
 	\end{tabular}%
-
+}
 \end{table}
 
-Com o resultado acima, é possível notar que os parâmetros que mais 
-afetaram a qualidade da solução são o tempo gasto na simulação foram  o
-número de vizinhos e o resfriamento. O valor dado em porcentagem representa o quanto
-da variabilidade da métrica coletada (como resultado) aquele parâmetro sozinho influencia. 
-Ainda que o valor de ambos tenha
-sido o mesmo, o número de vizinhos acaba sendo mais indicado para nova calibragem, pois consumiu uma
-fração menor do tempo total. O número de vizinhos foi aumentado visando obter 
-um resultado melhor ainda; os valores da temperatura inicial também
-foram aumentados e o fator de resfriamento foi decrementado junto com o
-número de perturbações. Modificando os parâmetros, visamos obter um novo 
+O resultado computado é dado na \autoref{candidatos_parametros_1}. As duas primeiras linhas contidas na \autoref{candidatos_parametros_1} representam os piores resultados
+obtidos nesta iteração. As informações contidas na coluna de "configurações" representam os níveis em que os valores
+de parâmetros foram utilizados; já na coluna de "métricas", o valor da esquerda representa o valor da função objetivo e 
+o valor da direita representa o tempo gasto (dado em segundos). Ambos os valores estão diretamente relacionados com suas respectivas configurações. Desta forma, a escolha dos níveis mais promissores para os parâmetros foi feita com base nas duas últimas linhas da 
+\autoref{candidatos_parametros_1}. Ao fazer a relação entre a \autoref{tabela_parametros_1} e a \autoref{candidatos_parametros_1}, o número de vizinhos foi aumentado, visando obter um resultado melhor ainda; os valores da temperatura inicial também foram aumentados e o fator de resfriamento foi decrementado junto com o número de perturbações. Modificando os parâmetros, visa-se obter um novo 
 conjunto de valores para o *Simulated Annealing* que propicie um melhor resultado a um menor
 custo de tempo. Os novos valores da segunda
 iteração do planejamento fatorial $2^{k}$ podem ser vistos na \autoref{tabela_parametros_2}.
+
 \begin{table}[ht]
 	\centering
 	\caption{Níveis propostos para os parâmetros do \textit{Simulated Annealing} na segunda iteração.}
@@ -1953,10 +1950,10 @@ iteração do planejamento fatorial $2^{k}$ podem ser vistos na \autoref{tabela_
 	\resizebox{\textwidth}{!}{%
 		\begin{tabular}{|l|l|c|c|c|c|c|c|c|c|c|}
 			\hline
-			\multicolumn{1}{|c|}{} &  & \multicolumn{4}{c|}{\textbf{FATORES}} & \multicolumn{4}{c|}{\textbf{FATORES}} & \multicolumn{1}{l|}{\textbf{FIXO}} \\ \hline
+			\multicolumn{1}{|c|}{} &  & \multicolumn{4}{c|}{\textbf{PARÂMETROS}} & \multicolumn{4}{c|}{\textbf{PARÂMETROS}} & \multicolumn{1}{l|}{\textbf{FIXO}} \\ \hline
 			\textbf{k=} & 4 & \multicolumn{2}{c|}{\begin{tabular}[c]{@{}c@{}}A\\ (n de vizinhos)\end{tabular}} & \multicolumn{2}{c|}{\begin{tabular}[c]{@{}c@{}}B\\ (temperatura inicial)\end{tabular}} & \multicolumn{2}{c|}{\begin{tabular}[c]{@{}c@{}}C\\ (fator resfriamento)\end{tabular}} & \multicolumn{2}{c|}{\begin{tabular}[c]{@{}c@{}}D\\ (perturbações)\end{tabular}} & Iterações \\ \hline
-			\multirow{2}{*}{\textbf{n=}} & \multirow{2}{*}{Niveis} & 1 & 40 & 1 & 150 & 1 & 75\% & 1 & 10 & 1000 \\ \cline{3-11} 
-			&  & 2 & 80 & 2 & 300 & 2 & 85\% & 2 & 15 & 1000 \\ \hline
+			\multirow{2}{*}{\textbf{n=}} & \multirow{2}{*}{Niveis} & 1 & 40 & 1 & 150 & 1 & 75\% & 1 & \textbf{10} & 1000 \\ \cline{3-11} 
+			&  & 2 & \textbf{80} & 2 & \textbf{300} & 2 & \textbf{85\%} & 2 & 15 & 1000 \\ \hline
 		\end{tabular}%
 	}
 \end{table}
@@ -1967,15 +1964,17 @@ iteração do planejamento fatorial $2^{k}$ podem ser vistos na \autoref{tabela_
 \centering
 \caption{Métricas coletadas para a combinação de níveis dos parâmetros da segunda iteração.}
 \label{candidatos_parametros_2}
+\resizebox{\textwidth}{!}{%
 	\begin{tabular}{|c|c|c|c|c|c|}
 		\hline
 		\multicolumn{4}{|c|}{\textbf{CONFIGURAÇÕES}} & \multicolumn{2}{c|}{\textbf{MÉTRICAS}} \\ \hline
-		1          & 2          & 2          & 2          & 723846,2116                     & 158                  \\ \hline
-		2          & 2          & 2          & 2          & 723846,2116                     & 144                  \\ \hline
-		2          & 2          & 2          & 1          & 723846,2116                     & 18                   \\ \hline
-		2          & 2          & 1          & 1          & 723846,2116                     & 10                   \\ \hline
+		\begin{tabular}[c]{@{}c@{}}A\\ (n de vizinhos)\end{tabular} & \begin{tabular}[c]{@{}c@{}}B\\ (temperatura inicial)\end{tabular} & \begin{tabular}[c]{@{}c@{}}C\\ (fator resfriamento)\end{tabular} & \begin{tabular}[c]{@{}c@{}}D\\ (perturbações)\end{tabular} & Qualidade do Resultado  & Tempo Gasto  \\ \hline
+		1          & 2          & 2          & 2          & 723846                     & 158                  \\ \hline
+		2          & 2          & 2          & 2          & 723846                     & 144                  \\ \hline
+		2          & 2          & 2          & 1          & 723846                     & 18                   \\ \hline
+		2          & 2          & 1          & 1          & \textbf{723846}                     & \textbf{10}                   \\ \hline
 	\end{tabular}%
-
+}
 \end{table}
 
 Como na iteração anterior, o melhor candidato a explorarmos novos níveis de calibração é o
@@ -1994,10 +1993,10 @@ terceira iteração e último teste.
 	\resizebox{\textwidth}{!}{%
 		\begin{tabular}{|l|l|c|c|c|c|c|c|c|c|c|}
 			\hline
-			\multicolumn{1}{|c|}{} &  & \multicolumn{4}{c|}{\textbf{FATORES}} & \multicolumn{4}{c|}{\textbf{FATORES}} & \multicolumn{1}{l|}{\textbf{FIXO}} \\ \hline
+			\multicolumn{1}{|c|}{} &  & \multicolumn{4}{c|}{\textbf{PARÂMETROS}} & \multicolumn{4}{c|}{\textbf{PARÂMETROS}} & \multicolumn{1}{l|}{\textbf{FIXO}} \\ \hline
 			\textbf{k=} & 4 & \multicolumn{2}{c|}{\begin{tabular}[c]{@{}c@{}}A\\ (n de vizinhos)\end{tabular}} & \multicolumn{2}{c|}{\begin{tabular}[c]{@{}c@{}}B\\ (temperatura inicial)\end{tabular}} & \multicolumn{2}{c|}{\begin{tabular}[c]{@{}c@{}}C\\ (fator resfriamento)\end{tabular}} & \multicolumn{2}{c|}{\begin{tabular}[c]{@{}c@{}}D\\ (perturbações)\end{tabular}} & Iterações \\ \hline
-			\multirow{2}{*}{\textbf{n=}} & \multirow{2}{*}{Niveis} & 1 & 80 & 1 & 300 & 1 & 80\% & 1 & 5 & 1000 \\ \cline{3-11} 
-			&  & 2 & 60 & 2 & 600 & 2 & 85\% & 2 & 10 & 1000 \\ \hline
+			\multirow{2}{*}{\textbf{n=}} & \multirow{2}{*}{Niveis} & 1 & \textbf{80} & 1 & \textbf{300} & 1 & 80\% & 1 & \textbf{5} & 1000 \\ \cline{3-11} 
+			&  & 2 & 60 & 2 & 600 & 2 & \textbf{85\%} & 2 & 10 & 1000 \\ \hline
 		\end{tabular}%
 	}
 \end{table}
@@ -2008,19 +2007,22 @@ De acordo com a configuração da \autoref{tabela_parametros_3} são dados o mel
 \centering
 \caption{Métricas coletadas para a combinação de níveis dos parâmetros da terceira iteração.}
 \label{candidatos_parametros_3}
+\resizebox{\textwidth}{!}{%
 	\begin{tabular}{|c|c|c|c|c|c|}
 		\hline
 		\multicolumn{4}{|c|}{\textbf{CONFIGURAÇÕES}} & \multicolumn{2}{c|}{\textbf{MÉTRICAS}} \\ \hline
-		A         & B         & C         & D        & Qualidade do Resultado  & Tempo Gasto  \\ \hline
-		2         & 2         & 1         & 1        & 810528,36               & 0            \\ \hline
-		2         & 1         & 2         & 1        & 787114,12               & 1            \\ \hline
-		1         & 2         & 1         & 1        & 769816,91               & 3            \\ \hline
-		1         & 1         & 2         & 2        & 735412,36               & 6            \\ \hline
+		\begin{tabular}[c]{@{}c@{}}A\\ (n de vizinhos)\end{tabular} & \begin{tabular}[c]{@{}c@{}}B\\ (temperatura inicial)\end{tabular} & \begin{tabular}[c]{@{}c@{}}C\\ (fator resfriamento)\end{tabular} & \begin{tabular}[c]{@{}c@{}}D\\ (perturbações)\end{tabular} & Qualidade do Resultado  & Tempo Gasto  \\ \hline
+		2         & 2         & 1         & 1        & 810528,36               & \textbf{0,1}            \\ \hline
+		2         & 1         & 2         & 1        & 787114,12               & \textbf{1}            \\ \hline
+		1         & 2         & 1         & 1        & \textbf{769816,91}               & 3            \\ \hline
+		1         & 1         & 2         & 2        & \textbf{735412,36}               & 6            \\ \hline
 	\end{tabular}%
+}
 \end{table}
 
-Os resultados apresentados na \autoref{candidatos_parametros_3} passaram por três refinamentos. Assim,
-como dito no início desta seção, o teste foi realizado com o intuito de
+Os resultados apresentados na \autoref{candidatos_parametros_3} passaram por três refinamentos. 
+Como é possível ver, os valores da função objetivo se mantiveram ou até melhoraram, se comparados com iterações anteriores.
+É notável que o tempo de execução diminuiu consideravelmente, em relação aos resultados das tabelas \ref{candidatos_parametros_2} e \ref{candidatos_parametros_1}. Assim, como dito no início desta seção, o teste foi realizado com o intuito de
 aprimorar os parâmetros do *Simulated Annealing* com apenas um *access point*. A
 estratégia para a versão final e com múltiplos *access points* é definir
 também como um fator (variável) o valor do raio de perturbação e fazer
@@ -2431,13 +2433,13 @@ No \autoref{saida_exemplo} é possível identificar como é invocado o *software
 	\caption{\label{saida_exemplo} Exemplo de como é executado o $script$ via console CLI juntamente com a saída de dados. }
 
 	\begin{lstlisting}[language=bash]
+	
 	$ python PlacementAPs.py 
 
 	Simulando ambiente com:  		400 x 149 pixels
 	Escala de simulacao:     		1 px : 0.1275 metros
 	Quantidade de APs:       		2
 	Potencia de cada APs:    		-25 dBm
-	FO global best: 5.762e+02
 
 	COBERTURA DE SINAL WI-FI:
 	87.62%	 com boa cobertura (sinal forte)
@@ -2447,8 +2449,8 @@ No \autoref{saida_exemplo} é possível identificar como é invocado o *software
 	sinal Ótimo  	24.3%
 	sinal Bom    	26.3%
 	sinal Ruim   	37.0%
-	\end{lstlisting}
 
+	\end{lstlisting}
 \end{quadro}
 
 Logo após a saída textual do resultado, ao fim da execução da otimização da posição
@@ -2461,7 +2463,7 @@ Annealing* fugiu de alguns ótimos locais e, no final da execução, retornou a 
 \begin{figure}[!ht]
 	\caption{\label{comportamento_fo} Comportamento da função objetivo do $Simulated Annealing$ na busca do melhor ponto.}
 	\begin{center}
-		\includegraphics[scale=0.5]{imagens/comportamento-fo.jpg}
+		\includegraphics[scale=0.4]{imagens/comportamento-fo.jpg}
 	\end{center}
 	\legend{Fonte: Elaboração do autor.}
 \end{figure}
@@ -2487,7 +2489,7 @@ Nesta nova escala de cores, a cor verde representa as zonas de maior intensidade
 a cor vermelha, as zonas com sinal relativamente ruim.
 
 \begin{figure}[ht]
-	\caption{\label{prop_bloco_a} Simulação da propagação de sinais de microondas no bloco A utilizando 1 AP.}
+	\caption{\label{prop_bloco_a} Simulação da propagação de sinais de microondas no bloco A utilizando um $access point$.}
 	\begin{center}
 		\includegraphics[scale=0.7]{imagens/prop-bloco-a-2.jpg}
 	\end{center}
@@ -2501,10 +2503,12 @@ contém o maior fluxo de pessoas que utilizam o acesso à internet.
 Na \autoref{prop_bloco_a}, existência demais zonas de sombra corresponde à
 potência máxima configurada para o *access point*, neste caso, -25 $dBm$.
 
+\clearpage
+
 No \autoref{saida_bloco_a_1} temos o resultado disponibilizado via terminal:
 
 \begin{quadro}[!htb]
-	\caption{\label{saida_bloco_a_1} Saída do $script$ via console CLI para simulação com 1 AP no bloco A. }
+	\caption{\label{saida_bloco_a_1} Saída do $script$ via console CLI para simulação com um $access point$ no bloco A. }
 
 	\begin{lstlisting}[language=bash]
 	$ python PlacementAPs.py 
@@ -2513,8 +2517,6 @@ No \autoref{saida_bloco_a_1} temos o resultado disponibilizado via terminal:
 	Escala de simulacao:                    1 px : 0.0800 metros
 	Quantidade de APs:                      1
 	Potencia de cada APs:                   -25 dBm
-
-	FO global best: 4.432e+02
 
 	COBERTURA DE SINAL WI-FI:
 	74.32%   com boa cobertura (sinal forte)
@@ -2535,8 +2537,7 @@ mais de um quarto de todo o espaço e, se somado com a fatia de sinal ruim, mais
 área não será atendida com uma boa qualidade de serviço.
 
 \begin{figure}[ht]
-	\caption{\label{percent_2_aps_bloco_c} Faixas de qualidade de sinal do posicionamento
-	 de um $access points$ no bloco A.}
+	\caption{\label{percent_2_aps_bloco_c} Faixas de qualidade de sinal do posicionamento de um $access points$ no bloco A.}
 	\begin{center}
 		\includegraphics[scale=0.51]{imagens/prop-bloco-percent-a-2.png}
 	\end{center}
@@ -2548,11 +2549,11 @@ mais de um quarto de todo o espaço e, se somado com a fatia de sinal ruim, mais
 As plantas dos pisos 1, 2 e 3 do bloco C foram obtidas em formato DWG e
 convertidas para o formato DXF. Tais
 arquivos foram simulados e obtidas suas representações gráficas. A
-\autoref{captura_zona} mostra a simulação da planta baixa no bloco C utilizando 1 *access point* com
+\autoref{captura_zona} mostra a simulação da planta baixa no bloco C utilizando um *access point* com
 potência de transmissão de -25 $dBm$.
 
 \begin{figure}[ht]
-	\caption{\label{captura_zona} Simulação da propagação de sinais de microondas no bloco C utilizando 1 AP.
+	\caption{\label{captura_zona} Simulação da propagação de sinais de microondas no bloco C utilizando um $access points$.
 		}
 	\begin{center}
 		\includegraphics[scale=0.7]{imagens/captura-zona-2.jpg}
@@ -2563,7 +2564,7 @@ potência de transmissão de -25 $dBm$.
 A saída via terminal pode ser visualizada no \autoref{saida_bloco_c_1}:
 
 \begin{quadro}[!htb]
-	\caption{\label{saida_bloco_c_1} Saída do $script$ via console CLI para simulação com 1 AP no bloco C. }
+	\caption{\label{saida_bloco_c_1} Saída do $script$ via console CLI para simulação com um $access point$ no bloco C. }
 
 	\begin{lstlisting}[language=bash]
 	$ python PlacementAPs.py 
@@ -2572,9 +2573,7 @@ A saída via terminal pode ser visualizada no \autoref{saida_bloco_c_1}:
 	Escala de simulacao:                    1 px : 0.0850 metros
 	Quantidade de APs:                      1
 	Potencia de cada APs:                   -25 dBm
-	
-	FO global best: 2.089e+02
-	
+		
 	COBERTURA DE SINAL WI-FI:
 	50.89%   com boa cobertura (sinal forte)
 	49.11%   de zonas de sombra (abaixo da sensibilidade)
@@ -2592,8 +2591,7 @@ Na \autoref{prop_bloco_percent_c_1} também pode ser visto como a zona de sombra
 fica  notável que utilizando apenas um *access point* se torna impossível obter uma boa qualidade do sinal todas as salas de ambos os piso do bloco C.
 
 \begin{figure}[ht]
-	\caption{\label{prop_bloco_percent_c_1} Faixas de qualidade de sinal do posicionamento
-	 de um $access point$ no bloco C.}
+	\caption{\label{prop_bloco_percent_c_1} Faixas de qualidade de sinal do posicionamento de um $access$ $point$ no bloco C.}
 	\begin{center}
 		\includegraphics[scale=0.7]{imagens/prop-bloco-percent-c-1.png}
 	\end{center}
@@ -2620,8 +2618,8 @@ adaptada, recalibrada e avaliada a implementação da simulação com dois
 *access points*. A \autoref{captura_dois_aps} mostra como foi o resultado da simulação do *Wi-Fi*
 no piso 2 do bloco A.
 
-\begin{figure}[ht]
-	\caption{\label{captura_dois_aps} Simulação da propagação de sinais de microondas no bloco A utilizando 2 APs.
+\begin{figure}[!ht]
+	\caption{\label{captura_dois_aps} Simulação da propagação de sinais de microondas no bloco A utilizando dois $access$ $points$.
 	}
 	\begin{center}
 		\includegraphics[scale=0.6]{imagens/captura-2-aps-2.jpg}
@@ -2643,7 +2641,7 @@ sala em que os *access points* estão instalados, mas, mesmo assim, a maior part
 No \autoref{saida_bloco_a_2} é possível visualizar o resumo da execução do algoritmo:
 
 \begin{quadro}[!htb]
-	\caption{\label{saida_bloco_a_2} Saída do $script$ via console CLI para simulação com 2 AP no bloco A. }
+	\caption{\label{saida_bloco_a_2} Saída do $script$ via console CLI para simulação com dois $access$ $points$ no bloco A. }
 
 	\begin{lstlisting}[language=bash]
 	$ python PlacementAPs.py 
@@ -2652,8 +2650,6 @@ No \autoref{saida_bloco_a_2} é possível visualizar o resumo da execução do a
 	Escala de simulacao:                    1 px : 0.0800 metros
 	Quantidade de APs:                      2
 	Potencia de cada APs:                   -25 dBm
-
-	FO global best: 6.112e+02
 
 	COBERTURA DE SINAL WI-FI:
 	91.12%   com boa cobertura (sinal forte)
@@ -2669,25 +2665,24 @@ No \autoref{saida_bloco_a_2} é possível visualizar o resumo da execução do a
 
 Na \autoref{percent_bloco_a_2} tem-se a representação da cobertura por faixa de intensidade do sinal na simulação de dois *access points* no segundo piso do bloco A. É válido ressaltar que ao utilizar dois *access points* na simulação, a cobertura é ainda maior, logo a fatia que indica a zona de sombra corresponde a apenas 8,9%, um valor inferior à metade do sombreamento quando havia somente um *access point*.
 
-\begin{figure}[ht]
-	\caption{\label{percent_bloco_a_2} Faixas de qualidade de sinal do posicionamento de dois $access points$ no segundo piso do bloco A. }
+\begin{figure}[!ht]
+	\caption{\label{percent_bloco_a_2} Faixas de qualidade de sinal do posicionamento de dois $access$ $points$ no segundo piso do bloco A. }
 	\begin{center}
 		\includegraphics[scale=0.7]{imagens/percent-bloco-a-2.png}
 	\end{center}
 	\legend{Fonte: Elaboração do autor.}
 \end{figure}
 
-Um teste com as mesmas configurações foi realizado com a planta baixa do bloco C porém, agora,
-para que seja possível ter uma maior cobertura da área do prédio, a
-simulação foi realizada com um equipamento de -17 $dBm$. Na \autoref{captura_dois_aps_c},
-pode ser visto quais são os pontos sugeridos pelo *Simulated Annealing* na busca para a
+Um teste com as mesmas configurações foi realizado com a planta baixa do bloco C.
+A simulação também foi realizada utilizando equipamento de -25 $dBm$. Na \autoref{captura_dois_aps_c},
+podem ser vistos quais são os pontos sugeridos pelo *Simulated Annealing* na busca para a
 alocação dos mesmos.
 
-\begin{figure}[ht]
-	\caption{\label{captura_dois_aps_c} Simulação da propagação de sinais de microondas no bloco C utilizando 2 APs.
+\begin{figure}[!ht]
+	\caption{\label{captura_dois_aps_c} Simulação da propagação de sinais de microondas no bloco C utilizando dois $access points$.
 	}
 	\begin{center}
-		\includegraphics[scale=0.7]{imagens/captura-2-aps-bloco-c-2.jpg}
+		\includegraphics[scale=0.6]{imagens/captura-2-aps-bloco-c-2.png}
 	\end{center}
 	\legend{Fonte: Elaboração do autor.}
 \end{figure}
@@ -2696,11 +2691,11 @@ Com o resultado dado pelo *Simulated Annealing* no bloco C, pode-se notar que fo
 cobrir praticamente toda a área. Há algumas pequenas áreas com pontos cegos
 porém, podem ser consideradas de certa forma um mal necessário quando o
 objetivo é obter a maior cobertura do sinal. Um resultado ainda melhor
-poderia ser encontrado se for feito uma nova calibração do *Simulated Annealing*. A saída
-dada pelo algoritmo é a pode ser vista no \autoref{saida_bloco_c_2}.
+poderia ser encontrado se for feita uma nova calibração do *Simulated Annealing*. A saída
+dada pelo algoritmo pode ser vista no \autoref{saida_bloco_c_2}.
 
 \begin{quadro}[!htb]
-	\caption{\label{saida_bloco_c_2} Saída do $script$ via console CLI para simulação com 2 AP no bloco C. }
+	\caption{\label{saida_bloco_c_2} Saída do $script$ via console CLI para simulação com dois $access$ $points$ no bloco C. }
 
 	\begin{lstlisting}[language=bash]
 	$ python PlacementAPs.py 
@@ -2708,37 +2703,37 @@ dada pelo algoritmo é a pode ser vista no \autoref{saida_bloco_c_2}.
 	Simulando ambiente com:                 600 x 223 pixels
 	Escala de simulacao:                    1 px : 0.0850 metros
 	Quantidade de APs:                      2
-	Potencia de cada APs:                   -17 dBm
+	Potencia de cada APs:                   -25 dBm
 
 	COBERTURA DE SINAL WI-FI:
-	89.76%   com boa cobertura (sinal forte)
-	10.24%   de zonas de sombra (abaixo da sensibilidade)
+	94.45%	 com boa cobertura (sinal forte)
+	5.55%	 de zonas de sombra (abaixo da sensibilidade)
 
 	Cobertura por FAIXAS de intensidade de sinal
-	sinal Otimo     28.4%
-	sinal Bom       24.8%
-	sinal Ruim      36.6%
+	sinal Otimo  	26.6%
+	sinal Bom    	25.2%
+	sinal Ruim   	42.6%
 	\end{lstlisting}
 
 \end{quadro}
 
-Na \autoref{percent_bloco_c_2} tem-se a representação da cobertura por faixa de intensidade do sinal na simulação de dois *access points* em ambos os pisos do bloco C. É notável que utilizando dois *access points* na simulação, a zona de sombreamante caiu de 49,0% na simulação com um *access point* para 10,2%, ou seja, um aproveitamente de 38,8% a mais da cobertura, adicionando apenas mais um equipamento.
+Na \autoref{percent_bloco_c_2} tem-se a representação da cobertura por faixa de intensidade do sinal na simulação de dois *access points* em ambos os pisos do bloco C. É notável que utilizando dois *access points* na simulação, a zona de sombreamante caiu de 49,0% na simulação com um *access point* (vide \autoref{prop_bloco_percent_c_1}) para 5,6%, ou seja, um aproveitamente de 43,4% a mais da cobertura, adicionando apenas mais um equipamento.
 
 \begin{figure}[ht]
-	\caption{\label{percent_bloco_c_2} Faixas de qualidade de sinal do posicionamento de dois $access points$ no bloco C.}
+	\caption{\label{percent_bloco_c_2} Faixas de qualidade de sinal do posicionamento de dois $access$ $points$ no bloco C.}
 	\begin{center}
-		\includegraphics[scale=0.7]{imagens/percent-bloco-c-2.png}
+		\includegraphics[scale=0.4]{imagens/percent-bloco-c-2.png}
 	\end{center}
 	\legend{Fonte: Elaboração do autor.}
-\end{figure}
+\end{figure} 
 
 Uma simulação utilizando três *access points* também foi realizada. O
 resultado da propagação do sinal pode ser visto na \autoref{captura_3_aps_bloco_c} utilizando equipamentos com potência de transmissão de -25 $dBm$.
 
 \begin{figure}[ht]
-	\caption{\label{captura_3_aps_bloco_c} Simulação da propagação de sinais de microondas no bloco C utilizando 3 APs.	}
+	\caption{\label{captura_3_aps_bloco_c} Simulação da propagação de sinais de microondas no bloco C utilizando três $access$ $points$.	}
 	\begin{center}
-		\includegraphics[scale=0.7]{imagens/captura-3-aps-bloco-c.jpg}
+		\includegraphics[scale=0.7]{imagens/captura-3-aps-bloco-c.png}
 	\end{center}
 	\legend{Fonte: Elaboração do autor.}
 \end{figure}
@@ -2746,7 +2741,7 @@ resultado da propagação do sinal pode ser visto na \autoref{captura_3_aps_bloc
 Os valores dados da saída são exibidos no \autoref{saida_bloco_c_3}:
 
 \begin{quadro}[!htb]
-	\caption{\label{saida_bloco_c_3} Saída do $script$ via console CLI para simulação com 3 AP no bloco C. }
+	\caption{\label{saida_bloco_c_3} Saída do $script$ via console CLI para simulação com três $access$ $points$ no bloco C. }
 
 	\begin{lstlisting}[language=bash]
 	$ python PlacementAPs.py 
@@ -2756,26 +2751,24 @@ Os valores dados da saída são exibidos no \autoref{saida_bloco_c_3}:
 	Quantidade de APs:                      3
 	Potencia de cada APs:                   -25 $dB$
 
-	FO global best: 5.169e+02
-
 	COBERTURA DE SINAL WI-FI:
-	81.69%   com boa cobertura (sinal forte)
-	18.31%   de zonas de sombra (abaixo da sensibilidade)
+	96.33%	 com boa cobertura (sinal forte)
+	3.67%	 de zonas de sombra (abaixo da sensibilidade)
 
 	Cobertura por FAIXAS de intensidade de sinal
-	sinal Otimo     25.8%
-	sinal Bom       28.1%
-	sinal Ruim      27.7%
+	sinal Ótimo  	29.4%
+	sinal Bom    	30.6%
+	sinal Ruim   	36.3%
 	\end{lstlisting}
 
 \end{quadro}
 
-Na \autoref{percent_bloco_c_3} tem-se a representação da cobertura por faixa de intensidade do sinal na simulação de três *access points* em ambos os pisos do bloco C. Ao utilizar-se três *access points* na simulação, a zona de sombreamento aumentou, se comparada com a simulação de dois *access points*, mas isto se deve simplesmente ao fato da simulação ter utilizado um equipamento com 10% da potência máxima possível, para fins de visualização dos dados. A cobertura de sinal com qualidade "ótima" também foi menor, resultado que pôde ser dado pelo fato da solução da metaheurística, no momento da simulação, ter ficado "presa" em um ótimo local e não ter conseguido obter um resultado melhor.
+Na \autoref{percent_bloco_c_3} tem-se a representação da cobertura por faixa de intensidade do sinal na simulação de três *access points* em ambos os pisos do bloco C. Ao utilizar-se três *access points* na simulação, a zona de sombreamento foi inferior a simulação de dois *access points*. A cobertura de sinal com qualidade "ótima" também foi relativamente maior, resultado que pôde ser dado pelo fato da solução da metaheurística, no momento da simulação, ter desviado de ótimos locais.
 
-\begin{figure}[ht]
+\begin{figure}[!ht]
 	\caption{\label{percent_bloco_c_3} Faixas de qualidade de sinal do posicionamento de três $access$ $points$ no bloco C.}
 	\begin{center}
-		\includegraphics[scale=0.7]{imagens/percent-bloco-c-3.png}
+		\includegraphics[scale=0.6]{imagens/percent-bloco-c-3.png}
 	\end{center}
 	\legend{Fonte: Elaboração do autor.}
 \end{figure}
@@ -2783,9 +2776,9 @@ Na \autoref{percent_bloco_c_3} tem-se a representação da cobertura por faixa d
 Na \autoref{captura_3_aps_bloco_a} é possível ver a simulação de propagação do sinal utilizando 3 access points no bloco A com equipamentos transmitindo a -25 $dB$.
 
 \begin{figure}[ht]
-	\caption{\label{captura_3_aps_bloco_a} Simulação da propagação de sinais de microondas no bloco A utilizando 3 APs com potência de -25 $dB$.}
+	\caption{\label{captura_3_aps_bloco_a} Simulação da propagação de sinais de microondas no bloco A utilizando três $access$ $points$ com potência de -25 $dB$.}
 	\begin{center}
-		\includegraphics[scale=0.7]{imagens/captura-3-aps-bloco-a.jpg}
+		\includegraphics[scale=0.5]{imagens/captura-3-aps-bloco-a.jpg}
 	\end{center}
 	\legend{Fonte: Elaboração do autor.}
 \end{figure}
@@ -2794,7 +2787,7 @@ Os valores dados na saída para a simulação da \autoref{captura_3_aps_bloco_a}
 no bloco A podem ser vistos no \autoref{saida_bloco_a_3}:
 
 \begin{quadro}[!htb]
-	\caption{\label{saida_bloco_a_3} Saída do $script$ via console CLI para simulação com 3 AP no bloco A. }
+	\caption{\label{saida_bloco_a_3} Saída do $script$ via console CLI para simulação com três $access$ $points$ no bloco A. }
 
 	\begin{lstlisting}[language=bash]
 	$ python PlacementAPs.py 
@@ -2803,8 +2796,6 @@ no bloco A podem ser vistos no \autoref{saida_bloco_a_3}:
 	Escala de simulacao:             1 px : 0.0800 metros
 	Quantidade de APs:               3
 	Potencia de cada APs:            -25 dBm
-
-	FO global best: 6.974e+02
 
 	COBERTURA DE SINAL WI-FI:
 	99.74%   com boa cobertura (sinal forte)
@@ -2820,10 +2811,10 @@ no bloco A podem ser vistos no \autoref{saida_bloco_a_3}:
 
 Na \autoref{percent_bloco_a_3} tem-se a representação da cobertura por faixa de intensidade do sinal na simulação de três *access points* para o segundo piso do bloco A. Fica claro que ao utilizar-se três *access points* na simulação, a zona de sombreamento tendeu a zero. Nenhum outro resultado das simulações para o bloco A mostrado anteriomente obteve um resultado em que a zona de sombra fosse tão menor. A fatia que representa o sinal ótimo não teve um grande aumento, mas se comparado aos resultados anteriores, foi significativo. No entanto, com o valor mínimo da zona de sombra, é possível garantir que toda a área do prédio seria coberta com o sinal *Wi-Fi*. Ao ser aplicado em um projeto para a instituição, fica evidente que o acréscimo de mais equipamentos sem a devida análise da real necessidade deles gerará um custo desnecessário.
 
-\begin{figure}[ht]
+\begin{figure}[!ht]
 	\caption{\label{percent_bloco_a_3} Faixas de qualidade de sinal do posicionamento de três $access$ $points$ no bloco A.}
 	\begin{center}
-		\includegraphics[scale=0.7]{imagens/percent-bloco-a-3.png}
+		\includegraphics[scale=0.56]{imagens/percent-bloco-a-3.png}
 	\end{center}
 	\legend{Fonte: Elaboração do autor.}
 \end{figure}

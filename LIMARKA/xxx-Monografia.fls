@@ -291,7 +291,7 @@ INPUT imagens/logistic-regression-2.png
 INPUT imagens/modelos-propagacao_a.png
 INPUT imagens/modelos-propagacao_b.png
 INPUT imagens/wifi-central.jpg
-INPUT imagens/canais-1.jpg
+INPUT imagens/canais.png
 INPUT imagens/absorcao-parede.jpg
 INPUT imagens/inter.jpg
 INPUT imagens/planta-labels.jpg
@@ -333,9 +333,9 @@ INPUT imagens/captura-zona-2.jpg
 INPUT imagens/prop-bloco-percent-c-1.png
 INPUT imagens/captura-2-aps-2.jpg
 INPUT imagens/percent-bloco-a-2.png
-INPUT imagens/captura-2-aps-bloco-c-2.jpg
+INPUT imagens/captura-2-aps-bloco-c-2.png
 INPUT imagens/percent-bloco-c-2.png
-INPUT imagens/captura-3-aps-bloco-c.jpg
+INPUT imagens/captura-3-aps-bloco-c.png
 INPUT imagens/percent-bloco-c-3.png
 INPUT imagens/captura-3-aps-bloco-a.jpg
 INPUT imagens/percent-bloco-a-3.png

@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/Debian) (preloaded format=xelatex 2017.10.28)  3 DEC 2017 00:53
+This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/Debian) (preloaded format=xelatex 2017.10.28)  4 DEC 2017 01:17
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1143,52 +1143,52 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 [26]
-LaTeX Font Info:    Try loading font information for OMS+lmr on input line 611.
+LaTeX Font Info:    Try loading font information for OMS+lmr on input line 610.
 
 (/usr/share/texmf/tex/latex/lm/omslmr.fd
 File: omslmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 611.
+(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 610.
 
-Overfull \hbox (16.02191pt too wide) in paragraph at lines 628--631
+Overfull \hbox (16.02191pt too wide) in paragraph at lines 627--630
 []\T1/lmr/m/n/12 Disponibilizar o \T1/lmr/m/it/12 soft-ware \T1/lmr/m/n/12 de m
 a-neira li-vre e de código-fonte aberto (FOSS), distribuindo-
  []
 
 [27] [28]
 LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <17.28> not available
-(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 665.
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 664.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 698.
+(Font)              <10> on input line 697.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 698.
+(Font)              <7> on input line 697.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 698.
+(Font)              <5> on input line 697.
 [29
 
 ] [30] [31]
 LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <14.4> not available
-(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 823.
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 822.
 [32] [33] [34] [35] [36] [37] [38] [39] [40] [41] [42
 
 ] [43]
 File: imagens/simulated-annealing.png Graphic file (type QTm)
 <use  "imagens/simulated-annealing.png" >
-Overfull \hbox (8.983pt too wide) in paragraph at lines 1379--1380
+Overfull \hbox (8.983pt too wide) in paragraph at lines 1378--1379
  [] 
  []
 
 [44]
 Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
-put line 1402.
+put line 1401.
 Package microtype Info: Character `029' is missing
 (microtype)             in font `T1/lmr/m/sc/12'.
 (microtype)             Ignoring protrusion settings for this character.
 [45
 
 ] [46] [47] [48] [49] [50] [51] [52]
-Underfull \hbox (badness 10000) in paragraph at lines 1851--1851
+Underfull \hbox (badness 10000) in paragraph at lines 1850--1850
  [][] [][][]\T1/lmr/m/n/10 Disponível em []$<[]https : / / www . otimizenesting
  . com . br / single-[]post / 2016 / 09 / 29 / Arquivo-[]DXF>[]$[].
  []
@@ -1200,7 +1200,7 @@ File: imagens/planta-labels.jpg Graphic file (type QTm)
 <use  "imagens/planta-labels.jpg" > [55] [56]
 File: imagens/medicao-modelos.jpg Graphic file (type QTm)
 <use  "imagens/medicao-modelos.jpg" >
-Overfull \hbox (6.15356pt too wide) in paragraph at lines 1998--1999
+Overfull \hbox (6.15356pt too wide) in paragraph at lines 1997--1998
  [] 
  []
 
@@ -1209,13 +1209,13 @@ File: imagens/curvas.png Graphic file (type QTm)
 <use  "imagens/curvas.png" > [58]
 File: imagens/log-logistica.png Graphic file (type QTm)
 <use  "imagens/log-logistica.png" >
-Overfull \hbox (3.31548pt too wide) in paragraph at lines 2063--2064
+Overfull \hbox (3.31548pt too wide) in paragraph at lines 2062--2063
  [] 
  []
 
 File: imagens/log-normal.jpg Graphic file (type QTm)
 <use  "imagens/log-normal.jpg" >
-Overfull \hbox (3.78087pt too wide) in paragraph at lines 2070--2071
+Overfull \hbox (3.78087pt too wide) in paragraph at lines 2069--2070
  [] 
  []
 
@@ -1232,9 +1232,9 @@ File: imagens/modelos-propagacao_b.png Graphic file (type QTm)
 <use  "imagens/modelos-propagacao_b.png" > [63] [64]
 File: imagens/wifi-central.jpg Graphic file (type QTm)
 <use  "imagens/wifi-central.jpg" >
-File: imagens/canais-1.jpg Graphic file (type QTm)
-<use  "imagens/canais-1.jpg" >
-Underfull \hbox (badness 10000) in paragraph at lines 2271--2271
+File: imagens/canais.png Graphic file (type QTm)
+<use  "imagens/canais.png" >
+Underfull \hbox (badness 10000) in paragraph at lines 2270--2270
 []\T1/lmr/m/n/12 Disponível em: []$<[]https : / / en . wikipedia . org / wiki /
  File : NonOverlappingChannels2 .
  []
@@ -1258,34 +1258,25 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 [69]
 File: imagens/sumulacao-sensibilidade.jpg Graphic file (type QTm)
-<use  "imagens/sumulacao-sensibilidade.jpg" >
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-[70] [71] [72] [73] [74]
+<use  "imagens/sumulacao-sensibilidade.jpg" > [70] [71] [72] [73] [74]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 2719.
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
+               Default added (so using `tbp') on input line 2730.
 
 [75] [76] (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2015/06/04 1.6 listings language file
 )
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
-nput line 2847.
-(./code/sobrepoe_solucoes_MAX.py)
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-[77]
+nput line 2858.
+(./code/sobrepoe_solucoes_MAX.py) [77]
 File: imagens/graph.jpg Graphic file (type QTm)
 <use  "imagens/graph.jpg" >
-Overfull \hbox (74.06145pt too wide) in paragraph at lines 2875--2876
+Overfull \hbox (74.06145pt too wide) in paragraph at lines 2886--2887
  [] 
  []
 
 [78] [79] (./code/calc_distance.py) (./code/simula_propagacao_gpu.py)
-Overfull \hbox (6.66975pt too wide) in paragraph at lines 2937--2938
+Overfull \hbox (6.66975pt too wide) in paragraph at lines 2948--2949
  [] 
  []
 
@@ -1297,12 +1288,12 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 ]
 File: imagens/block-grid.jpg Graphic file (type QTm)
 <use  "imagens/block-grid.jpg" > [81] (./code/simulate_kernel.py)
-Overfull \hbox (3.00311pt too wide) in paragraph at lines 9--2972
+Overfull \hbox (3.00311pt too wide) in paragraph at lines 9--2983
 [][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (13.71971pt too wide) in paragraph at lines 2972--2973
+Overfull \hbox (13.71971pt too wide) in paragraph at lines 2983--2984
  [] 
  []
 
@@ -1317,25 +1308,25 @@ File: imagens/captura-inicial.jpg Graphic file (type QTm)
 ]
 File: imagens/captura-1.jpg Graphic file (type QTm)
 <use  "imagens/captura-1.jpg" >
-Overfull \hbox (25.31862pt too wide) in paragraph at lines 3102--3103
+Overfull \hbox (25.31862pt too wide) in paragraph at lines 3113--3114
  [][] 
  []
 
 File: imagens/captura-2.jpg Graphic file (type QTm)
 <use  "imagens/captura-2.jpg" >
-Overfull \hbox (25.31862pt too wide) in paragraph at lines 3108--3109
+Overfull \hbox (25.31862pt too wide) in paragraph at lines 3119--3120
  [][] 
  []
 
 File: imagens/captura-3.jpg Graphic file (type QTm)
 <use  "imagens/captura-3.jpg" >
-Overfull \hbox (26.805pt too wide) in paragraph at lines 3114--3115
+Overfull \hbox (26.805pt too wide) in paragraph at lines 3125--3126
  [][] 
  []
 
 File: imagens/captura-4.jpg Graphic file (type QTm)
 <use  "imagens/captura-4.jpg" >
-Overfull \hbox (25.31862pt too wide) in paragraph at lines 3120--3121
+Overfull \hbox (25.31862pt too wide) in paragraph at lines 3131--3132
  [][] 
  []
 
@@ -1345,14 +1336,13 @@ File: lstlang1.sty 2015/06/04 1.6 listings language file
 File: lstlang1.sty 2015/06/04 1.6 listings language file
 )
 File: imagens/comportamento-fo.jpg Graphic file (type QTm)
-<use  "imagens/comportamento-fo.jpg" > [86]
-Underfull \vbox (badness 4416) has occurred while \output is active []
-
-[87]
+<use  "imagens/comportamento-fo.jpg" > [86] [87]
 File: imagens/prop-bloco-a-2.jpg Graphic file (type QTm)
 <use  "imagens/prop-bloco-a-2.jpg" > [88]
 File: imagens/prop-bloco-percent-a-2.png Graphic file (type QTm)
-<use  "imagens/prop-bloco-percent-a-2.png" > [89]
+<use  "imagens/prop-bloco-percent-a-2.png" > [89
+
+]
 File: imagens/captura-zona-2.jpg Graphic file (type QTm)
 <use  "imagens/captura-zona-2.jpg" > [90
 
@@ -1360,31 +1350,19 @@ File: imagens/captura-zona-2.jpg Graphic file (type QTm)
 File: imagens/prop-bloco-percent-c-1.png Graphic file (type QTm)
 <use  "imagens/prop-bloco-percent-c-1.png" >
 File: imagens/captura-2-aps-2.jpg Graphic file (type QTm)
-<use  "imagens/captura-2-aps-2.jpg" > [91]
-Underfull \vbox (badness 2662) has occurred while \output is active []
-
-[92]
+<use  "imagens/captura-2-aps-2.jpg" > [91] [92]
 File: imagens/percent-bloco-a-2.png Graphic file (type QTm)
 <use  "imagens/percent-bloco-a-2.png" >
-File: imagens/captura-2-aps-bloco-c-2.jpg Graphic file (type QTm)
-<use  "imagens/captura-2-aps-bloco-c-2.jpg" >
+File: imagens/captura-2-aps-bloco-c-2.png Graphic file (type QTm)
+<use  "imagens/captura-2-aps-bloco-c-2.png" > [93]
 File: imagens/percent-bloco-c-2.png Graphic file (type QTm)
-<use  "imagens/percent-bloco-c-2.png" > [93]
-File: imagens/captura-3-aps-bloco-c.jpg Graphic file (type QTm)
-<use  "imagens/captura-3-aps-bloco-c.jpg" >
-Underfull \vbox (badness 1033) has occurred while \output is active []
-
-[94]
+<use  "imagens/percent-bloco-c-2.png" > [94]
+File: imagens/captura-3-aps-bloco-c.png Graphic file (type QTm)
+<use  "imagens/captura-3-aps-bloco-c.png" > [95]
 File: imagens/percent-bloco-c-3.png Graphic file (type QTm)
 <use  "imagens/percent-bloco-c-3.png" >
 File: imagens/captura-3-aps-bloco-a.jpg Graphic file (type QTm)
-<use  "imagens/captura-3-aps-bloco-a.jpg" >
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-[95]
-Underfull \vbox (badness 1173) has occurred while \output is active []
-
-[96]
+<use  "imagens/captura-3-aps-bloco-a.jpg" > [96]
 File: imagens/percent-bloco-a-3.png Graphic file (type QTm)
 <use  "imagens/percent-bloco-a-3.png" > [97] [98] [99
 
@@ -1418,23 +1396,23 @@ AED: lastpage setting LastPage
 \tf@toc=\write9
 \openout9 = `xxx-Monografia.toc'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 3715.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 3715.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 3713.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 3713.
 (./xxx-Monografia.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 3715.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 3715.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 3713.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 3713.
 
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 3715.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 3713.
  ) 
 Here is how much of TeX's memory you used:
- 21212 strings out of 493638
- 307320 string characters out of 6146795
- 614618 words of memory out of 5000000
- 24260 multiletter control sequences out of 15000+600000
+ 21219 strings out of 493638
+ 307402 string characters out of 6146795
+ 603965 words of memory out of 5000000
+ 24267 multiletter control sequences out of 15000+600000
  117307 words of font info for 66 fonts, out of 8000000 for 9000
  1328 hyphenation exceptions out of 8191
- 40i,18n,47p,546b,1161s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 40i,18n,47p,546b,1168s stack positions out of 5000i,500n,10000p,200000b,80000s
 
 Output written on xxx-Monografia.pdf (107 pages).
