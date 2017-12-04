@@ -11,7 +11,7 @@
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
 \contentsline {chapter}{\chapternumberline {1}\MakeTextUppercase {INTRODUÇÃO}}{25}{chapter.1}
 \contentsline {section}{\numberline {1.1}Justificativa}{26}{section.1.1}
-\contentsline {section}{\numberline {1.2}Objetivos}{27}{section.1.2}
+\contentsline {section}{\numberline {1.2}Objetivos}{26}{section.1.2}
 \contentsline {section}{\numberline {1.3}Estrutura do Trabalho}{27}{section.1.3}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
 \contentsline {chapter}{\chapternumberline {2}\MakeTextUppercase {FUNDAMENTAÇÃO TEÓRICA}}{29}{chapter.2}
@@ -21,16 +21,16 @@
 \contentsline {section}{\numberline {2.4}Modelos de propagação}{32}{section.2.4}
 \contentsline {subsection}{\numberline {2.4.1}Propagação no espaço livre (modelo de \emph {Friis})}{32}{subsection.2.4.1}
 \contentsline {subsection}{\numberline {2.4.2}\emph {Two-rays ground reflection}}{33}{subsection.2.4.2}
-\contentsline {subsection}{\numberline {2.4.3}\emph {Log-distance path loss}}{35}{subsection.2.4.3}
-\contentsline {subsection}{\numberline {2.4.4}\emph {One-slope}}{36}{subsection.2.4.4}
+\contentsline {subsection}{\numberline {2.4.3}\emph {Log-distance path loss}}{34}{subsection.2.4.3}
+\contentsline {subsection}{\numberline {2.4.4}\emph {One-slope}}{35}{subsection.2.4.4}
 \contentsline {subsection}{\numberline {2.4.5}\emph {Wall and floor factor}}{36}{subsection.2.4.5}
 \contentsline {subsection}{\numberline {2.4.6}\emph {Log-normal fading}}{37}{subsection.2.4.6}
 \contentsline {subsection}{\numberline {2.4.7}\emph {Ray-tracing fading}}{37}{subsection.2.4.7}
-\contentsline {section}{\numberline {2.5}Trabalhos Relacionados}{38}{section.2.5}
+\contentsline {section}{\numberline {2.5}Trabalhos Relacionados}{37}{section.2.5}
 \contentsline {subsection}{\numberline {2.5.1}\emph {TamoGraph Site Survey}}{38}{subsection.2.5.1}
-\contentsline {subsection}{\numberline {2.5.2}\emph {Netscout AirMagnet Survey}}{39}{subsection.2.5.2}
-\contentsline {subsection}{\numberline {2.5.3}\emph {Ekahau Site Survey \& Planner}}{40}{subsection.2.5.3}
-\contentsline {subsection}{\numberline {2.5.4}\emph {D-Link Wi-Fi Planner PRO}}{41}{subsection.2.5.4}
+\contentsline {subsection}{\numberline {2.5.2}\emph {Netscout AirMagnet Survey}}{38}{subsection.2.5.2}
+\contentsline {subsection}{\numberline {2.5.3}\emph {Ekahau Site Survey \& Planner}}{39}{subsection.2.5.3}
+\contentsline {subsection}{\numberline {2.5.4}\emph {D-Link Wi-Fi Planner PRO}}{40}{subsection.2.5.4}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
 \contentsline {chapter}{\chapternumberline {3}\MakeTextUppercase {MATERIAIS E MÉTODOS}}{43}{chapter.3}
 \contentsline {section}{\numberline {3.1}A Metaheurística}{43}{section.3.1}
@@ -41,7 +41,7 @@
 \contentsline {subsection}{\numberline {3.4.2}CUDA \emph {Toolkit}}{49}{subsection.3.4.2}
 \contentsline {subsection}{\numberline {3.4.3}Numba}{50}{subsection.3.4.3}
 \contentsline {subsection}{\numberline {3.4.4}JIT (\emph {just-in-time})}{50}{subsection.3.4.4}
-\contentsline {subsection}{\numberline {3.4.5}\emph {Anaconda Navigator}}{52}{subsection.3.4.5}
+\contentsline {subsection}{\numberline {3.4.5}\emph {Anaconda Navigator}}{51}{subsection.3.4.5}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
 \contentsline {chapter}{\chapternumberline {4}\MakeTextUppercase {PROJETO E DESENVOLVIMENTO}}{53}{chapter.4}
 \contentsline {section}{\numberline {4.1}Representação do ambiente}{53}{section.4.1}
@@ -49,7 +49,7 @@
 \contentsline {subsection}{\numberline {4.1.2}Escala e precisão}{54}{subsection.4.1.2}
 \contentsline {section}{\numberline {4.2}Propagação dos sinais}{56}{section.4.2}
 \contentsline {subsection}{\numberline {4.2.1}Definição do modelo de propagação para sinais \emph {Wi-Fi}}{56}{subsection.4.2.1}
-\contentsline {subsection}{\numberline {4.2.2}Ajuste do modelo de propagação}{58}{subsection.4.2.2}
+\contentsline {subsection}{\numberline {4.2.2}Ajuste do modelo de propagação}{57}{subsection.4.2.2}
 \contentsline {subsection}{\numberline {4.2.3}Simulação da propagação de sinais no ambiente}{64}{subsection.4.2.3}
 \contentsline {subsection}{\numberline {4.2.4}Atenuação do sinal ao atravessar paredes}{65}{subsection.4.2.4}
 \contentsline {section}{\numberline {4.3}Visualização dos dados}{68}{section.4.3}
@@ -59,10 +59,10 @@
 \contentsline {section}{\numberline {4.5}Avaliação da solução}{75}{section.4.5}
 \contentsline {subsection}{\numberline {4.5.1}Avaliação da solução com um AP}{75}{subsection.4.5.1}
 \contentsline {subsection}{\numberline {4.5.2}Aperfeiçoamento da função objetivo}{76}{subsection.4.5.2}
-\contentsline {subsection}{\numberline {4.5.3}Avaliação da solução para dois ou mais APs}{77}{subsection.4.5.3}
-\contentsline {section}{\numberline {4.6}Análise da utilização de recursos}{78}{section.4.6}
-\contentsline {section}{\numberline {4.7}Paralelização em GPU}{80}{section.4.7}
-\contentsline {section}{\numberline {4.8}Validação dos modelos}{83}{section.4.8}
+\contentsline {subsection}{\numberline {4.5.3}Avaliação da solução para dois ou mais APs}{76}{subsection.4.5.3}
+\contentsline {section}{\numberline {4.6}Análise da utilização de recursos}{77}{section.4.6}
+\contentsline {section}{\numberline {4.7}Paralelização em GPU}{79}{section.4.7}
+\contentsline {section}{\numberline {4.8}Validação dos modelos}{82}{section.4.8}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
 \contentsline {chapter}{\chapternumberline {5}\MakeTextUppercase {RESULTADOS E ANÁLISE}}{85}{chapter.5}
 \contentsline {section}{\numberline {5.1}Simulação da propagação de sinais \emph {wireless}}{85}{section.5.1}

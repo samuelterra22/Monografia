@@ -13,14 +13,14 @@
 \contentsline {figure}{\numberline {11}{\ignorespaces Decaimento RSSI de $Wi-Fi$ de acordo com a distância ao $access point$.}}{65}{figure.4.11}
 \contentsline {figure}{\numberline {12}{\ignorespaces Canais não sobrepostos para WLANs de 2,4 GHz.}}{66}{figure.4.12}
 \contentsline {figure}{\numberline {13}{\ignorespaces Absorção do sinal por cada parede atravessada.}}{67}{figure.4.13}
-\contentsline {figure}{\numberline {14}{\ignorespaces Interseção de retas.}}{68}{figure.4.14}
+\contentsline {figure}{\numberline {14}{\ignorespaces Interseção de retas.}}{67}{figure.4.14}
 \contentsline {figure}{\numberline {15}{\ignorespaces Representação do ambiente a partir do arquivo $DXF$ contendo a planta-baixa do bloco A do IFMG $campus$ Formiga.}}{69}{figure.4.15}
-\contentsline {figure}{\numberline {16}{\ignorespaces Simulação da propagação utilizando 256 cores no mapa de calor.}}{70}{figure.4.16}
-\contentsline {figure}{\numberline {17}{\ignorespaces Regiões com sinal abaixo da sensibilidade máxima dos equipamentos no bloco C.}}{71}{figure.4.17}
-\contentsline {figure}{\numberline {18}{\ignorespaces Grafo do ciclo de execução do algoritmo.}}{79}{figure.4.18}
-\contentsline {figure}{\numberline {19}{\ignorespaces Divisão interna da GPU dos blocks, grids e threads.}}{81}{figure.4.19}
-\contentsline {figure}{\numberline {20}{\ignorespaces Captura realizada no Bloco C, para um $access point$ irradiando no Canal 11 (2.462 GHz).}}{84}{figure.4.20}
-\contentsline {figure}{\numberline {21}{\ignorespaces Simulação realizada com dados empíricos nas mesmas configurações do bloco C.}}{84}{figure.4.21}
+\contentsline {figure}{\numberline {16}{\ignorespaces Simulação da propagação utilizando 256 cores no mapa de calor.}}{69}{figure.4.16}
+\contentsline {figure}{\numberline {17}{\ignorespaces Regiões com sinal abaixo da sensibilidade máxima dos equipamentos no bloco C.}}{70}{figure.4.17}
+\contentsline {figure}{\numberline {18}{\ignorespaces Grafo do ciclo de execução do algoritmo.}}{78}{figure.4.18}
+\contentsline {figure}{\numberline {19}{\ignorespaces Divisão interna da GPU dos blocks, grids e threads.}}{80}{figure.4.19}
+\contentsline {figure}{\numberline {20}{\ignorespaces Captura realizada no Bloco C, para um $access point$ irradiando no Canal 11 (2.462 GHz).}}{82}{figure.4.20}
+\contentsline {figure}{\numberline {21}{\ignorespaces Simulação realizada com dados empíricos nas mesmas configurações do bloco C.}}{83}{figure.4.21}
 \contentsline {figure}{\numberline {22}{\ignorespaces Simulação da propagação de sinais de microondas no bloco A com absorção pelas paredes.}}{85}{figure.5.22}
 \contentsline {figure}{\numberline {23}{\ignorespaces Simulação da propagação inicial de sinais de microondas no bloco A utilizando versão inicial do algoritmo.}}{86}{figure.5.23}
 \contentsline {figure}{\numberline {24}{\ignorespaces Comportamento da função objetivo do $Simulated Annealing$ na busca do melhor ponto.}}{87}{figure.5.24}
